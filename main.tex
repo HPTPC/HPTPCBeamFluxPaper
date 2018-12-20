@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+\include{packagesAndDefinitions}
+\usepackage{graphicx}
+
+\begin{document}
+\title{Draft: HPTPC flux paper}
+\author{A. Author$^{\textrm{a}}$\thanks{Corresponding author, \texttt{address@rhul.ac.uk}}{}, B. Author$^{\textrm{b}}$}
+
+%\affil{$\textrm{a}$: Royal Holloway, University of London, Egham Hill, Egham, TW20 0EX, UK\\
+%$\textrm{b}$: }
+
+\date{Keywords: To be defined}
+
+\begin{abstract}
+\input{files/sec_0_abstract.tex}
+\end{abstract}
+
+
+
+\maketitle
+\linenumbers
+
+% Introduction and motivation 
+\input{files/sec_1_introduction.tex}
+
+% Justification of the gas choice 
+\input{files/sec_2_methods}
+
+% HPTPC description
+\input{files/sec_3_results.tex}
+
+
+% Outlook and Summary
+\input{files/sec_4_summary.tex}
+
+
+% Acknowledgements
+\newenvironment{acknowledgement}{\relax}{\relax}
+\begin{acknowledgement}
+\section*{Acknowledgements}
+
+\end{acknowledgement}
+
+
+% Bibliography
+\AtNextBibliography{\small}
+\printbibliography[heading=bibintoc]
+
+
+\end{document}
+
+
+
