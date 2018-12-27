@@ -1,0 +1,41 @@
+\section{Methods}
+\label{hptpcPaper:sec:Methods}
+\begin{itemize}
+    \item Discussion of experimental setup
+\item Beamline
+\item Beam Instrumentation
+\item UsToF
+\item DsToF
+    \begin{itemize}
+        \item Description of the DsToF scintillator and bar configuration 
+        \item Brief outline of the DsToF DAQ system
+        \item DsToF efficiencies with appropriate plot
+    \end{itemize}
+    The downstream time of flight system consists of 10 bars of plastic scintillator, which form the detector medium. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the downstream time of flight system are show in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
+
+\begin{figure}[ht]    
+\begin{minipage}[b]{.46\textwidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{files/Figures/dstofFront.png}
+    %\captionof{figure}{Front view of the downstream time of flight system}
+    \caption{Front view of the downstream time of flight system}
+    \label{fig:dstofFront}
+\end{minipage}
+\hspace{0.35cm}
+\begin{minipage}[b]{.46\textwidth}
+    \centering
+    \includegraphics[width=0.45\linewidth]{files/Figures/dstofDiag.png}
+    %\captionof{figure}{Diagonal view of the downstream time of flight system showing more clearly the two rows of scintillator bars and photomultiplier tubes}
+    \caption{Diagonal view of the downstream time of flight system showing more clearly the two rows of scintillator bars and photomultiplier tubes}
+    \label{fig:dstofDiagonal}
+\end{minipage}
+\end{figure}
+    
+    All 20 of the photomultiplier tubes have their anode signals read out using NIM discriminators which are then fed into a time-to-digital converter. 
+    
+    A signal (i.e. an incident particle of any kind) in the downstream time of flight system was considered to have occurred if a signal was seen in both photomultiplier tubes on the same bar within 20ns of each other.
+    
+\item (Cursory) TPC description
+\item MC overview
+\item Analysis methods and supporting plots; examples of ToF plots, proton and pion peaks with MC
+\end{itemize}
