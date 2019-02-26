@@ -18,7 +18,11 @@
 
 \end{itemize}
 
-    The downstream time of flight (DsToF) system consists of 10 bars of plastic scintillator, which form the detector medium. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the downstream time of flight system along with its dimensions are show in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
+	\subsection{UsToF instrumentation}
+
+	\subsection{DsToF instrumentation}
+	
+    The downstream time of flight (DsToF) system consists of 10 bars of Nuvia plastic scintillator, which form the detector medium. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the downstream time of flight system along with its dimensions are show in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
     
     The time resolution of the bars and PMTs was measured to be 1~ns. The spatial resolution of the bars and PMTs was measured to be 8.3~cm.
     
@@ -44,5 +48,17 @@
     
     Additionally, a signal is also fed into the same time-to-digital converter whenever there is a coincidence between the $S_1$ and $S_2$ timing points. When calculating the time of flight of a given particle, this time of coincidence is used as first timing point.
     
+	\subsection{Analysis methods -- $S_{4}$}
 
+	Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by the DsToF with a changing number of moderator blocks. This spectrum is formed from taking the difference in time between a coincidence being observed in the $S1$ and $S2$ timing points and a signal being recorded in $S4$ (the definition of an $S4$ signal is given above).
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\linewidth]{files/Figures/s4ToF_axisAdj.png}
+		\caption{$S_{4}$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, an exponentially falling background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars.}
+		\label{fig:s4tof}	
+	\end{figure}
 
+	Furthermore, two corrections are applied to this measurement to give fig.~\ref{fig:s4tof}. Timing delays caused by cabling and equipment have to be taken into account. For this, a Gaussian is fitted to the peak caused by quicker particles and the mean of this is treated to have a value of $S4 - S1$ which corresponds to a particle travelling at the speed of light. The other times are then shifted by the same amount.
+	
+	Additionally, the measurements are adjusted for the efficiency of each bar.
