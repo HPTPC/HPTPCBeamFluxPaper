@@ -59,6 +59,13 @@
 		\label{fig:s4tof}	
 	\end{figure}
 
-	Furthermore, two corrections are applied to this measurement to give fig.~\ref{fig:s4tof}. Timing delays caused by cabling and equipment have to be taken into account. For this, a Gaussian is fitted to the peak caused by quicker particles and the mean of this is treated to have a value of $S4 - S1$ which corresponds to a particle travelling at the speed of light. The other times are then shifted by the same amount.
+	Furthermore, two corrections are applied to this measurement to give fig.~\ref{fig:s4tof}. Timing delays caused by cabling and equipment have to be taken into account. For this, a Gaussian is fitted to the peak caused by quicker particles and the mean of this is treated to have a value of $S4 - S1$ which corresponds to a particle traversing the distance between $S1$ and $S4$ at the speed of light. The other times are then shifted by the same amount.
 	
-	Additionally, the measurements are adjusted for the efficiency of each bar.
+	Additionally, the measurements are adjusted for the efficiency of each bar. The efficiency of each bar is calculated by taking the number of signal hits in coincidence with an $S1-S2$ signal in each bar and dividing by the total number of PMT hits in each bar which are themselves in coincidence with an $S1-S2$ signal. If we express the number of single PMT hits which are in coincidence with $S1-S2$ signal as $N_{1PMTcoins}$ and the number of 2 PMT signals in coincidence with an $S1-S2$ signal as $N_{2PMTcoins}$ then the efficiency is given by~(\ref{eq:barEff}).
+	
+	\begin{equation}
+		\epsilon = \frac{N_{2PMTcoins}}{N_{2PMTcoins}+N_{1PMTcoins}}
+		\label{eq:barEff}
+	\end{equation}
+	
+	Using fig.~\ref{fig:s4tof} protons and MIPs are selected with timing cuts.
