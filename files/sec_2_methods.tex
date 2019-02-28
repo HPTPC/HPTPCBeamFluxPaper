@@ -21,7 +21,7 @@
     \end{figure}
     
     Moderator blocks were used in order to cause a spread in the incoming beam.
-    The blocks cause protons to scratter through a larger angle than pions and other MIPs, increasing the off-axis proton pion ratio.
+    The blocks cause protons to scatter through a larger angle than pions and other MIPs, increasing the off-axis proton pion ratio.
     The effect of this, together with placing the TPC and ToF systems off axis was to allow a measurement of protons with a lower pion background.
     This technique also had the effect of reducing the average momentum of the measured particles.
     Data were taken for 0, 1, 2, 3, and 4 moderator blocks in turn.
@@ -52,7 +52,7 @@
     Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. 
     The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. 
     Diagrams of the $S4$ wall, along with its dimensions are presented in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
-    The time resolution of the bars and PMTs was measured to be 1~ns. The spatial resolution of the bars and PMTs was measured to be 8.3~cm.
+    The time resolution of the bars and PMTs was measured to be 1~ns. The corresponding spatial resolution of the bars and PMTs was measured to be 8.3~cm.
     
     \begin{figure}[ht]    
     	\begin{minipage}[t]{.48\textwidth}
@@ -71,7 +71,6 @@
     \end{figure}
     
     All 20 of the photomultiplier tubes have their anode signals read out using NIM discriminators which are then fed into a time-to-digital converter. 
-    
     A signal (i.e. an incident particle of any kind) in $S4$ was considered to have occurred if a signal was seen in both photomultiplier tubes on the same bar within 20~ns of each other.
     
     Additionally, a signal was also fed into the same time-to-digital converter whenever there was a coincidence between the $S1$ and $S2$ timing points. 
@@ -127,6 +126,7 @@
 	These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
 	The signal functions are taken to be Gaussians while the background is taken to be an exponential function. 
 	An example of this is shown in figure~\ref{fig:fitEx}.
+	The particles in the quicker timing window (those for which $t_{S4}-t_{S1}<55~\text{ns}$ and $t_{S4}-t_{S1}>40~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $t_{S4}-t_{S1}<105~\text{ns}$ and $t_{S4}-t_{S1}>66~\text{ns}$) are considered to be protons.
 	
 	\begin{figure}[h]
 		\begin{adjustbox}{max totalsize={.7\textwidth}{.62\textheight},center}
