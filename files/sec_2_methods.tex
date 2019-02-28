@@ -46,12 +46,17 @@
     
 	\subsection{Upstream Time of Flight instrumentation (S1-3)}
     The upstream time of flight system was composed of the following constituents:
-    S1 and S2, a 4~cm by 4~cm plastic counter with 30~ps resolution and a trigger counter resepctively. 
-    S
+    S1 and S2, a 4~cm by 4~cm plastic counter with 30~ps resolution and a trigger counter resepctively.
+    S1 and S2 are shown in figure~\ref{}.
+    These were placed within 2~m of the beam entrance
+    S3, a SHiP prototype wall produced by the Université de Genève. 
+    The wall was 168~cm by 110~cm made up of 20 plastic scintillator bars with 90~ps timing resolution.
+    The S3 wall was placed directly upstream of the TPC.
+    S3 is shown in figure~\ref{}.
 
 	\subsection{Downstream Time of Flight instrumentation (S4)}
 	
-    The downstream time of flight system, S4, consists of 10 bars of Nuvia plastic scintillator, which form the detector medium. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the S4 wall, along with its dimensions are presented in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
+    The downstream time of flight system, $S4$, consists of 10 bars of Nuvia plastic scintillator, which form the detector medium. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the $S4$ wall, along with its dimensions are presented in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
     
     The time resolution of the bars and PMTs was measured to be 1~ns. The spatial resolution of the bars and PMTs was measured to be 8.3~cm.
     
@@ -73,11 +78,11 @@
     
     All 20 of the photomultiplier tubes have their anode signals read out using NIM discriminators which are then fed into a time-to-digital converter. 
     
-    A signal (i.e. an incident particle of any kind) in S4 was considered to have occurred if a signal was seen in both photomultiplier tubes on the same bar within 20~ns of each other.
+    A signal (i.e. an incident particle of any kind) in $S4$ was considered to have occurred if a signal was seen in both photomultiplier tubes on the same bar within 20~ns of each other.
     
-    Additionally, a signal was also fed into the same time-to-digital converter whenever there was a coincidence between the S1 and S2 timing points. When calculating the time of flight of a given particle, this time of coincidence was used as first timing point.
+    Additionally, a signal was also fed into the same time-to-digital converter whenever there was a coincidence between the $S1$ and $S2$ timing points. When calculating the time of flight of a given particle, this time of coincidence was used as first timing point.
     
-	\subsection{Analysis methods -- $S_{4}$}
+	\subsection{Analysis methods -- $S4$}
 
 	Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by the DsToF with a changing number of moderator blocks. This spectrum is formed from taking the difference in time between a coincidence being observed in the $S1$ and $S2$ timing points and a signal being recorded in $S4$ (the definition of an $S4$ signal is given above).
 	
