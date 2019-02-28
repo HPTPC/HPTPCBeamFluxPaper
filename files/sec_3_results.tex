@@ -1,60 +1,64 @@
 \section{Results}
 \label{hptpcPaper:sec:Results}
 
-	\begin{figure}[ht]
-		\begin{minipage}[t]{0.48\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiRatio}
-			\caption{The ratio of protons to pions as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
-			\label{fig:proPiRatio}
-		\end{minipage} 
-		\hspace{0.3cm}
-		\begin{minipage}[t]{0.48\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiProf}
-			\caption{The number of protons and pions detected per spill by the DsToF as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
-			\label{fig:proPiProf}
-		\end{minipage}
-	\end{figure}
+	%\begin{figure}[ht]
+	%	\begin{minipage}[t]{0.48\textwidth}
+	%		\centering
+	%		\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiRatio}
+	%		\caption{The ratio of protons to pions as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
+	%		\label{fig:proPiRatio}
+	%	\end{minipage} 
+	%	\hspace{0.3cm}
+	%	\begin{minipage}[t]{0.48\textwidth}
+	%		\centering
+	%		\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiProf}
+	%		\caption{The number of protons and pions detected per spill by the DsToF as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
+	%		\label{fig:proPiProf}
+	%	\end{minipage}
+	%\end{figure}
    
    	\begin{figure}[ht]
    		\begin{minipage}[t]{0.48\textwidth}
-   			\centering
-	   		\includegraphics[width=\textwidth]{files/Figures/piS4Horz}
+   			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
+		   		\input{files/Figures/piS4Horz.tex}
+	   		\end{adjustbox}
 	   		\caption{Distribution of hits identified in $S_{4}$ as minimum ionizing particles as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $S_{1}$.}
    		\end{minipage}
    		\hspace{0.3cm}
    		\begin{minipage}[t]{0.48\textwidth}
-   			\centering
-   			\includegraphics[width=\textwidth]{files/Figures/proS4Horz}
+	   		\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
+	   			\input{files/Figures/proS4Horz.tex}
+	   		\end{adjustbox}
    			\caption{Distribution of hits identified in $S_{4}$ as protons as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $S_{1}$.}
-   		\end{minipage} \\
+   		\end{minipage} 
    	
-   		\begin{minipage}[t]{0.48\textwidth}
-   			\centering
-   			\includegraphics[width=\textwidth]{files/Figures/piS4Vert}
-   			\caption{Distribution of hits identified in $S_{4}$ as minimum ionizing particles as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $S_{1}$.}
-   		\end{minipage}
-   		\hspace{0.3cm}
-   		\begin{minipage}[t]{0.48\textwidth}
-   			\centering
-   			\includegraphics[width=\textwidth]{files/Figures/proS4Vert}
-   			\caption{Distribution of hits identified in $S_{4}$ as protons as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $S_{1}$.}
-   		\end{minipage}
+   		%\begin{minipage}[t]{0.48\textwidth}
+   		%	\centering
+   		%	\includegraphics[width=\textwidth]{files/Figures/piS4Vert}
+   		%	\caption{Distribution of hits identified in $S_{4}$ as minimum ionizing particles as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $S_{1}$.}
+   		%\end{minipage}
+   		%\hspace{0.3cm}
+   		%\begin{minipage}[t]{0.48\textwidth}
+   		%	\centering
+   		%	\includegraphics[width=\textwidth]{files/Figures/proS4Vert}
+   		%	\caption{Distribution of hits identified in $S_{4}$ as protons as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $S_{1}$.}
+   		%\end{minipage}
    	
 	\end{figure}	
         
    	\begin{figure}[ht]
    		\begin{minipage}[t]{0.48\textwidth}
-   			\centering
-   			\includegraphics[width=\textwidth]{files/Figures/ratioS4Horz}
+   			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+   				\input{files/Figures/ratioS4Horz.tex}
+   			\end{adjustbox}
    			\caption{Proton/MIP ratio in $S_{4}$ for varying numbers of moderator blocks as a function of horizontal off-axis angle, as measured from $S_{1}$}
    			\label{fig:propiratio_s4_horz}
    		\end{minipage}
    		\hspace{0.3cm}
     	\begin{minipage}[t]{0.48\textwidth}
-    		\centering
-    		\includegraphics[width=\textwidth]{files/Figures/ratioS4Vert}
+    		\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+	    		\input{files/Figures/ratioS4Vert.tex}
+	    	\end{adjustbox}
     		\caption{Proton/MIP ratio in $S_{4}$ for varying numbers of moderator blocks as a function of vertical off-axis angle, as measured from $S_{1}$}
     		\label{fig:propiratio_s4_vert}
     	\end{minipage}	
