@@ -61,7 +61,7 @@
 	Figure~\ref{fig:thetas4mip} shows the flux of particles identified as minimum ionizing particles across $S4$.
 	This flux is shown as a function of the number of moderator blocks and as a function of the angle in the $x-y$ plane (see figure~\ref{fig:setup} for the definitions of these axes).
 	For all moderator blocks, the peak number of minimum ionizing particle events occurs at a value of $\theta$ between $1^{\circ}$ and $2^{\circ}$.
-	Similarly the number of proton events occurs at a value of $\theta$ of approximately $2^{\circ}$.
+	Similarly the number of proton events per spill, shown in figure~\ref{fig:thetas4pro} peaks at a value of $\theta$ of approximately $2^{\circ}$.
 	
 	Two factors have an impact on the position of the peak.
 	The limited efficiency of $S4$ at the ends of the bars (near to one of the photomultiplier tubes) means that fewer signal hits are recorded at these points. 
@@ -70,6 +70,16 @@
 	The angular overlap of $S2$ and $S4$ also plays a role in the position of the peak. 
 	Figure~\ref{fig:beamAng} shows that, when observed from $S1$, a limited area of $S4$ is covered by the active area of $S2$.
 	Given the requirement that a signal must be observed in $S2$, this means that the majority of events that are observed in $S4$ will be those that are in this overlap region.
+   
+   	Figure~\ref{fig:thetas4mip} also indicates that an increasing number of moderator blocks results in a increased total MIP flux through $S4$.
+   	This is observed due to the off-axis position of both $S2$ and $S4$ which means that much of the unmoderated beam does not strike these timing points.
+   	Due to scattering processes in the moderator, a greater number of MIPs are incident upon $S2$ and $S4$, with more scattering occuring in greater moderator thicknesses.
+   	
+   	When changing from an unmoderated beam to the configuration with 1 moderator block, the proton flux shown in figure~\ref{fig:thetas4pro} initially sees an increase in the total number of events in $S4$.
+   	However, upon the addition of further moderator blocks, the total number of proton events observed in $S4$ falls.
+   	The initial increase is thought to be for similar reasons to those specified for the MIP flux, with increased scattering meaning that more protons pass through the off-axis $S2$ and $S4$.
+   	The later fall may be due to the larger loss of energy of the protons in the thicker moderator.
+   	In turn, this may lead to attenuation of protons in the TPC resulting in fewer observed events in $S4$.
    
    	\begin{figure}[ht]
    		\begin{minipage}[t]{0.48\textwidth}
@@ -85,6 +95,7 @@
 	   			\input{files/Figures/proS4Horz.tex}
 	   		\end{adjustbox}
    			\caption{Distribution of hits identified in $S4$ as protons as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $S1$.}
+   			\label{fig:thetas4pro}
    		\end{minipage} 
    	
    		%\begin{minipage}[t]{0.48\textwidth}
