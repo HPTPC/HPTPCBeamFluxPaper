@@ -9,7 +9,7 @@
 			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
 				\input{files/Figures/thetaS1pi.tex}
 			\end{adjustbox}
-			\caption{Distribution of hits identified in $S3$ as minimum ionizing particles as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $S1$. In this case, no coincident hit in $S2$ was required.}
+			\caption{Distribution of hits in $S3$ identified as minimum ionizing particles, as a function the horizontal off-axis angle measured from $S1$ for varying numbers of moderator blocks. In this case, no coincident hit in $S2$ was required.}
 			\label{fig:s1s3mips}
 		\end{minipage}
 		\hspace{0.3cm}
@@ -17,7 +17,7 @@
 			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
 				\input{files/Figures/thetaS1pro.tex}
 			\end{adjustbox}
-			\caption{Distribution of hits identified in $S3$ as protons as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $S1$. In this case, no coincident hit in $S2$ was required.}
+			\caption{Distribution of hits in $S3$ identified as protons, as a function of the horizontal off-axis angle measured from $S1$ for varying numbers of moderator blocks. In this case, no coincident hit in $S2$ was required.}
 			\label{fig:s1s3protons}
 		\end{minipage}
 	\end{figure}
@@ -59,26 +59,27 @@
 	%\end{figure}
    
 	Figure~\ref{fig:thetas4mip} shows the flux of particles identified as minimum ionizing particles across $S4$.
-	This flux is shown as a function of the number of moderator blocks and as a function of the angle in the $x-y$ plane (see figure~\ref{fig:setup} for the definitions of these axes).
-	For all moderator blocks, the peak number of minimum ionizing particle events occurs at a value of $\theta$ between $1^{\circ}$ and $2^{\circ}$.
+	This flux is shown as as a function of the angle in the $x-y$ plane (see figure~\ref{fig:setup} for the definitions of these axes) for varying numbers of moderator blocks.
+	For all numbers of moderator blocks, the peak number of minimum ionizing particle events occurs at a value of $\theta$ between $1^{\circ}$ and $2^{\circ}$.
 	Similarly the number of proton events per spill, shown in figure~\ref{fig:thetas4pro} peaks at a value of $\theta$ of approximately $2^{\circ}$.
 	
-	Two factors have an impact on the position of the peak.
-	The limited efficiency of $S4$ at the ends of the bars (near to one of the photomultiplier tubes) means that fewer signal hits are recorded at these points. 
+	Two factors have an impact on the position of the peak:
+	The limited efficiency of $S4$ at the ends of the bars (near to either of the photomultiplier tubes) causes a smaller fraction of signal hits to be recorded in these regions. 
 	This limited efficiency is caused by the requirement that both PMTs record a waveform in order for a signal to be recorded.
+	This requirement is made, in order to reduce the number of false positives from dark noise in the bar.
 	
 	The angular overlap of $S2$ and $S4$ also plays a role in the position of the peak. 
-	Figure~\ref{fig:beamAng} shows that, when observed from $S1$, a limited area of $S4$ is covered by the active area of $S2$.
-	Given the requirement that a signal must be observed in $S2$, this means that the majority of events that are observed in $S4$ will be those that are in this overlap region.
+	Figure~\ref{fig:beamAng} shows that, when observed from $S1$, a limited area of $S4$ is shadowed by the active area of $S2$.
+	Given the requirement that a signal must be observed in $S2$, it is clear that the majority of events that are observed in $S4$ are from this overlap region.
    
-   	Figure~\ref{fig:thetas4mip} also indicates that an increasing number of moderator blocks results in a increased total MIP flux through $S4$.
-   	This is observed due to the off-axis position of both $S2$ and $S4$ which means that much of the unmoderated beam does not strike these timing points.
-   	Due to scattering processes in the moderator, a greater number of MIPs are incident upon $S2$ and $S4$, with more scattering occuring in greater moderator thicknesses.
+   	Figure~\ref{fig:thetas4mip} also indicates that an increasing number of moderator blocks results in an increased total MIP flux through $S4$.
+   	This is observed due to the off-axis position of both $S2$ and $S4$ avoids much of the unmoderated beam particles striking these timing points.
+   	Due to scattering processes in the moderator, a greater number of MIPs are incident upon $S2$ and $S4$, with more scattering occurring with greater numbers of moderator blocks
    	
    	When changing from an unmoderated beam to the configuration with 1 moderator block, the proton flux shown in figure~\ref{fig:thetas4pro} initially sees an increase in the total number of events in $S4$.
    	However, upon the addition of further moderator blocks, the total number of proton events observed in $S4$ falls.
-   	The initial increase is thought to be for similar reasons to those specified for the MIP flux, with increased scattering meaning that more protons pass through the off-axis $S2$ and $S4$.
-   	The later fall may be due to the larger loss of energy of the protons in the thicker moderator.
+   	The initial increase is thought to be for similar reasons to those specified for the MIP flux, with increased scattering causing more protons to pass through the off-axis $S2$ and $S4$.
+   	The subsequent decrease is likely due to the larger loss of energy of the protons in the thicker moderator.
    	In turn, this may lead to attenuation of protons in the TPC resulting in fewer observed events in $S4$.
    
    	\begin{figure}[ht]
@@ -141,8 +142,8 @@
 	\end{figure}
 		
 	The total flux passing through $S1$ and $S3$ is shown in figure~\ref{fig:s1s3all}.
-	This flux is then normalised such that its area is equal to 1.
-	The factors are then calculated by integrating this distribution between the angular limits of the other timing points.
+	This flux is normalised such that its area is equal to 1.
+	The factors are calculated by integrating this distribution between the angular limits of the other timing points.
 	Table~\ref{tab:fluxFactors} shows the calculated factors for various timing points and overlaps.
 	
 	\begin{figure}[h]
