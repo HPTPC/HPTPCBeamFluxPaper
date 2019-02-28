@@ -58,12 +58,26 @@
 	%	\end{minipage}
 	%\end{figure}
    
+	Figure~\ref{fig:thetas4mip} shows the flux of particles identified as minimum ionizing particles across $S4$.
+	This flux is shown as a function of the number of moderator blocks and as a function of the angle in the $x-y$ plane (see figure~\ref{fig:setup} for the definitions of these axes).
+	For all moderator blocks, the peak number of minimum ionizing particle events occurs at a value of $\theta$ between $1^{\circ}$ and $2^{\circ}$.
+	Similarly the number of proton events occurs at a value of $\theta$ of approximately $2^{\circ}$.
+	
+	Two factors have an impact on the position of the peak.
+	The limited efficiency of $S4$ at the ends of the bars (near to one of the photomultiplier tubes) means that fewer signal hits are recorded at these points. 
+	This limited efficiency is caused by the requirement that both PMTs record a waveform in order for a signal to be recorded.
+	
+	The angular overlap of $S2$ and $S4$ also plays a role in the position of the peak. 
+	Figure~\ref{fig:beamAng} shows that, when observed from $S1$, a limited area of $S4$ is covered by the active area of $S2$.
+	Given the requirement that a signal must be observed in $S2$, this means that the majority of events that are observed in $S4$ will be those that are in this overlap region.
+   
    	\begin{figure}[ht]
    		\begin{minipage}[t]{0.48\textwidth}
    			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
 		   		\input{files/Figures/piS4Horz.tex}
 	   		\end{adjustbox}
 	   		\caption{Distribution of hits identified in $S4$ as minimum ionizing particles as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $S1$.}
+	   		\label{fig:thetas4mip}
    		\end{minipage}
    		\hspace{0.3cm}
    		\begin{minipage}[t]{0.48\textwidth}
