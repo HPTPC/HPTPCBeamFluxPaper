@@ -64,8 +64,10 @@
 
 	\subsection{Downstream Time of Flight instrumentation (S4)}
 	
-    The downstream time of flight system, $S4$, consists of 10 bars of Nuvia plastic scintillator, which form the detector medium. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the $S4$ wall, along with its dimensions are presented in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
-    
+    The downstream time of flight system, $S4$, consists of 10 bars of Nuvia plastic scintillator, which form the detector medium. 
+    Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. 
+    The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. 
+    Diagrams of the $S4$ wall, along with its dimensions are presented in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
     The time resolution of the bars and PMTs was measured to be 1~ns. The spatial resolution of the bars and PMTs was measured to be 8.3~cm.
     
     \begin{figure}[ht]    
@@ -88,14 +90,16 @@
     
     A signal (i.e. an incident particle of any kind) in $S4$ was considered to have occurred if a signal was seen in both photomultiplier tubes on the same bar within 20~ns of each other.
     
-    Additionally, a signal was also fed into the same time-to-digital converter whenever there was a coincidence between the $S1$ and $S2$ timing points. When calculating the time of flight of a given particle, this time of coincidence was used as first timing point.
+    Additionally, a signal was also fed into the same time-to-digital converter whenever there was a coincidence between the $S1$ and $S2$ timing points. 
+    When calculating the time of flight of a given particle, this time of coincidence was used as first timing point.
     
     \subsection{The HPTPC Prototype}
     The prototype 
     
 	\subsection{Analysis methods -- $S4$}
 
-	Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by the DsToF with a changing number of moderator blocks. This spectrum is formed from taking the difference in time between a coincidence being observed in the $S1$ and $S2$ timing points and a signal being recorded in $S4$ (the definition of an $S4$ signal is given above).
+	Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by the DsToF with a changing number of moderator blocks. 
+	This spectrum is formed from taking the difference in time between a coincidence being observed in the $S1$ and $S2$ timing points and a signal being recorded in $S4$ (the definition of an $S4$ signal is given above).
 	
 	\begin{figure}[h]
 		\begin{adjustbox}{max totalsize={.8\textwidth}{.7\textheight},center}
@@ -105,16 +109,24 @@
 		\label{fig:s4tof}	
 	\end{figure}
 
-	Furthermore, two corrections are applied to this measurement to give fig.~\ref{fig:s4tof}. Timing delays caused by cabling and equipment have to be taken into account. For this, a Gaussian is fitted to the peak caused by quicker particles and the mean of this is treated to have a value of $S4 - S1$ which corresponds to a particle traversing the distance between $S1$ and $S4$ at the speed of light. The other times are then shifted by the same amount.
+	Furthermore, two corrections are applied to this measurement to give fig.~\ref{fig:s4tof}. 
+	Timing delays caused by cabling and equipment have to be taken into account. 
+	For this, a Gaussian is fitted to the peak caused by quicker particles and the mean of this is treated to have a value of $S4 - S1$ which corresponds to a particle traversing the distance between $S1$ and $S4$ at the speed of light. 
+	The other times are then shifted by the same amount.
 	
-	Additionally, the measurements are adjusted for the efficiency of each bar. The efficiency of each bar is calculated by taking the number of signal hits in coincidence with an $S1-S2$ signal in each bar and dividing by the total number of PMT hits in each bar which are themselves in coincidence with an $S1-S2$ signal. If we express the number of single PMT hits which are in coincidence with $S1-S2$ signal as $N_{1PMTcoins}$ and the number of 2 PMT signals in coincidence with an $S1-S2$ signal as $N_{2PMTcoins}$ then the efficiency is given by~(\ref{eq:barEff}).
+	Additionally, the measurements are adjusted for the efficiency of each bar. 
+	The efficiency of each bar is calculated by taking the number of signal hits in coincidence with an $S1-S2$ signal in each bar and dividing by the total number of PMT hits in each bar which are themselves in coincidence with an $S1-S2$ signal. 
+	If we express the number of single PMT hits which are in coincidence with $S1-S2$ signal as $N_{1PMTcoins}$ and the number of 2 PMT signals in coincidence with an $S1-S2$ signal as $N_{2PMTcoins}$ then the efficiency is given by~(\ref{eq:barEff}).
 	
 	\begin{equation}
 		\epsilon = \frac{N_{2PMTcoins}}{N_{2PMTcoins}+N_{1PMTcoins}}
 		\label{eq:barEff}
 	\end{equation}
 	
-	Using fig.~\ref{fig:s4tof} protons and MIPs are selected with timing cuts. These timing cuts are chosen by fitting a sum of signal and background functions to the time-of-flight spectra shown in figure~\ref{fig:s4tof}. The signal functions are taken to be Gaussians while the background is taken to be an exponential function. An example of this is shown in figure~\ref{fig:fitEx}.
+	Using fig.~\ref{fig:s4tof} protons and MIPs are selected with timing cuts. 
+	These timing cuts are chosen by fitting a sum of signal and background functions to the time-of-flight spectra shown in figure~\ref{fig:s4tof}. 
+	The signal functions are taken to be Gaussians while the background is taken to be an exponential function. 
+	An example of this is shown in figure~\ref{fig:fitEx}.
 	
 	\begin{figure}[h]
 		\begin{adjustbox}{max totalsize={.7\textwidth}{.62\textheight},center}
@@ -124,16 +136,7 @@
 		\label{fig:fitEx}
 	\end{figure}
 
-	To produce the data used in this analysis, an exponential background function is subtracted. The parameters for this function are taken from the combined signal and background function.
-	
-	\subsection{Analysis methods -- $S3$}
-	
-	
-	\begin{figure}[h]
-		\begin{adjustbox}{max totalsize={.8\textwidth}{.7\textheight},center}
-			\input{files/Figures/utof1dS1Log.tex}
-		\end{adjustbox}
-		\caption{Overlaid time of flight spectra measured in $S3$. In this case no coincidence is required in the $S3$ timing point.}
-		\label{fig:s3tof_nos2}
-	\end{figure}
+	To produce the data used in this analysis, an exponential background function is subtracted. 
+	The parameters for this function are taken from the combined signal and background function.
+
 	
