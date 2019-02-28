@@ -18,7 +18,7 @@
 
 \end{itemize}
     \subsection{CERN Beam Test}
-    The Beam Test took place at the T10 beam line, East Area at the Proton Synchrotron in CERN from the 15th August to the 18th September 2018.
+    The beam test took place in the 0.8~GeV T10 beam line, East Area at the Proton Synchrotron in CERN from the 15th August to the 18th September 2018.
     The primary experimental setup for the data taking period is shown in figure~\ref{fig:setup}.
     \begin{figure}
     \includegraphics[width=1.0\linewidth]{files/Figures/T10Diagram.jpg}
@@ -36,11 +36,20 @@
     		\label{fig:modblocks}
     \end{figure}
     
-	\subsection{UsToF instrumentation}
+    Moderator blocks were used in order to cause a spread in the incoming beam.
+    The blocks cause protons to be spread through a larger angle than pions and other MIPs, increasing the off-axis proton pion ratio.
+    The effect of this, together with placing the TPC and ToF systems off axis was to allow a measurement of protons with a lower pion background.
+    This technique also had the effect of reducing the average momentum of the measured particles.
+    Data were taken for 0, 1, 2, 3, and 4 moderator blocks in turn.
+    
+ 
+    
+	\subsection{Upstream time instrumentation}
+    The 
 
 	\subsection{DsToF instrumentation}
 	
-    The downstream time of flight (DsToF) system consists of 10 bars of Nuvia plastic scintillator, which form the detector medium. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the downstream time of flight system along with its dimensions are show in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
+    The downstream time of flight system, S4, consists of 10 bars of Nuvia plastic scintillator, which form the detector medium. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the S4 wall, along with its dimensions are show in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
     
     The time resolution of the bars and PMTs was measured to be 1~ns. The spatial resolution of the bars and PMTs was measured to be 8.3~cm.
     
@@ -62,9 +71,9 @@
     
     All 20 of the photomultiplier tubes have their anode signals read out using NIM discriminators which are then fed into a time-to-digital converter. 
     
-    A signal (i.e. an incident particle of any kind) in the downstream time of flight system was considered to have occurred if a signal was seen in both photomultiplier tubes on the same bar within 20~ns of each other.
+    A signal (i.e. an incident particle of any kind) in S4 was considered to have occurred if a signal was seen in both photomultiplier tubes on the same bar within 20~ns of each other.
     
-    Additionally, a signal is also fed into the same time-to-digital converter whenever there is a coincidence between the $S_1$ and $S_2$ timing points. When calculating the time of flight of a given particle, this time of coincidence is used as first timing point.
+    Additionally, a signal was also fed into the same time-to-digital converter whenever there was a coincidence between the S1 and S2 timing points. When calculating the time of flight of a given particle, this time of coincidence was used as first timing point.
     
 	\subsection{Analysis methods -- $S_{4}$}
 
