@@ -10,8 +10,8 @@
     		\label{fig:setup}
     \end{figure}
     The centre of the HPTPC Prototype was placed 13~m from the wire chamber at the beam entrance. 
-    3 Time of Flight constituents, labeled S1 to S3, were placed upstream of the TPC, while the 4th, labeled S4, was placed directly downstream.
-    Both the TPC and Time of Flight systems were placed at an off axis angle with respect to the direction shown by the green arrow.
+    Three Time of Flight constituents, labeled S1 to S3, were placed upstream of the TPC, while the 4th, labeled S4, was placed directly downstream.
+    Both the TPC and Time of Flight systems were placed at an off axis angle with respect to the direction of the beam.
     Additionally, a variable number of blocks of acrylic moderator, shown in Figure~\ref{fig:modblocks}, were placed in the beamline, upstream of S1.
       \begin{figure}
       \centering
@@ -21,7 +21,7 @@
     \end{figure}
     
     Moderator blocks were used in order to cause a spread in the incoming beam.
-    The blocks cause protons to scatter through a larger angle than pions and other MIPs, increasing the off-axis proton pion ratio.
+    The blocks cause protons to scatter through a larger angle than pions and other minimum ionising particles (MIP), increasing the off-axis proton pion ratio.
     The effect of this, together with placing the TPC and ToF systems off axis was to allow a measurement of protons with a lower pion background.
     This technique also had the effect of reducing the average momentum of the measured particles.
     Data were taken for 0, 1, 2, 3, and 4 moderator blocks in turn.
@@ -38,17 +38,39 @@
     
     
 	\subsection{Upstream Time of Flight instrumentation (S1-3)}
+	
     The upstream time of flight system was composed of the following constituents:
     S1 and S2, a 4~cm by 4~cm plastic counter with 30~ps resolution and a trigger counter resepctively.
     S1 and S2 are shown in figure~\ref{}.
     These were placed within 2~m of the beam entrance
-    S3, a SHiP prototype wall produced by the Université de Genève. 
+    S3. 
+    
+    The sketch of the upstream ToF detector is shown in figure \ref{ }.
+It was assembled of 22 staggered bars:  20 bars with dimensions $1.68 \times 6 \times 1$~cm$^3$ 
+and 2 bars of  $1.5 \times 6 \times 1$~cm$^3$ placed on top and bottom.
+The overlap between bars was set to 5~mm, thus the active area of the detector was approximately 1.68 m $\times$ 1.22 m.
+The material of the bar,
+EJ-200, provides a suitable optical attenuation length 4~m
+and fast timing (rise time of 0.9~ns and decay time 2.1~ns). 
+The emission spectrum of EJ-200 resides in the violet region of the visible spectrum.
+Arrays of eight $6 \times 6$~mm$^2$ area silicone photomultipliers (SiPMs) from Hamamatsu Photonics were coupled to both ends of the bar to collect photons produced in de-excitation processes evoked by ionizing particles crossing the scintillator.
+Anode signals of SiPMs have been read out and summed by an 8-channel SiPM anode readout integrated circuit MUSIC-R1. 
+The construction of the prototype was a joint effort between groups of Geneva and Zurich universities as a part of R\&D for the Timing detector of the SHIP experiment \cite{AK}.
+
+A 64-ch SAMPIC  module was used for the data acquisition.
+A SAMPIC chip is a Waveform and Time to Digital Converter (WTDC) multichannel ASIC which provides a raw time with an ultrafast analog memory allowing fine timing extraction as well as other parameters of the pulse \cite{SAMPIC}. 
+Each channel integrates a discriminator that can trigger itself independently or participate to a more complex trigger. 
+
+A mean time of light signals detected at two ends of a single bar
+provides a time reference with the resolution of about 100 ps, 
+while the time difference gives a position of the interaction along the bar.  
+An example of a reconstructed $XY$ distribution is shown in Figure \ref{ }.
+
     
     
-    The wall was 168~cm by 110~cm made up of 20 plastic scintillator bars with 90~ps timing resolution.
     The S3 wall was placed directly upstream of the TPC.
     S3 is shown in figure~\ref{}.
-    (ADDITIONAL INFORMATION TO BE ADDED BY ALEXANDER K)
+    
 
 
 
@@ -58,7 +80,7 @@
     Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. 
     The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. 
     Diagrams of the $S4$ wall, along with its dimensions are presented in figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
-    The time resolution of the bars and PMTs was measured to be 1~ns. The corresponding spatial resolution of the bars and PMTs was measured to be 8.3~cm.
+    The time resolution of the bars and photomultiplier tubes (PMT) was measured to be 1~ns. The corresponding spatial resolution of the bars and PMTs was measured to be 8.3~cm.
     
     \begin{figure}[ht]    
     	\begin{minipage}[t]{.48\textwidth}
@@ -88,7 +110,7 @@
     The TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field.
     The drift distance produced was 48~cm, with the anodes separated by 1~mm.
     Data taking with the TPC made use of both optical and charge readout.
-    The vessel, electrodes, and drift region of the TPC are shown in figure~\ref{fig:TPC}
+    The vessel, electrodes, and drift region of the TPC are shown in figure~\ref{fig:TPC}.
     
      \begin{figure}
       \centering
@@ -98,7 +120,7 @@
     \end{figure}
     
     The centre of the TPC was placed 13~m from the beam entrance with S3 and S4 directly upstream and downstream of the vessel, respectively.
-    Throughout the run, the TPC was filled with either pure Argon, or a combination of Argon and a small quantity of quencher.
+    Throughout the run, the TPC was filled with either pure Argon, or a combination of Argon and a small percentage of quencher.
     
 	\subsection{Analysis methods -- $S4$}
 
