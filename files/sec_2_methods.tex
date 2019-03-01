@@ -37,13 +37,16 @@
     \end{figure}
     
     
-	\subsection{Upstream Time of Flight instrumentation (S1-3)}
+	\subsection{Upstream beam counters S1 and S2}
 	
-    The upstream time of flight system was composed of the following constituents:
-    S1 and S2, a 4~cm by 4~cm plastic counter with 30~ps resolution and a trigger counter resepctively.
-    S1 and S2 are shown in figure~\ref{}.
-    These were placed within 2~m of the beam entrance
-    S3. 
+	S1 and S2 are shown in figure~\ref{fig:modblocks}. 
+    S1 is a $40\times40\times5$~mm$^3$ plastic scintillator tile which is attached to four 1'' Hamamatsu R4998 photoubes from four ends for the light readout. 
+    The time resolution of the counter, as measured by the DAQ system of the upstream ToF, was about 30 ps.
+    S2 were placed 1~m downstream of S1. The size of the scintillator tile,  $120\times120\times5$~mm$^3$, was adjuster to account for the beam divergence in the moderator blocks. The light was collected by a 2'' PMT R13089 which was connected to the scintillator via long light-guide as shown in figure~\ref{fig:modblocks}. 
+    The discriminated signal from this PMT from one of the PMTs of S1 and 
+    
+    
+    \subsection{Upstream Time of Flight instrumentation (S3)}
     
     The sketch of the upstream ToF detector is shown in figure \ref{ }.
 It was assembled of 22 staggered bars:  20 bars with dimensions $1.68 \times 6 \times 1$~cm$^3$ 
@@ -61,10 +64,7 @@ A 64-ch SAMPIC  module was used for the data acquisition.
 A SAMPIC chip is a Waveform and Time to Digital Converter (WTDC) multichannel ASIC which provides a raw time with an ultrafast analog memory allowing fine timing extraction as well as other parameters of the pulse \cite{SAMPIC}. 
 Each channel integrates a discriminator that can trigger itself independently or participate to a more complex trigger. 
 
-A mean time of light signals detected at two ends of a single bar
-provides a time reference with the resolution of about 100 ps, 
-while the time difference gives a position of the interaction along the bar.  
-An example of a reconstructed $XY$ distribution is shown in Figure \ref{ }.
+A mean time of light signals detected at two ends of a single bar provides a time reference with the resolution of about 100 ps, while the time difference gives a position of the interaction along the bar. An example of a reconstructed $XY$ distribution is shown in Figure \ref{ }.
 
     
     
