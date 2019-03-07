@@ -66,9 +66,28 @@ Arrays of eight $6 \times 6$~mm$^2$ area silicone photomultipliers (SiPMs) from 
 
 A 64-ch SAMPIC  module was used for the data acquisition. A SAMPIC chip is a Waveform and Time to Digital Converter (WTDC) multichannel ASIC which provides a raw time with an ultrafast analog memory allowing fine timing extraction as well as other parameters of the pulse \cite{SAMPIC}. Each channel integrates a discriminator that can trigger itself independently or participate to a more complex trigger. 
 
-A mean time of light signals detected at two ends of a single bar provides a time reference with the resolution of about 100 ps, while the time difference gives a position of the interaction along the bar, with a resolution of NNN. An example of a reconstructed $XY$ distribution is shown in Figure \ref{ }.
+A mean time of light signals detected at two ends of a single bar provides a time reference with the resolution of about 100 ps, while the time difference gives a position of the interaction along the bar, with a resolution of NNN. Examples of reconstructed $XY$ distributions are shown in Figures~\ref{fig:s3XY_pion} and~\ref{fig:s3XY_proton}.
 
-    
+\begin{figure}[ht]
+	\begin{minipage}[t]{0.49\textwidth}
+		\centering
+		\begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+			\input{files/Figures/0_pionXY.tex}
+		\end{adjustbox}
+		\caption{Reconstructed $XY$ distribution of hits observed in $S3$. In this case a timing cut has been applied to select only those hits identified as coming from minimum ionizing particles. This particular data was taken without a moderator in the beamline.}
+		\label{fig:s3XY_pion}
+	\end{minipage} 	
+	\hspace{0.2cm}
+	\begin{minipage}[t]{0.49\textwidth}
+		\centering
+		\begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+			\input{files/Figures/4_protonXY.tex}
+		\end{adjustbox}
+		\caption{Reconstructed $XY$ distribution of hits observed in $S3$. In this case a timing cut and an amplitude cut has been applied to select only those hits thought to come from protons. This data was taken with 4 moderator blocks in the beamline.}
+		\label{fig:s3XY_proton}
+	\end{minipage}
+\end{figure}
+  
     
 
 %    The placement of each of the four time of flight constituents in respect to the TPC is shown in figure~\ref{fig:S1S2S3S4}.
