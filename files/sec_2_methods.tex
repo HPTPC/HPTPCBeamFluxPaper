@@ -204,11 +204,27 @@ The number of spills per moderator block configuration were as follows (with mor
 	To produce the data used in this analysis, an exponential background function is subtracted. 
 	The parameters for this function are taken from the combined signal and background function.
 
+	Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $S3$ timing point for varying numbers of moderator blocks.
+	Similarly to figure~\ref{fig:s4tof}, the quicker peak is thought to be formed by minimum ionizing particles, while the peak at higher values of $S3 - S1$ is thought to be caused by protons.
+	
 	\begin{figure}[h]
 		\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
 			\input{files/Figures/utof1dS1Log_axAdj.tex}
 		\end{adjustbox}
-		\caption{$S3$ time-of-flight spectra for varying numbers of moderator blocks.}
+		\caption{$S3$ time of flight spectra for varying numbers of moderator blocks.}
 		\label{fig:s3tof}
+	\end{figure}
+
+	For the data collected in $S3$, both timing and signal amplitude cuts were used to select protons and MIPs.
+	Figure~\ref{fig:TvsA} shows an example of the signal size recorded in one of the SiPMs on one of the scintillator bars against the measured value of $S3 - S1$.
+	To reduce the number of background events in the proton sample, a minimum signal amplitude is implemented.
+	The higher mass of the protons means that, at the beam energies used, they typically deposit more energy in the detector, resulting in greater amplitudes being observed.
+	
+	\begin{figure}[h]
+		\begin{adjustbox}{max totalsize={.7\textwidth}, center}
+			\input{files/Figures/TvsA.tex}
+		\end{adjustbox}
+		\caption{Example of SiPM signal amplitude plotted against uncorrected $S3$ time of flight. The population in the upper right is thought to be produced by protons.}
+		\label{fig:TvsA}
 	\end{figure}
 	
