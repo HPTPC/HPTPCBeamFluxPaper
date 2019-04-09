@@ -166,20 +166,20 @@ The centre of the TPC was placed 13~m from the beam entrance with $S3$ and $S4$ 
 The primary aims of the use of $S1 - S4$ were to make measurements of the flux of particles entering and exiting the TPC vessel, and to perform particle identification using the time of flight measurement.
 Using this data, it is possible to provide a momentum spectrum of particles in- and outgoing from the TPC, and calculate the ratio of particle species in the beam.
 
-Protons can be distinguished from particles that are close to minimum ionising (pions, muons, and electrons) which travel the distance from $S1$ to $S3$ or $S4$ in a shorter time.
+Protons take longer to travel the distance from $S1$ to $S3$ or $S4$ than lighter particles that are close to minimum ionising of the same momentum. This difference in time of flight can be used to distinguish between the two types of particles.
 Distinguishing these MIPs from one another is more difficult due to similar masses and can be only determined by the upstream ToF system.
 From the particle flux data, it is possible to measure the ratio of protons to other particles over the range of off-axis angles covered by the $S3$ and $S4$ walls, and for varying numbers of moderator blocks.
 
-The variation of momentum spectrum and proton pion ratio with differing numbers of acrylic blocks off the beam axis provide the motivation for the measurement techniques used.
-As such the data used in these results cover two days in the run where the number of moderator blocks were varied with other beam properties held constant.
-The number of spills per moderator block configuration were as follows (with more data taken for 4 blocks as that was the configuration used for the majority of the beam test):
+The variation of momentum spectrum and proton-MIP ratio with differing numbers of acrylic blocks off the beam axis provide the motivation for the measurement techniques used.
+As such the data used in these results cover two days in the run where the number of moderator blocks was varied with other beam properties held constant.
+The numbers of spills per moderator block configuration were as follows (with more data taken for 4 blocks as that was the configuration used for the majority of the beam test):
 0 blocks: 257 spills, 1 block:  254 spills, 2 blocks: 267 spills, 3 blocks: 220 spills, 4 blocks: 3884 spills.
 
 
 \subsection{Analysis Methods}
 
 	Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by $S4$ with a changing number of moderator blocks.
-	This spectrum given by the difference in time between observation of a coincidence in the $S1$ and $S2$ timing points and a signal being recorded in $S4$ (the definition of an $S4$ signal is given above).
+	This spectrum is given by the difference in time between observation of a coincidence in the $S1$ and $S2$ timing points and a signal being recorded in $S4$ (the definition of an $S4$ signal is given above).
 	
 	\begin{figure}[h]
 		\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
@@ -189,9 +189,10 @@ The number of spills per moderator block configuration were as follows (with mor
 		\label{fig:s4tof}	
 	\end{figure}
 
-	Furthermore, two corrections are applied to this measurement to give fig.~\ref{fig:s4tof}. 
-	Timing delays caused by cabling and equipment are taken into account:
-	A Gaussian is fitted to the peak caused by faster particles.
+	Two corrections are applied to this measurement to give fig.~\ref{fig:s4tof}. 
+	The data is corrected for the efficiency of each of the $S4$ bars and a background is subtracted from the data.
+	Initially, timing delays caused by cabling and equipment are taken into account.
+	Then a Gaussian is fitted to the peak caused by faster particles.
 	All times are normalised such that the mean of this peak is at a value of $S4 - S1$ corresponding to a particle traversing the distance between $S1$ and $S4$ at the speed of light. 
 	The other times are then shifted by the same amount.
 	
@@ -254,7 +255,9 @@ The number of spills per moderator block configuration were as follows (with mor
 
     For the data collected in $S3$, both timing and signal amplitude cuts were used to select protons and MIPs.
 	Figure~\ref{fig:TvsA} shows an example of the signal size recorded in one of the SiPMs on one of the scintillator bars against the measured value of $S3 - S1$.
-	To reduce the number of background events in the proton sample, a minimum signal amplitude is implemented.
+	To reduce the number of background events in the proton sample, a minimum signal amplitude is required.
+	This cut varied, depending on the SiPM in question and was determined from distributions such as those in figure~\ref{fig:TvsA}. 
+	The cut values used ranged between 0.125~V and 0.3~V.
 	The higher mass of the protons means that, at the beam energies used, they typically deposit more energy in the detector, resulting in greater amplitudes being observed.
 	
 	\begin{figure}[h]

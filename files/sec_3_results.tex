@@ -22,7 +22,7 @@
 		\end{minipage}
 	\end{figure}
 
-	Figure~\ref{fig:propiratio_s3_horz} shows the proton/MIP ratio measured in $S3$ as a function of the nominal off-axis angle and for various numbers of moderator blocks.
+	Figure~\ref{fig:propiratio_s3_horz} shows the proton-MIP ratio measured in $S3$ as a function of the nominal off-axis angle and for various numbers of moderator blocks.
 	For 0, 1, 2 and 3 moderator blocks the ratio falls to a minimum at approximately $-1^{\circ}$. This corresponds to the true beam centre for these runs.
 	As the angle moves to lower values of $\theta$, the ratio rises for these configurations while a similar effect is observed as $\theta$ increases.
 	The peak at higher values of $\theta$ shifts to progressively greater values of $\theta$ as more moderator blocks are added (from approximately $\theta = 0.5^{\circ}$ for 0 blocks up to approximately $\theta = 2^{\circ}$ for the 3 block case).
@@ -84,14 +84,14 @@
 	Two factors have an impact on the position of the peak:
 	the limited efficiency of $S4$ at the ends of the bars (near to either of the photomultiplier tubes) causes a smaller fraction of signal hits to be recorded in these regions. 
 	This limited efficiency is caused by the requirement that both PMTs record a waveform in order for a signal to be recorded.
-	This requirement is made, in order to reduce the number of false positives from dark noise in the bar.
+	This requirement is made, in order to reduce the number of false positives from dark noise in the PMT.
 	
 	The angular overlap of $S2$ and $S4$ also plays a role in the position of the peak. 
 	Figure~\ref{fig:beamAng} shows that, when observed from $S1$, a limited area of $S4$ is shadowed by the active area of $S2$.
 	Given the requirement that a signal must be observed in $S2$, it is clear that the majority of events that are observed in $S4$ are from this overlap region.
    
    	Figure~\ref{fig:thetas4mip} also indicates that an increasing number of moderator blocks results in an increased total MIP flux through $S4$.
-   	This is observed due to the off-axis position of both $S2$ and $S4$ avoids much of the unmoderated beam particles striking these timing points.
+   	This is observed due to the off-axis position of both $S2$ and $S4$, avoiding much of the unmoderated beam particles striking these timing points.
    	Due to scattering processes in the moderator, a greater number of MIPs are incident upon $S2$ and $S4$, with more scattering occurring with greater numbers of moderator blocks
    	
    	When changing from an unmoderated beam to the configuration with 1 moderator block, the proton flux shown in figure~\ref{fig:thetas4pro} initially sees an increase in the total number of events in $S4$.
@@ -135,20 +135,20 @@
      \frac{N_{protons}}{N_{MIPs}}
      \end{equation*}	
      reaching its peak at a value of $\theta$ of approximately $2^{\circ}$.
-     It is clear that in the angular region of this peak, the ratio of protons to pions has been dramatically increased from the expected on axis value of 1:6 seen previously.
+     It is clear that in the angular region of this peak, the proton-MIP has been dramatically increased from the expected on axis value of 1:6 seen previously.
      With the addition of moderator blocks, the size of the peak reduces until, in the 3 block configuration, it is no longer visible. 
-     For the 4 block configuration, the proton/MIP ratio appears to be close to 0 for most values of $\theta$ but rises slightly at large values.
+     For the 4 block configuration, the proton-MIP ratio appears to be close to 0 for most values of $\theta$ but rises slightly at large values.
      
-     Similarly, figure~\ref{fig:propiratio_s4_vert} shows the proton/MIP ratio falling with the addition of moderator blocks.
+     Similarly, figure~\ref{fig:propiratio_s4_vert} shows the proton-MIP ratio falling with the addition of moderator blocks.
      For the 0, 1, 2 and 3 block configurations the ratio appears to rise as the vertical off-axis angle ($\phi$) moves further away from $0^{\circ}$. 
-     For the 4 block configuration, the value of the proton/MIP ratio is close to zero at all values of $\phi$.
+     For the 4 block configuration, the value of the proton-MIP ratio is close to zero at all values of $\phi$.
      
    	\begin{figure}[!ht]
    		\begin{minipage}[t]{0.48\textwidth}
    			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
    				\input{files/Figures/ratioS4Horz.tex}
    			\end{adjustbox}
-   			\caption{Proton/MIP ratio in $S4$ for varying numbers of moderator blocks as a function of horizontal off-axis angle, as measured from $S1$.}
+   			\caption{Proton-MIP ratio in $S4$ for varying numbers of moderator blocks as a function of horizontal off-axis angle, as measured from $S1$.}
    			\label{fig:propiratio_s4_horz}
    		\end{minipage}
    		\hspace{0.3cm}
@@ -156,7 +156,7 @@
     		\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
 	    		\input{files/Figures/ratioS4Vert.tex}
 	    	\end{adjustbox}
-    		\caption{Proton/MIP ratio in $S4$ for varying numbers of moderator blocks as a function of vertical off-axis angle, as measured from $S1$.}
+    		\caption{Proton-MIP ratio in $S4$ for varying numbers of moderator blocks as a function of vertical off-axis angle, as measured from $S1$.}
     		\label{fig:propiratio_s4_vert}
     	\end{minipage}	
    	\end{figure}
@@ -174,6 +174,8 @@
    
 	\subsection{Flux normalization between detectors}
 	
+	Because the portion of the beam subtended by each ToF detector is different comparisons between detectors require normalisations to be applied. 
+	These normalizations account both for solid angle coverage differences, and the different flux intensities present in the detectors.
 	Normalization factors for comparing the flux are calculated and shown in table~\ref{tab:fluxFactors}.
 	These factors are calculated relative to the flux passing through $S3$ which covered the greatest angular extent of any of the timing points. 
 	The angular positions of the various timing points are shown in figure~\ref{fig:beamAng}.
