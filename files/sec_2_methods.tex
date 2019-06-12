@@ -6,20 +6,20 @@
     The results in this paper use data taken on the 31st August and 1st September, during which the setup configuration was varied as described below.
     The primary components of the  experimental setup for the data taking period is shown in Figure~\ref{fig:setup}.
     \begin{figure}
-    \includegraphics[width=1.0\linewidth]{files/Figures/T10Diagram.jpg}
+    \includegraphics[width=1.0\linewidth]{files/Figures/T10Diagram.pdf}
     	\caption{Beam test configuration}
     		\label{fig:setup}
     \end{figure}
     The centre of the HPTPC Prototype was placed 13~m from the wire chamber, labeled as $WC$, at the beam entrance. Three ToF constituents, labeled $S1$ to $S3$, were placed upstream of the TPC, while the fourth, labeled $S4$, was placed directly downstream. Both the TPC and ToF systems were placed at an off-axis angle with respect to the direction of the beam.
-    Additionally, a variable number of blocks of acrylic moderator, shown in Figure~\ref{fig:modblocks}, were placed in the beamline, immediately behind of $S1$.
+    Additionally, a variable number of blocks of acrylic moderator, shown in Figure~\ref{fig:modblocks}, were placed in the beamline, immediately behind $S1$.
     
     
-    Data acquisition (DAQ) of up- and downstream ToF systems were completely independent. Due to low intensity of the beam, the synchronization between systems was done offline using the reference signal from PS at the beginning of every spill. The trigger condition of the upstream ToF was based on the coincidence between $S1$ and $S3$ constituents. While DAQ of the downstream ToF, $S4$, was run in self-triggering mode with a gate open during the spill. Coincidence signals between $S1$ and $S2$ counters was also recorded by the DAQ of the downstream ToF and was used in the particle identification (PID) analysis. 
+    Data acquisition (DAQ) of up- and downstream ToF systems were completely independent. Due to low intensity of the beam, the synchronization between systems was performed offline using the reference signal from the PS at the beginning of every spill. The trigger condition of the upstream ToF was based on the coincidence between $S1$ and $S3$ constituents, while the DAQ of the downstream ToF, $S4$, was run in self-triggering mode with a gate open during the spill. Coincidence signals between $S1$ and $S2$ counters were also recorded by the downstream ToF DAQ and were used in the particle identification (PID) analysis. 
     
     
-    A system of moderator blocks was located between $S1$ and $S2$ counters.  The system is composed of a stand on which up to four polystyrene $10\times10\times10$~cm$^3$ blocks can be placed. Figure~\ref{fig:modblocks} shows the stand with four blocks on it. The moderator blocks have the effect of both reducing the energy of incoming particles as well as scattering protons at higher angles than minimum ionizing particles (MIP), thus increasing the proton to MIP ratio at off-axis angles from the beam. 
+    A system of moderator blocks was located between the $S1$ and $S2$ counters.  The system was composed of a stand on which up to four polystyrene $10\times10\times10$~cm$^3$ blocks could be placed. Figure~\ref{fig:modblocks} shows a photograph of the stand with four blocks on it. The moderator blocks have the effect of both reducing the energy of incoming particles as well as scattering protons at higher angles than minimum ionizing particles (MIP). This should lead to an  increase in the proton to MIP ratio at off-axis angles from the beam, while decreasing the total number of protons and MIPs traversing the TPC. The addition of too many moderator blocks would cause too many protons to fall below threshold as compared with MIPs.
     
-    Data was taken with the beam momentum primarily at 0.8~GeV/c, and with each configuration of 0 to 4 moderator blocks. Figure~INSERT shows the typical composition of the beam upstream of $S1$ at 0.8~GeV/c. Beam spills are approximately 500~ms in length with 5-10~s between spills.  
+    Data was taken with the beam momentum primarily at 0.8~GeV/c, and with each configuration of 0 to 4 moderator blocks. Figure~INSERT shows the typical composition of the beam upstream of $S1$ at 0.8~GeV/c. Beam spills were approximately 500~ms in length with 5-10~s between spills.  
     
 %    Moderator blocks were used in order to cause a spread in the incoming beam.
 %    The blocks cause protons to scatter through a larger angle than pions and other minimum ionising particles (MIP), increasing the off-axis proton pion ratio.
@@ -55,12 +55,12 @@
 	
 	The analog signals from one of the $S1$ PMTs and $S2$ PMT were fed into NIM discriminator units.
 	%set at AA mV and BB mV respectively. 
-	As a next step, the discriminated signals were fed into a NIM coincidence unit, and the coincidence of the two signals was recorded by the DAQ systems of $S3$ and $S4$. This information was further used for the time-of-flight analysis of the downstream ToF. 
+	Subsequently, the discriminated signals were fed into a NIM coincidence unit, and the coincidence of the two signals was recorded by the DAQ systems of $S3$ and $S4$. This information was further used for the time-of-flight analysis of the downstream ToF. 
 
     
 \subsection{Upstream Time of Flight instrumentation ($S3$)}
 
-The $S3$ `upstream' ToF constituent sits just upstream of the HPTPC prototype in the beamline. The sketch of the $S3$ ToF constituent is shown in Figure~\ref{fig:S3sketch}. The detector is composed of 22 staggered bars:  20 bars with dimensions $1.68 \times 6 \times 1$~cm$^3$ and 2 bars of  $1.5 \times 6 \times 1$~cm$^3$ placed on top and bottom \cite{S3-proceedings}.
+The $S3$ `upstream' ToF constituent was placed just upstream of the HPTPC prototype in the beamline. The sketch of the $S3$ ToF wall is shown in Figure~\ref{fig:S3sketch}. The detector is composed of 22 staggered bars:  20 bars with dimensions $1.68 \times 6 \times 1$~cm$^3$ and 2 bars of  $1.5 \times 6 \times 1$~cm$^3$ placed on top and bottom \cite{S3-proceedings}.
 The overlap between bars was set to 5~mm, thus the active area of the detector was approximately 1.68~m $\times$ 1.22~m.
      \begin{figure}
       \centering
@@ -120,7 +120,7 @@ A mean time of light signals detected at two ends of a single bar provides a tim
 
 \subsection{Downstream Time of Flight instrumentation ($S4$)}
 	
-The $S4$ `downstream' ToF constituent sits just downstream of the HPTPC prototype in the beamline. It consists of 10 bars of Nuvia plastic scintillator \cite{NUVIA}. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the $S4$ wall, along with its dimensions are presented in Figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}. The time resolution of the bars and PMTs was measured to be 1~ns. The corresponding spatial resolution of the bars and PMTs was measured to be 8.3~cm.
+The $S4$ `downstream' ToF constituent sat immediately downstream of the HPTPC prototype in the beamline. It consists of 10 bars of Nuvia plastic scintillator \cite{NUVIA}. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the $S4$ wall, along with its dimensions are presented in Figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}. The time resolution of the bars and PMTs was measured to be 1~ns. The corresponding spatial resolution of the bars and PMTs was measured to be 8.3~cm.
     
     \begin{figure}[ht]    
     	\begin{minipage}[t]{.48\textwidth}
@@ -138,12 +138,12 @@ The $S4$ `downstream' ToF constituent sits just downstream of the HPTPC prototyp
     	\end{minipage}
     \end{figure}
     
-All 20 of the PMTs have their anode signals read out using NIM discriminators which are then fed into a time-to-digital converter. A signal in $S4$ was considered to have occurred if a signal was seen in both PMTs on the same bar within 20~ns of each other. 
+All 20 of the PMTs have their anode signals read out using NIM discriminators which are then fed into a time-to-digital converter. A signal in $S4$ was observed to have occurred if a signal was seen in both PMTs on the same bar within 20~ns of each other. 
 
 Additionally, a signal was also fed into the same time-to-digital converter whenever there was a coincidence between the $S1$ and $S2$ timing points. When calculating the time of flight of a given particle, this time of coincidence was used as first timing point.
 
 \subsection{The HPTPC Prototype}
-The prototype was built at Royal Holloway, University London.  The steel vessel was rated to 6~barA of pressure, and the walls of the vessel were 4~cm thick (THIS NEEDS CHECKING).
+The prototype was built at Royal Holloway, University London.  The steel vessel was rated to 6~barA of pressure, and the walls of the vessel were 1~cm thick.
 The TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field. The drift distance produced was 48~cm, with the anodes separated by 1~mm. Data taking with the TPC made use of both optical and charge readout.The vessel, electrodes, and drift region of the TPC are shown in figure~\ref{fig:TPC}.
     
      \begin{figure}
@@ -153,7 +153,7 @@ The TPC comprised thin steel mesh electrodes (one cathode and three anodes), and
     		\label{fig:TPC}
     \end{figure}
     
-The centre of the TPC was placed 13~m from the beam entrance with $S3$ and $S4$ directly upstream and downstream of the vessel, respectively. Throughout the run, the TPC was filled with either pure Argon, or a combination of Argon and a small percentage of quencher.
+The centre of the TPC was placed 13~m from the beam entrance with $S3$ and $S4$ directly upstream and downstream of the vessel, respectively. Throughout the run, the TPC was filled with either pure argon, or a combination of argon and a small percentage of quencher.
 
 
 %\subsection{Beam Taking Periods}
@@ -164,13 +164,13 @@ The centre of the TPC was placed 13~m from the beam entrance with $S3$ and $S4$ 
 \section{Analysis}
 \subsection{Analysis Goals}
 The primary aims of the use of $S1 - S4$ were to make measurements of the flux of particles entering and exiting the TPC vessel, and to perform particle identification using the time of flight measurement.
-Using this data, it is possible to provide a momentum spectrum of particles in- and outgoing from the TPC, and calculate the ratio of particle species in the beam.
+Using this data, it is possible to provide a momentum spectrum of particles in- and outgoing from the TPC, and calculate the ratio of particle species in the beam. It is also possible to provide a calculation of the multiplicity of protons reaching the geometric area of the TPC active region.
 
 Protons take longer to travel the distance from $S1$ to $S3$ or $S4$ than lighter particles that are close to minimum ionising of the same momentum. This difference in time of flight can be used to distinguish between the two types of particles.
 Distinguishing these MIPs from one another is more difficult due to similar masses and can be only determined by the upstream ToF system.
 From the particle flux data, it is possible to measure the ratio of protons to other particles over the range of off-axis angles covered by the $S3$ and $S4$ walls, and for varying numbers of moderator blocks.
 
-The variation of momentum spectrum and proton-MIP ratio with differing numbers of acrylic blocks off the beam axis provide the motivation for the measurement techniques used.
+The variation of momentum spectrum, proton-MIP ratio, and proton multiplicity with differing numbers of acrylic blocks off the beam axis provide the motivation for the measurement techniques used.
 As such the data used in these results cover two days in the run where the number of moderator blocks was varied with other beam properties held constant.
 The numbers of spills per moderator block configuration were as follows (with more data taken for 4 blocks as that was the configuration used for the majority of the beam test):
 0 blocks: 257 spills, 1 block:  254 spills, 2 blocks: 267 spills, 3 blocks: 220 spills, 4 blocks: 3884 spills.
@@ -224,6 +224,7 @@ The numbers of spills per moderator block configuration were as follows (with mo
 
 	Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $S3$ timing point for varying numbers of moderator blocks.
 	Similarly to figure~\ref{fig:s4tof}, the quicker peak is formed by minimum ionizing particles, while the peak at higher values of $S3 - S1$ corresponds to protons.
+	The black, 0 block peak ranging from 90 to 100~ns corresponds to deuterons.
 	\begin{figure}[h]
 		\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
 			\input{files/Figures/utof1dS1Log_axAdj.tex}
