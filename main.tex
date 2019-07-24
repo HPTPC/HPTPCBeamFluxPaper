@@ -1,24 +1,97 @@
-
 \documentclass[11pt,a4paper]{article}
+%\documentclass[11pt,a4paper]{Definitions/mdpi}
+%\documentclass[instruments,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
+
 \include{packagesAndDefinitions}
 \usepackage{graphicx}
 \usepackage{float}
-\begin{document}
+%\begin{document}
 \title{Draft: HPTPC flux paper}
-\author{A. Author$^{\textrm{a}}$\thanks{Corresponding author, \texttt{address@rhul.ac.uk}}{}, B. Author$^{\textrm{b}}$}
-
+\newcommand{\firstargument}{}
+%\newcommand{\Title}[1]{\gdef\@Title{#1}}%
+\newcommand{\Author}[1]{\gdef\@Author{#1}}%
+\def\@AuthorNames{}
+\newcommand{\AuthorNames}[1]{\gdef\@AuthorNames{#1}}%
+%\newcommand{\firstpage}[1]{\gdef\@firstpage{#1}}
+%\newcommand{\doinum}[1]{\gdef\@doinum{#1}}
+\newcommand{\address}[2][]{\renewcommand{\firstargument}{#1}\gdef\@address{#2}}
+%\include{packagesAndDefinitions}
+%\newcommand{\orcidauthorA}{0000-0000-000-000X}
 %\affil{$\textrm{a}$: Royal Holloway, University of London, Egham Hill, Egham, TW20 0EX, UK\\
 %$\textrm{b}$: }
 
-\date{Keywords: To be defined}
+\Author{
+A. Deisting$^{3}$*,  
+E. Atkin$^{2}$, 
+G. Barker$^{7}$, 
+A. Basharina-Freshville$^{5}$, 
+C. Betancourt$^{8}$,
+S. Boyd$^{7}$, 
+D. Brailsford$^{1}$, 
+Z. Chen-Wishart$^{3}$,
+L. Cremonesi$^{5}$, 
+A. Dias$^{3}$,
+P. Dunne$^{2}$,  
+J. Haigh$^{7}$, 
+P. Hamacher-Baumann$^{4}$, 
+S. Jones$^{5}$, 
+A. Kaboth$^{3}$,   
+A. Korzenev$^{6}$,
+W. Ma$^{4}$,
+P. Mermod$^{6}$,
+M. Mironova$^{2}$,
+J. Monroe$^{3}$, 
+R. Nichol$^{5}$, 
+T. Nonnenmacher$^{2}$, 
+J. Nowak$^{1}$, 
+W. Parker$^{3}$, 
+H. Ritchie-Yates$^{3}$,
+S. Roth$^{4}$,
+R. Saakyan$^{5}$, 
+N. Serra$^{8}$,
+J. Steinmann$^{4}$,
+A. Tarrant$^{3}$, 
+S. Valder$^{7}$, 
+A. Waldron$^{2}$, 
+M. Ward$^{3}$,  
+M. Wascko$^{2}$,  
+M. Uchida$^{2}$  
+}
 
+
+% Authors, for metadata in PDF
+\AuthorNames{Firstname Lastname, Firstname Lastname and Firstname Lastname}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+
+$^{1}$ \quad Lancaster University, Bailrigg, Lancaster LA1 4YW, UK; 
+
+$^{2}$ \quad Imperial College London, Prince Consort Rd, Kensington, London SW7 2BW, UK; 
+
+$^{3}$ \quad Royal Holloway, University of London, Egham Hill, Egham, TW20 0EX, UK;\\
+
+$^{4}$ \quad RWTH Aachen University, III. Physikalisches Institut, Aachen, DE;\\
+
+$^{5}$ \quad University College London, Gower St, Kings Cross, London WC1E 6BT, UK; 
+
+$^{6}$ \quad DPNC Université de Genève, 1205 Genf, Schweiz, CH; 
+
+$^{7}$ \quad University of Warwick, Coventry CV4 7AL, UK; 
+
+$^{8}$ \quad Physik-Institut, Universität Züriche, Rämistrasse 71, 8006 Zürich, CH; 
+
+}
+\date{Keywords: To be defined}
+\begin{document}
+\maketitle
 \begin{abstract}
 \input{files/sec_0_abstract.tex}
 \end{abstract}
 
 
 
-\maketitle
+%\maketitle
 \linenumbers
 
 % Introduction and motivation 
