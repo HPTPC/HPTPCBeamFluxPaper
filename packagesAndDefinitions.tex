@@ -4,9 +4,8 @@
 \usepackage{amstext}
 \usepackage[affil-it]{authblk}
 \usepackage[UKenglish]{babel}
-\usepackage[backref=false,backend=bibtex,style=numeric-comp,sorting=none,maxcitenames=1,block=none,giveninits,url=false]{biblatex}
-\addbibresource{hptpc-beam-paper.bib}
-\usepackage{url}
+%\usepackage[backref=false,backend=bibtex,style=numeric-comp,sorting=none,maxcitenames=1,block=none,giveninits,url=false]{biblatex}
+%\addbibresource{hptpc-instrumentation-paper.bib}
 \usepackage{bm}                %bold in math mode
 \usepackage{booktabs}
 \usepackage{color}
@@ -15,11 +14,11 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage[space]{grffile}    %allows spaces in picture names
-\usepackage[top=2.5cm, right=2.5cm, left=2.5cm, bottom=2.5cm]{geometry}
-\usepackage[colorlinks=false, pdfborder={0 0 0}, breaklinks]{hyperref}
+%\usepackage[top=2.5cm, right=2.5cm, left=2.5cm, bottom=2.5cm]{geometry}
+%\usepackage[colorlinks=false, pdfborder={0 0 0}, breaklinks]{hyperref}
 %\usepackage[latin1]{inputenc}
 \usepackage[utf8]{inputenc}
-\usepackage[switch]{lineno}    %line numbers, switch: left right line numbers %,columnwise
+%\usepackage[switch]{lineno}    %line numbers, switch: left right line numbers %,columnwise
 \usepackage{longtable}
 \usepackage{marvosym}
 \usepackage{multicol}
@@ -27,10 +26,6 @@
 \usepackage[separate-uncertainty,multi-part-units = single, allow-number-unit-breaks]{siunitx}
 \usepackage{subfig}
 \usepackage{tikz-timing}
-\usepackage{tikz}
-\usepackage{adjustbox}
-
-
 \usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes} % Add TODO notes to the text
 %\usepackage{ucs}
 
@@ -42,42 +37,16 @@
 
 \usepackage{csquotes}
 
-%Remove urls and dois
-\AtEveryBibitem{%
-  \clearfield{issn} % Remove issn
-  \clearfield{doi}  % Remove doi
-
-  \ifentrytype{online}{}{% Remove url except for @online
-    \clearfield{url}
-  }
-}
-
 %footnotes indicated with letters
 \renewcommand*{\thefootnote}{\alph{footnote}}
-
-%adding the abstract to the title environment
-\makeatletter
-\newbox\abstract@box
-\renewenvironment{abstract}
-  {\global\setbox\abstract@box=\vbox\bgroup
-     \hsize=\textwidth\linewidth=\textwidth
-    \small
-    \begin{center}%
-    {\bfseries \abstractname\vspace{-.5em}\vspace{\z@}}%
-    \end{center}%
-    \quotation}
-  {\endquotation\egroup}
-\expandafter\def\expandafter\@maketitle\expandafter{\@maketitle
-  \ifvoid\abstract@box\else\unvbox\abstract@box\if@twocolumn\vskip1.5em\fi\fi}
-\makeatother
 
 %fix a line numbering problem
 \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
   \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
   \renewenvironment{#1}%
-     {\linenomath\csname old#1\endcsname}%
-     {\csname oldend#1\endcsname\endlinenomath}}% 
+  	{\linenomath\csname old#1\endcsname}%
+	{\csname oldend#1\endcsname\endlinenomath}}% 
 \newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
   \patchAmsMathEnvironmentForLineno{#1}%
   \patchAmsMathEnvironmentForLineno{#1*}}%
@@ -92,11 +61,16 @@
 
 
 % other definitions - gas mixtures
+\newcommand{\ar}{$\textrm{Ar}$}
+\newcommand{\cf}{$\textrm{CF}_{4}$}
+\newcommand{\co}{$\textrm{CO}_{2}$}
+\newcommand{\n}{$\textrm{N}_{2}$}
 \newcommand{\arco}{$\textrm{Ar}\textnormal{-}\textrm{CO}_2$}
 \newcommand{\arcois}[1]{$\textrm{Ar}\textnormal{-}\textrm{CO}_2$ (#1)}
 \newcommand{\arcf}{$\textrm{Ar}\textnormal{-}\textrm{CF}_4$}
 \newcommand{\arcfis}[1]{$\textrm{Ar}\textnormal{-}\textrm{CF}_4$ (#1)}
 \newcommand{\arn}{$\textrm{Ar}\textnormal{-}\textrm{N}_2$}
+\newcommand{\nen}{$\textrm{Ne}\textnormal{-}\textrm{N}_2$}
 \newcommand{\arnis}[1]{$\textrm{Ar}\textnormal{-}\textrm{N}_2$ (#1)}
 \newcommand{\arcon}{$\textrm{Ar}\textnormal{-}\textrm{CO}_2\textnormal{-}\textrm{N}_2$}
 \newcommand{\arconis}[1]{$\textrm{Ar}\textnormal{-}\textrm{CO}_2\textnormal{-}\textrm{N}_2$ (#1)}
@@ -117,3 +91,5 @@
 \newcommand{\secrefbra}[1]{Sec.~\ref{#1}}   % In brackets
 \newcommand{\Secref}[1]{Section~\ref{#1}}   % Beginning of a section
 %
+
+\usepackage{adjustbox}

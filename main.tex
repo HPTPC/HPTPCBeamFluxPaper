@@ -1,62 +1,68 @@
-\documentclass[11pt,a4paper]{article}
-%\documentclass[11pt,a4paper]{Definitions/mdpi}
-%\documentclass[instruments,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
+\documentclass[instruments,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
 
+% Journal relateed parameters
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{xx}
+\issuenum{1}
+\articlenumber{5}
+\pubyear{2019}
+\copyrightyear{2019}
+%\externaleditor{Academic Editor: name}
+\history{Received: date; Accepted: date; Published: date}
+%\updates{yes} % If there is an update available, un-comment this line
+
+
+% our packages
 \include{packagesAndDefinitions}
-\usepackage{graphicx}
-\usepackage{float}
-%\begin{document}
-\title{Draft: HPTPC flux paper}
-\newcommand{\firstargument}{}
-%\newcommand{\Title}[1]{\gdef\@Title{#1}}%
-\newcommand{\Author}[1]{\gdef\@Author{#1}}%
-\def\@AuthorNames{}
-\newcommand{\AuthorNames}[1]{\gdef\@AuthorNames{#1}}%
-%\newcommand{\firstpage}[1]{\gdef\@firstpage{#1}}
-%\newcommand{\doinum}[1]{\gdef\@doinum{#1}}
-\newcommand{\address}[2][]{\renewcommand{\firstargument}{#1}\gdef\@address{#2}}
-%\include{packagesAndDefinitions}
-%\newcommand{\orcidauthorA}{0000-0000-000-000X}
-%\affil{$\textrm{a}$: Royal Holloway, University of London, Egham Hill, Egham, TW20 0EX, UK\\
-%$\textrm{b}$: }
 
+% Title and authors
+\Title{Draft: HPTPC flux paper}
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0000-000-000X} % Add \orcidA{} behind the author's name
+%\newcommand{\orcidauthorB}{0000-0000-000-000X} % Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
 \Author{
-A. Deisting$^{3}$*,  
-E. Atkin$^{2}$, 
-G. Barker$^{7}$, 
-A. Basharina-Freshville$^{5}$, 
-C. Betancourt$^{8}$,
-S. Boyd$^{7}$, 
-D. Brailsford$^{1}$, 
-Z. Chen-Wishart$^{3}$,
-L. Cremonesi$^{5}$, 
-A. Dias$^{3}$,
-P. Dunne$^{2}$,  
-J. Haigh$^{7}$, 
-P. Hamacher-Baumann$^{4}$, 
-S. Jones$^{5}$, 
-A. Kaboth$^{3}$,   
-A. Korzenev$^{6}$,
-W. Ma$^{4}$,
-P. Mermod$^{6}$,
-M. Mironova$^{2}$,
-J. Monroe$^{3}$, 
-R. Nichol$^{5}$, 
-T. Nonnenmacher$^{2}$, 
-J. Nowak$^{1}$, 
-W. Parker$^{3}$, 
-H. Ritchie-Yates$^{3}$,
-S. Roth$^{4}$,
-R. Saakyan$^{5}$, 
-N. Serra$^{8}$,
-J. Steinmann$^{4}$,
-A. Tarrant$^{3}$, 
-S. Valder$^{7}$, 
-A. Waldron$^{2}$, 
-M. Ward$^{3}$,  
-M. Wascko$^{2}$,  
-M. Uchida$^{2}$  
+	A. Deisting$^{3}$*,  
+	E. Atkin$^{2}$, 
+	G. Barker$^{7}$, 
+	A. Basharina-Freshville$^{5}$, 
+	C. Betancourt$^{8}$,
+	S. Boyd$^{7}$, 
+	D. Brailsford$^{1}$, 
+	Z. Chen-Wishart$^{3}$,
+	L. Cremonesi$^{5}$, 
+	A. Dias$^{3}$,
+	P. Dunne$^{2}$,  
+	J. Haigh$^{7}$, 
+	P. Hamacher-Baumann$^{4}$, 
+	S. Jones$^{5}$, 
+	A. Kaboth$^{3}$,   
+	A. Korzenev$^{6}$,
+	W. Ma$^{4}$,
+	P. Mermod$^{6}$,
+	M. Mironova$^{2}$,
+	J. Monroe$^{3}$, 
+	R. Nichol$^{5}$, 
+	T. Nonnenmacher$^{2}$, 
+	J. Nowak$^{1}$, 
+	W. Parker$^{3}$, 
+	H. Ritchie-Yates$^{3}$,
+	S. Roth$^{4}$,
+	R. Saakyan$^{5}$, 
+	N. Serra$^{8}$,
+	J. Steinmann$^{4}$,
+	A. Tarrant$^{3}$, 
+	S. Valder$^{7}$, 
+	A. Waldron$^{2}$, 
+	M. Ward$^{3}$,  
+	M. Wascko$^{2}$,  
+	M. Uchida$^{2}$  
 }
+
 
 
 % Authors, for metadata in PDF
@@ -64,61 +70,87 @@ M. Uchida$^{2}$
 
 % Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
 \address{%
-
-$^{1}$ \quad Lancaster University, Bailrigg, Lancaster LA1 4YW, UK; 
-
-$^{2}$ \quad Imperial College London, Prince Consort Rd, Kensington, London SW7 2BW, UK; 
-
-$^{3}$ \quad Royal Holloway, University of London, Egham Hill, Egham, TW20 0EX, UK;\\
-
-$^{4}$ \quad RWTH Aachen University, III. Physikalisches Institut, Aachen, DE;\\
-
-$^{5}$ \quad University College London, Gower St, Kings Cross, London WC1E 6BT, UK; 
-
-$^{6}$ \quad DPNC Université de Genève, 1205 Genf, Schweiz, CH; 
-
-$^{7}$ \quad University of Warwick, Coventry CV4 7AL, UK; 
-
-$^{8}$ \quad Physik-Institut, Universität Züriche, Rämistrasse 71, 8006 Zürich, CH; 
-
+	
+	$^{1}$ \quad Lancaster University, Bailrigg, Lancaster LA1 4YW, UK; 
+	
+	$^{2}$ \quad Imperial College London, Prince Consort Rd, Kensington, London SW7 2BW, UK; 
+	
+	$^{3}$ \quad Royal Holloway, University of London, Egham Hill, Egham, TW20 0EX, UK;\\
+	
+	$^{4}$ \quad RWTH Aachen University, III. Physikalisches Institut, Aachen, DE;\\
+	
+	$^{5}$ \quad University College London, Gower St, Kings Cross, London WC1E 6BT, UK; 
+	
+	$^{6}$ \quad DPNC Universit\'e de Gen\`eve, 1205 Genf, Schweiz, CH; 
+	
+	$^{7}$ \quad University of Warwick, Coventry CV4 7AL, UK; 
+	
+	$^{8}$ \quad Physik-Institut, Universit\"at Z\"uriche, R\"amistrasse 71, 8006 Z\"urich, CH; 
+	
 }
-\date{Keywords: To be defined}
+
+% Contact information of the corresponding author
+\corres{Correspondence: Alexander.Deisting@rhul.ac.uk}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation 3} 
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+%\simplesumm{} % Simple summary
+%\conference{} % An extended version of a conference paper
+
+
+% Keywords
+\keyword{To be defined}
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+
 \begin{document}
-\maketitle
-\begin{abstract}
-\input{files/sec_0_abstract.tex}
-\end{abstract}
+
+	\abstract{
+		\input{files/sec_0_abstract}
+	}
 
 
+	%\maketitle
+	\linenumbers
 
-%\maketitle
-\linenumbers
+	% Introduction and motivation 
+	\input{files/sec_1_introduction}
 
-% Introduction and motivation 
-\input{files/sec_1_introduction.tex}
+	% Justification of the gas choice 
+	\input{files/sec_2_methods}
 
-% Justification of the gas choice 
-\input{files/sec_2_methods}
-
-% HPTPC description
-\input{files/sec_3_results.tex}
-
-
-% Outlook and Summary
-\input{files/sec_4_summary.tex}
+	% HPTPC description
+	\input{files/sec_3_results}
 
 
-% Acknowledgements
-\newenvironment{acknowledgement}{\relax}{\relax}
-\begin{acknowledgement}
-\section*{Acknowledgements}
-
-\end{acknowledgement}
+	% Outlook and Summary
+	\input{files/sec_4_summary}
 
 
-% Bibliography
-\AtNextBibliography{\small}
-\printbibliography[heading=bibintoc]
+	% Acknowledgements
+	\newenvironment{acknowledgement}{\relax}{\relax}
+	\begin{acknowledgement}
+		\section*{Acknowledgements}
+
+	\end{acknowledgement}
+
+
+	% Bibliography
+	%\AtNextBibliography{\small}
+	%\printbibliography[heading=bibintoc]
+
+	%=====================================
+	% References, variant B: external bibliography
+	%=====================================
+	\section*{References}
+	\externalbibliography{yes}
+	\bibliography{hptpc-beam-paper.bib}
 
 
 \end{document}
