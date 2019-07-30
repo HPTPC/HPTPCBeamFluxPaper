@@ -1,33 +1,54 @@
 \section{Beam Line and Detectors}
 \label{hptpcPaper:sec:Methods}
 
-    \subsection{Beam Test Overview}
-    The beam test took place in the T10 beam line, East Area at the Proton Synchrotron in CERN from the 15th August to the 18th September 2018.
-    The results in this paper use data taken on the 31st August and 1st September, during which the setup configuration was varied as described below.
-    JOCELYN:"really only these two days?  This paper needs to be the flux reference, so we also need to include the flux measurements during the beam test....
-suggest cut this sentence in any case and refer to the time ranges of the various types of data where these are analyzed" SEB what do you think?
-    The primary components of the  experimental setup for the data taking period are shown schematically in Figure~\ref{fig:setup}.
-    \begin{figure}
-    \includegraphics[width=1.0\linewidth]{files/Figures/T10Diagram.pdf}
-    	\caption{Beam test configuration}
-    		\label{fig:setup}
-    \end{figure}
-    The beam position monitor lies upstream of all the ToF constituents and the TPC, at the beam entrance. 
-    %The centre of the HPTPC Prototype was placed 13~m from the wire chamber at the beam entrance. 
-    The beam position monitor is followed by three ToF constituents: $S1$, which provides the trigger is a small-area beam trigger. $S2$, a trigger counter that provides a coincidence measurement with $S1$. $S3$, a large wall of plastic scintillator bars, placed directly upstream of the TPC vessel. All three of these upstream constituents are described in greater detail in Sections 2.2 and 2.3. Directly between $S1$ and $S2$, a variable number of blocks of acrylic moderator were placed, and are shown in Figure~\ref{fig:modblocks}. The vessel containing the TPC was placed 13~m from the wire chamber at the beam entrance. Lastly, a fourth ToF constituent, labeled $S4$, was placed directly downstream of the vessel. This was a second wall of plastic scintillator bars, described further in Section 2.4. Both the TPC and ToF systems were placed at an off-axis angle with respect to the direction of the beam. To study the impact of moderator thickness, a variable number of blocks of acrylic, each of dimension $10\times10\times10$~cm$^3$, were placed in the beamline, with the upstream end of the moderators located xxx cm behind $S1$, and are shown in Figure~\ref{fig:modblocks}.
-    
-    SEB, I changed this paragraph in accordance with JOCELYN's comments, but please have a read through
-    We also need the off axis angle (with +/-). MORGAN made an updated version of this schematic with the axis labels. Need to find it and add it. Need to check the mod block from S1
-    
-    Data acquisition (DAQ) of up- and downstream ToF systems were completely independent. The synchronization between systems was performed offline using the reference signal from the PS at the beginning of every spill. The PS beam structure is as follows: T10 received between 1 and 3 spills during each supercycle which has a typical duration of 33~s. The spill duration is approximately 400~ms. The minimum separation in time between two spills is approximately 1 second. Therefore the start of spill signal frequency is 1 Hz or smaller. The trigger condition of the upstream ToF was based on the coincidence between $S1$ and $S3$ constituents, while the DAQ of the downstream ToF, $S4$, was run in self-triggering mode with a gate open during the spill. Coincidence signals between $S1$ and $S2$ counters were also recorded by the downstream ToF DAQ and were used in the particle identification (PID) analysis, described in Section~3. 
-    JOCELYN:"the S1 and S2 coincidence signal was recorded by both DAQs or just one? I thought this signal was fanned out to all DAQs." SEB?
-    
-    
-    A system of moderator blocks was located between the $S1$ and $S2$ counters.  The system was composed of a stand on which up to four polystyrene $10\times10\times10$~cm$^3$ blocks could be placed contiguously. Figure~\ref{fig:modblocks} shows the stand with four blocks installed. The moderator blocks have the effect of both reducing the energy of incoming particles as well as scattering protons in the beam through higher angles than beam MIPs. This tends to increase in the proton-to-MIP ratio at low off-axis angles from the beam, while decreasing the total number of protons and MIPs traversing the TPC. A maximum of four moderator blocks was chosen to retain a minimum intensity in the TPC.
-    %The addition of too many moderator blocks would cause an overscattering whereby too many protons fall below threshold as compared with MIPs.
-    
-    Data was taken with the beam momentum primarily at 0.8~GeV/c, and with each configuration of 0 to 4 moderator blocks. Figure~INSERT shows the typical composition of the beam upstream of $S1$ at 0.8~GeV/c. Beam spills were approximately 500~ms in length with 5-10~s between spills.  
-    JOCELYN:"In general, you need a paragraph and a figure or two that describe the T10 beam before you do anything to it. The description of the un-modified beam should come before any explanation about the modifications, so probably as a subsection at the end of section 1. This unmodified beam data should probably come from the 2016 measurements, or the on-axis TOF measurements with no moderator." - similar to previous comment 2016 data probably best So maybe remove figure INSERT, and just do a subsection at the end of section 1.
+\subsection{Beam Test Overview}
+The beam test took place in the T10 beam line, East Area at the Proton Synchrotron in CERN from the 15th August to the 18th September 2018.
+The results in this paper use data taken on the 31st August and 1st September, during which the setup configuration was varied as described below.
+\todo{JOCELYN:"really only these two days?  This paper needs to be the flux reference, so we also need to include the flux measurements during the beam test....
+suggest cut this sentence in any case and refer to the time ranges of the various types of data where these are analyzed" SEB what do you think?}
+The primary components of the  experimental setup for the data taking period are shown schematically in Figure~\ref{fig:setup}.
+\begin{figure}
+  \includegraphics[width=1.0\linewidth]{files/Figures/T10Diagram.pdf}
+  \caption{Beam test configuration}
+  \label{fig:setup}
+\end{figure}
+The beam position monitor lies upstream of all the ToF constituents and the TPC, at the beam entrance. 
+%The centre of the HPTPC Prototype was placed 13~m from the wire chamber at the beam entrance. 
+The beam position monitor is followed by three ToF constituents: \textit{S1}, which provides the trigger is a small-area beam trigger.
+\textit{S2}, a trigger counter that provides a coincidence measurement with \textit{S1}.
+\textit{S3}, a large wall of plastic scintillator bars, placed directly upstream of the TPC vessel.
+All three of these upstream constituents are described in greater detail in Sections~\ref{subsec:s1s2Exp}~and~\ref{subsec:s3Exp}.
+Directly between \textit{S1} and \textit{S2}, a variable number of blocks of acrylic moderator were placed, and are shown in Figure~\ref{fig:modblocks}.
+The vessel containing the TPC was placed 13~m from the wire chamber at the beam entrance.
+Lastly, a fourth ToF constituent, labeled \textit{S4}, was placed directly downstream of the vessel.
+This was a second wall of plastic scintillator bars, described further in Section~\ref{subsec:s4Exp}.
+Both the TPC and ToF systems were placed at an off-axis angle with respect to the direction of the beam.
+To study the impact of moderator thickness, a variable number of blocks of acrylic, each of dimension $10\times10\times10$~cm$^3$, were placed in the beamline, with the upstream end of the moderators located xxx cm behind \textit{S1}, and are shown in Figure~\ref{fig:modblocks}.
+
+\todo{SEB, I changed this paragraph in accordance with JOCELYN's comments, but please have a read through. We also need the off axis angle (with +/-). MORGAN made an updated version of this schematic with the axis labels. Need to find it and add it. Need to check the mod block from S1}
+
+Data acquisition (DAQ) of up- and downstream ToF systems were completely independent.
+The synchronization between systems was performed offline using the reference signal from the PS at the beginning of every spill.
+The PS beam structure is as follows: T10 received between 1 and 3 spills during each supercycle which has a typical duration of 33~s.
+The spill duration is approximately 400~ms.
+The minimum separation in time between two spills is approximately 1 second.
+Therefore the start of spill signal frequency is 1 Hz or smaller.
+The trigger condition of the upstream ToF was based on the coincidence between \textit{S1} and \textit{S3} constituents.
+\textit{S2} signals were also recorded but the upstream ToF DAQ but were not a trigger condition.
+The DAQ of the downstream ToF, \textit{S4}, was run in self-triggering mode with a gate open during the spill.
+Coincidence signals between \textit{S1} and \textit{S2} counters were also recorded by the downstream ToF DAQ and were used in the particle identification (PID) analysis, described in Section~\ref{hptpcpaper:sec:results}.  
+
+A system of moderator blocks was located between the \textit{S1} and \textit{S2} counters.
+The system was composed of a stand on which up to four polystyrene $10\times10\times10$~cm$^3$ blocks could be placed contiguously.
+Figure~\ref{fig:modblocks} shows the stand with four blocks installed.
+The moderator blocks have the effect of both reducing the energy of incoming particles as well as scattering protons in the beam through higher angles than beam MIPs.
+This tends to increase in the proton-to-MIP ratio at low off-axis angles from the beam, while decreasing the total number of protons and MIPs traversing the TPC.
+A maximum of four moderator blocks was chosen to retain a minimum intensity in the TPC.
+%The addition of too many moderator blocks would cause an overscattering whereby too many protons fall below threshold as compared with MIPs.
+
+Data was taken with the beam momentum primarily at 0.8~GeV/c, and with each configuration of 0 to 4 moderator blocks.
+Figure~INSERT shows the typical composition of the beam upstream of \textit{S1} at 0.8~GeV/c. Beam spills were approximately 500~ms in length with 5-10~s between spills.  
+\todo{JOCELYN:"In general, you need a paragraph and a figure or two that describe the T10 beam before you do anything to it. The description of the un-modified beam should come before any explanation about the modifications, so probably as a subsection at the end of section 1. This unmodified beam data should probably come from the 2016 measurements, or the on-axis TOF measurements with no moderator." - similar to previous comment 2016 data probably best So maybe remove figure INSERT, and just do a subsection at the end of section 1.}
 
 %    Moderator blocks were used in order to cause a spread in the incoming beam.
 %    The blocks cause protons to scatter through a larger angle than pions and other minimum ionising particles (MIP), increasing the off-axis proton pion ratio.
@@ -44,243 +65,275 @@ suggest cut this sentence in any case and refer to the time ranges of the variou
 %    	\caption{T10 beam constituents (REFERENCE NEEDED)}
 %    		\label{fig:beamcharacteristics}
 %    \end{figure}
-    
-    
-    \begin{figure}[t]
-      \centering
-    %\includegraphics[width=0.2\linewidth]{files/Figures/ModeratorBlocks.jpg}
-    \includegraphics[width=1.05\linewidth]{files/Figures/S1S2S3S4.png}
-    	\caption{Photo demonstrating the $S1$ and $S2$ counters and the stand with four acrylic moderator blocks of the upstream part of the setup (right). Photo of the downstream part of the setup which shows the $S3$, $S4$ detectors and HPTPC (left).}
-    		\label{fig:modblocks}
-    \end{figure}
-    
-    JOCELYN" Change all $S1$ to S$1$ or S1 and so on" your choice SEB
-	\subsection{Upstream beam counters $S1$ and $S2$}
-	JOCELYN:"This actually isn't a good picture of S1, need one that shows the hardware head on." (do we have one of these?)
-	The beam counters $S1$ and $S2$ are shown in Figure~\ref{fig:modblocks}, right. The $S1$ counter is a $40\times40\times5$~mm$^3$ plastic scintillator cross which is attached to four 1'' Hamamatsu R4998 phototubes at each end for the light readout. The time resolution of the counter, as measured by the DAQ system of the upstream ToF, was about 30~ps. 
-	replace about with an error bar on the 30 ps. JOCELYN:" And even better, include a timing distribution of the S1 data that has FWHM or sigma of 30 ps." SEB do you have any info like this? If not, we will need to talk to ALEXANDER KORZENEV about it.
-	JOCELYN:"for time of flight, distance knowledge is essential.  Need a paragraph before 2.2. that describes how the distances are known (the survey, and description of survey methodology and precision), and includes a table of the relevant distances with error bars."
-	
-	The $S2$ counter is a scintillator tile of size $120\times120\times5$~mm$^3$, coupled to a 2" PMT R1309, which  2'' PMT R13089 which was connected to the scintillator via long light-guide as shown in Figure~\ref{fig:modblocks}. The $S2$ counter was placed 1.4m +/- xm (THIS NUMBER NEEDS CHECKING - SEB?) downstream of $S1$.  The transverse position of S2 was adjusted to account for the beam divergence in the moderator blocks.
-	
-	The analog signals from one of the $S1$ PMTs and $S2$ PMT were fed into NIM discriminator units. JOCELYN:"with what threshold? specify" SEB?
-	JOCELYN:"was it really only one of the S1 PMTs?  I thought a coincidence of the S1 PMTs was formed, and then that signal was ANDed with the S2 PMT." SEB?
-	%set at AA mV and BB mV respectively. 
-	Subsequently, the discriminated signals were fed into a NIM coincidence unit, and the coincidence of the two signals was recorded by the DAQ systems of the upstream ToF wall ($S3$) and the downstream ToF wall ($S4$). This information was further used for the time-of-flight analysis of the downstream ToF. JOCELYN:"but not the upstream? why not?" SEB?
 
-    
-\subsection{Upstream Time of Flight instrumentation ($S3$)}
-JOCELYN:"Replace just upstream with a number and error bar"
-The $S3$ `upstream' ToF constituent was placed just upstream of the HPTPC prototype in the beamline. A schematic drawing of the $S3$ ToF wall is shown in Figure~\ref{fig:S3sketch}. The detector is composed of 22 staggered scintillator bars:  20 bars with dimensions $1.7 \times 6.0 \times 1.0$~cm$^3$ and 2 bars of  $1.5 \times 6.0 \times 1.0$~cm$^3$ placed on top and bottom \cite{S3-proceedings}.
+
+\begin{figure}[t]
+  \centering
+  %\includegraphics[width=0.2\linewidth]{files/Figures/ModeratorBlocks.jpg}
+  \includegraphics[width=1.05\linewidth]{files/Figures/S1S2S3S4.png}
+  \caption{Photo demonstrating the \textit{S1} and \textit{S2} counters and the stand with four acrylic moderator blocks of the upstream part of the setup (right). Photo of the downstream part of the setup which shows the \textit{S3}, \textit{S4} detectors and HPTPC (left).}
+  \label{fig:modblocks}
+\end{figure}
+
+\subsection{Upstream beam counters S1 and S2}
+\label{subsec:s1s2Exp}
+JOCELYN:"This actually isn't a good picture of S1, need one that shows the hardware head on." (do we have one of these?)
+The beam counters \textit{S1} and \textit{S2} are shown in Figure~\ref{fig:modblocks}, right.
+The \textit{S1} counter is a $40\times40\times5$~mm$^3$ plastic scintillator cross which is attached to four 1'' Hamamatsu R4998 phototubes at each end for the light readout.
+The time resolution of the counter, as measured by the DAQ system of the upstream ToF, was about 30~ps. 
+\todo{replace about with an error bar on the 30 ps. JOCELYN:" And even better, include a timing distribution of the S1 data that has FWHM or sigma of 30 ps." SEB do you have any info like this? If not, we will need to talk to ALEXANDER KORZENEV about it.}
+\todo{JOCELYN:"for time of flight, distance knowledge is essential.  Need a paragraph before 2.2. that describes how the distances are known (the survey, and description of survey methodology and precision), and includes a table of the relevant distances with error bars."}
+
+The \textit{S2} counter is a scintillator tile of size $120\times120\times5$~mm$^3$, coupled to a 2" PMT R1309, which  2'' PMT R13089 which was connected to the scintillator via long light-guide as shown in Figure~\ref{fig:modblocks}.
+The \textit{S2} counter was placed 1.4m +/- xm \todo{THIS NUMBER NEEDS CHECKING - SEB?} downstream of \textit{S1}.
+The transverse position of \textit{S2} was adjusted to account for the beam divergence in the moderator blocks.
+
+The analog signals from one of the \textit{S1} PMTs and \textit{S2} PMT were fed into NIM discriminator units.
+\todo{JOCELYN:"with what threshold? specify" SEB? JOCELYN:"was it really only one of the S1 PMTs?
+I thought a coincidence of the S1 PMTs was formed, and then that signal was ANDed with the S2 PMT." SEB?}
+%set at AA mV and BB mV respectively. 
+Subsequently, the discriminated signals were fed into a NIM coincidence unit, and the coincidence of the two signals was recorded by the DAQ systems of the upstream ToF wall (\textit{S3}) and the downstream ToF wall (\textit{S4}). This information was further used for the time-of-flight analysis of the downstream ToF. \todo{JOCELYN:"but not the upstream? why not?" SEB?}
+
+
+\subsection{Upstream Time of Flight instrumentation (S3)}
+\label{subsec:s3Exp}
+\todo{JOCELYN:"Replace just upstream with a number and error bar"}
+The \textit{S3} `upstream' ToF constituent was placed just upstream of the HPTPC prototype in the beamline.
+A schematic drawing of the \textit{S3} ToF wall is shown in Figure~\ref{fig:S3sketch}.
+The detector is composed of 22 staggered scintillator bars:  20 bars with dimensions $1.7 \times 6.0 \times 1.0$~cm$^3$ and 2 bars of  $1.5 \times 6.0 \times 1.0$~cm$^3$ placed on top and bottom \cite{S3-proceedings}.
 The overlap between bars was set to 5~mm, thus the active area of the detector was approximately 1.68 $\times$ 1.22~m$^2$.
-JOCELYN:"Give exact detector area" -SEB?
-     \begin{figure}
-      \centering
-    \includegraphics[width=0.7\linewidth]{files/Figures/uToF_sketch.pdf}
-    	\caption{Sketch of the $S3$ wall \cite{S3-proceedings}.}
-    		\label{fig:S3sketch}
-    \end{figure}
-JOCELYN:"its not clear from this description that the bars are staggered in z, include a side view in Fig. 5 to clarify."-SEB?
-JOCELYN:"Use cm everywhere, no m or mm"
+\todo{JOCELYN:"Give exact detector area" - SEB?}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\linewidth]{files/Figures/uToF_sketch.pdf}
+  \caption{Sketch of the \textit{S3} wall \cite{S3-proceedings}.}
+  \label{fig:S3sketch}
+\end{figure}
+\todo{JOCELYN:"its not clear from this description that the bars are staggered in z, include a side view in Fig. 5 to clarify."-SEB?}
+\todo{JOCELYN:"Use cm everywhere, no m or mm"}
 The bars are made from the plastic scintillator, EJ-200 \cite{SCIONIX}, which 
 provides a suitable optical attenuation length of 4~m and fast timing, with a rise time of 0.9~ns and decay time constant of 2.1~ns.
-JOCELYN:"give the scintillator brightness first (usually in photons per MeV deposited), then the attenuation length " - SEB?
-The scintillation emission spectrum of EJ-200 resides primarily in the violet region of the visible spectrum that corresponds well to the photon detection efficiency wavelength range of photosensors used for the readout. JOCEYLN: "Add a sentence describing how the bars were wrapped (with what, why, with what reflectivity, etc.)" - SEB?
-JOCELYN:"give the wavelength range numerically here, and include a citation to the data sheet that shows the spectrum" -SEB?
+\todo{JOCELYN:"give the scintillator brightness first (usually in photons per MeV deposited), then the attenuation length " - SEB?}
+The scintillation emission spectrum of EJ-200 resides primarily in the violet region of the visible spectrum that corresponds well to the photon detection efficiency wavelength range of photosensors used for the readout. \todo{JOCEYLN: "Add a sentence describing how the bars were wrapped (with what, why, with what reflectivity, etc.)" - SEB?}
+\todo{JOCELYN:"give the wavelength range numerically here, and include a citation to the data sheet that shows the spectrum" -SEB?}
 
-Arrays of eight $6 \times 6$~mm$^2$ area silicon photomultipliers (SiPMs) S13360-6050PE from Hamamatsu Photonics \cite{Hamamatsu} were coupled to each end of the bar to collect scintillation photons. The anode signals of the SiPMs are read out, summed and shaped by a dedicated circuit as described in Ref.\,\cite{S3-readout}.
+Arrays of eight $6 \times 6$~mm$^2$ area silicon photomultipliers (SiPMs) S13360-6050PE from Hamamatsu Photonics \cite{Hamamatsu} were coupled to each end of the bar to collect scintillation photons.
+The anode signals of the SiPMs are read out, summed and shaped by a dedicated circuit as described in Ref.\,\cite{S3-readout}.
 %an 8-channel SiPM anode readout integrated circuit MUSIC-R1. %The construction of the prototype was a joint effort between groups of Geneva and Zurich universities as a part of R\&D for the Timing detector of the SHIP experiment \cite{AK}.
 
-A 64-ch SAMPIC  module was used for the data acquisition. A SAMPIC chip is a Waveform and Time to Digital Converter (WTDC) 16-channel ASIC which provides a raw time with an ultrafast analog memory allowing fine timing extraction as well as other parameters of the pulse~\cite{SAMPIC}. Each channel contains a discriminator that can trigger itself independently or participate in a more complex combined trigger. 
-Three module ASICs ($16\times3=48$ channels) were connected to the 44 channels of $S3$ and were operated in self-triggering mode. JOCELYN:"What were the conditions of the self trigger i.e. threshold? multiplicity? time over threshold? etc.) specify here." SEB?
-A 4th ASIC was used to acquire data from $S1$, the coincidence signal $S1\cap S2$, and the start-of-spill signal from PS. A second level trigger was implemented in firmware and run on the level of the ASICs: the data were only sent to the hard disk of the DAQ notebook in the case of coincidence between $S1$ channels and channels of three ASICs used for $S3$.
+A 64-ch SAMPIC  module was used for the data acquisition.
+A SAMPIC chip is a Waveform and Time to Digital Converter (WTDC) 16-channel ASIC which provides a raw time with an ultrafast analog memory allowing fine timing extraction as well as other parameters of the pulse~\cite{SAMPIC}.
+Each channel contains a discriminator that can trigger itself independently or participate in a more complex combined trigger. 
+Three module ASICs ($16\times3=48$ channels) were connected to the 44 channels of \textit{S3} and were operated in self-triggering mode.
+\todo{JOCELYN:"What were the conditions of the self trigger i.e. threshold? multiplicity? time over threshold? etc.) specify here." SEB?}
+A 4th ASIC was used to acquire data from \textit{S1}, the coincidence signal $\mathit{S1} \cap \mathit{S2}$, and the start-of-spill signal from PS.
+A second level trigger was implemented in firmware and run on the level of the ASICs: the data were only sent to the hard disk of the DAQ notebook in the case of coincidence between \textit{S1} channels and channels of three ASICs used for \textit{S3}.
 
+A mean time of light signals detected at two ends of a single bar provides a time reference with a resolution of about 100~ps, while the difference between the time of the light signals gives the position of the interaction along the bar, with a resolution of 1.6~cm.
+Examples of reconstructed $XY$ distributions are shown in Figures~\ref{fig:s3XY_pion} and~\ref{fig:s3XY_proton}.
 
-A mean time of light signals detected at two ends of a single bar provides a time reference with a resolution of about 100~ps, while the difference between the time of the light signals gives the position of the interaction along the bar, with a resolution of 1.6~cm. Examples of reconstructed $XY$ distributions are shown in Figures~\ref{fig:s3XY_pion} and~\ref{fig:s3XY_proton}.
+\todo{JOCELYN: "to understand whether the axes make sense, the reader needs to know the coordinate system.  The paper needs a paragraph on the coordinates of the upstream TOF somewhere before reconstruction is discussed to make sense of this.  That paragraph should spell out where the TOF is, and where the beam is expected to be, and then the discussion of these figures (that needs to be included in the reconstruction section) should compare the measured beam center position (which can't really be determined from these figures, so the caption should give it, as well as the text), with the expected beam center position." SEB/We will have included the axes in the beam diagram further up.}
 
-
-JOCELYN: "to understand whether the axes make sense, the reader needs to know the coordinate system.  The paper needs a paragraph on the coordinates of the upstream TOF somewhere before reconstruction is discussed to make sense of this.  That paragraph should spell out where the TOF is, and where the beam is expected to be, and then the discussion of these figures (that needs to be included in the reconstruction section) should compare the measured beam center position (which can't really be determined from these figures, so the caption should give it, as well as the text), with the expected beam center position." SEB/We will have included the axes in the beam diagram further up.
 \begin{figure}[t]
-	\begin{minipage}[t]{0.49\textwidth}
-		\centering
-		\begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
-			\input{files/Figures/0_pionXY.tex}
-		\end{adjustbox}
-		\caption{Reconstructed $XY$ distribution of hits observed in $S3$. In this case a timing cut has been applied to select only those hits identified as coming from minimum ionizing particles. This particular data was taken without a moderator in the beamline.}
-		\label{fig:s3XY_pion}
-	\end{minipage} 	
-	\hfill
-	\begin{minipage}[t]{0.49\textwidth}
-		\centering
-		\begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
-			\input{files/Figures/4_protonXY.tex}
-		\end{adjustbox}
-		\caption{Reconstructed $XY$ distribution of hits observed in $S3$. In this case a timing cut and an amplitude cut has been applied to select only those hits thought to come from protons. This data was taken with 4 moderator blocks in the beamline.}
-		\label{fig:s3XY_proton}
-	\end{minipage}
+  \begin{minipage}[t]{0.49\textwidth}
+    \centering
+    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+      \input{files/Figures/0_pionXY.tex}
+    \end{adjustbox}
+    \caption{Reconstructed $XY$ distribution of hits observed in \textit{S3}. In this case a timing cut has been applied to select only those hits identified as coming from minimum ionizing particles. This particular data was taken without a moderator in the beamline.}
+    \label{fig:s3XY_pion}
+  \end{minipage} 	
+  \hfill
+  \begin{minipage}[t]{0.49\textwidth}
+    \centering
+    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+      \input{files/Figures/4_protonXY.tex}
+    \end{adjustbox}
+    \caption{Reconstructed $XY$ distribution of hits observed in \textit{S3}. In this case a timing cut and an amplitude cut has been applied to select only those hits thought to come from protons. This data was taken with 4 moderator blocks in the beamline.}
+    \label{fig:s3XY_proton}
+  \end{minipage}
 \end{figure}
-  
-    
 
 %    The placement of each of the four time of flight constituents in respect to the TPC is shown in figure~\ref{fig:S1S2S3S4}.
 %    \begin{figure}
 %      \centering
 %%    \includegraphics[width=0.6\linewidth]{files/Figures/S1S2S3S4.png}
- %   	\caption{Position of the time of flight constituents in the T10 beam hall. The TPC prototype and beam entrance are also shown}
- %   		\label{fig:S1S2S3S4}
- %   \end{figure}
-    
+%   	\caption{Position of the time of flight constituents in the T10 beam hall. The TPC prototype and beam entrance are also shown}
+%   		\label{fig:S1S2S3S4}
+%   \end{figure}
 
+\subsection{Downstream Time of Flight instrumentation (S4)}
+\label{subsec:s4Exp}
+The \textit{S4} `downstream' ToF constituent sat immediately downstream of the HPTPC prototype in the beamline.
+It consists of 10 bars of Nuvia NuDET plastic scintillator which has a wavelength of maximum emission of 425~nm and a decay time constant of 2.5~ns~\cite{Nuvia}.
+Each of these bars measure $10 \times 1 \times 140$~cm$^3$
+Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube~\cite{Hamamatsu}.
+The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector.
+The total active area of the \textit{S4} wall is $1.4 \times 0.68$~m$^2$, along with its dimensions are presented in Figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
+The time resolution of the bars and PMTs was measured to be 1~ns using a $^{90}$Sr source placed at measured distances along the bar.
+Figure~\ref{fig:s4Res} shows an example of the distribution from which this value was derived.
+Figure~\ref{fig:s4Res} is the measured time difference for signals coming from the PMTs at either end of a bar caused by the $^{90}$Sr at a given position.
+The corresponding spatial resolution of the bars and PMTs was measured to be 8.3~cm.
 
+\begin{figure}[h]
+	\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
+		\input{files/Figures/sampleS4Res.tex}
+	\end{adjustbox}
+	\caption{Difference in signal arrival time PMTs at each end of a bar as measured using a $^{90}$Sr source placed 64~cm from one end of the bar.}
+	\label{fig:s4Res}	
+\end{figure}
 
-\subsection{Downstream Time of Flight instrumentation ($S4$)}
-	
-The $S4$ `downstream' ToF constituent sat immediately downstream of the HPTPC prototype in the beamline. It consists of 10 bars of Nuvia plastic scintillator \cite{NUVIA}. Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube. The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector. Diagrams of the $S4$ wall, along with its dimensions are presented in Figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}. The time resolution of the bars and PMTs was measured to be 1~ns. The corresponding spatial resolution of the bars and PMTs was measured to be 8.3~cm.
-    
-    \begin{figure}[ht]    
-    	\begin{minipage}[t]{.48\textwidth}
-    		\centering
-    		\includegraphics[width=0.6\linewidth]{files/Figures/dstofFront.png}
-    		\caption{Front view of the downstream time of flight system}
-    		\label{fig:dstofFront}
-    	\end{minipage}
-    	\hspace{0.3cm}
-    	\begin{minipage}[t]{.48\textwidth}
-    		\centering
-    		\includegraphics[width=0.45\linewidth]{files/Figures/dstofDiag.png}
-    		\caption{Diagonal view of the downstream time of flight system showing more clearly the two rows of scintillator bars and photomultiplier tubes}
-    		\label{fig:dstofDiagonal}
-    	\end{minipage}
-    \end{figure}
-    
-The anode signals of all 20 of the PMTs are read out using NIM discriminators which are then fed into a time-to-digital converter. A signal in $S4$ was observed to have occurred if a signal was seen in both PMTs on the same bar within 20~ns of each other. 
+\begin{figure}[ht]    
+  \begin{minipage}[t]{.48\textwidth}
+    \centering
+    \includegraphics[width=0.6\linewidth]{files/Figures/dstofFront.png}
+    \caption{Front view of the downstream time of flight system}
+    \label{fig:dstofFront}
+  \end{minipage}
+  \hspace{0.3cm}
+  \begin{minipage}[t]{.48\textwidth}
+    \centering
+    \includegraphics[width=0.45\linewidth]{files/Figures/dstofDiag.png}
+    \caption{Diagonal view of the downstream time of flight system showing more clearly the two rows of scintillator bars and photomultiplier tubes}
+    \label{fig:dstofDiagonal}
+  \end{minipage}
+\end{figure}
 
-Additionally, a signal was also fed into the same time-to-digital converter whenever there was a coincidence between the $S1$ and $S2$ timing points. The time corresponding to this coincidence was used as first timing point in calculating the particle time of flight.
+The anode signals of all 20 of the PMTs are discriminated using LeCroy 620AL NIM discriminators, at a threshold of 20~mV.
+The discriminated signals are then fed into a time-to-digital converter. A signal in \textit{S4} was observed to have occurred if a signal was seen in both PMTs, above the discriminator threshold, on the same bar within 20~ns of each other. 
+
+The $\mathit{S1-S2}$ coincidence signal was digitized by the same time-to-digital converter. This signal was used to calculate the particle time of flight from $\mathit{S2}$ to $\mathit{S4}$.
 
 \subsection{The HPTPC Prototype}
 The prototype was built at Royal Holloway, University London.  The steel vessel was rated to 6~barA of pressure, and the walls of the vessel were 1~cm thick.
-The TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field. The drift distance produced was 48~cm, with the anodes separated by 1~mm. Data taking with the TPC made use of both optical and charge readout. The vessel, electrodes, and drift region of the TPC are shown in figure~\ref{fig:TPC}.
-    
-     \begin{figure}
-      \centering
-    \includegraphics[width=0.6\linewidth]{files/Figures/IMG_1194.jpg}
-    	\caption{Cross-sectional view of the TPC; the thin mesh electrodes and copper ring drift volume can be seen inside the steel vessel}
-    		\label{fig:TPC}
-    \end{figure}
-    
-The centre of the TPC was placed 13~m from the beam entrance with $S3$ and $S4$ directly upstream and downstream of the vessel, respectively. Throughout the run, the TPC was filled with either pure argon, or a combination of argon and a small percentage of quencher.
+The TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field.
+The drift distance produced was 48~cm, with the anodes separated by 1~mm. Data taking with the TPC made use of both optical and charge readout.
+The vessel, electrodes, and drift region of the TPC are shown in figure~\ref{fig:TPC}.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\linewidth]{files/Figures/IMG_1194.jpg}
+  \caption{Cross-sectional view of the TPC; the thin mesh electrodes and copper ring drift volume can be seen inside the steel vessel}
+  \label{fig:TPC}
+\end{figure}
+
+
+The centre of the TPC was placed 13~m from the beam entrance with \textit{S3} and \textit{S4} directly upstream and downstream of the vessel, respectively.
+Throughout the run, the TPC was filled with either pure argon, or a combination of argon and a small percentage of quencher.
 
 %\subsection{Beam Taking Periods}
 
 %The data taken for the following studies was accrued over the course 
 %WHAT DATA AND WHEN (Maybe this goes earlier)
- %(this is described above now)   
+%(this is described above now)
+
 \section{Analysis}
 \subsection{Analysis Goals}
-The primary aims of the use of $S1 - S4$ were to make measurements of the flux of particles entering and exiting the TPC vessel, and to perform particle identification using the time of flight measurement.
-Using this data, it is possible to provide a momentum spectrum of particles in- and outgoing from the TPC, and calculate the ratio of particle species in the beam. It is also possible to provide a calculation of the multiplicity of protons reaching the geometric area of the TPC active region.
+The primary aims of the use of $\mathit{S1} - \mathit{S4}$ were to make measurements of the flux of particles entering and exiting the TPC vessel, and to perform particle identification using the time of flight measurement.
+Using this data, it is possible to provide a momentum spectrum of particles in- and outgoing from the TPC, and calculate the ratio of particle species in the beam.
+It is also possible to provide a calculation of the multiplicity of protons reaching the geometric area of the TPC active region.
 
-Protons take longer to travel the distance from $S1$ to $S3$ or $S4$ than lighter particles that are close to being minimum ionising. This difference in time of flight can be used to distinguish between the two types of particles.
+Protons take longer to travel the distance from \textit{S1} to \textit{S3} or \textit{S4} than lighter particles that are close to being minimum ionising.
+This difference in time of flight can be used to distinguish between the two types of particles.
 Distinguishing these MIPs from one another is more difficult due to their similar masses and can be only determined by the upstream ToF system.
-From the particle flux data, it is possible to measure the ratio of protons to other particles over the range of off-axis angles covered by the $S3$ and $S4$ walls, and for varying numbers of moderator blocks.
+From the particle flux data, it is possible to measure the ratio of protons to other particles over the range of off-axis angles covered by the \textit{S3} and \textit{S4} walls, and for varying numbers of moderator blocks.
 
 The variation of momentum spectrum, proton-MIP ratio, and proton multiplicity with differing numbers of acrylic blocks as a function of angle off the beam axis provide the motivation for the measurement techniques used.
 As such the data used in these results cover two days in the run where the number of moderator blocks was varied with other beam properties held approximately constant.
-The numbers of spills per moderator block configuration were as follows (with more data taken for 4 blocks as that was the configuration used for the majority of the beam test):
-0 blocks: 257 spills, 1 block:  254 spills, 2 blocks: 267 spills, 3 blocks: 220 spills, 4 blocks: 3884 spills.
+The numbers of spills per moderator block configuration were as follows (with more data taken for 4 blocks as that was the configuration used for the majority of the beam test): 0 blocks: 257 spills, 1 block:  254 spills, 2 blocks: 267 spills, 3 blocks: 220 spills, 4 blocks: 3884 spills.
 
 
 \subsection{Analysis Methods}
 
-	Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by $S4$ with a changing number of moderator blocks.
-	This spectrum is given by the difference in time between observation of a coincidence in the $S1$ and $S2$ timing points and a signal being recorded in $S4$ (the definition of an $S4$ signal is given above).
-	
-	\begin{figure}[h]
-		\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
-			\input{files/Figures/tofS4_correct.tex}
-		\end{adjustbox}
-		\caption{$S4$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, an exponentially falling background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars.}
-		\label{fig:s4tof}	
-	\end{figure}
+Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by \textit{S4} with a changing number of moderator blocks.
+This spectrum is given by the difference in time between observation of a coincidence in the \textit{S1} and \textit{S2} timing points and a signal being recorded in \textit{S4} (the definition of an \textit{S4} signal is given above).
 
-	Two corrections are applied to this measurement to give figure~\ref{fig:s4tof}. 
-	The data is corrected for the efficiency of each of the $S4$ bars and a background is subtracted from the data.
-	Initially, timing delays caused by cabling and equipment are taken into account.
-	Then a Gaussian is fitted to the peak caused by faster particles.
-	All times are normalised such that the mean of this peak is at a value of $S4 - S2$ corresponding to a particle traversing the distance between $S2$ and $S4$ at the speed of light. 
-	The other times are then shifted by the same amount.
-	
-	Additionally, the measurements are corrected for the efficiency of each bar. 
-	The efficiency of a bar is calculated by dividing the number of signal hits in coincidence with an $S1-S2$ signal in each bar by the total number of PMT hits in each bar (themselves in coincidence with an $S1-S2$ signal). 
-	If the number of single PMT hits which are in coincidence with $S1-S2$ signal is expressed as $N_{1PMTcoinc}$ and the number of 2 PMT signals in coincidence with an $S1-S2$ signal is expressed as $N_{2PMTcoinc}$, then the efficiency is given by~(\ref{eq:barEff}).
-	
-	\begin{equation}
-		\epsilon = \frac{N_{2PMTcoinc}}{N_{2PMTcoinc}+N_{1PMTcoinc}}
-		\label{eq:barEff}
-	\end{equation}
-	
-	Using figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
-	These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
-	The signal functions are taken to be Gaussians while the background is taken to be an exponential function. 
-	An example of this is shown in figure~\ref{fig:fitEx}.
-	The particles in the quicker timing window (those for which $t_{S4}-t_{S2}<51~\text{ns}$ and $t_{S4}-t_{S2}>36~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $t_{S4}-t_{S2}<101~\text{ns}$ and $t_{S4}-t_{S2}>62~\text{ns}$) are considered to be protons.
-	
-	\begin{figure}[h]
-		\begin{adjustbox}{max totalsize={.7\textwidth}{.62\textheight},center}
-			\input{files/Figures/1_dtof1d.tex}
-		\end{adjustbox}
-		\caption{Example of the time of flight spectrum observed in $S4$ with a combined signal and background function fitted (shown in black)}
-		\label{fig:fitEx}
-	\end{figure}
+\begin{figure}[h]
+  \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
+    \input{files/Figures/tofS4_correct.tex}
+  \end{adjustbox}
+  \caption{\textit{S4} time-of-flight spectra for varying numbers of moderator blocks. For all configurations, an exponentially falling background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars.}
+  \label{fig:s4tof}	
+\end{figure}
 
-	To produce the data used in this analysis, an exponential background function is subtracted. 
-	The parameters for this function are taken from the combined signal and background function.
+Two corrections are applied to this measurement to give figure~\ref{fig:s4tof}. 
+The data is corrected for the efficiency of each of the \textit{S4} bars and a background is subtracted from the data.
+Initially, timing delays caused by cabling and equipment are taken into account.
+Then a Gaussian is fitted to the peak caused by faster particles.
+All times are normalised such that the mean of this peak is at a value of $\mathit{S4} - \mathit{S2}$ corresponding to a particle traversing the distance between \textit{S2} and \textit{S4} at the speed of light. 
+The other times are then shifted by the same amount.
 
-	Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $S3$ timing point for varying numbers of moderator blocks.
-	Similarly to figure~\ref{fig:s4tof}, the quicker peak is formed by minimum ionizing particles, while the peak at higher values of $S3 - S1$ corresponds to protons.
-	The black, 0 block peak ranging from 90 to 100~ns corresponds to deuterons.
-	\begin{figure}[h]
-		\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
-			\input{files/Figures/utofS1.tex}
-		\end{adjustbox}
-		\caption{$S3$ time of flight spectra for varying numbers of moderator blocks.}
-		\label{fig:s3tof}
-	\end{figure}
+Additionally, the measurements are corrected for the efficiency of each bar. 
+The efficiency of a bar is calculated by dividing the number of signal hits in coincidence with an $\mathit{S1}-\mathit{S2}$ signal in each bar by the total number of PMT hits in each bar (themselves in coincidence with an $\mathit{S1}-\mathit{S2}$ signal). 
+If the number of single PMT hits which are in coincidence with $\mathit{S1}-\mathit{S2}$ signal is expressed as $N_{1PMTcoinc}$ and the number of 2 PMT signals in coincidence with an $\mathit{S1}-\mathit{S2}$ signal is expressed as $N_{2PMTcoinc}$, then the efficiency is given by~(\ref{eq:barEff}).
 
+\begin{equation}
+  \epsilon = \frac{N_{2PMTcoinc}}{N_{2PMTcoinc}+N_{1PMTcoinc}}
+  \label{eq:barEff}
+\end{equation}
 
-    The mass distribution calculated for the data set without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}. The time difference between $S3$ and $S1$ counters corresponding to a single particle was converted to the mass using the formula
-    \begin{equation} 
-     m^2 = p^2 \left( 
-     \left(\frac{t_{S3}-t_{S1}}{x_{S3}-x_{S1}} \cdot c \right)^2
-    - 1  \right)
-    \end{equation}
-    where the particle momentum $p$ is assumed to be 0.8~GeV/c, the distance between two detectors $x_{S3}-x_{S1}$ is 10.9~m and $c$ is the speed of light. 
-    The true mass positions in Figure~\ref{fig:s3tof_mass} are indicated by vertical arrows. One can clearly observe distinct peaks corresponding to protons and deuterons. 
-    The insert in the figure shows a zoomed region corresponding to the MIPs. 
-    
+Using figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
+These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
+The signal functions are taken to be Gaussians while the background is taken to be an exponential function. 
+An example of this is shown in figure~\ref{fig:fitEx}.
+The particles in the quicker timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>36~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<101~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>62~\text{ns}$) are considered to be protons.
 
-    \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.9\linewidth]{files/Figures/Data_2018_8_31_b2_800MeV_0block_All.pdf}
-		\caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between $S3$ and $S1$. Vertical arrows show predicted position of particles.}
-		\label{fig:s3tof_mass}
-	\end{figure}
+\begin{figure}[h]
+  \begin{adjustbox}{max totalsize={.7\textwidth}{.62\textheight},center}
+    \input{files/Figures/1_dtof1d.tex}
+  \end{adjustbox}
+  \caption{Example of the time of flight spectrum observed in \textit{S4} with a combined signal and background function fitted (shown in black)}
+  \label{fig:fitEx}
+\end{figure}
+
+To produce the data used in this analysis, an exponential background function is subtracted. 
+The parameters for this function are taken from the combined signal and background function.
+
+Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the \textit{S3} timing point for varying numbers of moderator blocks.
+Similarly to figure~\ref{fig:s4tof}, the quicker peak is formed by minimum ionizing particles, while the peak at higher values of $\mathit{S3} - \mathit{S1}$ corresponds to protons.
+The black, 0 block peak ranging from 90 to 100~ns corresponds to deuterons.
+\begin{figure}[h]
+  \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
+    \input{files/Figures/utofS1.tex}
+  \end{adjustbox}
+  \caption{\textit{S3} time of flight spectra for varying numbers of moderator blocks.}
+  \label{fig:s3tof}
+\end{figure}
 
 
+The mass distribution calculated for the data set without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}.
+The time difference between \textit{S3} and \textit{S1} counters corresponding to a single particle was converted to the mass using the formula
+\begin{equation} 
+  m^2 = p^2 \left( 
+  \left(\frac{t_{S3}-t_{S1}}{x_{S3}-x_{S1}} \cdot c \right)^2
+  - 1  \right)
+\end{equation}
+where the particle momentum $p$ is assumed to be 0.8~GeV/c, the distance between two detectors $x_{\mathit{S3}}-x_{\mathit{S1}}$ is 10.9~m and $c$ is the speed of light. 
+The true mass positions in Figure~\ref{fig:s3tof_mass} are indicated by vertical arrows.
+One can clearly observe distinct peaks corresponding to protons and deuterons. 
+The insert in the figure shows a zoomed region corresponding to the MIPs. 
 
-    For the data collected in $S3$, both timing and signal amplitude cuts were used to select protons and MIPs.
-	Figure~\ref{fig:TvsA} shows an example of the signal size recorded in one of the SiPMs on one of the scintillator bars against the measured value of $S3 - S1$.
-	To reduce the number of background events in the proton sample, a minimum signal amplitude is required.
-	This cut varied, depending on the SiPM in question and was determined from distributions such as those in figure~\ref{fig:TvsA}. 
-	The cut values varied in the range 0.125~V and 0.3~V.
-	At the beam energies used, due to their higher mass, the protons typically deposit more energy in the detector, resulting in the observation of greater amplitudes.
-	
-	\begin{figure}[h]
-		\begin{adjustbox}{max totalsize={.7\textwidth}, center}
-			\input{files/Figures/TvsA_2block.tex}
-		\end{adjustbox}
-		\caption{Example of SiPM signal amplitude plotted against uncorrected $S3$ time of flight. The population in the upper right is produced by protons. This particular figure shows the distribution when 2 moderator blocks are present.}
-		\label{fig:TvsA}
-	\end{figure}
-	
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{files/Figures/Data_2018_8_31_b2_800MeV_0block_All.pdf}
+  \caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between \textit{S3} and \textit{S1}. Vertical arrows show predicted position of particles.}
+  \label{fig:s3tof_mass}
+\end{figure}
+
+
+
+For the data collected in \textit{S3}, both timing and signal amplitude cuts were used to select protons and MIPs.
+Figure~\ref{fig:TvsA} shows an example of the signal size recorded in one of the SiPMs on one of the scintillator bars against the measured value of $\mathit{S3} - \mathit{S1}$.
+To reduce the number of background events in the proton sample, a minimum signal amplitude is required.
+This cut varied, depending on the SiPM in question and was determined from distributions such as those in figure~\ref{fig:TvsA}. 
+The cut values varied in the range 0.125~V and 0.3~V.
+At the beam energies used, due to their higher mass, the protons typically deposit more energy in the detector, resulting in the observation of greater amplitudes.
+
+\begin{figure}[h]
+  \begin{adjustbox}{max totalsize={.7\textwidth}, center}
+    \input{files/Figures/TvsA_2block.tex}
+  \end{adjustbox}
+  \caption{Example of SiPM signal amplitude plotted against uncorrected \textit{S3} time of flight. The population in the upper right is produced by protons. This particular figure shows the distribution when 2 moderator blocks are present.}
+  \label{fig:TvsA}
+\end{figure}
+
