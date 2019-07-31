@@ -1,230 +1,229 @@
 \section{Results}
 \label{hptpcPaper:sec:Results}
 
-	\subsection{Flux measurements -- $S3$}
+\subsection{Flux measurements -- $\mathit{S3}$}
+  
+  \begin{figure}[h]
+    \begin{minipage}{0.48\textwidth}
+      \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
+	\input{files/Figures/thetaS1pi.tex}
+      \end{adjustbox}
+      \caption{Distribution of hits in $\mathit{S3}$ identified as minimum ionizing particles, as a function the horizontal off-axis angle measured from $\mathit{S1}$ for varying numbers of moderator blocks. In this case, no coincident hit in $\mathit{S2}$ was required.}
+      \label{fig:s1s3mips}
+    \end{minipage}
+    \hspace{0.3cm}
+    \begin{minipage}{0.48\textwidth}
+      \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
+	\input{files/Figures/thetaS1pro.tex}
+      \end{adjustbox}
+      \caption{Distribution of hits in $\mathit{S3}$ identified as protons, as a function of the horizontal off-axis angle measured from $\mathit{S1}$ for varying numbers of moderator blocks. In this case, no coincident hit in $\mathit{S2}$ was required.}
+      \label{fig:s1s3protons}
+    \end{minipage}
+  \end{figure}
 
-	
-	\begin{figure}[h]
-		\begin{minipage}{0.48\textwidth}
-			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
-				\input{files/Figures/thetaS1pi.tex}
-			\end{adjustbox}
-			\caption{Distribution of hits in $S3$ identified as minimum ionizing particles, as a function the horizontal off-axis angle measured from $S1$ for varying numbers of moderator blocks. In this case, no coincident hit in $S2$ was required.}
-			\label{fig:s1s3mips}
-		\end{minipage}
-		\hspace{0.3cm}
-		\begin{minipage}{0.48\textwidth}
-			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
-				\input{files/Figures/thetaS1pro.tex}
-			\end{adjustbox}
-			\caption{Distribution of hits in $S3$ identified as protons, as a function of the horizontal off-axis angle measured from $S1$ for varying numbers of moderator blocks. In this case, no coincident hit in $S2$ was required.}
-			\label{fig:s1s3protons}
-		\end{minipage}
-	\end{figure}
+  The distribution of MIPs and protons are shown in figures~\ref{fig:s1s3mips} and~\ref{fig:s1s3protons} in turn. 
+  In both cases, the peak falls and broadens in $\theta$ with the increasing number of moderator blocks. 
+  The scattering effect of the acrylic blocks can be seen, as at off axis angles, such as the range at which the vessel is placed, the number of MIPS and protons is increased.
+  The spread of particles for unmoderated data was unexpected, as the beam was already diffuse; the peak in both figures for 0 blocks was already broad.
+  Therefore overscattering of protons with 3 and 4 moderator blocks occurred, and the number of protons reaching $\mathit{S3}$ fell faster than the number of MIPS.
 
-    The distribution of MIPs and protons are shown in figures~\ref{fig:s1s3mips} and~\ref{fig:s1s3protons} in turn. 
-    In both cases, the peak falls and broadens in $\theta$ with the increasing number of moderator blocks. 
-    The scattering effect of the acrylic blocks can be seen, as at off axis angles, such as the range at which the vessel is placed, the number of MIPS and protons is increased.
-    The spread of particles for unmoderated data was unexpected, as the beam was already diffuse; the peak in both figures for 0 blocks was already broad.
-    Therefore overscattering of protons with 3 and 4 moderator blocks occurred, and the number of protons reaching S3 fell faster than the number of MIPS.
+  Figure~\ref{fig:propiratio_s3_horz} and \ref{fig:propiratio_s3_vert} figure show the proton-MIP ratio measured in $\mathit{S3}$ as a function of the nominal off-axis angle, horizontally and vertically respectively, and for various numbers of moderator blocks.
+  For 0, 1, 2 and 3 moderator blocks the ratio falls to a minimum at approximately $-1^{\circ}$ with respect to the beam axis. This corresponds to the true beam centre for these runs.
+  As the angle moves to lower values of $\theta$, the ratio rises for these configurations while a similar effect is observed as $\theta$ increases.
+  The peak at higher values of $\theta$ shifts to progressively greater values of $\theta$ as more moderator blocks are added (from approximately $\theta = 0.5^{\circ}$ for 0 blocks up to approximately $\theta = 2^{\circ}$ for the 3 block case).
+  At most values of $\theta$, the proton/MIP ratio falls with the addition of more moderator blocks. 
+  This is due to the overscattering of protons, particularly with 4 moderator blocks, which occurred due to the unmoderated beam being broader than expected.
+  However, at values of $\theta$ greater than $2^{\circ}$ the ratio is increased with the addition of some moderator blocks.
+  
+  \begin{figure}[!ht]
+    \begin{minipage}[t]{0.48\textwidth}
+      \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+	\input{files/Figures/thetaS1ratio.tex}
+      \end{adjustbox}
+      \caption{Proton/MIP ratio in $\mathit{S3}$ for varying numbers of moderator blocks as a function of horizontal off-axis angle, as measured from $\mathit{S1}$}
+      \label{fig:propiratio_s3_horz}
+    \end{minipage}
+    \hspace{0.3cm}
+    \begin{minipage}[t]{0.48\textwidth}
+      \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+	\input{files/Figures/phiS1ratio.tex}
+      \end{adjustbox}
+      \caption{Proton/MIP ratio in $\mathit{S3}$ for varying numbers of moderator blocks as a function of vertical off-axis angle, as measured from $\mathit{S1}$}
+	\label{fig:propiratio_s3_vert}
+    \end{minipage}	
+  \end{figure}
 
-	Figure~\ref{fig:propiratio_s3_horz} and \ref{fig:propiratio_s3_vert} figure show the proton-MIP ratio measured in $S3$ as a function of the nominal off-axis angle, horizontally and vertically respectively, and for various numbers of moderator blocks.
-	For 0, 1, 2 and 3 moderator blocks the ratio falls to a minimum at approximately $-1^{\circ}$ with respect to the beam axis. This corresponds to the true beam centre for these runs.
-	As the angle moves to lower values of $\theta$, the ratio rises for these configurations while a similar effect is observed as $\theta$ increases.
-	The peak at higher values of $\theta$ shifts to progressively greater values of $\theta$ as more moderator blocks are added (from approximately $\theta = 0.5^{\circ}$ for 0 blocks up to approximately $\theta = 2^{\circ}$ for the 3 block case).
-	At most values of $\theta$, the proton/MIP ratio falls with the addition of more moderator blocks. 
-	This is due to the overscattering of protons, particularly with 4 moderator blocks, which occurred due to the unmoderated beam being broader than expected.
-	However, at values of $\theta$ greater than $2^{\circ}$ the ratio is increased with the addition of some moderator blocks.
-	
-	\begin{figure}[!ht]
-		\begin{minipage}[t]{0.48\textwidth}
-			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
-				\input{files/Figures/thetaS1ratio.tex}
-			\end{adjustbox}
-			\caption{Proton/MIP ratio in $S3$ for varying numbers of moderator blocks as a function of horizontal off-axis angle, as measured from $S1$}
-			\label{fig:propiratio_s3_horz}
-		\end{minipage}
-		\hspace{0.3cm}
-		\begin{minipage}[t]{0.48\textwidth}
-			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
-				\input{files/Figures/phiS1ratio.tex}
-			\end{adjustbox}
-			\caption{Proton/MIP ratio in $S3$ for varying numbers of moderator blocks as a function of vertical off-axis angle, as measured from $S1$}
-			\label{fig:propiratio_s3_vert}
-		\end{minipage}	
-	\end{figure}
+  Figure~\ref{fig:s3promom} shows the momentum spectrum of those particles identified in $\mathit{S3}$ as protons.
 
-	Figure~\ref{fig:s3promom} shows the momentum spectrum of those particles identified in $S3$ as protons.
+  \begin{figure}[ht]
+    \centering
+    \begin{adjustbox}{max totalsize={0.8\textwidth}, center}
+      \input{files/Figures/proMomS1.tex}
+    \end{adjustbox}
+    \caption{Proton momentum spectrum as measured in $\mathit{S3}$.}
+      \label{fig:s3promom}
+  \end{figure}
 
-	\begin{figure}[ht]
-		\centering
-		\begin{adjustbox}{max totalsize={0.8\textwidth}, center}
-			\input{files/Figures/proMomS1.tex}
-		\end{adjustbox}
-		\caption{Proton momentum spectrum as measured in $S3$.}
-		\label{fig:s3promom}
-	\end{figure}
-
-	Even though the proton/ratio ratio was not uniformly increased as intended, the moderator blocks were nonetheless required for reduction of the proton momentum.
-	The momentum of protons reaching S3 is shown in figure~\ref{fig:s3promom}. 
-	The momentum of particles identified as protons was successfully reduced with increasing numbers of moderator blocks, with the range falling from 0.55-0.65~GeV/c for the unmoderated beam, to 0.30-0.45~GeV/c for 4~acrylic blocks.
-    The momentum of these particles is further reduced as they pass through the steel walls of the vessel on their path to the TPC region.
-    [PROTON STEEL STUDY GOES HERE]
+  Even though the proton/ratio ratio was not uniformly increased as intended, the moderator blocks were nonetheless required for reduction of the proton momentum.
+  The momentum of protons reaching $\mathit{S3}$ is shown in figure~\ref{fig:s3promom}. 
+  The momentum of particles identified as protons was successfully reduced with increasing numbers of moderator blocks, with the range falling from 0.55-0.65~GeV/c for the unmoderated beam, to 0.30-0.45~GeV/c for 4~acrylic blocks.
+  The momentum of these particles is further reduced as they pass through the steel walls of the vessel on their path to the TPC region.
+  [PROTON STEEL STUDY GOES HERE]
 
 
-	\subsection{Flux measurements -- $S4$}
+  \subsection{Flux measurements -- $\mathit{S4}$}
 
-	%\begin{figure}[ht]
-	%	\begin{minipage}[t]{0.48\textwidth}
-	%		\centering
-	%		\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiRatio}
-	%		\caption{The ratio of protons to pions as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
-	%		\label{fig:proPiRatio}
-	%	\end{minipage} 
-	%	\hspace{0.3cm}
-	%	\begin{minipage}[t]{0.48\textwidth}
-	%		\centering
-	%		\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiProf}
-	%		\caption{The number of protons and pions detected per spill by the DsToF as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
-	%		\label{fig:proPiProf}
-	%	\end{minipage}
-	%\end{figure}
-   
-	Figure~\ref{fig:thetas4mip} shows the flux of particles identified as minimum ionizing particles across $S4$.
-	This flux is shown as as a function of the angle in the $x-y$ plane (see figure~\ref{fig:setup} for the definitions of these axes) for varying numbers of moderator blocks.
-	For all numbers of moderator blocks, the peak number of minimum ionizing particle events occurs at a value of $\theta$ between $1^{\circ}$ and $2^{\circ}$.
-	Similarly the number of proton events per spill, shown in figure~\ref{fig:thetas4pro} peaks at a value of $\theta$ of approximately $2^{\circ}$.
-	
-	Two factors have an impact on the position of the peak:
-	the limited efficiency of $S4$ at the ends of the bars (near to either of the photomultiplier tubes) causes a smaller fraction of signal hits to be recorded in these regions. 
-	This limited efficiency is caused by the requirement that both PMTs record a waveform in order for a signal to be recorded.
-	This requirement is made, in order to reduce the number of false positives from dark noise in the PMT.
-	
-	The angular overlap of $S2$ and $S4$ also plays a role in the position of the peak. 
-	Figure~\ref{fig:beamAng} shows that, when observed from $S1$, a limited area of $S4$ is shadowed by the active area of $S2$.
-	Given the requirement that a signal must be observed in $S2$, it is clear that the majority of events that are observed in $S4$ are from this region of overlap.
-   
-   	Figure~\ref{fig:thetas4mip} also indicates that initially, an increasing number of moderator blocks results in an increased total MIP flux through $S4$. 
-   	However, upon the addition of the fourth moderator block the flux of MIPs appears to fall.
-   	This is observed due to the off-axis position of both $S2$ and $S4$, avoiding many of the unmoderated beam particles striking these timing points.
-   	Due to scattering processes in the moderator, a greater number of MIPs are incident upon $S2$ and $S4$, with more scattering occurring with greater numbers of moderator blocks.
-   	The drop off in the number of MIPs observed in the four block data is likely due to the overscattering of the protons and MIPs as stated previously.
-   	
-   	When changing from an unmoderated beam to the configuration with 1 moderator block, the proton flux shown in figure~\ref{fig:thetas4pro} initially sees an increase in the total number of events in $S4$.
-   	However, upon the addition of further moderator blocks, the total number of protons observed in $S4$ falls.
-   	The initial increase is similar to that for the MIP flux, with increased scattering causing more protons to pass through the off-axis $S2$ and $S4$.
-   	The subsequent decrease is likely due to the larger loss of energy of the protons in the thicker moderator.
-   	In turn, this may lead to attenuation of protons in the TPC resulting in fewer observed events in $S4$.
-   
-   	\begin{figure}[!ht]
-   		\begin{minipage}[t]{0.48\textwidth}
-   			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
-		   		\input{files/Figures/piS4Horz_new.tex}
-	   		\end{adjustbox}
-	   		\caption{Distribution of hits identified in $S4$ as minimum ionizing particles as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $S1$.}
-	   		\label{fig:thetas4mip}
-   		\end{minipage}
-   		\hspace{0.3cm}
-   		\begin{minipage}[t]{0.48\textwidth}
-	   		\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
-	   			\input{files/Figures/proS4Horz_new.tex}
-	   		\end{adjustbox}
-   			\caption{Distribution of hits identified in $S4$ as protons as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $S1$.}
-   			\label{fig:thetas4pro}
-   		\end{minipage} 
-   		%\begin{minipage}[t]{0.48\textwidth}
-   		%	\centering
-   		%	\includegraphics[width=\textwidth]{files/Figures/piS4Vert}
-   		%	\caption{Distribution of hits identified in $S_{4}$ as minimum ionizing particles as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $S_{1}$.}
-   		%\end{minipage}
-   		%\hspace{0.3cm}
-   		%\begin{minipage}[t]{0.48\textwidth}
-   		%	\centering
-   		%	\includegraphics[width=\textwidth]{files/Figures/proS4Vert}
-   		%	\caption{Distribution of hits identified in $S_{4}$ as protons as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $S_{1}$.}
-   		%\end{minipage}
-	\end{figure}	
-        
-     Figures~\ref{fig:propiratio_s4_horz} and~\ref{fig:propiratio_s4_vert} show the ratio of protons to minimum ionizing particles as a function of the number of moderator blocks and the two off-axis angles.
-     For the 0, 1 and 2 moderator block configurations, figure~\ref{fig:propiratio_s4_horz} shows the ratio reaching its peak at a value of $\theta$ of approximately $2^{\circ}$.
-     It is clear that in the angular region of this peak, the proton-MIP ratio has been dramatically increased from the expected on axis value of 1:6 seen previously.
-     With the addition of moderator blocks, the size of the peak reduces until, in the 3 block configuration, it is only faintly visible. 
-     For the 4 block configuration, the proton-MIP ratio is close to 0 for most values of $\theta$ but rises slightly at large values.
-     
-     Similarly, figure~\ref{fig:propiratio_s4_vert} shows the proton-MIP ratio falling with the addition of moderator blocks.
-     For the 0, 1, 2 and 3 block configurations the ratio rises as the vertical off-axis angle ($\phi$) moves further away from $0^{\circ}$. 
-     For the 4 block configuration, the value of the proton-MIP ratio is close to zero at all values of $\phi$.
-     As mentioned previously, this is thought to be due to the attenuation of low energy protons within the walls of the pressure vessel.
-     
-   	\begin{figure}[!ht]
-   		\begin{minipage}[t]{0.48\textwidth}
-   			\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
-   				\input{files/Figures/ratioS4Horz_new.tex}
-   			\end{adjustbox}
-   			\caption{Proton-MIP ratio in $S4$ for varying numbers of moderator blocks as a function of horizontal off-axis angle, as measured from $S1$.}
-   			\label{fig:propiratio_s4_horz}
-   		\end{minipage}
-   		\hspace{0.3cm}
-    	\begin{minipage}[t]{0.48\textwidth}
-    		\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
-	    		\input{files/Figures/ratioS4Vert_new.tex}
-	    	\end{adjustbox}
-    		\caption{Proton-MIP ratio in $S4$ for varying numbers of moderator blocks as a function of vertical off-axis angle, as measured from $S1$.}
-    		\label{fig:propiratio_s4_vert}
-    	\end{minipage}	
-   	\end{figure}
-   
-	\subsection{Flux normalisation between detectors}
-	
-	Because the portion of the beam subtended by each ToF detector is different, comparisons between detectors require the application of a normalisation.
-	These normalisations account both for solid angle coverage differences, and the different flux intensities present in the detectors.
-	Normalisation factors for comparing the flux are calculated and shown in table~\ref{tab:fluxFactors}.
-	These factors are calculated relative to the flux passing through $S3$ which covered the greatest angular extent of any of the timing points. 
-	The angular positions of the various timing points are shown in figure~\ref{fig:beamAng}.
-	
-	\begin{figure}[h]
-		
-	\end{figure}
-		
-	The total flux passing through $S1$ and $S3$ is shown in figure~\ref{fig:s1s3all}.
-	This flux is normalised such that its area is equal to 1.
-	The factors are calculated by integrating this distribution between the angular limits of the other timing points.
-	Table~\ref{tab:fluxFactors} shows the calculated factors for various timing points and overlaps.
-	
-	\begin{figure}[h]
-		\begin{minipage}{0.49\textwidth}
-			\begin{adjustbox}{max totalsize={\textwidth}{.5\textheight}}
-				\input{files/Figures/beamlineAng.tex}
-			\end{adjustbox}
-			\centering
-			\caption{Diagram showing the angular location of the extremities of the timing points. The coordinate system used has the origin at the $S1$ timing point, with the $x$ axis running parallel to the nominal beam axis.}
-			\label{fig:beamAng}
-		\end{minipage}
-		\hfill
-		\begin{minipage}{0.49\textwidth}
-			\begin{adjustbox}{max totalsize={\textwidth}{0.5\textheight}, center}
-				\input{files/Figures/totalFlux.tex}
-			\end{adjustbox}
-			\caption{Total particle flux passing through $S1$ and $S3$ for varying numbers of moderator blocks. The flux is shown as a function of the off-axis angle in the $x-y$ plane with the origin at $S1$ and the $x$ axis running parallel to the nominal beamline.}
-			\label{fig:s1s3all}
-		\end{minipage}
-		\
-	\end{figure}
-		
-	\begin{table}
-		\centering
-		\begin{tabular}{|c|c|c|c|c|}
-			\hline
-			Number of blocks & $S3$ int. & $S2$ int. & $S2 \cap S4$ int. & $S4$ int. \\
-			\hline
-			0 & 1 & 0.1821 & 0.03661 & 0.03927 \\
-			1 & 1 & 0.2987 & 0.08206 & 0.08705 \\
-			2 & 1 & 0.3502 & 0.12391 & 0.13234 \\
-			3 & 1 & 0.3772 & 0.15016 & 0.16323 \\
-			4 & 1 & 0.3950 & 0.16824 & 0.18714 \\
-			\hline		
-		\end{tabular}
-		\caption{Table showing the calculated flux corrections for various numbers of moderator blocks.}
-		\label{tab:fluxFactors}
-	\end{table}
-	
+    %\begin{figure}[ht]
+    %	\begin{minipage}[t]{0.48\textwidth}
+    %		\centering
+    %		\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiRatio}
+    %		\caption{The ratio of protons to pions as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
+    %		\label{fig:proPiRatio}
+    %	\end{minipage} 
+    %	\hspace{0.3cm}
+    %	\begin{minipage}[t]{0.48\textwidth}
+    %		\centering
+    %		\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiProf}
+    %		\caption{The number of protons and pions detected per spill by the DsToF as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
+    %		\label{fig:proPiProf}
+    %	\end{minipage}
+    %\end{figure}
+    
+    Figure~\ref{fig:thetas4mip} shows the flux of particles identified as minimum ionizing particles across $\mathit{S4}$.
+    This flux is shown as as a function of the angle in the $x-y$ plane (see figure~\ref{fig:setup} for the definitions of these axes) for varying numbers of moderator blocks.
+    For all numbers of moderator blocks, the peak number of minimum ionizing particle events occurs at a value of $\theta$ between $1^{\circ}$ and $2^{\circ}$.
+    Similarly the number of proton events per spill, shown in figure~\ref{fig:thetas4pro} peaks at a value of $\theta$ of approximately $2^{\circ}$.
+    
+    Two factors have an impact on the position of the peak:
+    the limited efficiency of $\mathit{S4}$ at the ends of the bars (near to either of the photomultiplier tubes) causes a smaller fraction of signal hits to be recorded in these regions. 
+    This limited efficiency is caused by the requirement that both PMTs record a waveform in order for a signal to be recorded.
+    This requirement is made, in order to reduce the number of false positives from dark noise in the PMT.
+    
+    The angular overlap of $\mathit{S2}$ and $\mathit{S4}$ also plays a role in the position of the peak. 
+    Figure~\ref{fig:beamAng} shows that, when observed from $\mathit{S1}$, a limited area of $\mathit{S4}$ is shadowed by the active area of $\mathit{S2}$.
+    Given the requirement that a signal must be observed in $\mathit{S2}$, it is clear that the majority of events that are observed in $\mathit{S4}$ are from this region of overlap.
+    
+    Figure~\ref{fig:thetas4mip} also indicates that initially, an increasing number of moderator blocks results in an increased total MIP flux through $\mathit{S4}$. 
+    However, upon the addition of the fourth moderator block the flux of MIPs appears to fall.
+    This is observed due to the off-axis position of both $\mathit{S2}$ and $\mathit{S4}$, avoiding many of the unmoderated beam particles striking these timing points.
+    Due to scattering processes in the moderator, a greater number of MIPs are incident upon $\mathit{S2}$ and $\mathit{S4}$, with more scattering occurring with greater numbers of moderator blocks.
+    The drop off in the number of MIPs observed in the four block data is likely due to the overscattering of the protons and MIPs as stated previously.
+    
+    When changing from an unmoderated beam to the configuration with 1 moderator block, the proton flux shown in figure~\ref{fig:thetas4pro} initially sees an increase in the total number of events in $\mathit{S4}$.
+    However, upon the addition of further moderator blocks, the total number of protons observed in $\mathit{S4}$ falls.
+    The initial increase is similar to that for the MIP flux, with increased scattering causing more protons to pass through the off-axis $\mathit{S2}$ and $\mathit{S4}$.
+    The subsequent decrease is likely due to the larger loss of energy of the protons in the thicker moderator.
+    In turn, this may lead to attenuation of protons in the TPC resulting in fewer observed events in $\mathit{S4}$.
+    
+    \begin{figure}[!ht]
+      \begin{minipage}[t]{0.48\textwidth}
+   	\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
+	  \input{files/Figures/piS4Horz_new.tex}
+	\end{adjustbox}
+	\caption{Distribution of hits identified in $\mathit{S4}$ as minimum ionizing particles as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $\mathit{S1}$.}
+	\label{fig:thetas4mip}
+      \end{minipage}
+      \hspace{0.3cm}
+      \begin{minipage}[t]{0.48\textwidth}
+	\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
+	  \input{files/Figures/proS4Horz_new.tex}
+	\end{adjustbox}
+   	\caption{Distribution of hits identified in $\mathit{S4}$ as protons as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $\mathit{S1}$.}
+   	\label{fig:thetas4pro}
+      \end{minipage} 
+      %\begin{minipage}[t]{0.48\textwidth}
+      %	\centering
+      %	\includegraphics[width=\textwidth]{files/Figures/piS4Vert}
+      %	\caption{Distribution of hits identified in $\mathit{S4}$ as minimum ionizing particles as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $\mathit{S1}$.}
+      %\end{minipage}
+      %\hspace{0.3cm}
+      %\begin{minipage}[t]{0.48\textwidth}
+      %	\centering
+      %	\includegraphics[width=\textwidth]{files/Figures/proS4Vert}
+      %	\caption{Distribution of hits identified in $\mathit{S_{4}$ as protons as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $\mathit{S_{1}$.}
+      %\end{minipage}
+    \end{figure}	
+    
+    Figures~\ref{fig:propiratio_s4_horz} and~\ref{fig:propiratio_s4_vert} show the ratio of protons to minimum ionizing particles as a function of the number of moderator blocks and the two off-axis angles.
+    For the 0, 1 and 2 moderator block configurations, figure~\ref{fig:propiratio_s4_horz} shows the ratio reaching its peak at a value of $\theta$ of approximately $2^{\circ}$.
+    It is clear that in the angular region of this peak, the proton-MIP ratio has been dramatically increased from the expected on axis value of 1:6 seen previously.
+    With the addition of moderator blocks, the size of the peak reduces until, in the 3 block configuration, it is only faintly visible. 
+    For the 4 block configuration, the proton-MIP ratio is close to 0 for most values of $\theta$ but rises slightly at large values.
+    
+    Similarly, figure~\ref{fig:propiratio_s4_vert} shows the proton-MIP ratio falling with the addition of moderator blocks.
+    For the 0, 1, 2 and 3 block configurations the ratio rises as the vertical off-axis angle ($\phi$) moves further away from $0^{\circ}$. 
+    For the 4 block configuration, the value of the proton-MIP ratio is close to zero at all values of $\phi$.
+    As mentioned previously, this is thought to be due to the attenuation of low energy protons within the walls of the pressure vessel.
+    
+    \begin{figure}[!ht]
+      \begin{minipage}[t]{0.48\textwidth}
+   	\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+   	  \input{files/Figures/ratioS4Horz_new.tex}
+   	\end{adjustbox}
+   	\caption{Proton-MIP ratio in $\mathit{S4}$ for varying numbers of moderator blocks as a function of horizontal off-axis angle, as measured from $\mathit{S1}$.}
+   	\label{fig:propiratio_s4_horz}
+      \end{minipage}
+      \hspace{0.3cm}
+      \begin{minipage}[t]{0.48\textwidth}
+    	\begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+	  \input{files/Figures/ratioS4Vert_new.tex}
+	\end{adjustbox}
+    	\caption{Proton-MIP ratio in $\mathit{S4}$ for varying numbers of moderator blocks as a function of vertical off-axis angle, as measured from $\mathit{S1}$.}
+    	\label{fig:propiratio_s4_vert}
+      \end{minipage}	
+    \end{figure}
+    
+    \subsection{Flux normalisation between detectors}
+    
+    Because the portion of the beam subtended by each ToF detector is different, comparisons between detectors require the application of a normalisation.
+    These normalisations account both for solid angle coverage differences, and the different flux intensities present in the detectors.
+    Normalisation factors for comparing the flux are calculated and shown in table~\ref{tab:fluxFactors}.
+    These factors are calculated relative to the flux passing through $\mathit{S3}$ which covered the greatest angular extent of any of the timing points. 
+    The angular positions of the various timing points are shown in figure~\ref{fig:beamAng}.
+    
+    \begin{figure}[h]
+      
+    \end{figure}
+    
+    The total flux passing through $\mathit{S1}$ and $\mathit{S3}$ is shown in figure~\ref{fig:s1s3all}.
+    This flux is normalised such that its area is equal to 1.
+    The factors are calculated by integrating this distribution between the angular limits of the other timing points.
+    Table~\ref{tab:fluxFactors} shows the calculated factors for various timing points and overlaps.
+    
+    \begin{figure}[h]
+      \begin{minipage}{0.49\textwidth}
+	\begin{adjustbox}{max totalsize={\textwidth}{.5\textheight}}
+	  \input{files/Figures/beamlineAng.tex}
+	\end{adjustbox}
+	\centering
+	\caption{Diagram showing the angular location of the extremities of the timing points. The coordinate system used has the origin at the $\mathit{S1}$ timing point, with the $x$ axis running parallel to the nominal beam axis.}
+	\label{fig:beamAng}
+      \end{minipage}
+      \hfill
+      \begin{minipage}{0.49\textwidth}
+	\begin{adjustbox}{max totalsize={\textwidth}{0.5\textheight}, center}
+	  \input{files/Figures/totalFlux.tex}
+	\end{adjustbox}
+	\caption{Total particle flux passing through $\mathit{S1}$ and $\mathit{S3}$ for varying numbers of moderator blocks. The flux is shown as a function of the off-axis angle in the $x-y$ plane with the origin at $\mathit{S1}$ and the $x$ axis running parallel to the nominal beamline.}
+	\label{fig:s1s3all}
+      \end{minipage}
+      \
+    \end{figure}
+    
+    \begin{table}
+      \centering
+      \begin{tabular}{|c|c|c|c|c|}
+	\hline
+	Number of blocks & $\mathit{S3}$ int. & $\mathit{S2}$ int. & $\mathit{S2} \cap \mathit{S4}$ int. & $\mathit{S4}$ int. \\
+	\hline
+	0 & 1 & 0.1821 & 0.03661 & 0.03927 \\
+	1 & 1 & 0.2987 & 0.08206 & 0.08705 \\
+	2 & 1 & 0.3502 & 0.12391 & 0.13234 \\
+	3 & 1 & 0.3772 & 0.15016 & 0.16323 \\
+	4 & 1 & 0.3950 & 0.16824 & 0.18714 \\
+	\hline		
+      \end{tabular}
+      \caption{Table showing the calculated flux corrections for various numbers of moderator blocks.}
+      \label{tab:fluxFactors}
+    \end{table}
+    
