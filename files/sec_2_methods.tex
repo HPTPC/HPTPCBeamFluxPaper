@@ -282,8 +282,8 @@ This spectrum is given by the difference in time between observation of a coinci
 \end{figure}
 
 Two corrections are applied to this measurement to give figure~\ref{fig:s4tof}. 
-The data is corrected for the efficiency of each of the \textit{S4} bars and a background is subtracted from the data.
-Initially, timing delays caused by cabling and equipment are taken into account.
+The data is corrected for the efficiency of each of the \textit{S4} bars and a background is subtracted from the data. % New paragraph here with discussion of how this is done
+Initially, timing delays caused by cabling and equipment are taken into account. % More detail needs to be added here
 Then a Gaussian is fitted to the peak caused by faster particles.
 All times are normalised such that the mean of this peak is at a value of $\mathit{S4} - \mathit{S2}$ corresponding to a particle traversing the distance between \textit{S2} and \textit{S4} at the speed of light. 
 The other times are then shifted by the same amount.
@@ -325,15 +325,28 @@ The black, 0 block peak ranging from 90 to 100~ns corresponds to deuterons.
   \label{fig:s3tof}
 \end{figure}
 
-
 The mass distribution calculated for the data set without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}.
-The time difference between \textit{S3} and \textit{S1} counters corresponding to a single particle was converted to the mass using the formula
+The time difference between $\mathit{S3}$ and $\mathit{S1}$ counters corresponding to a single particle was converted to mass.
+Starting from the equation for relativistic momentum
+\begin{align}
+	p = \gamma m v
+\end{align}
+where $m$ is the mass of the particle, $v$ is the speed of particle and $\gamma$ is the Lorentz factor.
+Squaring and rearranging gives
+\begin{align}
+	m^{2} = \frac{p}{\gamma v}
+\end{align}
+before the Lorentz factor is expanded to give
+\begin{align}
+	m^{2} = p^{2}\left(\frac{1}{v^{2}} - \frac{1}{c^{2}}\right)
+\end{align}
+where $c$ is the speed of light in a vacuum. Expressing $v$ as the distance between $\mathit{S1}$ and $\mathit{S3}$ ($x_{\mathit{S3}}-x_{\mathit{S1}} = 10.9~\text{m}$) divided by the time difference between the $\mathit{S1}$ and $\mathit{S3}$ counters ($t_{\mathit{S3}} - t_{\mathit{S1}}$) and expressing in natural units 
 \begin{equation} 
   m^2 = p^2 \left( 
-  \left(\frac{t_{S3}-t_{S1}}{x_{S3}-x_{S1}} \cdot c \right)^2
+  \left(\frac{t_{\mathit{S3}}-t_{\mathit{S1}}}{x_{\mathit{S3}}-x_{\mathit{S1}}} \cdot c \right)^2
   - 1  \right)
 \end{equation}
-where the particle momentum $p$ is assumed to be 0.8~GeV/c, the distance between two detectors $x_{\mathit{S3}}-x_{\mathit{S1}}$ is 10.9~m and $c$ is the speed of light. 
+where the particle momentum $p$ is assumed to be 0.8~GeV/c.
 The true mass positions in Figure~\ref{fig:s3tof_mass} are indicated by vertical arrows.
 One can clearly observe distinct peaks corresponding to protons and deuterons. 
 The insert in the figure shows a zoomed region corresponding to the MIPs. 
@@ -345,7 +358,17 @@ The insert in the figure shows a zoomed region corresponding to the MIPs.
   \label{fig:s3tof_mass}
 \end{figure}
 
+The same procedure is repeated for the particles measured in $\mathit{S2}$ and $\mathit{S4}$ and is shown in Figure~\ref{s4tof_mass}.
+In this case, $x_{\mathit{S4}}-x_{\mathit{S2}} = 12.5~\text{m}$.
 
+\begin{figure}[h]
+	\centering
+	\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
+		\input{files/Figures/s4TofMass.tex}
+	\end{adjustbox}
+	\caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between $\mathit{S4}$ and $\mathit{S2}$. Vertical arrows show predicted position of particles.}
+	\label{fig:s4tof_mass}
+\end{figure}
 
 For the data collected in \textit{S3}, both timing and signal amplitude cuts were used to select protons and MIPs.
 Figure~\ref{fig:TvsA} shows an example of the signal size recorded in one of the SiPMs on one of the scintillator bars against the measured value of $\mathit{S3} - \mathit{S1}$.
