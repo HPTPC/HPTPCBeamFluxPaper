@@ -325,21 +325,21 @@ This cut varied, depending on the SiPM in question and was determined from distr
 The cut values varied in the range 0.125~V and 0.3~V.
 
 \begin{figure}[h]
-	\begin{adjustbox}{max totalsize={.7\textwidth}, center}
-		\input{files/Figures/TvsA_2block.tex}
-	\end{adjustbox}
-	\caption{Example of SiPM signal amplitude plotted against uncorrected \textit{S3} time of flight. The population in the upper right is produced by protons. This particular figure shows the distribution when 2 moderator blocks are present.}
-	\label{fig:TvsA}
+  \begin{adjustbox}{max totalsize={.7\textwidth}, center}
+    \input{files/Figures/TvsA_2block.tex}
+  \end{adjustbox}
+  \caption{Example of SiPM signal amplitude plotted against uncorrected $\mathit{S3}$ time of flight. The population in the upper right is produced by protons. This particular figure shows the distribution when 2 moderator blocks are present.}
+  \label{fig:TvsA}
 \end{figure}
 
-Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by \textit{S4} with a changing number of moderator blocks.
-This spectrum is given by the difference in time between observation of a coincidence in the \textit{S1} and \textit{S2} timing points and a signal being recorded in \textit{S4} (the definition of an \textit{S4} signal is given above).
+Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by $\mathit{S4}$ with a changing number of moderator blocks.
+This spectrum is given by the difference in time between observation of a coincidence in the $\mathit{S1}$ and $\mathit{S2}$ timing points and a signal being recorded in $\mathit{S4}$ (the definition of an $\mathit{S4}$ signal is given above).
 
 \begin{figure}[h]
   \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
     \input{files/Figures/tofS4_correct.tex}
   \end{adjustbox}
-  \caption{\textit{S4} time-of-flight spectra for varying numbers of moderator blocks. For all configurations, an exponentially falling background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars.}
+  \caption{$\mathit{S4}$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, an exponentially falling background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars.}
   \label{fig:s4tof}	
 \end{figure}
 
@@ -354,29 +354,48 @@ Protons passing through the TPC lose energy, resulting in them no longer having 
 In turn, this leads the protons to have a larger reconstructed mass than predicted.
 
 \begin{figure}[h]
-	\centering
-	\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
-		\input{files/Figures/s4TofMass.tex}
-	\end{adjustbox}
-	\caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between $\mathit{S4}$ and $\mathit{S2}$. Vertical arrows show predicted position of particles.}
-	\label{fig:s4tof_mass}
+  \centering
+  \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
+    \input{files/Figures/s4TofMass.tex}
+  \end{adjustbox}
+  \caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between $\mathit{S4}$ and $\mathit{S2}$. Vertical arrows show predicted position of particles.}
+  \label{fig:s4tof_mass}
 \end{figure}
 
-Two corrections are applied to this measurement to give figure~\ref{fig:s4tof}. 
-The data is corrected for the efficiency of each of the \textit{S4} bars and a background is subtracted from the data. % New paragraph here with discussion of how this is done
+Two corrections are applied to this measurement to give figure~\ref{fig:s4tof}.
+A correction based upon the efficiency of each $\mathit{S4}$ bar is calculated and applied as follows.
+An $\mathit{S4}$ signal hit is defined as having occurred when both PMTs on a bar register a signal with an amplitude of more than 20~mV within 20~ns of each other.
+These $\mathit{S4}$ signal hits are deemed to have been produced by a beam particle if $30~\text{ns} < t_{\mathit{S4}} - t_{\mathit{S2}} < 160~\text{ns}$.
+The number of these beam particle-induced signal hits is expressed as $N_{\text{Beam, 2 PMT}}$.
+
+The number of beam particle-induced single PMT hits is defined as $N_{\text{Beam, 1 PMT}}$.
+These are cases where a single PMT on a bar registers a signal with an amplitude of more than 20~mV and where $30~\text{ns} < t_{\text{PMT}} - t_{\mathit{S2}} < 160~\text{ns}$ but there is no coincident signal above the threshold in the PMT at the other end of the bar.
+
+The efficiency, $\epsilon$, is calculated in terms of these quantities and is show in eq.~\ref{eq:barEff}.
+\begin{equation}
+  \epsilon = \frac{N_{\text{Beam, 2 PMT}}}{N_{\text{Beam, 2 PMT}}+N_{\text{Beam, 1 PMT}}}
+  \label{eq:barEff}
+\end{equation}
+
+These $\mathit{S4}$ bar efficiencies are calculated with eq.~\ref{eq:barEff} and are shown in Figure~\ref{fig:s4Eff}.
+The large differences in measured efficiencies between the 1, 2 and 3 block data and the other data are thought to be due to the amplification of the signals from different PMTs during the period when these data were taken.
+Additional differences in efficiency may result from differences in the voltage applied across a given PMT cathod and anode between runs.
+
+\begin{figure}[h]
+  \centering
+  \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
+    \input{files/Figures/barEffs.tex}
+  \end{adjustbox}
+  \caption{$\mathit{S4}$ bar-by-bar efficiencies calculated using eq.~\ref{eq:barEff}. The bars are numbered vertically in ascending order, with bar 1 being the lowest and bar 10 the highest.}
+  \label{fig:s4Eff}
+\end{figure}
+
+Additionally, a background is subtracted from the data. % New paragraph here with discussion of how this is done
+
 Initially, timing delays caused by cabling and equipment are taken into account. % More detail needs to be added here
 Then a Gaussian is fitted to the peak caused by faster particles.
 All times are normalised such that the mean of this peak is at a value of $\mathit{S4} - \mathit{S2}$ corresponding to a particle traversing the distance between $\mathit{S2}$ and $\mathit{S4}$ at the speed of light. 
 The other times are then shifted by the same amount.
-
-Additionally, the measurements are corrected for the efficiency of each bar. 
-The efficiency of a bar is calculated by dividing the number of signal hits in coincidence with an $\mathit{S1}-\mathit{S2}$ signal in each bar by the total number of PMT hits in each bar (themselves in coincidence with an $\mathit{S1}-\mathit{S2}$ signal). 
-If the number of single PMT hits which are in coincidence with $\mathit{S1}-\mathit{S2}$ signal is expressed as $N_{1PMTcoinc}$ and the number of 2 PMT signals in coincidence with an $\mathit{S1}-\mathit{S2}$ signal is expressed as $N_{2PMTcoinc}$, then the efficiency is given by~(\ref{eq:barEff}).
-
-\begin{equation}
-  \epsilon = \frac{N_{2PMTcoinc}}{N_{2PMTcoinc}+N_{1PMTcoinc}}
-  \label{eq:barEff}
-\end{equation}
 
 Using figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
 These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
