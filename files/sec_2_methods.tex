@@ -125,13 +125,22 @@ The anode signals of the SiPMs are read out, summed and shaped by a dedicated ci
 A 64-ch SAMPIC  module was used for the data acquisition.
 A SAMPIC chip is a Waveform and Time to Digital Converter (WTDC) 16-channel ASIC which provides a raw time with an ultrafast analog memory allowing fine timing extraction as well as other parameters of the pulse~\cite{SAMPIC}.
 Each channel contains a discriminator that can trigger itself independently or participate in a more complex combined trigger. 
-Three module ASICs ($16\times3=48$ channels) were connected to the 44 channels of \textit{S3} and were operated in self-triggering mode.
+Three module ASICs ($16\times3=48$ channels) were connected to the 44 channels of $\mathit{S3}$ and were operated in self-triggering mode.
 \todo{JOCELYN:"What were the conditions of the self trigger i.e. threshold? multiplicity? time over threshold? etc.) specify here." ALEXANDER KORZENEV}
-A 4th ASIC was used to acquire data from \textit{S1}, the coincidence signal $\mathit{S1} \cap \mathit{S2}$, and the start-of-spill signal from PS.
-A second level trigger was implemented in firmware and run on the level of the ASICs: the data were only sent to the hard disk of the DAQ notebook in the case of coincidence between \textit{S1} channels and channels of three ASICs used for \textit{S3}.
+A 4th ASIC was used to acquire data from $\mathit{S1}$, the coincidence signal $\mathit{S1} \cap \mathit{S2}$, and the start-of-spill signal from PS.
+A second level trigger was implemented in firmware and run on the level of the ASICs: the data were only sent to the hard disk of the DAQ notebook in the case of coincidence between $\mathit{S1}$ channels and channels of three ASICs used for $\mathit{S3}$.
 
 A mean time of light signals detected at two ends of a single bar provides a time reference with a resolution of about 100~ps, while the difference between the time of the light signals gives the position of the interaction along the bar, with a resolution of 1.6~cm.
+
 Examples of reconstructed $XY$ distributions are shown in Figures~\ref{fig:s3XY_pion} and~\ref{fig:s3XY_proton}.
+The axes of the distributions shown in Figures~\ref{fig:s3XY_pion} and~\ref{fig:s3XY_proton} are local coordinates for $\mathit{S3}$ where $y=0~cm$ is the bottom of the active area and $y=120~cm$ is the top of the active area.
+In the $x$ direction, 0~cm is the left-hand side of $\mathit{S3}$ as viewed from $\mathit{S1}$, while $x = 170~cm$ is the right-hand edge of $\mathit{S3}$.
+Figure~\ref{fig:s3XY_pion} shows the spatial distribution of hits in $\mathit{S3}$ thought to be produced by MIPs when no moderator was present in the beamline.
+This distribution shows that most of the hits are concentrated in one small spot of the detector (the beam centre).
+
+Figure~\ref{fig:s3XY_proton} shows the spatial distribution of hits identified in $\mathit{S3}$ as protons when 4 moderator blocks were in the beamline.
+In contrast to Figure~\ref{fig:s3XY_pion}, the pattern of hits is far more diffuse.
+This clearly shows the scattering effect of the moderator blocks.
 
 \todo{JOCELYN: "to understand whether the axes make sense, the reader needs to know the coordinate system.  The paper needs a paragraph on the coordinates of the upstream TOF somewhere before reconstruction is discussed to make sense of this.  That paragraph should spell out where the TOF is, and where the beam is expected to be, and then the discussion of these figures (that needs to be included in the reconstruction section) should compare the measured beam center position (which can't really be determined from these figures, so the caption should give it, as well as the text), with the expected beam center position." SEB/We will have included the axes in the beam diagram further up.}
 
@@ -141,7 +150,7 @@ Examples of reconstructed $XY$ distributions are shown in Figures~\ref{fig:s3XY_
     \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
       \input{files/Figures/0_pionXY.tex}
     \end{adjustbox}
-    \caption{Reconstructed $XY$ distribution of hits observed in \textit{S3}. In this case a timing cut has been applied to select only those hits identified as coming from minimum ionizing particles. This particular data was taken without a moderator in the beamline.}
+    \caption{Reconstructed spatial distribution of hits observed in $\mathit{S3}$. In this case a timing cut has been applied to select only those hits identified as coming from minimum ionizing particles. This particular data was taken without a moderator in the beamline.}
     \label{fig:s3XY_pion}
   \end{minipage} 	
   \hfill
@@ -150,7 +159,7 @@ Examples of reconstructed $XY$ distributions are shown in Figures~\ref{fig:s3XY_
     \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
       \input{files/Figures/4_protonXY.tex}
     \end{adjustbox}
-    \caption{Reconstructed $XY$ distribution of hits observed in \textit{S3}. In this case a timing cut and an amplitude cut has been applied to select only those hits thought to come from protons. This data was taken with 4 moderator blocks in the beamline.}
+    \caption{Reconstructed spatial distribution of hits observed in $\mathit{S3}$. In this case a timing cut and an amplitude cut has been applied to select only those hits thought to come from protons. This data was taken with 4 moderator blocks in the beamline.}
     \label{fig:s3XY_proton}
   \end{minipage}
 \end{figure}
@@ -165,12 +174,12 @@ Examples of reconstructed $XY$ distributions are shown in Figures~\ref{fig:s3XY_
 
 \subsection{Downstream Time of Flight instrumentation (S4)}
 \label{subsec:s4Exp}
-The \textit{S4} `downstream' ToF constituent sat immediately downstream of the HPTPC prototype in the beamline.
+The $\mathit{S4}$ `downstream' ToF constituent sat immediately downstream of the HPTPC prototype in the beamline.
 It consists of 10 bars of Nuvia NuDET plastic scintillator which has a wavelength of maximum emission of 425~nm and a decay time constant of 2.5~ns~\cite{Nuvia}.
 Each of these bars measure $10 \times 1 \times 140$~cm$^3$
 Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube~\cite{Hamamatsu}.
 The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector.
-The total active area of the \textit{S4} wall is $1.4 \times 0.68$~m$^2$, along with its dimensions are presented in Figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
+The total active area of the $\mathit{S4}$ wall is $1.4 \times 0.68$~m$^2$, along with its dimensions are presented in Figure~\ref{fig:dstofFront} and~\ref{fig:dstofDiagonal}.
 The time resolution of the bars and PMTs was measured to be 1~ns using a $^{90}$Sr source placed at measured distances along the bar.
 Figure~\ref{fig:s4Res} shows an example of the distribution from which this value was derived.
 Figure~\ref{fig:s4Res} is the measured time difference for signals coming from the PMTs at either end of a bar caused by the $^{90}$Sr at a given position.
@@ -272,14 +281,14 @@ The numbers of spills per moderator block are shown in Table~\ref{tab:spills} (w
 
 \subsection{Analysis Methods}
 
-Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the \textit{S3} timing point for varying numbers of moderator blocks.
+Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $\mathit{S3}$ timing point for varying numbers of moderator blocks.
 The quicker peak is formed by minimum ionizing particles, while the peak at higher values of $\mathit{S3} - \mathit{S1}$ corresponds to protons.
 The black, 0 block peak ranging from 90 to 100~ns corresponds to deuterons.
 \begin{figure}[h]
 	\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
 		\input{files/Figures/utofS1.tex}
 	\end{adjustbox}
-	\caption{\textit{S3} time of flight spectra for varying numbers of moderator blocks.}
+	\caption{$\mathit{S3}$ time of flight spectra for varying numbers of moderator blocks.}
 	\label{fig:s3tof}
 \end{figure}
 
@@ -321,7 +330,7 @@ For the data collected in $\mathit{S3}$, both timing and signal amplitude cuts w
 Figure~\ref{fig:TvsA} shows an example of the signal size recorded in one of the SiPMs on one of the scintillator bars against the measured value of $t_{\mathit{S3}} - t_{\mathit{S1}}$.
 At the beam energies used, due to their higher mass, the protons typically deposit more energy in the detector, resulting in the observation of greater amplitudes.
 Therefore, to reduce the number of background events in the proton sample, a minimum signal amplitude is required.
-This cut varied, depending on the SiPM in question and was determined from distributions such as those in figure~\ref{fig:TvsA}. 
+This cut varied, depending on the SiPM in question and was determined from distributions such as those in Figure~\ref{fig:TvsA}. 
 The cut values varied in the range 0.125~V and 0.3~V.
 
 \begin{figure}[h]
@@ -390,7 +399,7 @@ This shift is applied to all measured times to give the value of $t_{\mathit{S4}
 %These delays are calculated by summing the quoted delays for each length of cable and piece of equipment between an $\mathit{S4}$ PMT and the TDC.
 %The same procedure is repeated when counting the delay between the $\mathit{S2}$ and the TDC.
 
-Two corrections are applied to this measurement to give figure~\ref{fig:s4tof}.
+Two further corrections are applied to this measurement to give Figure~\ref{fig:s4tof}.
 A correction based upon the efficiency of each $\mathit{S4}$ bar is calculated and applied as follows.
 An $\mathit{S4}$ signal hit is defined as having occurred when both PMTs on a bar register a signal with an amplitude of more than 20~mV within 20~ns of each other.
 These $\mathit{S4}$ signal hits are deemed to have been produced by a beam particle if $30~\text{ns} < t_{\mathit{S4}} - t_{\mathit{S2}} < 160~\text{ns}$.
@@ -420,10 +429,6 @@ Additional differences in efficiency may result from differences in the voltage 
 
 Additionally, a background is subtracted from the data. % New paragraph here with discussion of how this is done
 
-Then a Gaussian is fitted to the peak caused by faster particles.
-All times are normalised such that the mean of this peak is at a value of $\mathit{S4} - \mathit{S2}$ corresponding to a particle traversing the distance between $\mathit{S2}$ and $\mathit{S4}$ at the speed of light. 
-The other times are then shifted by the same amount.
-
 Using figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
 These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
 The signal functions are taken to be Gaussians while the background is taken to be an exponential function. 
@@ -434,7 +439,7 @@ The particles in the quicker timing window (those for which $t_{\mathit{S4}}-t_{
   \begin{adjustbox}{max totalsize={.7\textwidth}{.62\textheight},center}
     \input{files/Figures/1_dtof1d.tex}
   \end{adjustbox}
-  \caption{Example of the time of flight spectrum observed in \textit{S4} with a combined signal and background function fitted (shown in black)}
+  \caption{Example of the time of flight spectrum observed in $\mathit{S4}$ with a combined signal and background function fitted (shown in black)}
   \label{fig:fitEx}
 \end{figure}
 
