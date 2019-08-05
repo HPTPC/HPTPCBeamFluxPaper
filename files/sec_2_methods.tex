@@ -201,7 +201,7 @@ The corresponding spatial resolution of the bars and PMTs was measured to be 8.3
 \end{figure}
 
 The anode signals of all 20 of the PMTs are discriminated using LeCroy 620AL NIM discriminators, at a threshold of 20~mV.
-The discriminated signals are then fed into a time-to-digital converter. A signal in \textit{S4} is deemed to have occurred if a signal is seen in both PMTs, above the discriminator threshold, on the same bar within 20~ns of each other. 
+The discriminated signals are then fed into a time-to-digital converter. A signal in $\mathit{S4}$ is deemed to have occurred if a signal is seen in both PMTs, above the discriminator threshold, on the same bar within 20~ns of each other. 
 This timing window is determined through testing performed with a $^{90}$Sr source at known positions on the bar.
 
 The $\mathit{S1-S2}$ coincidence signal is digitized by the same time-to-digital converter. This signal is used to calculate the particle time of flight from $\mathit{S2}$ to $\mathit{S4}$.
@@ -362,6 +362,34 @@ In turn, this leads the protons to have a larger reconstructed mass than predict
   \label{fig:s4tof_mass}
 \end{figure}
 
+Initially, timing delays caused by cabling and equipment are taken into account.
+An $\mathit{S4}$ signal measured in the downstream DAQ which occurs at a true time $t_{\mathit{S4}}$ will be recorded as happening at a time
+\begin{align}
+  t_{\mathit{S4},~\text{rec}} = t_{\mathit{S4}} + t_{\mathit{S4},~\text{delay}}
+  \label{eq:delayS4}
+\end{align}
+while an $\mathit{S2}$ signal measured in the downstream DAQ will be recorded at a time
+\begin{align}
+  t_{\mathit{S2},~\text{rec}} = t_{\mathit{S2}} + t_{\mathit{S2},~\text{delay}}
+  \label{eq:delayS2}
+\end{align}
+where $t_{\mathit{S4},~\text{delay}}$ and $t_{\mathit{S2},~\text{delay}}$ are the total delays caused by cabling and equipment between the respective detectors and the downstream ToF DAQ.
+Therefore, the true time of flight, $t_{\mathit{S4}} - t_{\mathit{S2}}$, will be given by
+\begin{align}
+  t_{\mathit{S4}} - t_{\mathit{S2}} = t_{\mathit{S4},~\text{rec}} - t_{\mathit{S2},~\text{rec}} - \left( t_{\mathit{S4},~\text{delay}} - t_{\mathit{S2},~\text{delay}} \right)
+  \label{eq:delayTof}
+\end{align}
+where $t_{\mathit{S4},~\text{delay}} - t_{\mathit{S2},~\text{delay}}$ is to be determined.
+
+In order to determine $t_{\mathit{S4},~\text{delay}} - t_{\mathit{S2},~\text{delay}}$, a Gaussian is fitted to the faster peak observed in the 0 block data which is thought to be produced by minimum ionizing particles.
+A charged pion with a momentum of 0.8~GeV/c will have a speed of $0.985c$ and will therefore traverse the distance between $\mathit{S2}$ and $\mathit{S4}$ (12.6~m) in a time of 42.6~ns.
+When a Gaussian is fitted to the data, the mean of the MIP peak lies at $(86.31 \pm 0.019)~\text{ns}$.
+Rearranging eq.~\ref{eq:delayTof} and substituting in 86.31~ns for $t_{\mathit{S4},~\text{rec}} - t_{\mathit{S2},~\text{rec}}$ gives a value for $t_{\mathit{S4},~\text{delay}} - t_{\mathit{S2},~\text{delay}}$ of 43.7~ns.
+This shift is applied to all measured times to give the value of $t_{\mathit{S4}} - t_{\mathit{S2}}$ used in the analysis.
+
+%These delays are calculated by summing the quoted delays for each length of cable and piece of equipment between an $\mathit{S4}$ PMT and the TDC.
+%The same procedure is repeated when counting the delay between the $\mathit{S2}$ and the TDC.
+
 Two corrections are applied to this measurement to give figure~\ref{fig:s4tof}.
 A correction based upon the efficiency of each $\mathit{S4}$ bar is calculated and applied as follows.
 An $\mathit{S4}$ signal hit is defined as having occurred when both PMTs on a bar register a signal with an amplitude of more than 20~mV within 20~ns of each other.
@@ -392,7 +420,6 @@ Additional differences in efficiency may result from differences in the voltage 
 
 Additionally, a background is subtracted from the data. % New paragraph here with discussion of how this is done
 
-Initially, timing delays caused by cabling and equipment are taken into account. % More detail needs to be added here
 Then a Gaussian is fitted to the peak caused by faster particles.
 All times are normalised such that the mean of this peak is at a value of $\mathit{S4} - \mathit{S2}$ corresponding to a particle traversing the distance between $\mathit{S2}$ and $\mathit{S4}$ at the speed of light. 
 The other times are then shifted by the same amount.
