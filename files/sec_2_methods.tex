@@ -14,13 +14,38 @@ The primary components of the  experimental setup for the data taking period are
   \label{fig:setup}
 \end{figure}
 
+\begin{figure}[ht]
+  \begin{adjustbox}{max totalsize={.7\textwidth}{.5\textheight},center}
+    \input{files/Figures/angularDist.tex}
+  \end{adjustbox}
+  \caption{Angular position of various objects within the T10 beamline. US and DS refer to the upstream and downstream faces of the HPTPC. The origin in this view is at the wire chamber (also know as the beam position monitor.}
+  \label{fig:angularDist}  
+\end{figure}
+
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Object & Minimum $\theta$ & Maximum $\theta$ & Minimum $\phi$ & Maximum $\phi$ \\
+    \hline
+    $\mathit{S1}$ & $-1.89^{\circ} \pm 0.14^{\circ}$ & $12.29^{\circ} \pm 0.14^{\circ}$ & $-5.71^{\circ} \pm 0.14^{\circ}$ & $8.58^{\circ} \pm 0.14^{\circ}$ \\
+    $\mathit{S2}$ & $0.60^{\circ}$ \pm 0.02^{\circ} & $4.18^{\circ} \pm 0.02^{\circ}$ & $-1.43^{\circ} \pm 0.02^{\circ}$ & $2.69^{\circ} \pm 0.02^{\circ}$ \\
+    $\mathit{S3}$ & $-2.826^{\circ} \pm 0.004^{\circ}$ & $5.900^{\circ} \pm 0.004^{\circ}$ & $-3.087^{\circ} \pm 0.004^{\circ}$ & $3.296^{\circ} \pm 0.004^{\circ}$ \\
+    $\mathit{S4}$ & $0.499^{\circ} \pm 0.003^{\circ}$ & $6.068{\circ} \pm 0.003^{\circ}$ & $-1.368{\circ} \pm 0.003^{\circ}$ & $1.765^{\circ} \pm 0.003^{\circ}$ \\
+    TPC upstream face & $1.530^{\circ} \pm 0.003^{\circ}$ & $3.630^{\circ} \pm 0.003^{\circ}$ & $-2.566^{\circ} \pm 0.003^{\circ}$ & $2.549^{\circ} \pm 0.003^{\circ}$ \\
+    TPC downstream face & $1.881^{\circ} \pm 0.003^{\circ}$ & $3.811^{\circ} \pm 0.003^{\circ}$ & $-2.3567^{\circ} \pm 0.003^{\circ}$ & $2.341^{\circ} \pm 0.003^{\circ}$ \\
+    \hline
+  \end{tabular}
+  \caption{Angular extents of various timing points within the T10 beamline.}
+\end{table}
+
 The beam position monitor lies upstream of all the ToF constituents and the TPC, at the beam entrance. 
 %The centre of the HPTPC Prototype was placed 13~m from the wire chamber at the beam entrance. 
-The beam position monitor is followed by three ToF constituents: \textit{S1}, which provides the trigger is a small-area beam trigger.
-\textit{S2}, a trigger counter that provides a coincidence measurement with \textit{S1}.
-\textit{S3}, a large wall of plastic scintillator bars, placed directly upstream of the TPC vessel.
+The beam position monitor is followed by three ToF constituents: $\mathit{S1}$, which provides the trigger is a small-area beam trigger.
+$\mathit{S2}$, a trigger counter that provides a coincidence measurement with $\mathit{S1}$.
+$\mathit{S3}$, a large wall of plastic scintillator bars, placed directly upstream of the TPC vessel.
 All three of these upstream constituents are described in greater detail in Sections~\ref{subsec:s1s2Exp}~and~\ref{subsec:s3Exp}.
-Directly between \textit{S1} and \textit{S2}, a variable number of blocks of acrylic moderator were placed, and are shown in Figure~\ref{fig:modblocks}.
+Directly between $\mathit{S1}$ and $\mathit{S2}$, a variable number of blocks of acrylic moderator were placed, and are shown in Figure~\ref{fig:modblocks}.
 The vessel containing the TPC was placed 13~m from the wire chamber at the beam entrance.
 Lastly, a fourth ToF constituent, labeled \textit{S4}, was placed directly downstream of the vessel.
 This was a second wall of plastic scintillator bars, described further in Section~\ref{subsec:s4Exp}.
@@ -50,7 +75,7 @@ A maximum of four moderator blocks was chosen to retain a minimum intensity in t
 
 Data was taken with the beam momentum primarily at 0.8~GeV/c, and with each configuration of 0 to 4 moderator blocks.
 Figure~INSERT shows the typical composition of the beam upstream of \textit{S1} at 0.8~GeV/c. Beam spills were approximately 500~ms in length with 5-10~s between spills.  
-\todo{JOCELYN:"In general, you need a paragraph and a figure or two that describe the T10 beam before you do anything to it. The description of the un-modified beam should come before any explanation about the modifications, so probably as a subsection at the end of section 1. This unmodified beam data should probably come from the 2016 measurements, or the on-axis TOF measurements with no moderator." - similar to previous comment 2016 data probably best So maybe remove figure INSERT, and just do a subsection at the end of section 1.}
+\todo[inline]{JOCELYN:"In general, you need a paragraph and a figure or two that describe the T10 beam before you do anything to it. The description of the un-modified beam should come before any explanation about the modifications, so probably as a subsection at the end of section 1. This unmodified beam data should probably come from the 2016 measurements, or the on-axis TOF measurements with no moderator." - similar to previous comment 2016 data probably best So maybe remove figure INSERT, and just do a subsection at the end of section 1.}
 
 %    Moderator blocks were used in order to cause a spread in the incoming beam.
 %    The blocks cause protons to scatter through a larger angle than pions and other minimum ionising particles (MIP), increasing the off-axis proton pion ratio.
@@ -237,6 +262,7 @@ Throughout the run, the TPC was filled with either pure argon, or a combination 
 The performance of this TPC is the subject of a forthcoming publication.
 
 \section{Analysis}
+\label{hptpcPaper:sec:Analysis}
 \subsection{Analysis Goals}
 
 The primary aims of the use of $\mathit{S1} - \mathit{S4}$ were as follows: to assess the feasibility of using this combination of off-axis positioning and a moderated beam at the PS to produce the momenta of most relevance to neutrino cross-section studies and to characterize the incident flux on the TPC and exiting the TPC, for the TPC data analysis. \todo[inline]{TOBY, I rewrote this paragraph in line with the comments. This ok with you?}
@@ -263,20 +289,20 @@ As such the data used in these results cover two days in the run where the numbe
 The numbers of spills per moderator block are shown in Table~\ref{tab:spills} (with more data taken for 4 blocks as that was the configuration used for the majority of the beam test).
 
 \begin{table}
-	\centering
-	\begin{tabular}{|c|c|}
-		\hline
-		Number of moderator blocks & Recorded spills \\
-		\hline
-		0 & 257 \\
-		1 & 254 \\
-		2 & 267 \\
-		3 & 220 \\
-		4 & 3884 \\
-		\hline
-	\end{tabular}
-	\caption{The number of spills recorded for each moderator block configuration}
-	\label{tab:spills}
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    Number of moderator blocks & Recorded spills \\
+    \hline
+    0 & 257 \\
+    1 & 254 \\
+    2 & 267 \\
+    3 & 220 \\
+    4 & 3884 \\
+    \hline
+  \end{tabular}
+  \caption{The number of spills recorded for each moderator block configuration}
+  \label{tab:spills}
 \end{table}
 
 \subsection{Analysis Methods}
@@ -285,11 +311,11 @@ Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $\mathi
 The quicker peak is formed by minimum ionizing particles, while the peak at higher values of $\mathit{S3} - \mathit{S1}$ corresponds to protons.
 The black, 0 block peak ranging from 90 to 100~ns corresponds to deuterons.
 \begin{figure}[h]
-	\begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
-		\input{files/Figures/utofS1.tex}
-	\end{adjustbox}
-	\caption{$\mathit{S3}$ time of flight spectra for varying numbers of moderator blocks.}
-	\label{fig:s3tof}
+  \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
+    \input{files/Figures/utofS1.tex}
+  \end{adjustbox}
+  \caption{$\mathit{S3}$ time of flight spectra for varying numbers of moderator blocks.}
+  \label{fig:s3tof}
 \end{figure}
 
 The mass distribution calculated for the data set without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}.
