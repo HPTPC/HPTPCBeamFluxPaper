@@ -84,11 +84,21 @@ These measurements are used to calculate the positions of various components in 
 Figure~\ref{fig:angularDistWC} shows the angular distribution of various objects within the beamline.
 
 \begin{figure}[ht]
-  \begin{adjustbox}{max totalsize={.7\textwidth}{.5\textheight},center}
-    \input{files/Figures/angularDist.tex}
-  \end{adjustbox}
-  \caption{Angular position of various objects within the T10 beamline. US and DS refer to the upstream and downstream faces of the HPTPC. The origin in this view is at the wire chamber (also know as the beam position monitor.}
-  \label{fig:angularDistWC}  
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+      \input{files/Figures/angularDist.tex}
+    \end{adjustbox}
+    \caption{Angular position of various objects within the T10 beamline. US and DS refer to the upstream and downstream faces of the HPTPC. The origin in this view is at the wire chamber (also know as the beam position monitor.}
+    \label{fig:angularDistWC}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+      \input{files/Figures/angDistS1.tex}
+    \end{adjustbox}
+    \caption{Angular position of various objects within the T10 beamline. US and DS refer to the upstream and downstream faces of the HPTPC. The origin in this view is at the centre of $\mathit{S1}$.}
+    \label{fig:angularDistS1}
+  \end{minipage}
 \end{figure}
 
 Table~\ref{tab:angWC} shows the calculated angular extent of the various beamline components as measured from the beam position monitor.
@@ -136,7 +146,7 @@ The analog signals from one of the $\mathit{S1}$ PMTs and $\mathit{S2}$ PMT were
 Subsequently, the discriminated signals were fed into a NIM coincidence unit, and the coincidence of the two signals was recorded by the DAQ systems of the downstream ToF wall ($\mathit{S4}$).
 This information was further used for the time-of-flight analysis of the downstream ToF.
 
-\subsection{Upstream Time of Flight instrumentation ($\mathit{S3}$)}
+\subsection{Upstream Time of Flight instrumentation $\mathit(S3)$}
 \label{subsec:s3Exp}
 \todo[inline]{JOCELYN:"Replace just upstream with a number and error bar"}
 The $\mathit{S3}$ `upstream' ToF constituent was placed just upstream of the HPTPC prototype in the beamline.
@@ -220,7 +230,7 @@ This clearly shows the scattering effect of the moderator blocks.
 
 \subsection{Downstream Time of Flight instrumentation (S4)}
 \label{subsec:s4Exp}
-The $\mathit{S4}$ `downstream' ToF constituent sat immediately downstream of the HPTPC prototype in the beamline.
+The $\mathit{S4}$ `downstream' ToF constituent sat immediately downstream of the HPTPC prototype in the beamline. \todo[inline]{JOCELYN: ``replace with a number and an error bar''}
 It consists of 10 bars of Nuvia NuDET plastic scintillator which has a wavelength of maximum emission of 425~nm and a decay time constant of 2.5~ns~\cite{Nuvia}.
 Each of these bars measure $10 \times 1 \times 140$~cm$^3$
 Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube~\cite{Hamamatsu}.
@@ -256,10 +266,12 @@ This timing window is determined through testing performed with a $^{90}$Sr sour
 The $\mathit{S1-S2}$ coincidence signal is digitized by the same time-to-digital converter. This signal is used to calculate the particle time of flight from $\mathit{S2}$ to $\mathit{S4}$.
 
 \subsection{The HPTPC Prototype}
+\todo[inline]{JOCELYN: This section should given the relevant geometric info on the TPC and how this is known (and how well). It should start with something like ``For the characterisation of the beam using the ToF systems described in this paper, the relevant characteristics of the HPTPC prototype are the location and thickness of the walls''}
 The steel vessel is rated to 6~barA of pressure, and the walls of the vessel are 1~cm thick.
 The TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field.
+\todo[inline]{JOCELYN: Important info which is missing here is the diameter of the field cage and the distance from the inside of the vessel wall to the field cage rings.}
 The drift distance produced was 48~cm, with the anodes separated by 1~mm. Data taking with the TPC made use of both optical and charge readout.
-The vessel, electrodes, and drift region of the TPC are shown in figure~\ref{fig:TPC}.
+The vessel, electrodes, and drift region of the TPC are shown in Figure~\ref{fig:TPC}.
 
 \begin{figure}
   \centering
@@ -300,7 +312,9 @@ For the same two particles travelling between $\mathit{S2}$ and $\mathit{S4}$ (a
 \todo[inline]{Add error bars to these numbers.}
 
 The variation of momentum spectrum, proton-MIP ratio, and proton multiplicity with differing numbers of acrylic blocks as a function of angle off the beam axis provide the motivation for the measurement techniques used.
+\todo[inline]{JOCELYN: I don't understand this sentence: ``The variation... provide the motivation for the measurement techniques used.'' What is this getting at?}
 As such the data used in these results cover two days in the run where the number of moderator blocks was varied with other beam properties held approximately constant.
+\todo[inline]{JOCELYN: cut - only need to discuss this if there are time-dependent calibration constants applied.}
 The numbers of spills per moderator block are shown in Table~\ref{tab:spills} (with more data taken for 4 blocks as that was the configuration used for the majority of the beam test).
 
 \begin{table}
