@@ -139,7 +139,7 @@ This distribution is produced by measuring the hit time in each of the four PMTs
 \todo[inline]{JOCELYN:"for time of flight, distance knowledge is essential.  Need a paragraph before 2.2. that describes how the distances are known (the survey, and description of survey methodology and precision), and includes a table of the relevant distances with error bars."}
 
 The $\mathit{S2}$ counter is a scintillator tile of size $120\times120\times5$~mm$^3$, coupled to a 2" PMT R1309, which  2'' PMT R13089 which was connected to the scintillator via long light-guide as shown in Figure~\ref{fig:modblocks}.
-The $\mathit{S2}$ counter was placed $(1.41 \pm 0.01)~\text{m}$ \todo{THIS NUMBER NEEDS CHECKING - SEB?} downstream of $\mathit{S1}$.
+The $\mathit{S2}$ counter was placed $(1.41 \pm 0.01)~\text{m}$ \todo[inline]{THIS NUMBER NEEDS CHECKING - SEB?} downstream of $\mathit{S1}$.
 The transverse position of $\mathit{S2}$ was adjusted to account for the beam divergence in the moderator blocks.
 
 The analog signals from one of the $\mathit{S1}$ PMTs and $\mathit{S2}$ PMT were fed into NIM discriminator units with a threshold of 30~mV.
@@ -198,7 +198,7 @@ Figure~\ref{fig:s3XY_proton} shows the spatial distribution of hits identified i
 In contrast to Figure~\ref{fig:s3XY_pion}, the pattern of hits is far more diffuse.
 This clearly shows the scattering effect of the moderator blocks.
 
-\todo{JOCELYN: "to understand whether the axes make sense, the reader needs to know the coordinate system.  The paper needs a paragraph on the coordinates of the upstream TOF somewhere before reconstruction is discussed to make sense of this.  That paragraph should spell out where the TOF is, and where the beam is expected to be, and then the discussion of these figures (that needs to be included in the reconstruction section) should compare the measured beam center position (which can't really be determined from these figures, so the caption should give it, as well as the text), with the expected beam center position." SEB/We will have included the axes in the beam diagram further up.}
+\todo[inline]{JOCELYN: "to understand whether the axes make sense, the reader needs to know the coordinate system.  The paper needs a paragraph on the coordinates of the upstream TOF somewhere before reconstruction is discussed to make sense of this.  That paragraph should spell out where the TOF is, and where the beam is expected to be, and then the discussion of these figures (that needs to be included in the reconstruction section) should compare the measured beam center position (which can't really be determined from these figures, so the caption should give it, as well as the text), with the expected beam center position." SEB/We will have included the axes in the beam diagram further up.}
 
 \begin{figure}[t]
   \begin{minipage}[t]{0.49\textwidth}
@@ -333,10 +333,12 @@ The numbers of spills per moderator block are shown in Table~\ref{tab:spills} (w
 \end{table}
 
 \subsection{Analysis Methods}
+\todo[inline]{JOCELYN: Section title needs to be more descriptive}
 
 Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $\mathit{S3}$ timing point for varying numbers of moderator blocks.
 The quicker peak is formed by minimum ionizing particles, while the peak at higher values of $\mathit{S3} - \mathit{S1}$ corresponds to protons.
 The black, 0 block peak ranging from 90 to 100~ns corresponds to deuterons.
+\todo[inline]{JOCELYN: How are the timing ranges chosen? What are the timing ranges for protons and MIPs? Suggest include a table with the ranges for teh uToF, dToF and the analytic expectation in bith given the distances.}
 \begin{figure}[h]
   \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
     \input{files/Figures/utofS1.tex}
