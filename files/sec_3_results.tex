@@ -68,13 +68,15 @@ However, at values of $\theta$ greater than $2^{\circ}$ the ratio is increased w
   \label{fig:s3promom}
 \end{figure}
 
-Even though the proton/ratio ratio was not uniformly increased as intended, the moderator blocks were nonetheless required for reduction of the proton momentum.
-The momentum of protons reaching $\mathit{S3}$ is shown in figure~\ref{fig:s3promom}. 
+Even though the proton/ratio ratio was not uniformly increased, the moderator blocks were nonetheless required for reduction of the proton momentum.
+The momentum of protons reaching $\mathit{S3}$ is shown in Figure~\ref{fig:s3promom}. 
 The momentum of particles identified as protons was successfully reduced with increasing numbers of moderator blocks, with the range falling from 0.55-0.65~GeV/c for the unmoderated beam, to 0.30-0.45~GeV/c for 4~acrylic blocks.
+\todo[inline]{JOCELYN: in what angular range?  Is this off-axis?  Presumably since the momentum measurement is 0.8 GeV/c, but this should be clearly speciied in what angular range this is measured.}
 
 The momentum of these particles is further reduced as they pass through the steel walls of the vessel on their path to the TPC region.
 [PROTON STEEL STUDY GOES HERE]
 
+\todo[inline]{JOCELYN: the number of protons per spill crossing the area of the TPC... its hard to work this out from Figs. 16-19.  I'd suggest you add a 2D plot that shows something like ToF vs. angle, with a z axis color scale corresponding to intensity, and then have another plot beside it that shows phi vs. theta and a set of boxes indicating the S1, S2, upstream TOF coverage, the downstream TOF coverage, and the TPC drift region coverage.}
 
 \subsection{Flux measurements -- $\mathit{S4}$}
 
@@ -103,14 +105,16 @@ Two factors have an impact on the position of the peak:
 the limited efficiency of $\mathit{S4}$ at the ends of the bars (near to either of the photomultiplier tubes) causes a smaller fraction of signal hits to be recorded in these regions. 
 This limited efficiency is caused by the requirement that both PMTs record a waveform in order for a signal to be recorded.
 This requirement is made, in order to reduce the number of false positives from dark noise in the PMT.
+\todo[inline]{JOCELYN: Need a quantitative statement about the efficiency vs. angle here.}
 
 The angular overlap of $\mathit{S2}$ and $\mathit{S4}$ also plays a role in the position of the peak. 
 Figure~\ref{fig:beamAng} shows that, when observed from $\mathit{S1}$, a limited area of $\mathit{S4}$ is shadowed by the active area of $\mathit{S2}$.
-Given the requirement that a signal must be observed in $\mathit{S2}$, it is clear that the majority of events that are observed in $\mathit{S4}$ are from this region of overlap.
+\todo[inline]{JOCELYN: this explanation should go earlier in the dicsussion of the coordinate system for each ToF wall...}
+Given the requirement that a signal must be observed in $\mathit{S2}$, it is clear that all of the events that are observed in $\mathit{S4}$ are from this region of overlap.
 
 Figure~\ref{fig:thetas4mip} also indicates that initially, an increasing number of moderator blocks results in an increased total MIP flux through $\mathit{S4}$. 
 However, upon the addition of the fourth moderator block the flux of MIPs appears to fall.
-This is observed due to the off-axis position of both $\mathit{S2}$ and $\mathit{S4}$, avoiding many of the unmoderated beam particles striking these timing points.
+This is observed due to the off-axis position of both $\mathit{S2}$ and $\mathit{S4}$, avoiding many of the unmoderated beam particles striking these detectors.
 Due to scattering processes in the moderator, a greater number of MIPs are incident upon $\mathit{S2}$ and $\mathit{S4}$, with more scattering occurring with greater numbers of moderator blocks.
 %The drop off in the number of MIPs observed in the four block data is likely due to the overscattering of the protons and MIPs as stated previously.
 
@@ -150,15 +154,18 @@ In turn, this leads to attenuation of protons in the TPC resulting in fewer obse
 \end{figure}	
 
 Figures~\ref{fig:propiratio_s4_horz} and~\ref{fig:propiratio_s4_vert} show the ratio of protons to minimum ionizing particles as a function of the number of moderator blocks and the two off-axis angles.
+\todo[inline]{JOCELYN: What are the two off-axis angles? Hard for the reader to figure out what the interesting region is. Need a figure that sets up the coordinate system}
 For the 0, 1 and 2 moderator block configurations, figure~\ref{fig:propiratio_s4_horz} shows the ratio reaching its peak at a value of $\theta$ of approximately $2^{\circ}$.
 It is clear that in the angular region of this peak, the proton-MIP ratio has been dramatically increased from the expected on axis value of 1:6 seen previously.
-With the addition of moderator blocks, the size of the peak reduces until, in the 3 block configuration, it is only faintly visible. 
-For the 4 block configuration, the proton-MIP ratio is close to 0 for most values of $\theta$ but rises slightly at large values.
+With the addition of moderator blocks, the size of the peak reduces until, in the 3 block configuration, the peak has fallen from a proton-MIP ratio of 1.1 for the 0 block configuration to value of 01. for the 3 block configuration. 
+For the 4 block configuration, the proton-MIP ratio is below 0.05 for all values of $\theta$ but rises to its highest value at $\theta = 5^{\circ}$.
 
 Similarly, figure~\ref{fig:propiratio_s4_vert} shows the proton-MIP ratio falling with the addition of moderator blocks.
+\todo[inline]{JOCELYN: this whole discussion (and that of the previous paragraph is focussed on the proton-MIP ratio, however more important to the goals of the beamtest is to achieve low momentum proton flux to make measurements in the region relevant for neutrino-nucleus FSI.  Need to recast this whole discussion in terms of the goals: (1) proton momentum in the relevant range (2) low occupancy (<10 particles per spill in the TPC) given the relatively slow optical readout (3) proton-to-MIP ratio optimized}
 For the 0, 1, 2 and 3 block configurations the ratio rises as the vertical off-axis angle ($\phi$) moves further away from $0^{\circ}$. 
 For the 4 block configuration, the value of the proton-MIP ratio is close to zero at all values of $\phi$.
 As mentioned previously, this is thought to be due to the attenuation of low energy protons within the walls of the pressure vessel.
+\todo[inline]{Eliminate ``thought to be'' and put use the results of the simulation study to reinforce why we think this is.}
 
 \begin{figure}[!ht]
   \begin{minipage}[t]{0.48\textwidth}
@@ -180,7 +187,8 @@ As mentioned previously, this is thought to be due to the attenuation of low ene
 
 \subsection{Flux normalisation between detectors}
 
-Because the portion of the beam subtended by each ToF detector is different, comparisons between detectors require the application of a normalisation.
+Because the portion of the beam subtended by each ToF detector is different, comparisons of the fluxes of various particles between detectors require the application of a normalisation.
+\todo[inline]{JOCELYN: awkward. rephrase.}
 These normalisations account both for solid angle coverage differences, and the different flux intensities present in the detectors.
 Normalisation factors for comparing the flux are calculated and shown in table~\ref{tab:fluxFactors}.
 These factors are calculated relative to the flux passing through $\mathit{S3}$ which covered the greatest angular extent of any of the timing points. 
