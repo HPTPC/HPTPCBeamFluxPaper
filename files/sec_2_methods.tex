@@ -81,27 +81,15 @@ Figure~INSERT shows the typical composition of the beam upstream of $\mathit{S1}
 The T10 beamline area is surveyed and the distances to various components measured to a precision of 0.5~mm by the CERN Survey, Mechatronics and Measurements (SMM) group.
 These measurements are used to calculate the positions of various components in the beamline relative to one another.
 
-Figure~\ref{fig:angularDistWC} shows the angular distribution of various objects within the beamline.
+Figure~\ref{fig:angularDistS1} shows the angular distribution of various objects within the beamline using the coordinate system defined above. Table~\ref{tab:angS1} shows the calculated angular extent of the various beamline components as measured from $\mathit{S1}$.
 
 \begin{figure}[ht]
-  \begin{minipage}[t]{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
-      \input{files/Figures/angularDist.tex}
-    \end{adjustbox}
-    \caption{Angular position of various objects within the T10 beamline. US and DS refer to the upstream and downstream faces of the HPTPC. The origin in this view is at the wire chamber (also know as the beam position monitor.}
-    \label{fig:angularDistWC}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
-      \input{files/Figures/angDistS1.tex}
-    \end{adjustbox}
-    \caption{Angular position of various objects within the T10 beamline. US and DS refer to the upstream and downstream faces of the HPTPC. The origin in this view is at the centre of $\mathit{S1}$.}
-    \label{fig:angularDistS1}
-  \end{minipage}
+  \begin{adjustbox}{max totalsize={0.7\textwidth}{.5\textheight},center}
+    \input{files/Figures/angDistS1.tex}
+  \end{adjustbox}
+  \caption{Angular position of various objects within the T10 beamline. US and DS refer to the upstream and downstream faces of the HPTPC. The origin in this view is at the centre of $\mathit{S1}$.}
+  \label{fig:angularDistS1}
 \end{figure}
-
-Table~\ref{tab:angWC} shows the calculated angular extent of the various beamline components as measured from the beam position monitor.
 
 \begin{table}
   \centering
@@ -109,17 +97,34 @@ Table~\ref{tab:angWC} shows the calculated angular extent of the various beamlin
     \hline
     Object & Minimum $\theta$ & Maximum $\theta$ & Minimum $\phi$ & Maximum $\phi$ \\
     \hline
-    $\mathit{S1}$ & $-1.89^{\circ} \pm 0.14^{\circ}$ & $12.29^{\circ} \pm 0.14^{\circ}$ & $-5.71^{\circ} \pm 0.14^{\circ}$ & $8.58^{\circ} \pm 0.14^{\circ}$ \\
-    $\mathit{S2}$ & $0.60^{\circ} \pm 0.02^{\circ}$ & $4.18^{\circ} \pm 0.02^{\circ}$ & $-1.43^{\circ} \pm 0.02^{\circ}$ & $2.69^{\circ} \pm 0.02^{\circ}$ \\
-    $\mathit{S3}$ & $-2.826^{\circ} \pm 0.004^{\circ}$ & $5.900^{\circ} \pm 0.004^{\circ}$ & $-3.087^{\circ} \pm 0.004^{\circ}$ & $3.296^{\circ} \pm 0.004^{\circ}$ \\
-    $\mathit{S4}$ & $0.499^{\circ} \pm 0.003^{\circ}$ & $6.068{\circ} \pm 0.003^{\circ}$ & $-1.368{\circ} \pm 0.003^{\circ}$ & $1.765^{\circ} \pm 0.003^{\circ}$ \\
-    TPC upstream face & $1.530^{\circ} \pm 0.003^{\circ}$ & $3.630^{\circ} \pm 0.003^{\circ}$ & $-2.566^{\circ} \pm 0.003^{\circ}$ & $2.549^{\circ} \pm 0.003^{\circ}$ \\
-    TPC downstream face & $1.881^{\circ} \pm 0.003^{\circ}$ & $3.811^{\circ} \pm 0.003^{\circ}$ & $-2.3567^{\circ} \pm 0.003^{\circ}$ & $2.341^{\circ} \pm 0.003^{\circ}$ \\
+    $\mathit{S2}$ & $-0.36^{\circ} \pm 0.03^{\circ}$ & $3.96^{\circ} \pm 0.03^{\circ}$ & $-2.01^{\circ} \pm 0.03^{\circ}$ & $2.94^{\circ} \pm 0.03^{\circ}$ \\
+    $\mathit{S3}$ & $-3.040^{\circ} \pm 0.004^{\circ}$ & $5.923^{\circ} \pm 0.004^{\circ}$ & $-3.215^{\circ} \pm 0.004^{\circ}$ & $3.344^{\circ} \pm 0.004^{\circ}$ \\
+   $\mathit{S4}$ & $0.401^{\circ} \pm 0.003^{\circ}$ & $6.083{\circ} \pm 0.003^{\circ}$ & $-1.426{\circ} \pm 0.003^{\circ}$ & $1.771^{\circ} \pm 0.003^{\circ}$ \\
+    TPC upstream face & $1.439^{\circ} \pm 0.003^{\circ}$ & $3.590^{\circ} \pm 0.003^{\circ}$ & $-2.662^{\circ} \pm 0.003^{\circ}$ & $2.575^{\circ} \pm 0.003^{\circ}$ \\
+    TPC downstream face & $1.806^{\circ} \pm 0.003^{\circ}$ & $3.778^{\circ} \pm 0.003^{\circ}$ & $-2.440^{\circ} \pm 0.003^{\circ}$ & $2.361^{\circ} \pm 0.003^{\circ}$ \\
     \hline
   \end{tabular}
   \caption{Angular extents of various timing points within the T10 beamline as measured from the beam position monitor.}
-  \label{tab:angWC}
+  \label{tab:angS1}
 \end{table}
+
+%\begin{table}
+%  \centering
+%  \begin{tabular}{|c|c|c|c|c|}
+%    \hline
+%    Object & Minimum $\theta$ & Maximum $\theta$ & Minimum $\phi$ & Maximum $\phi$ \\
+%    \hline
+%    $\mathit{S1}$ & $-1.89^{\circ} \pm 0.14^{\circ}$ & $12.29^{\circ} \pm 0.14^{\circ}$ & $-5.71^{\circ} \pm 0.14^{\circ}$ & $8.58^{\circ} \pm 0.14^{\circ}$ \\
+%    $\mathit{S2}$ & $0.60^{\circ} \pm 0.02^{\circ}$ & $4.18^{\circ} \pm 0.02^{\circ}$ & $-1.43^{\circ} \pm 0.02^{\circ}$ & $2.69^{\circ} \pm 0.02^{\circ}$ \\
+%    $\mathit{S3}$ & $-2.826^{\circ} \pm 0.004^{\circ}$ & $5.900^{\circ} \pm 0.004^{\circ}$ & $-3.087^{\circ} \pm 0.004^{\circ}$ & $3.296^{\circ} \pm 0.004^{\circ}$ \\
+%   $\mathit{S4}$ & $0.499^{\circ} \pm 0.003^{\circ}$ & $6.068{\circ} \pm 0.003^{\circ}$ & $-1.368{\circ} \pm 0.003^{\circ}$ & $1.765^{\circ} \pm 0.003^{\circ}$ \\
+%    TPC upstream face & $1.530^{\circ} \pm 0.003^{\circ}$ & $3.630^{\circ} \pm 0.003^{\circ}$ & $-2.566^{\circ} \pm 0.003^{\circ}$ & $2.549^{\circ} \pm 0.003^{\circ}$ \\
+%    TPC downstream face & $1.881^{\circ} \pm 0.003^{\circ}$ & $3.811^{\circ} \pm 0.003^{\circ}$ & $-2.3567^{\circ} \pm 0.003^{\circ}$ & $2.341^{\circ} \pm 0.003^{\circ}$ \\
+%    \hline
+%  \end{tabular}
+%  \caption{Angular extents of various timing points within the T10 beamline as measured from the beam position monitor.}
+%  \label{tab:angWC}
+%\end{table}
 
 \subsection{Upstream beam counters $\mathit{S1}$ and $\mathit{S2}$}
 \label{subsec:s1s2Exp}
