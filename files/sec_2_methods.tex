@@ -421,14 +421,27 @@ For the data collected in $\mathit{S3}$, both timing and signal amplitude cuts w
 Figure~\ref{fig:TvsA} shows an example of the signal size recorded in one of the SiPMs on one of the scintillator bars against the measured value of $t_{\mathit{S3}} - t_{\mathit{S1}}$.
 At the beam energies used, due to their higher mass, the protons typically deposit more energy in the detector, resulting in the observation of greater amplitudes.
 Therefore, to reduce the number of background events in the proton sample, a minimum signal amplitude is required.
-This cut varied, depending on the SiPM in question and was determined from distributions such as those in Figure~\ref{fig:TvsA}. 
-The cut values varied in the range 0.125~V and 0.3~V.
+This cut varies, depending on the SiPM in question and is determined from distributions such as those shown in Figure~\ref{fig:TvsA}. 
+The cut values vary in the range 0.125~V to 0.3~V.
 
 \begin{figure}[h]
-  \begin{adjustbox}{max totalsize={.7\textwidth}, center}
-    \input{files/Figures/TvsA_4block.tex}
-  \end{adjustbox}
-  \caption{Example of SiPM signal amplitude plotted against uncorrected $\mathit{S3}$ time of flight. The population in the upper right is produced by protons. This particular figure shows the distribution when 4 moderator blocks are present.}
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}, center}
+      \input{files/Figures/tvsa0.tex}
+    \end{adjustbox} \\
+    \begin{adjustbox}{max totalsize={\textwidth}, center}
+      \input{files/Figures/tvsa2.tex}
+    \end{adjustbox}
+  \end{minipage} 
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}, center}
+      \input{files/Figures/tvsa1.tex}
+    \end{adjustbox} \\
+    \begin{adjustbox}{max totalsize={\textwidth}, center}
+      \input{files/Figures/tvsa3.tex}
+    \end{adjustbox}
+  \end{minipage}  
+  \caption{Examples of SiPM signal amplitude plotted against $\mathit{S1}$ to $\mathit{S3}$ time of flight for different numbers of moderator blocks. Clockwise from top left 0, 1, 3 and 2 moderator blocks are shown. The black dashed line shows the amplitude cut used for this particular SiPM. The population at lower values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by MIPs while the population at higher values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by protons.}
   \label{fig:TvsA}
 \end{figure}
 
@@ -450,7 +463,7 @@ Unlike the same distribution produced for particles travelling from $\mathit{S1}
 This is thought to be due to the attenuation of deuterons within the walls of the TPC.
 Additionally, the predicted proton position does not line up with the measured proton position. 
 This is again thought to be caused by the positioning of the TPC in front of $\mathit{S4}$.
-Protons passing through the TPC lose energy, resulting in them no longer having less than the original 0.8~GeV/c beam momentum.
+Protons passing through the TPC lose energy, resulting in them having less than the original 0.8~GeV/c beam momentum.
 In turn, this leads the protons to have a larger reconstructed mass than predicted.
 
 \begin{figure}[h]
