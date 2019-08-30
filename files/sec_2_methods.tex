@@ -119,16 +119,21 @@ Figure~\ref{fig:angularDistS1} shows the angular distribution of various objects
   \label{tab:angS1}
 \end{table}
 
+Table~\ref{tab:distances} shows the distances between various points in the T10 beamline.
+These distances were calculated using the data gathered by the survey team.
+The distances are measured between the central points of each of these objects.
+
 \begin{table}
   \centering
   \begin{tabular}{|c|c|c|c|c|}
       \hline
-      \multicolumn{5}{|c|}{Distance between various objects} \\
+      $\mathit{S1}-\mathit{S2}$ & $\mathit{S1}-\mathit{S3}$ & $\mathit{S3}$ - TPC US side & TPC DS side - $\mathit{S4}$ & $\mathit{S2}-\mathit{S4}$  \\
       \hline
-      $\mathit{S1}-\mathit{S2}$ & $\mathit{S1}-\mathit{S3}$ & $\mathit{S3}$ - TPC drift volume &TPC drift volume - $\mathit{S4}$ & $\mathit{S2}-\mathit{S4}$  \\
-      $(1.4188\pm)~\text{m}$ & $(10.7556\pm)~\text{m}$ & $(1.87072\pm)~\text{m}$ & $(1.46752\pm)~\text{m}$ & $(12.651\pm)~\text{m}$ \\
+      $(1.4194 \pm 0.0014)~\text{m}$ & $(10.7562 \pm 0.0014)~\text{m}$ & $(1.3225 \pm 0.0014)~\text{m}$ & $(0.9175 \pm 0.0014)~\text{m}$ & $(12.6510 \pm 0.0014)~\text{m}$ \\
       \hline
   \end{tabular}
+  \caption{Distances between central points of objects in the T10 beamline. US and DS refer to upstream and downstream respectively.}
+  \label{tab:distances}
 \end{table}
 
 %\begin{table}
@@ -164,10 +169,8 @@ This distribution is produced by measuring the hit time in each of the four PMTs
   \label{fig:s3Res}
 \end{figure}
 
-\todo[inline]{JOCELYN:"for time of flight, distance knowledge is essential.  Need a paragraph before 2.2. that describes how the distances are known (the survey, and description of survey methodology and precision), and includes a table of the relevant distances with error bars."}
-
 The $\mathit{S2}$ counter is a scintillator tile of size $120\times120\times5$~mm$^3$, coupled to a 2" PMT R1309, which  2'' PMT R13089 which was connected to the scintillator via long light-guide as shown in Figure~\ref{fig:modblocks}.
-The $\mathit{S2}$ counter was placed $(1.41 \pm 0.01)~\text{m}$ \todo[inline]{THIS NUMBER NEEDS CHECKING - SEB?} downstream of $\mathit{S1}$.
+The $\mathit{S2}$ counter was placed $(1.4194 \pm 0.0014)~\text{m}$ downstream of $\mathit{S1}$.
 The transverse position of $\mathit{S2}$ was adjusted to account for the beam divergence in the moderator blocks.
 
 The analog signals from one of the $\mathit{S1}$ PMTs and $\mathit{S2}$ PMT were fed into NIM discriminator units with a threshold of 30~mV.
@@ -176,8 +179,7 @@ This information was further used for the time-of-flight analysis of the downstr
 
 \subsection{Upstream Time of Flight instrumentation $\mathit(S3)$}
 \label{subsec:s3Exp}
-\todo[inline]{JOCELYN:"Replace just upstream with a number and error bar"}
-The $\mathit{S3}$ `upstream' ToF constituent was placed just upstream of the HPTPC prototype in the beamline.
+The $\mathit{S3}$ `upstream' ToF constituent was placed $(1.3225 \pm 0.0014)~\text{m}$ upstream of the upstream side of the HPTPC drift volume in the beamline.
 A schematic drawing of the $\mathit{S3}$ ToF wall is shown in Figure~\ref{fig:S3sketch}.
 The detector is composed of 22 staggered scintillator bars:  20 bars with dimensions $1.7 \times 6.0 \times 1.0$~cm$^3$ and 2 bars of  $1.5 \times 6.0 \times 1.0$~cm$^3$ placed on top and bottom~\cite{S3-proceedings}.
 The overlap between bars was set to 5~mm, thus the active area of the detector was $2.0214~\text{cm}^{2}$.
@@ -226,7 +228,7 @@ Figure~\ref{fig:s3XY_proton} shows the spatial distribution of hits identified i
 In contrast to Figure~\ref{fig:s3XY_pion}, the pattern of hits is far more diffuse.
 This clearly shows the scattering effect of the moderator blocks.
 
-\todo[inline]{JOCELYN: "to understand whether the axes make sense, the reader needs to know the coordinate system.  The paper needs a paragraph on the coordinates of the upstream TOF somewhere before reconstruction is discussed to make sense of this.  That paragraph should spell out where the TOF is, and where the beam is expected to be, and then the discussion of these figures (that needs to be included in the reconstruction section) should compare the measured beam center position (which can't really be determined from these figures, so the caption should give it, as well as the text), with the expected beam center position." SEB/We will have included the axes in the beam diagram further up.}
+\todo[inline]{JOCELYN: "to understand whether the axes make sense, the reader needs to know the coordinate system.  The paper needs a paragraph on the coordinates of the upstream TOF somewhere before reconstruction is discussed to make sense of this.  That paragraph should spell out where the TOF is, and where the beam is expected to be, and then the discussion of these figures (that needs to be included in the reconstruction section) should compare the measured beam center position (which can't really be determined from these figures, so the caption should give it, as well as the text), with the expected beam center position."}
 
 \begin{figure}[t]
   \begin{minipage}[t]{0.49\textwidth}
@@ -256,14 +258,14 @@ This clearly shows the scattering effect of the moderator blocks.
 %   		\label{fig:S1S2S3S4}
 %   \end{figure}
 
-\subsection{Downstream Time of Flight instrumentation (S4)}
+\subsection{Downstream Time of Flight instrumentation ($\mathit{S4}$)}
 \label{subsec:s4Exp}
-The $\mathit{S4}$ `downstream' ToF constituent sat immediately downstream of the HPTPC prototype in the beamline. \todo[inline]{JOCELYN: ``replace with a number and an error bar''}
+The $\mathit{S4}$ `downstream' ToF constituent sat $(0.9175 \pm 0.0014)~\text{m}$ downstream of the downstream edge of the drift volume of the HPTPC prototype in the beamline.
 It consists of 10 bars of Nuvia NuDET plastic scintillator which has a wavelength of maximum emission of 425~nm and a decay time constant of 2.5~ns~\cite{Nuvia}.
 Each of these bars measure $10 \times 1 \times 140$~cm$^3$
 Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube~\cite{Hamamatsu}.
 The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector.
-The total active area of the $\mathit{S4}$ wall is $1.4 \times 0.68$~m$^2$.
+The total active area of the $\mathit{S4}$ wall is $1.4 \times 0.78$~m$^2$.
 A diagram of $\mathit{S4}$ along with its dimensions is presented in Figure~\ref{fig:dstofDiagram}.
 
 The time resolution of the bars and PMTs is measured to be 1~ns using a $^{90}$Sr source placed at measured distances along the bar.
