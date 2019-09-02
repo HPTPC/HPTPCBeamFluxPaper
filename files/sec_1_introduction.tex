@@ -48,9 +48,32 @@ This is predominately below the proton detection threshold in liquid Argon TPCs 
 %The threshold for a well-reconstructed proton in argon gas at 5 (10) bar is 3 MeV (5 MeV), and therefore such a detector could accurately probe the key low-momentum region of parameter space to reduce neutrino interaction cross section uncertainties. 
 %This measurement range is highly complementary to what can be learned from liquid argon detectors. 
 
+\begin{figure}
+  \begin{minipage}[t]{0.49\textwidth}
+    \centering
+    \begin{adjustbox}{max totalsize={\textwidth},center}
+      \input{files/Figures/utofNoBend.tex}
+    \end{adjustbox}
+    \caption{Time of flight spectrum for the unmoderated and unbent T10 beam over a baseline of 10.8~m. In this case, the selected beam mometum is 0.8~GeV/c}
+    \label{fig:utofNoBend}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.49\textwidth}
+    \centering
+    \begin{adjustbox}{max totalsize={\textwidth},center}
+      \input{files/Figures/protonKE.tex}
+    \end{adjustbox}
+    \caption{An example of the measured kinetic energy of protons in the T10 beamline with no moderator and with no bending applied. The selected beam momentum in this case is 0.8~GeV/c.}
+    \label{fig:keNoBend}
+  \end{minipage}
+\end{figure}
+
 We have built a High Pressure gas Time Projection Chamber (HPTPC) prototype and exposed it to a charged particle beam at the T10 beamline in CERN in August and September 2018 \cite{SPSC-P-355}.
-\todo[inline]{JOCELYN:"before this next statement i think you need a figure (or a sentence) that shows (describes) the typical T10 beam spectrum (before we did anything with it), and explains that the low-momentum flux is negligble."}
-The physics objective of the beam test was to make measurements of low momentum protons in argon, at lower momenta than were available in the T10 beamline. 
+Figure~\ref{fig:utofNoBend} shows the time of flight spectrum for the unmoderated T10 beamline as measured in $\mathit{S3}$ (see section~\ref{hptpcPaper:sec:Methods} for details of the time of flight systems).
+In this case the chosen beam momentum is 0.8~GeV/c.
+The kinetic energy of the protons in this sample is shown in Figure~\ref{fig:keNoBend}.
+As Figure~\ref{fig:keNoBend} shows, the flux of protons with kinetic energy less than 200~MeV is negligible.
+The physics objective of the beam test was to make measurements of protons in argon, at lower kinetic energies than were available with the unmoderated T10 beam. 
 
 To enhance the low energy proton flux, a novel technique was used:
 we placed acrylic moderator blocks directly in the beamline, which spread the beam particles, via multiple Coulomb scattering.
