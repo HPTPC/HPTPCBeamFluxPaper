@@ -63,17 +63,29 @@ However, at values of $\theta$ greater than $2^{\circ}$ the ratio is increased w
 
 \begin{figure}[ht]
   \centering
-  \begin{adjustbox}{max totalsize={0.8\textwidth}, center}
-    \input{files/Figures/proMomS1.tex}
-  \end{adjustbox}
-  \caption{Proton momentum spectrum as measured in $\mathit{S3}$.}
-  \label{fig:s3promom}
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}, center}
+      \input{files/Figures/proMomS1.tex}
+    \end{adjustbox}
+    \caption{Proton momentum spectrum as measured in $\mathit{S3}$.}
+    \label{fig:s3promom}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}, center}
+      \input{files/Figures/proMomTpc.tex}
+    \end{adjustbox}
+    \caption{Proton momentum spectrum as measured in $\mathit{S3}$ for those protons passing through the HPTPC drift volume.}
+    \label{fig:tpcpromom}
+  \end{minipage}
 \end{figure}
 
 Even though the proton/ratio ratio was not uniformly increased, the moderator blocks were nonetheless required for reduction of the proton momentum.
 The momentum of protons reaching $\mathit{S3}$ is shown in Figure~\ref{fig:s3promom}. 
 The momentum of particles identified as protons was successfully reduced with increasing numbers of moderator blocks, with the range falling from 0.55-0.65~GeV/c for the unmoderated beam, to 0.30-0.45~GeV/c for 4~acrylic blocks.
 \todo[inline]{JOCELYN: in what angular range?  Is this off-axis?  Presumably since the momentum measurement is 0.8 GeV/c, but this should be clearly speciied in what angular range this is measured.}
+
+Figure~\ref{fig:tpcpromom} shows the momentum spectrum of those protons passing through the HPTPC drift volume.
 
 The momentum of these particles is further reduced as they pass through the steel walls of the vessel on their path to the TPC region.
 [PROTON STEEL STUDY GOES HERE]
