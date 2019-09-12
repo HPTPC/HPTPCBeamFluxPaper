@@ -85,6 +85,7 @@ The T10 beamline area is surveyed and the distances to various components measur
 These measurements are used to calculate the positions of various components in the beamline relative to one another.
 Multiple points on each of $\mathit{S1}$, $\mathit{S2}$, $\mathit{S3}$, $\mathit{S4}$ and the TPC frame have their positions measured relative to an origin located at the nominal T10 beam focussing point.
 
+The coordinate axes are defined as follows: $x$ refers to the non-beam horizontal direction, $y$ to the vertical direction, and $z$ the beam direction.
 The off-axis angles, $\theta$ and $\phi$, are defined using the axes shown in Figure~\ref{fig:setup}.
 The origin is taken to be at $\mathit{S1}$.
 The horizontal off-axis angle, $\theta$, is defined as the angle in the $x-z$ plane as shown in Figure~\ref{fig:setup} with $\theta = 0^{\circ}$ parallel to the $z$ axis and with positive $\theta$ in the negative $x$ direction.
@@ -161,8 +162,13 @@ The distances are measured between the central points of each of these objects.
 
 \subsection{Upstream beam counters $\mathit{S1}$ and $\mathit{S2}$}
 \label{subsec:s1s2Exp}
-\todo[inline]{JOCELYN:"This actually isn't a good picture of S1, need one that shows the hardware head on." (do we have one of these?)}
-The beam counters $\mathit{S1}$ and $\mathit{S2}$ are shown in Figure~\ref{fig:modblocks}, right.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.65\linewidth]{files/Figures/S1S2FrontOn.png}
+  \caption{The S1 and S2 beam counters. Together the coincidence of signals in the beam counters were recorded by the DAQ systems}
+  \label{fig:S1S2headon}
+\end{figure}
+The beam counters $\mathit{S1}$ and $\mathit{S2}$ are shown in Figure~\ref{fig:S1S2headon}, right.
 The $\mathit{S1}$ counter is a $40\times40\times5$~mm$^3$ plastic scintillator cross which is attached to four 1'' Hamamatsu R4998 phototubes at each end for the light readout.
 The time resolution of the counter, as measured by the DAQ system of the upstream ToF, was about 30~ps.
 An example of a timing distribution from which this value can be taken is shown in Figure~\ref{fig:s3Res}.
@@ -233,8 +239,6 @@ Figure~\ref{fig:s3XY_proton} shows the spatial distribution of hits identified i
 In contrast to Figure~\ref{fig:s3XY_pion}, the pattern of hits is far more diffuse.
 This clearly shows the scattering effect of the moderator blocks.
 
-\todo[inline]{JOCELYN: "to understand whether the axes make sense, the reader needs to know the coordinate system.  The paper needs a paragraph on the coordinates of the upstream TOF somewhere before reconstruction is discussed to make sense of this.  That paragraph should spell out where the TOF is, and where the beam is expected to be, and then the discussion of these figures (that needs to be included in the reconstruction section) should compare the measured beam center position (which can't really be determined from these figures, so the caption should give it, as well as the text), with the expected beam center position."}
-
 \begin{figure}[t]
   \begin{minipage}[t]{0.49\textwidth}
     \centering
@@ -302,11 +306,10 @@ This timing window is determined through testing performed with a $^{90}$Sr sour
 The $\mathit{S1-S2}$ coincidence signal is digitized by the same time-to-digital converter. This signal is used to calculate the particle time of flight from $\mathit{S2}$ to $\mathit{S4}$.
 
 \subsection{The HPTPC Prototype}
-\todo[inline]{JOCELYN: This section should given the relevant geometric info on the TPC and how this is known (and how well).}
-For the characterisation of the beam using the ToF systems described in this paper, the relevant characteristics of the HPTPC prototype are the location and thickness of the walls.
-The steel vessel is rated to 6~barA of pressure, and the walls of the vessel are 1~cm thick.
-The TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field.
-\todo[inline]{JOCELYN: Important info which is missing here is the diameter of the field cage and the distance from the inside of the vessel wall to the field cage rings.}
+For the characterisation of the beam using the ToF systems described in this paper, the relevant characteristics of the HPTPC prototype are the location and thickness of the walls:
+the steel vessel is rated to 6~barA of pressure, and the walls of the vessel are 1~cm thick. The angular position of the TPC can be found in Table~\ref{tab:angS1} while its position relative to other objects in the beamline can be found in Table~\ref{tab:distances}.
+ 
+The TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field. The diameter of the field cage was 111~cm, with a shortest distance to the vessel of 14.5~cm.
 The drift distance produced was 48~cm, with the anodes separated by 1~mm. Data taking with the TPC made use of both optical and charge readout.
 The vessel, electrodes, and drift region of the TPC are shown in Figure~\ref{fig:TPC}.
 
@@ -314,19 +317,18 @@ The vessel, electrodes, and drift region of the TPC are shown in Figure~\ref{fig
 
   \centering
     \includegraphics[width=\linewidth]{files/Figures/IMG_20180830_170947192-3.jpg}
-  \caption{Cross-sectional view of the TPC; the thin mesh electrodes and copper ring drift volume can be seen inside the steel vessel}
+  \caption{Cross-sectional view of the TPC; the thin mesh electrodes and copper ring drift volume can be seen inside the steel vessel. The walls of the vessel shown are 1~cm thick with a vessel outer diameter of 142~cm. At the point of hitting the vessel, the beam centre was 1.14cm below the centre of the vessel vertically, where the distance from the inside of the vessel wall to the drift region was 15~cm}
   
    \label{fig:TPC}
-   \todo[inline]{TOBY: "This caption needs to give the important quantitative info for the ToF analysis, eg. wall thickness, separation of walls at the height of the beam centre, the distance from the inside of the upstream wall to the drift region, etc"}
+  
    %Vessel: wall thickness 1cm, beam centre height -1.14cm, 
 \end{figure}
 
+Throughout the run, the TPC was filled with either pure argon, or a combination of argon and a small percentage of quencher.
+The performance of this TPC is the subject of a forthcoming publication.
 
 %In the coordinate system shown in Figure~\ref{fig:setup} and detailed in section~\ref{sec:coord}, the TPC centre lies at $X=10.82~\text{m}$, $Y=0.5593~\text{m}$, $Z=-0.0114~\text{m}$. 
-The angular position of the TPC can be found in Table~\ref{tab:angS1} while its position relative to other objects in the beamline can be found in Table~\ref{tab:distances}.
 
-Throughout the run, the TPC was filled with either pure argon, or a combination of argon and a small percentage of quencher. 
-The performance of this TPC is the subject of a forthcoming publication.
 
 \section{Analysis}
 \label{hptpcPaper:sec:Analysis}
@@ -370,7 +372,7 @@ Figure~\ref{fig:s1s3PredTimes} and Figure~\ref{fig:s2s4PredTimes} show the predi
 \end{figure}
 
 The variation of momentum spectrum, proton-MIP ratio, and proton multiplicity with differing numbers of acrylic blocks as a function of angle off the beam axis provide the motivation for the measurement techniques used.
-\todo[inline]{TOBY: I don't understand this sentence: ``The variation... provide the motivation for the measurement techniques used.'' What is this getting at?}
+\todo[inline]{SEB: Rephrase to make slightly clearer: ``The variation... provide the motivation for the measurement techniques used.'' What is this getting at?}
 The numbers of spills per moderator block are shown in Table~\ref{tab:spills} (with more data taken for 4 blocks as that was the configuration used for the majority of the beam test).
 
 \begin{table}
