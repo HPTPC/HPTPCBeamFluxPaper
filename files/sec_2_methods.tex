@@ -17,7 +17,6 @@ The primary components of the  experimental setup for the data taking period are
 The T10 beamline at CERN is a secondary beam derived from the Proton Synchrotron beam which consists primarily of protons, electrons and charged pions~\cite{T10Report}.
 
 The beam position monitor lies upstream of all the ToF constituents and the TPC, at the beam entrance. 
-%The centre of the HPTPC Prototype was placed 13~m from the wire chamber at the beam entrance. 
 The beam position monitor is followed by three ToF constituents: $\mathit{S1}$, which provides the trigger is a small-area beam trigger.
 $\mathit{S2}$, a trigger counter that provides a coincidence measurement with $\mathit{S1}$.
 $\mathit{S3}$, a large wall of plastic scintillator bars, placed directly upstream of the TPC vessel.
@@ -26,10 +25,10 @@ Directly between $\mathit{S1}$ and $\mathit{S2}$, a variable number of blocks of
 The vessel containing the TPC was placed 13~m from the wire chamber at the beam entrance.
 Lastly, a fourth ToF constituent, labeled $\mathit{S4}$, was placed directly downstream of the vessel.
 This was a second wall of plastic scintillator bars, described further in Section~\ref{subsec:s4Exp}.
-Both the TPC and ToF systems were placed at an off-axis angle with respect to the direction of the beam.
+Both the TPC and ToF systems were placed at an off-axis angle with respect to the direction of the beam (see Section~\ref{sec:coord} for further details).
 To study the impact of moderator thickness, a variable number of blocks of acrylic, each of dimension $10\times10\times10$~cm$^3$, were placed in the beamline, with the upstream end of the moderators located xxx cm behind $\mathit{S1}$, and are shown in Figure~\ref{fig:modblocks}.
 
-\todo[inline]{also need the off axis angle (with +/-). Need to check the mod block from S1}
+\todo[inline]{Need moderator block distance from S1 if we have it.}
 
 Data acquisition (DAQ) of up- and downstream ToF systems were completely independent.
 The synchronization between systems was performed offline using the reference signal from the PS at the beginning of every spill.
@@ -314,13 +313,10 @@ The drift distance produced was 48~cm, with the anodes separated by 1~mm. Data t
 The vessel, electrodes, and drift region of the TPC are shown in Figure~\ref{fig:TPC}.
 
 \begin{figure}
-
   \centering
-    \includegraphics[width=\linewidth]{files/Figures/IMG_20180830_170947192-3.jpg}
+  \includegraphics[width=\linewidth]{files/Figures/IMG_20180830_170947192-3.jpg}
   \caption{Cross-sectional view of the TPC; the thin mesh electrodes and copper ring drift volume can be seen inside the steel vessel. The walls of the vessel shown are 1~cm thick with a vessel outer diameter of 142~cm. At the point of hitting the vessel, the beam centre was 1.14cm below the centre of the vessel vertically, where the distance from the inside of the vessel wall to the drift region was 15~cm}
-  
    \label{fig:TPC}
-  
    %Vessel: wall thickness 1cm, beam centre height -1.14cm, 
 \end{figure}
 
@@ -335,6 +331,29 @@ The performance of this TPC is the subject of a forthcoming publication.
 \subsection{Analysis Goals}
 
 The primary aims of the use of $\mathit{S1} - \mathit{S4}$ were as follows: to assess the feasibility of using this combination of off-axis positioning and a moderated beam at the PS to produce the momenta of more closely in line with neutrino cross-section studies and to characterize the incident flux on the TPC and exiting the TPC, for the TPC data analysis.
+
+The numbers of spills recorded for each number of moderator blocks are shown in Table~\ref{tab:spills}.
+More data is taken for 4 blocks as that was the configuration used for the majority of the beam test.
+
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    Number of moderator blocks & Recorded spills \\
+    \hline
+    0 & 257 \\
+    1 & 254 \\
+    2 & 267 \\
+    3 & 220 \\
+    4 & 3884 \\
+    \hline
+  \end{tabular}
+  \caption{The number of spills recorded for each moderator block configuration}
+  \label{tab:spills}
+\end{table}
+
+
+\subsection{Time of flight analysis}
 
 %Protons take longer to travel the distance from \textit{S1} to \textit{S3} or \textit{S4} than lighter particles that are close to being minimum ionising.
 %This difference in time of flight can be used to distinguish between the two types of particles.
@@ -370,29 +389,6 @@ Figure~\ref{fig:s1s3PredTimes} and Figure~\ref{fig:s2s4PredTimes} show the predi
     \label{fig:s2s4PredTimes}
   \end{minipage}
 \end{figure}
-
-The variation of momentum spectrum, proton-MIP ratio, and proton multiplicity with differing numbers of acrylic blocks as a function of angle off the beam axis provide the motivation for the measurement techniques used.
-\todo[inline]{SEB: Rephrase to make slightly clearer: ``The variation... provide the motivation for the measurement techniques used.'' What is this getting at?}
-The numbers of spills per moderator block are shown in Table~\ref{tab:spills} (with more data taken for 4 blocks as that was the configuration used for the majority of the beam test).
-
-\begin{table}
-  \centering
-  \begin{tabular}{|c|c|}
-    \hline
-    Number of moderator blocks & Recorded spills \\
-    \hline
-    0 & 257 \\
-    1 & 254 \\
-    2 & 267 \\
-    3 & 220 \\
-    4 & 3884 \\
-    \hline
-  \end{tabular}
-  \caption{The number of spills recorded for each moderator block configuration}
-  \label{tab:spills}
-\end{table}
-
-\subsection{Time of flight analysis}
 
 Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $\mathit{S3}$ timing point for varying numbers of moderator blocks.
 The quicker peak is formed by minimum ionizing particles, while the peak at higher values of $\mathit{S3} - \mathit{S1}$ corresponds to protons.
@@ -482,7 +478,7 @@ This spectrum is given by the difference in time between observation of a coinci
 
 Additionally, the reconstructed mass distribution for particles travelling from $\mathit{S2}$ to $\mathit{S4}$ is shown in Figure~\ref{fig:s4tof_mass}. 
 The distribution is again produced using eq.~\ref{eq:recoMass}.
-In this case, $x_{\mathit{S4}}-x_{\mathit{S2}} = 12.5~\text{m}$.
+In this case, $x_{\mathit{S4}}-x_{\mathit{S2}} = 12.7~\text{m}$.
 Unlike the same distribution produced for particles travelling from $\mathit{S1}$ to $\mathit{S3}$ (see Figure~\ref{fig:s3tof_mass}), no deuteron peak is visible.
 This is thought to be due to the attenuation of deuterons within the walls of the TPC.
 Additionally, the predicted proton position does not line up with the measured proton position. 
