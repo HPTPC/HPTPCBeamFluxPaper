@@ -3,6 +3,40 @@
 
 \subsection{Flux measurements -- $\mathit{S3}$}
 
+The ToF systems are at an off-axis angle with respect to the beam axis (see Table~\ref{tab:angS1} for values) in order to boost the low-momentum proton flux in the most relevant range for neutrino experiments.
+This is quantified in terms of the two off-axis angles.
+These angles are defined as detailed in section~\ref{sec:coord}.
+
+\begin{figure}[ht]
+  \centering
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}, center}
+      \input{files/Figures/proMomS1.tex}
+    \end{adjustbox}
+    \caption{Proton momentum spectrum as measured in $\mathit{S3}$.}
+    \label{fig:s3promom}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}, center}
+      \input{files/Figures/proMomTpc.tex}
+    \end{adjustbox}
+    \caption{Proton momentum spectrum as measured in $\mathit{S3}$ for those protons passing through the HPTPC drift volume.}
+    \label{fig:tpcpromom}
+  \end{minipage}
+\end{figure}
+
+The momentum of protons reaching $\mathit{S3}$ is shown in Figure~\ref{fig:s3promom}. 
+The momentum of particles identified as protons was successfully reduced with increasing numbers of moderator blocks, with the range falling from 0.55-0.65~GeV/c for the unmoderated beam, to 0.30-0.45~GeV/c for 4~acrylic blocks.
+
+Figure~\ref{fig:tpcpromom} shows the momentum spectrum of those protons passing through the HPTPC drift volume.
+The angular range of the TPC is stated in Table~\ref{tab:angS1}.
+Here, it can be seen that the flux of low momentum protons (those with a momentum of less than 0.4~GeV/c) passing through the TPC was increased from a negligible amount in the 0, 1 and 2 block cases to 17.6 per spill for the 4 block case.
+
+The combination of moderator blocks and positioning the TPC in an off-axis position also achieved the desired effect of lowering the multiplicity of protons passing through the TPC.
+Figure~\ref{fig:tpcpromom} shows that the addition of 1, 2, and 3 moderator blocks increased the number of protons passing through the TPC from 14.8 per spill in the unmoderated case to 93.7 per spill in the 3 block case.
+However, the addition of the fourth moderator block led to a fall in the number of protons passing tthrough the TPC to 17.6 per spill.
+  
 \begin{figure}[h]
   \begin{minipage}{0.48\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
@@ -21,9 +55,6 @@
   \end{minipage}
 \end{figure}
 
-The ToF systems are at an off-axis angle with respect to the beam axis (see Table~\ref{tab:angS1} for values) in order to boost the low-momentum proton flux in the most relevant range for neutrino experiments.
-This is quantified in terms of the two off-axis angles.
-These angles are defined as detailed in section~\ref{sec:coord}.
 The distribution vs. off-axis angle of MIPs and protons in $\mathit{S3}$ are shown in Figures~\ref{fig:s1s3mips} and~\ref{fig:s1s3protons}.
 In both cases, the peak beam intensity falls and broadens in $\theta$ with the increasing number of moderator blocks. 
 At off-axis angles the number of MIPs and protons is increased as the number of moderator blocks is increased.
@@ -35,8 +66,8 @@ Therefore overscattering of protons with 3 and 4 moderator blocks occurred, and 
 
 Figure~\ref{fig:propiratio_s3_horz} and \ref{fig:propiratio_s3_vert} figure show the proton-MIP ratio measured in $\mathit{S3}$ as a function of the nominal off-axis angle, horizontally and vertically respectively, and for various numbers of moderator blocks.
 For 0, 1, 2 and 3 moderator blocks the ratio falls to a minimum at approximately $-1^{\circ}$ with respect to the beam axis.
-This corresponds to the true beam centre for these runs.
-\todo[inline]{SEB: why? need to explain this point, and if the beam axis is in different places for different runs then need a table that summarizes this.}
+This corresponds to the true beam centre.
+
 As the angle moves to lower values of $\theta$, the ratio rises for these configurations while a similar effect is observed as $\theta$ increases.
 The peak at higher values of $\theta$ shifts to progressively greater values of $\theta$ as more moderator blocks are added (from approximately $\theta = 0.5^{\circ}$ for 0 blocks up to approximately $\theta = 2^{\circ}$ for the 3 block case).
 At most values of $\theta$, the proton/MIP ratio falls with the addition of more moderator blocks. 
@@ -61,53 +92,10 @@ However, at values of $\theta$ greater than $2^{\circ}$ the ratio is increased w
   \end{minipage}	
 \end{figure}
 
-\begin{figure}[ht]
-  \centering
-  \begin{minipage}[t]{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}, center}
-      \input{files/Figures/proMomS1.tex}
-    \end{adjustbox}
-    \caption{Proton momentum spectrum as measured in $\mathit{S3}$.}
-    \label{fig:s3promom}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}, center}
-      \input{files/Figures/proMomTpc.tex}
-    \end{adjustbox}
-    \caption{Proton momentum spectrum as measured in $\mathit{S3}$ for those protons passing through the HPTPC drift volume.}
-    \label{fig:tpcpromom}
-  \end{minipage}
-\end{figure}
-
-Even though the proton/ratio ratio was not uniformly increased, the moderator blocks were nonetheless required for reduction of the proton momentum.
-The momentum of protons reaching $\mathit{S3}$ is shown in Figure~\ref{fig:s3promom}. 
-The momentum of particles identified as protons was successfully reduced with increasing numbers of moderator blocks, with the range falling from 0.55-0.65~GeV/c for the unmoderated beam, to 0.30-0.45~GeV/c for 4~acrylic blocks.
-
-Figure~\ref{fig:tpcpromom} shows the momentum spectrum of those protons passing through the HPTPC drift volume.
-The angular range of the TPC is stated in Table~\ref{tab:angS1}.
-Here, it can be seen that the flux of low momentum protons (those with a momentum of less than 0.4~GeV/c) passing through the TPC was increased from a negligible amount in the 0, 1 and 2 block cases to several per spill for the 3 and 4 blocks cases.
-
 The momentum of these particles is further reduced as they pass through the steel walls of the vessel on their path to the TPC region.
 [PROTON STEEL STUDY GOES HERE]
 
 \subsection{Flux measurements -- $\mathit{S4}$}
-
-%\begin{figure}[ht]
-%	\begin{minipage}[t]{0.48\textwidth}
-%		\centering
-%		\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiRatio}
-%		\caption{The ratio of protons to pions as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
-%		\label{fig:proPiRatio}
-%	\end{minipage} 
-%	\hspace{0.3cm}
-%	\begin{minipage}[t]{0.48\textwidth}
-%		\centering
-%		\includegraphics[width=\textwidth]{files/Figures/Run1040_proPiProf}
-%		\caption{The number of protons and pions detected per spill by the DsToF as a function of time since the start of the beam spill. For these data, 1 moderator block was in place and the beam momentum was nominally 0.8~GeV/c. The data for this graph is from the sum of 255 spills.}
-%		\label{fig:proPiProf}
-%	\end{minipage}
-%\end{figure}
 
 Figure~\ref{fig:thetas4mip} shows the flux of particles identified as minimum ionizing particles across $\mathit{S4}$.
 This flux is shown as as a function of the angle in the $x-y$ plane (see figure~\ref{fig:setup} for the definitions of these axes) for varying numbers of moderator blocks.
