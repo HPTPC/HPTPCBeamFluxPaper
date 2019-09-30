@@ -170,7 +170,7 @@ In turn, this leads to attenuation of protons in the TPC resulting in fewer obse
 Figures~\ref{fig:propiratio_s4_horz} and~\ref{fig:propiratio_s4_vert} show the ratio of protons to minimum ionizing particles as a function of the number of moderator blocks and the two off-axis angles.
 For the 0, 1 and 2 moderator block configurations, figure~\ref{fig:propiratio_s4_horz} shows the ratio reaching its peak at a value of $\theta$ of approximately $2^{\circ}$.
 It is clear that in the angular region of this peak, the proton-MIP ratio has been dramatically increased from the expected on axis value of 1:6 seen previously.
-With the addition of moderator blocks, the size of the peak reduces until, in the 3 block configuration, the peak has fallen from a proton-MIP ratio of 1.1 for the 0 block configuration to value of 01. for the 3 block configuration. 
+With the addition of moderator blocks, the size of the peak reduces until, in the 3 block configuration, the peak has fallen from a proton-MIP ratio of 1.1 for the 0 block configuration to value of 0.1 for the 3 block configuration. 
 For the 4 block configuration, the proton-MIP ratio is below 0.05 for all values of $\theta$ but rises to its highest value at $\theta = 5^{\circ}$.
 
 Similarly, figure~\ref{fig:propiratio_s4_vert} shows the proton-MIP ratio falling with the addition of moderator blocks.
@@ -197,58 +197,53 @@ As mentioned previously, this is thought to be due to the attenuation of low ene
   \end{minipage}	
 \end{figure}
 
-\subsection{Flux normalisation between detectors}
+%\subsection{Flux normalisation between detectors}
 
-Because the portion of the beam subtended by each ToF detector is different, comparisons of the fluxes of various particles between detectors require the application of a normalisation.
-\todo[inline]{JOCELYN: awkward. rephrase.}
-These normalisations account both for solid angle coverage differences, and the different flux intensities present in the detectors.
-Normalisation factors for comparing the flux are calculated and shown in table~\ref{tab:fluxFactors}.
-These factors are calculated relative to the flux passing through $\mathit{S3}$ which covered the greatest angular extent of any of the timing points. 
-The angular positions of the various timing points are shown in figure~\ref{fig:beamAng}.
+%Because the portion of the beam subtended by each ToF detector is different, comparisons of the fluxes of various particles between detectors require the application of a normalisation.
+%\todo[inline]{JOCELYN: awkward. rephrase.}
+%These normalisations account both for solid angle coverage differences, and the different flux intensities present in the detectors.
+%Normalisation factors for comparing the flux are calculated and shown in table~\ref{tab:fluxFactors}.
+%These factors are calculated relative to the flux passing through $\mathit{S3}$ which covered the greatest angular extent of any of the timing points. 
+%The angular positions of the various timing points are shown in figure~\ref{fig:beamAng}.
 
-\begin{figure}[h]
-  
-\end{figure}
+%The total flux passing through $\mathit{S1}$ and $\mathit{S3}$ is shown in figure~\ref{fig:s1s3all}.
+%This flux is normalised such that its area is equal to 1.
+%The factors are calculated by integrating this distribution between the angular limits of the other timing points.
+%Table~\ref{tab:fluxFactors} shows the calculated factors for various timing points and overlaps.
 
-The total flux passing through $\mathit{S1}$ and $\mathit{S3}$ is shown in figure~\ref{fig:s1s3all}.
-This flux is normalised such that its area is equal to 1.
-The factors are calculated by integrating this distribution between the angular limits of the other timing points.
-Table~\ref{tab:fluxFactors} shows the calculated factors for various timing points and overlaps.
+%\begin{figure}[h]
+%  \begin{minipage}{0.49\textwidth}
+%    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight}}
+%      \input{files/Figures/beamlineAng.tex}
+%    \end{adjustbox}
+%    \centering
+%    \caption{Diagram showing the angular location of the extremities of the timing points. The coordinate system used has the origin at the $\mathit{S1}$ timing point, with the $x$ axis running parallel to the nominal beam axis.}
+%    \label{fig:beamAng}
+%  \end{minipage}
+%  \hfill
+%  \begin{minipage}{0.49\textwidth}
+%    \begin{adjustbox}{max totalsize={\textwidth}{0.5\textheight}, center}
+%      \input{files/Figures/totalFlux.tex}
+%    \end{adjustbox}
+%    \caption{Total particle flux passing through $\mathit{S1}$ and $\mathit{S3}$ for varying numbers of moderator blocks. The flux is shown as a function of the off-axis angle in the $x-y$ plane with the origin at $\mathit{S1}$ and the $x$ axis running parallel to the nominal beamline.}
+%    \label{fig:s1s3all}
+%  \end{minipage}
+%\end{figure}
 
-\begin{figure}[h]
-  \begin{minipage}{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight}}
-      \input{files/Figures/beamlineAng.tex}
-    \end{adjustbox}
-    \centering
-    \caption{Diagram showing the angular location of the extremities of the timing points. The coordinate system used has the origin at the $\mathit{S1}$ timing point, with the $x$ axis running parallel to the nominal beam axis.}
-    \label{fig:beamAng}
-  \end{minipage}
-  \hfill
-  \begin{minipage}{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}{0.5\textheight}, center}
-      \input{files/Figures/totalFlux.tex}
-    \end{adjustbox}
-    \caption{Total particle flux passing through $\mathit{S1}$ and $\mathit{S3}$ for varying numbers of moderator blocks. The flux is shown as a function of the off-axis angle in the $x-y$ plane with the origin at $\mathit{S1}$ and the $x$ axis running parallel to the nominal beamline.}
-    \label{fig:s1s3all}
-  \end{minipage}
-  \
-\end{figure}
-
-\begin{table}
-  \centering
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Number of blocks & $\mathit{S3}$ int. & $\mathit{S2}$ int. & $\mathit{S2} \cap \mathit{S4}$ int. & $\mathit{S4}$ int. \\
-    \hline
-    0 & 1 & 0.1821 & 0.03661 & 0.03927 \\
-    1 & 1 & 0.2987 & 0.08206 & 0.08705 \\
-    2 & 1 & 0.3502 & 0.12391 & 0.13234 \\
-    3 & 1 & 0.3772 & 0.15016 & 0.16323 \\
-    4 & 1 & 0.3950 & 0.16824 & 0.18714 \\
-    \hline		
-  \end{tabular}
-  \caption{Calculated flux corrections for varying numbers of moderator blocks.}
-  \label{tab:fluxFactors}
-\end{table}
+%\begin{table}
+%  \centering
+%  \begin{tabular}{|c|c|c|c|c|}
+%    \hline
+%    Number of blocks & $\mathit{S3}$ int. & $\mathit{S2}$ int. & $\mathit{S2} \cap \mathit{S4}$ int. & $\mathit{S4}$ int. \\
+%    \hline
+%    0 & 1 & 0.1821 & 0.03661 & 0.03927 \\
+%    1 & 1 & 0.2987 & 0.08206 & 0.08705 \\
+%    2 & 1 & 0.3502 & 0.12391 & 0.13234 \\
+%    3 & 1 & 0.3772 & 0.15016 & 0.16323 \\
+%    4 & 1 & 0.3950 & 0.16824 & 0.18714 \\
+%    \hline		
+%  \end{tabular}
+%  \caption{Calculated flux corrections for varying numbers of moderator blocks.}
+%  \label{tab:fluxFactors}
+%\end{table}
     
