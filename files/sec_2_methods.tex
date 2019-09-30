@@ -545,13 +545,31 @@ The large differences in measured efficiencies between the 1, 2 and 3 block data
 Additional differences in efficiency may result from differences in the voltage applied across a given PMT cathod and anode between runs.
 
 \begin{figure}[h]
-  \centering
-  \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
-    \input{files/Figures/barEffs.tex}
-  \end{adjustbox}
-  \caption{$\mathit{S4}$ bar-by-bar efficiencies calculated using eq.~\ref{eq:barEff}. The bars are numbered vertically in ascending order, with bar 1 being the lowest and bar 10 the highest.}
-  \label{fig:s4Eff}
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}, center}
+      \input{files/Figures/barEffEx.tex}
+    \end{adjustbox}
+    \caption{Relative efficiency vs. horizontal position along an $\mathit{S4}$ bar. This data is for the 0 moderator block case.}
+    \label{fig:s4PosEff}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth},center}
+      \input{files/Figures/barEffs.tex}
+    \end{adjustbox}
+    \caption{$\mathit{S4}$ bar-by-bar efficiencies calculated using eq.~\ref{eq:barEff}. The bars are numbered vertically in ascending order, with bar 1 being the lowest and bar 10 the highest.}
+    \label{fig:s4Eff}
+  \end{minipage}
 \end{figure}
+
+Separate to this, the measurement is also corrected for the efficiency as a function of the distance along the $\mathit{S4}$ bar.
+This relative is efficiency is derived as follows.
+It is assumed that rate of cosmics passing through each part of a given $\mathit{S4}$ bar is uniform.
+The number of cosmics through each $\mathit{S4}$ bar as a function of position is measured by assuming that all of the signals occurring outside of beam spills are produced by cosmic rays.
+The efficiency is then derived from this distribution by scaling it such that the histogram bin with the highest number of cosmics has a value of 1.
+An example of one of these distributions is shown in Figure~\ref{fig:s4PosEff}.
+MIP and proton signals hits are then scaled by the reciprocal of this efficiency, depending where along a given bar this hit occurs.
+Figure~\ref{fig:s4PosEff} shows that the relative efficiency of the bar drops from 1 at the bar centre (70~cm) to less than 0.05 at the ends of the bar.
 
 Using figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
 These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
