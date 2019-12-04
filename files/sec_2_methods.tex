@@ -46,11 +46,8 @@ Figure~\ref{fig:modblocks} shows the stand with four blocks installed.
 The moderator blocks have the effect of both reducing the energy of incoming particles as well as scattering protons in the beam through higher angles than beam MIPs.
 This tends to increase the proton-to-MIP ratio at low off-axis angles from the beam, while decreasing the total number of protons and MIPs traversing the TPC.
 A maximum of four moderator blocks was chosen to retain a minimum intensity in the TPC.
-%The addition of too many moderator blocks would cause an overscattering whereby too many protons fall below threshold as compared with MIPs.
 
 Data was taken with the beam momentum primarily at 0.8~GeV/c, and with each configuration of 0 to 4 moderator blocks.
-%Figure~INSERT shows the typical composition of the beam upstream of $\mathit{S1}$ at 0.8~GeV/c. Beam spills were approximately 500~ms in length with 5-10~s between spills.  
-\todo[inline]{JOCELYN:"In general, you need a paragraph and a figure or two that describe the T10 beam before you do anything to it. The description of the un-modified beam should come before any explanation about the modifications, so probably as a subsection at the end of section 1. This unmodified beam data should probably come from the 2016 measurements, or the on-axis TOF measurements with no moderator." - similar to previous comment 2016 data probably best So maybe remove figure INSERT, and just do a subsection at the end of section 1.}
 
 %    Moderator blocks were used in order to cause a spread in the incoming beam.
 %    The blocks cause protons to scatter through a larger angle than pions and other minimum ionising particles (MIP), increasing the off-axis proton pion ratio.
@@ -425,12 +422,11 @@ Therefore, the true time of flight, $t_{f} - t_{i}$, will be given by
 where $t_{f,~\text{delay}} - t_{i,~\text{delay}}$ is to be determined.
 In order to determine $t_{f,~\text{delay}} - t_{i,~\text{delay}}$, a Gaussian is fitted to the faster peak observed in the 0 block data which is thought to be produced by minimum ionizing particles.
 
-\todo[inline]{Insert measurement of the required shift for utof here.}
-
 A charged pion with a momentum of 0.8~GeV/c will have a speed of $0.985c$ and will therefore traverse the distance between $\mathit{S2}$ and $\mathit{S4}$ (12.7~m) in a time of 42.6~ns.
 When a Gaussian is fitted to the data, the mean of the MIP peak lies at $(86.31 \pm 0.019)~\text{ns}$.
 Rearranging eq.~\ref{eq:delayTof} and substituting in 86.31~ns for $t_{\mathit{S4},~\text{rec}} - t_{\mathit{S2},~\text{rec}}$ gives a value for $t_{\mathit{S4},~\text{delay}} - t_{\mathit{S2},~\text{delay}}$ of 43.7~ns.
 This shift is applied to all measured times to give the value of $t_{\mathit{S4}} - t_{\mathit{S2}}$ used in the analysis.
+The process is repeated for the $\mathit{S3}$ data.
 
 The mass distribution calculated for the data set without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}.
 The time difference between $\mathit{S3}$ and $\mathit{S1}$ counters corresponding to a single particle was converted to mass.
@@ -550,7 +546,7 @@ Using figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts.
 These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
 The signal functions are taken to be Gaussians while the background is taken to be an exponential function. 
 An example of this is shown in figure~\ref{fig:fitEx}.
-The particles in the quicker timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>36~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<101~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>62~\text{ns}$) are considered to be protons.
+The particles in the quicker timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>36~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<285~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>62~\text{ns}$) are considered to be protons.
 
 \begin{figure}[h]
   \begin{adjustbox}{max totalsize={.7\textwidth}{.62\textheight},center}

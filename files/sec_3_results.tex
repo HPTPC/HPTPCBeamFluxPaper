@@ -116,13 +116,12 @@ This flux is shown as as a function of the angle in the $x-y$ plane (see figure~
 For all numbers of moderator blocks, the peak number of minimum ionizing particle events occurs at a value of $\theta$ between $1^{\circ}$ and $2^{\circ}$.
 Similarly the number of proton events per spill, shown in figure~\ref{fig:thetas4pro} peaks at a value of $\theta$ of approximately $2^{\circ}$.
 
-Two factors have an impact on the position of the peak:
-the limited efficiency of $\mathit{S4}$ at the ends of the bars (near to either of the photomultiplier tubes) causes a smaller fraction of signal hits to be recorded in these regions. 
-This limited efficiency is caused by the requirement that both PMTs record a waveform in order for a signal to be recorded.
-This requirement is made, in order to reduce the number of false positives from dark noise in the PMT.
-\todo[inline]{JOCELYN: Need a quantitative statement about the efficiency vs. angle here.}
+%Two factors have an impact on the position of the peak:
+%the limited efficiency of $\mathit{S4}$ at the ends of the bars (near to either of the photomultiplier tubes) causes a smaller fraction of signal hits to be recorded in these regions. 
+%This limited efficiency is caused by the requirement that both PMTs record a waveform in order for a signal to be recorded.
+%This requirement is made, in order to reduce the number of false positives from dark noise in the PMT.
 
-The angular overlap of $\mathit{S2}$ and $\mathit{S4}$ also plays a role in the position of the peak. 
+The angular overlap of $\mathit{S2}$ and $\mathit{S4}$ plays a role in the position of the peak. 
 Figure~\ref{fig:angularDistS1} shows that, when observed from $\mathit{S1}$, a limited area of $\mathit{S4}$ is shadowed by the active area of $\mathit{S2}$.
 Given the requirement that a signal must be observed in $\mathit{S2}$, it is clear that all of the events that are observed in $\mathit{S4}$ are from this region of overlap.
 
@@ -154,28 +153,17 @@ In turn, this leads to attenuation of protons in the TPC resulting in fewer obse
     \caption{Distribution of hits identified in $\mathit{S4}$ as protons as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $\mathit{S1}$.}
     \label{fig:thetas4pro}
   \end{minipage} 
-  %\begin{minipage}[t]{0.48\textwidth}
-  %	\centering
-  %	\includegraphics[width=\textwidth]{files/Figures/piS4Vert}
-  %	\caption{Distribution of hits identified in $\mathit{S4}$ as minimum ionizing particles as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $\mathit{S1}$.}
-  %\end{minipage}
-  %\hspace{0.3cm}
-  %\begin{minipage}[t]{0.48\textwidth}
-  %	\centering
-  %	\includegraphics[width=\textwidth]{files/Figures/proS4Vert}
-  %	\caption{Distribution of hits identified in $\mathit{S_{4}$ as protons as a function of the number of moderator blocks and the vertical off-axis angle, as measured from $\mathit{S_{1}$.}
-  %\end{minipage}
 \end{figure}	
 
 Figures~\ref{fig:propiratio_s4_horz} and~\ref{fig:propiratio_s4_vert} show the ratio of protons to minimum ionizing particles as a function of the number of moderator blocks and the two off-axis angles.
 For the 0, 1 and 2 moderator block configurations, figure~\ref{fig:propiratio_s4_horz} shows the ratio reaching its peak at a value of $\theta$ of approximately $2^{\circ}$.
-It is clear that in the angular region of this peak, the proton-MIP ratio has been dramatically increased from the expected on axis value of 1:6 seen previously.
+%It is clear that in the angular region of this peak, the proton-MIP ratio has been dramatically increased from the expected on axis value of 1:6 seen previously.
 With the addition of moderator blocks, the size of the peak reduces until, in the 3 block configuration, the peak has fallen from a proton-MIP ratio of 1.1 for the 0 block configuration to value of 0.1 for the 3 block configuration. 
-For the 4 block configuration, the proton-MIP ratio is below 0.05 for all values of $\theta$ but rises to its highest value at $\theta = 5^{\circ}$.
+For the 4 block configuration, the proton-MIP ratio is below 0.1 for all values of $\theta$ but rises to its highest value at $\theta = 5^{\circ}$.
 
 Similarly, figure~\ref{fig:propiratio_s4_vert} shows the proton-MIP ratio falling with the addition of moderator blocks.
 For the 0, 1, 2 and 3 block configurations the ratio rises as the vertical off-axis angle ($\phi$) moves further away from $0^{\circ}$. 
-For the 4 block configuration, the value of the proton-MIP ratio is close to zero at all values of $\phi$.
+For the 4 block configuration, the value of the proton-MIP ratio is below 0.01 at all values of $\phi$.
 As mentioned previously, this is thought to be due to the attenuation of low energy protons within the walls of the pressure vessel.
 \todo[inline]{Eliminate ``thought to be'' and put use the results of the simulation study to reinforce why we think this is.}
 
