@@ -4,8 +4,7 @@
 \subsection{Beam Test Overview}
 The beam test took place in the T10 beam line, East Area at the Proton Synchrotron in CERN from the 15th August to the 18th September 2018.
 The results in this paper use data taken on the 28th August and 1st September, during which the setup configuration was varied as described below.
-\todo[inline]{JOCELYN:"really only these two days?  This paper needs to be the flux reference, so we also need to include the flux measurements during the beam test....
-suggest cut this sentence in any case and refer to the time ranges of the various types of data where these are analyzed" SEB what do you think? - SEB: Changed to reflect the increased range of 4 block data used.} 
+
 The primary components of the  experimental setup for the data taking period are shown schematically in Figure~\ref{fig:setup}.
 
 \begin{figure}
@@ -28,7 +27,7 @@ This was a second wall of plastic scintillator bars, described further in Sectio
 Both the TPC and ToF systems were placed at an off-axis angle with respect to the direction of the beam (see Section~\ref{sec:coord} for further details).
 To study the impact of moderator thickness, a variable number of blocks of acrylic, each of dimension $10\times10\times10$~cm$^3$, were placed in the beamline, with the upstream end of the moderators located xxx cm behind $\mathit{S1}$, and are shown in Figure~\ref{fig:modblocks}.
 
-\todo[inline]{Need moderator block distance from S1 if we have it.}
+\todo[inline]{Need moderator block distance from S1 if we have it -- This wasn't part of the survey, I'm not sure this measurement exists.}
 
 Data acquisition (DAQ) of up- and downstream ToF systems were completely independent.
 The synchronization between systems was performed offline using the reference signal from the PS at the beginning of every spill.
@@ -502,7 +501,7 @@ This spectrum is given by the difference in time between observation of a coinci
   \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
     \input{files/Figures/tofS4_correct.tex}
   \end{adjustbox}
-  \caption{$\mathit{S4}$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, an exponentially falling background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars.}
+  \caption{$\mathit{S4}$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, an exponentially falling background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars and for the variation in efficiency as a function of position along the bar.}
   \label{fig:s4tof}	
 \end{figure}
 
@@ -525,51 +524,23 @@ In turn, this leads the protons to have a larger reconstructed mass than predict
   \label{fig:s4tof_mass}
 \end{figure}
 
-A further correction is applied to this measurement to give Figure~\ref{fig:s4tof}.
-A correction based upon the efficiency of each $\mathit{S4}$ bar is calculated and applied as follows.
-An $\mathit{S4}$ signal hit is defined as having occurred when both PMTs on a bar register a signal with an amplitude of more than 20~mV within 20~ns of each other.
-These $\mathit{S4}$ signal hits are deemed to have been produced by a beam particle if $30~\text{ns} < t_{\mathit{S4}} - t_{\mathit{S2}} < 160~\text{ns}$.
-The number of these beam particle-induced signal hits is expressed as $N_{\text{Beam, 2 PMT}}$.
-
-The number of beam particle-induced single PMT hits is defined as $N_{\text{Beam, 1 PMT}}$.
-These are cases where a single PMT on a bar registers a signal with an amplitude of more than 20~mV and where $30~\text{ns} < t_{\text{PMT}} - t_{\mathit{S2}} < 160~\text{ns}$ but there is no coincident signal above the threshold in the PMT at the other end of the bar.
-
-The efficiency, $\epsilon$, is calculated in terms of these quantities and is show in eq.~\ref{eq:barEff}.
-\begin{equation}
-  \epsilon = \frac{N_{\text{Beam, 2 PMT}}}{N_{\text{Beam, 2 PMT}}+N_{\text{Beam, 1 PMT}}}
-  \label{eq:barEff}
-\end{equation}
-
-These $\mathit{S4}$ bar efficiencies are calculated with eq.~\ref{eq:barEff} and are shown in Figure~\ref{fig:s4Eff}.
-The large differences in measured efficiencies between the 1, 2 and 3 block data and the other data are thought to be due to the amplification of the signals from different PMTs during the period when these data were taken.
-Additional differences in efficiency may result from differences in the voltage applied across a given PMT cathod and anode between runs.
+A correction is made for the variation in particle detection efficiency between the bars and for the variation in this efficiency as a function of the position along each bar.
+This correction is performed using the cosmic ray flux.
+It is assumed that the flux of cosmic rays passing through each part of $\mathit{S4}$ is equal.
+The number of cosmic rays passing through each 7~cm segment of each $\mathit{S4}$ bar is measured by assuming that all signals occurring outside of beam spills are produced by cosmic rays.
+The efficiency is then derived from this distribution by scaling with a constant factor, that the bin with the highest number of cosmics has a value of 1.
+An example of one of these distributions is shown is Figure~\ref{fig:s4PosEff}.
 
 \begin{figure}[h]
-  \begin{minipage}[t]{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}, center}
-      \input{files/Figures/barEffEx.tex}
-    \end{adjustbox}
-    \caption{Relative efficiency vs. horizontal position along an $\mathit{S4}$ bar. This data is for the 0 moderator block case.}
-    \label{fig:s4PosEff}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[t]{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth},center}
-      \input{files/Figures/barEffs.tex}
-    \end{adjustbox}
-    \caption{$\mathit{S4}$ bar-by-bar efficiencies calculated using eq.~\ref{eq:barEff}. The bars are numbered vertically in ascending order, with bar 1 being the lowest and bar 10 the highest.}
-    \label{fig:s4Eff}
-  \end{minipage}
+  \begin{adjustbox}{width=.7\textwidth, center}
+    \input{files/Figures/relativeEff1Blocks.tex}
+  \end{adjustbox}
+  \caption{Relative detection efficiency of $\mathit{S4}$ as a function of bar number and position along each bar. The data from bar 10 was not used in the analysis due to the poor efficiency along the bar.}
+  \label{fig:s4PosEff}
 \end{figure}
 
-Separate to this, the measurement is also corrected for the efficiency as a function of the distance along the $\mathit{S4}$ bar.
-This relative is efficiency is derived as follows.
-It is assumed that rate of cosmics passing through each part of a given $\mathit{S4}$ bar is uniform.
-The number of cosmics through each $\mathit{S4}$ bar as a function of position is measured by assuming that all of the signals occurring outside of beam spills are produced by cosmic rays.
-The efficiency is then derived from this distribution by scaling it such that the histogram bin with the highest number of cosmics has a value of 1.
-An example of one of these distributions is shown in Figure~\ref{fig:s4PosEff}.
-MIP and proton signals hits are then scaled by the reciprocal of this efficiency, depending where along a given bar this hit occurs.
-Figure~\ref{fig:s4PosEff} shows that the relative efficiency of the bar drops from 1 at the bar centre (70~cm) to less than 0.05 at the ends of the bar.
+Events are then weighted according to the bar in which they are observed and their measured position along this bar.
+The weight applied is the inverse of the value shown in Figure~\ref{fig:s4PosEff}.
 
 Using figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
 These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
