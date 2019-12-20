@@ -1,7 +1,7 @@
 \section{Beam Flux Measurement}
 \label{hptpcPaper:sec:Results}
 
-\subsection{Flux measurements -- $\mathit{S3}$}
+\subsection{Flux measurements with S3}
 
 The ToF systems are at an off-axis angle with respect to the beam axis (see Table~\ref{tab:angS1} for values) in order to boost the low-momentum proton flux in the most relevant range for neutrino experiments.
 This is quantified in terms of the two off-axis angles.
@@ -45,11 +45,10 @@ Here, it can be seen that the flux of low momentum protons (those with a momentu
 Figure~\ref{fig:tpcproke} shows the kinetic energy spectrum of protons $\mathit{S3}$ crossing the time projection chamber.
 Comparing figure~\ref{fig:tpcproke} with figure~\ref{fig:protonsfromargon} shows that, for the four moderator block case, the kinetic energy of protons incident upon the TPC is just above the 50~MeV region where the different neutrino interaction generators become discrepant.
 These protons lose further energy within the walls of the HPTPC vessel, resulting in a flux of protons below 50~MeV within the TPC.
-\todo[inline]{TOBY: Need the results of the proton-steel study to back up/ verify this.}
 
 The combination of moderator blocks and positioning the TPC in an off-axis position also achieved the desired effect of lowering the multiplicity of protons passing through the TPC.
 Figure~\ref{fig:tpcpromom} shows that the addition of 1, 2, and 3 moderator blocks increased the number of protons passing through the TPC from 14.8 per spill in the unmoderated case to 93.7 per spill in the 3 block case.
-However, the addition of the fourth moderator block led to a fall in the number of protons passing tthrough the TPC to 17.6 per spill.
+However, the addition of the fourth moderator block led to a fall in the number of protons passing through the TPC to 17.6 per spill.
   
 \begin{figure}[h]
   \begin{minipage}{0.48\textwidth}
@@ -106,9 +105,8 @@ However, at values of $\theta$ greater than $2^{\circ}$ the ratio is increased w
 \end{figure}
 
 The momentum of these particles is further reduced as they pass through the steel walls of the vessel on their path to the TPC region.
-\todo[inline]{Toby to add results plots and text for proton MC study by Tuesday 10th}
 
-\subsection{Flux measurements -- $\mathit{S4}$}
+\subsection{Flux measurements with S4}
 
 Figure~\ref{fig:thetas4mip} shows the flux of particles identified as minimum ionizing particles across $\mathit{S4}$.
 This flux is shown as as a function of the angle in the $x-y$ plane (see figure~\ref{fig:setup} for the definitions of these axes) for varying numbers of moderator blocks.
@@ -164,7 +162,6 @@ Similarly, figure~\ref{fig:propiratio_s4_vert} shows the proton-MIP ratio fallin
 For the 0, 1, 2 and 3 block configurations the ratio rises as the vertical off-axis angle ($\phi$) moves further away from $0^{\circ}$. 
 For the 4 block configuration, the value of the proton-MIP ratio is below 0.01 at all values of $\phi$.
 As mentioned previously, this is thought to be due to the attenuation of low energy protons within the walls of the pressure vessel.
-\todo[inline]{Toby to add results plots and text for proton MC study by Tuesday 10th}
 
 \begin{figure}[!ht]
   \begin{minipage}[t]{0.48\textwidth}
@@ -189,53 +186,62 @@ As mentioned previously, this is thought to be due to the attenuation of low ene
 \subsection{Monte Carlo Studies}
 In order to ascertain the flux of protons reaching the active region of the TPC, and verify the deadtime and other corrections, a MC study was performed. 
 As the initial beam characteristics were not fully known, particle positions and momenta were drawn from the $\mathit{S3}$ distributions shown in figure~\ref{fig:s3promom}. To study protons, the same timing and amplitude cuts described in section~\ref{timeofflightanalysissubsec} were applied.
-The initial simulation profile is shown in figure~\ref{fig:MCS3} and exactly matches the profile shown in figure~\ref{fig:s3promom} by construction.
+The initial simulation profile is constructed identically from the moentum profile shown in figure~\ref{fig:s3promom}.
 
-
-\begin{figure}[!ht]
-  \begin{minipage}[t]{0.48\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
-      \input{files/Figures/MCS3.tex}
-    \end{adjustbox}
-    \caption{Initial simulation momentum profile of protons penetrating the $\mathit{S3}$ wall in the direction of the TPC}
-    \label{fig:MCS3}
-  \end{minipage}
-  \hspace{0.3cm}
-  \begin{minipage}[t]{0.48\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
-      \input{files/Figures/MCS4.tex}
+\begin{figure}[ht]
+  \centering
+     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+      \input{files/Figures/momS4NoLog.tex}
     \end{adjustbox}
     \caption{Momentum profile of simulated protons reaching $\mathit{S4}$, with momentum above the detection threshold of 140~MeV/c}
     \label{fig:MCS4}
-  \end{minipage}	
 \end{figure}
 
-The momentum profile of simulated protons reaching the $\mathit{S4}$ wall is shown in figure~\ref{fig:MCS4}. A cut is set at the momentum threshold of S4 of 140~MeV/c. The simulation shows a significant reduction in momentum as most particles have travelled through both steel walls of the TPC vessel. In particular, in the 4 moderator block case, very few particles have survived through the second vessel wall to reach $\mathit{S4}$. The ratio of number of protons reaching $\mathit{S4}$ to those reaching $\mathit{S3}$ is shown for both simulation and data in table~\ref{tab:ratios}. The agreement shown demonstrates that the efficiency, deadtime, and other corrections described in section~\ref{timeofflightanalysissubsec} are justified.
-\todo{Seb - need to add data ratio values here and reduce MC values' precision accordinly}
+
+
+%\begin{figure}[!ht]
+%  \begin{minipage}[t]{0.48\textwidth}
+%   \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+%      \input{files/Figures/S3MC.tex}
+%   \end{adjustbox}
+ %   \caption{Initial simulation momentum profile of protons penetrating the $\mathit{S3}$ wall in the direction of the TPC}
+ %   \label{fig:MCS3}
+ % \end{minipage}
+ % \hspace{0.3cm}
+ % \begin{minipage}[t]{0.48\textwidth}
+ %   \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+ %     \input{files/Figures/momS4NoLog.tex}
+ %   \end{adjustbox}
+ %   \caption{Momentum profile of simulated protons reaching $\mathit{S4}$, with momentum above the detection threshold of 140~MeV/c}
+%    \label{fig:MCS4}
+ % \end{minipage}	
+%\end{figure}
+
+The simulated protons are propagated through the vessel and the momentum profile of simulated protons reaching the $\mathit{S4}$ wall is shown in figure~\ref{fig:MCS4}. A cut is set at the momentum threshold of S4 of 140~MeV/c. The simulation shows a significant reduction in momentum as most particles have travelled through both steel walls of the TPC vessel. In particular, in the 4 moderator block case, very few particles have survived through the second vessel wall to reach $\mathit{S4}$. The ratio of number of protons reaching $\mathit{S4}$ to those reaching $\mathit{S3}$ is shown for both simulation and data in table~\ref{tab:ratios}. The agreement shown demonstrates that the efficiency corrections described in section~\ref{timeofflightanalysissubsec} are justified \todo{Seb's efficiency correction in progress - will hopefully help with this}.
 \begin{table}
   \centering
   \begin{tabular}{|c|c|c|}
     \hline
     Number of moderator blocks & MC simulation & Data \\
     \hline
-    0  & 0.04464 & $3.96^{\circ} \pm 0.03^{\circ}$ \\
-    1 &  0.09262 & $5.923^{\circ} \pm 0.004^{\circ}$  \\
-    2 & 0.11960 & $6.083{\circ} \pm 0.003^{\circ}$ \\
-    3 & 0.07722 & $3.590^{\circ} \pm 0.003^{\circ}$\\
-    4 & 0.01741 & $3.778^{\circ} \pm 0.003^{\circ}$ \\
+    $0$ & $0.0374$ & TBC \\
+    $1$ & $0.0818$ & TBC \\
+    $2$ & $0.1103$ & TBC \\
+    $3$ & $0.0817$ & TBC \\
+    $4$ & $0.0162$ & TBC \\
     \hline
   \end{tabular}
   \caption{Ratio of protons reaching $\mathit{S4}$:protons reaching $\mathit{S3}$ for different numbers of moderator blocks in MC and data}
   \label{tab:ratios}
 \end{table}
 
-
-
+The number of simulated particles that penetrate the active area of the TPC are shown in figures~\ref{fig:MCTPC} and~\ref{fig:MCKE} as a function of momentum and kinetic energy respectively. Comparing figure~\ref{fig:MCKE} with the motivation plot shown in figure~\ref{fig:protonsfromargon}, it is clear that 4 moderator blocks were required to access the momentum region of interest (below 50 MeV). The off axis and moderator technique were therefore successful in the extent to which the proton energy was lowered.
+The number of particles reaching the active area of the TPC was  per spill $9.82 \pm  0.14$ for 4 moderator blocks, compared with $48.9 \pm 1.5$ per spill without moderation.
 
 \begin{figure}[!ht]
   \begin{minipage}[t]{0.48\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
-      \input{files/Figures/MCTPClog.tex}
+      \input{files/Figures/momTpc.tex}
     \end{adjustbox}
     \caption{Momentum profile of simulated protons reaching the active region of the TPC}
     \label{fig:MCTPC}
@@ -243,7 +249,7 @@ The momentum profile of simulated protons reaching the $\mathit{S4}$ wall is sho
   \hspace{0.3cm}
   \begin{minipage}[t]{0.48\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
-      \input{files/Figures/MCKE.tex}
+      \input{files/Figures/keTpc.tex}
     \end{adjustbox}
     \caption{Energy profile of simulated protons reaching the active region of the TPC}
     \label{fig:MCKE}
