@@ -20,7 +20,7 @@ The primary components of the experimental setup are shown schematically in figu
 \end{figure}
 
 A beam position monitor (BPM) was situated at the beam entrance into the test area, upstream of all the ToF constituents and the TPC. 
-The TPC was placed 13~m downstream of the BPM and XXX m away from the beam centre, so that the TPC active region spanned off-axis angles 1.4--3.8$^{ \circ }$.
+The TPC was placed 13~m downstream of the BPM and 0.67~m away from the beam centre, so that the TPC active region spanned off-axis angles 1.4--3.8$^{ \circ }$.
 There were four ToF constituents: 
 \begin{itemize}
     \item $\mathit{S1}$, a small-area beam trigger, see section~\ref{subsec:s1s2Exp};
@@ -28,9 +28,10 @@ There were four ToF constituents:
     \item $\mathit{S3}$, a wall of plastic scintillator bars placed directly upstream of the TPC vessel, see section~\ref{subsec:s3Exp};
     \item $\mathit{S4}$, a wall of plastic scintillator bars placed directly downstream of the TPC vessel, see section~\ref{subsec:s4Exp}.
 \end{itemize}
+
 Directly between $\mathit{S1}$ and $\mathit{S2}$, a variable number of blocks of acrylic were placed, and are shown in figure~\ref{fig:modblocks}.
 Both the TPC and ToF systems were placed at an off-axis angle with respect to the direction of the beam (see section~\ref{sec:coord} for further details).
-To study the impact of moderator thickness, a variable number of blocks of acrylic, each of dimension $10\times10\times10$~cm$^3$, were placed in the beamline, with the upstream end of the moderators located XXX cm behind $\mathit{S1}$, and are shown in figure~\ref{fig:modblocks}.
+To study the impact of moderator thickness, a variable number of blocks of acrylic, each of dimension $10\times10\times10$~cm$^3$, were placed in the beamline and are shown in figure~\ref{fig:modblocks}.
 
 The data acquisition (DAQ) systems of the upstream ($\mathit{S3}$) and downstream ($\mathit{S4}$) ToF systems were completely independent.
 Synchronization between ToF DAQ systems was performed offline using the reference signal from the PS at the beginning of every spill.
@@ -240,7 +241,7 @@ This clearly shows the scattering effect of the moderator blocks.
 \label{subsec:s4Exp}
 The $\mathit{S4}$ `downstream' ToF constituent sat $(0.9175 \pm 0.0014)~\text{m}$ downstream of the downstream edge of the drift volume of the HPTPC prototype in the beamline.
 It consists of 10 bars of Nuvia NuDET plastic scintillator which has a wavelength of maximum emission of 425~nm and a decay time constant of 2.5~ns~\cite{Nuvia}.
-Each of these bars measure $10 \times 1 \times 140$~cm$^3$
+Each of these bars measure $10 \times 1 \times 140$~cm$^3$. 
 Attached to either end of each of these scintillator bars is a 5" Hamamatsu R6594 photomultiplier tube~\cite{Hamamatsu}.
 The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector.
 The total active area of the $\mathit{S4}$ wall is $1.4 \times 0.78$~m$^2$.
@@ -285,7 +286,7 @@ The vessel, electrodes, and drift region of the TPC are shown in figure~\ref{fig
 \begin{figure}
   \centering
   \includegraphics[width=\linewidth]{files/Figures/IMG_20180830_170947192-3.jpg}
-  \caption{Cross-sectional view of the TPC; the thin mesh electrodes and copper ring drift volume can be seen inside the steel vessel. The walls of the vessel shown are 1~cm thick with a vessel outer diameter of 142~cm. At the point of hitting the vessel, the beam centre was 1.14cm below the centre of the vessel vertically, where the distance from the inside of the vessel wall to the drift region was 15~cm}
+  \caption{Cross-sectional view of the TPC; the thin mesh electrodes and copper ring drift volume can be seen inside the steel vessel. The walls of the vessel shown are 1~cm thick with a vessel outer diameter of 142~cm. At the point of hitting the vessel, the beam centre was 1.14cm below the centre of the vessel vertically, where the distance from the inside of the vessel wall to the drift region was 15~cm.}
    \label{fig:TPC}
    %Vessel: wall thickness 1cm, beam centre height -1.14cm, 
 \end{figure}
@@ -374,24 +375,24 @@ The timing ranges are chosen using the analytic expectations shown in figures~\r
   \label{fig:s3tof}
 \end{figure}
 
-In order to calculate the correct time of flight, timing delays caused by cabling and equipment are taken into account.
+To calculate the correct time of flight, timing delays caused by cabling and equipment are taken into account.
 The same method is used to correct the measurements of the time of flight between $\mathit{S1}$ and $\mathit{S3}$, and $\mathit{S2}$ and $\mathit{S4}$.
 The initial recorded time, $t_i$, is either $t_{\mathit{S1}}$ or $t_{\mathit{S2}}$ while the final recorded time, $t_f$ is then $t_{\mathit{S3}}$ or $t_{\mathit{S4}}$ respectively.
 
 A signal measured in the more downstream of the detectors ($\mathit{S3}$ or $\mathit{S4}$) which occurs at a true time $t_f$ will be recorded as happening at a time
 \begin{align}
-  t_{f,~\text{rec}} = t_f + t_{f,~\text{delay}}
+  t_{f,~\text{rec}} = t_f + t_{f,~\text{delay}} \,,
   \label{eq:delayS4}
 \end{align}
 while a signal measured in the same DAQ from the more upstream of the detectors ($\mathit{S1}$ or $\mathit{S2}$) will be recorded at a time
 \begin{align}
-  t_{i,~\text{rec}} = t_{i} + t_{i,~\text{delay}}
+  t_{i,~\text{rec}} = t_{i} + t_{i,~\text{delay}} \,,
   \label{eq:delayS2}
 \end{align}
 where $t_{f,~\text{delay}}$ and $t_{i,~\text{delay}}$ are the total delays caused by cabling and equipment between the respective detectors and the DAQ.
 Therefore, the true time of flight, $t_{f} - t_{i}$, will be given by
 \begin{align}
-  t_{f} - t_{i} = t_{f,~\text{rec}} - t_{i,~\text{rec}} - \left( t_{f,~\text{delay}} - t_{i,~\text{delay}} \right)
+  t_{f} - t_{i} = t_{f,~\text{rec}} - t_{i,~\text{rec}} - \left( t_{f,~\text{delay}} - t_{i,~\text{delay}} \right) \,,
   \label{eq:delayTof}
 \end{align}
 where $t_{f,~\text{delay}} - t_{i,~\text{delay}}$ is to be determined.
@@ -399,7 +400,7 @@ In order to determine $t_{f,~\text{delay}} - t_{i,~\text{delay}}$, a Gaussian is
 
 A charged pion with a momentum of 0.8~GeV/c will have a speed of $0.985c$ and will therefore traverse the distance between $\mathit{S2}$ and $\mathit{S4}$ (12.7~m) in a time of 42.6~ns.
 When a Gaussian is fitted to the data, the mean of the MIP peak lies at $(86.31 \pm 0.019)~\text{ns}$.
-Rearranging eq.~\ref{eq:delayTof} and substituting in 86.31~ns for $t_{\mathit{S4},~\text{rec}} - t_{\mathit{S2},~\text{rec}}$ gives a value for $t_{\mathit{S4},~\text{delay}} - t_{\mathit{S2},~\text{delay}}$ of 43.7~ns.
+Rearranging equation~\ref{eq:delayTof} and substituting in 86.31~ns for $t_{\mathit{S4},~\text{rec}} - t_{\mathit{S2},~\text{rec}}$ gives a value for $t_{\mathit{S4},~\text{delay}} - t_{\mathit{S2},~\text{delay}}$ of 43.7~ns.
 This shift is applied to all measured times to give the value of $t_{\mathit{S4}} - t_{\mathit{S2}}$ used in the analysis.
 The process is repeated for the $\mathit{S3}$ data.
 In this case the required shift is 65.0~ns.
@@ -408,22 +409,22 @@ The mass distribution calculated for the data set without moderator blocks is sh
 The time difference between $\mathit{S3}$ and $\mathit{S1}$ counters corresponding to a single particle was converted to mass.
 Starting from the equation for relativistic momentum
 \begin{align}
-p = \gamma m v
+p = \gamma m v \,,
 \end{align}
 where $m$ is the mass of the particle, $v$ is the speed of particle and $\gamma$ is the Lorentz factor.
 Squaring and rearranging gives
 \begin{align}
-  m^{2} = \frac{p^{2}}{\gamma^{2} v^{2}}
+  m^{2} = \frac{p^{2}}{\gamma^{2} v^{2}} \,,
 \end{align}
 before the Lorentz factor is expanded to give
 \begin{align}
-  m^{2} = p^{2}\left(\frac{1}{v^{2}} - \frac{1}{c^{2}}\right)
+  m^{2} = p^{2}\left(\frac{1}{v^{2}} - \frac{1}{c^{2}}\right) \,,
 \end{align}
 where $c$ is the speed of light in a vacuum. Expressing $v$ as the distance between $\mathit{S1}$ and $\mathit{S3}$ ($x_{\mathit{S3}}-x_{\mathit{S1}} = 10.9~\text{m}$) divided by the time difference between the $\mathit{S1}$ and $\mathit{S3}$ counters ($t_{\mathit{S3}} - t_{\mathit{S1}}$) and expressing in natural units 
 \begin{equation} 
   m^2 = p^2 \left( 
   \left(\frac{t_{\mathit{S3}}-t_{\mathit{S1}}}{x_{\mathit{S3}}-x_{\mathit{S1}}} \cdot c \right)^2
-  - 1  \right)
+  - 1  \right) \,,
   \label{eq:recoMass}
 \end{equation}
 where the particle momentum $p$ is assumed to be 0.8~GeV/c.
@@ -478,7 +479,7 @@ This spectrum is given by the difference in time between observation of a coinci
 \end{figure}
 
 Additionally, the reconstructed mass distribution for particles travelling from $\mathit{S2}$ to $\mathit{S4}$ is shown in figure~\ref{fig:s4tof_mass}. 
-The distribution is again produced using eq.~\ref{eq:recoMass}.
+The distribution is again produced using equation~\ref{eq:recoMass}.
 In this case, $x_{\mathit{S4}}-x_{\mathit{S2}} = 12.7~\text{m}$.
 Unlike the same distribution produced for particles travelling from $\mathit{S1}$ to $\mathit{S3}$ (see figure~\ref{fig:s3tof_mass}), no deuteron peak is visible.
 This is thought to be due to the attenuation of deuterons within the walls of the TPC.
