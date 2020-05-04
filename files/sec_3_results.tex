@@ -217,21 +217,28 @@ A cut is set at the momentum threshold of $\mathit{S4}$ of 140~MeV/c.
 The simulation shows a significant reduction in momentum as most particles have travelled through both steel walls of the TPC vessel.
 In particular, in the 4 moderator block case, very few particles have survived through the second vessel wall to reach $\mathit{S4}$.
 The ratio of number of protons reaching $\mathit{S4}$ to those reaching $\mathit{S3}$ is shown for both simulation and data in table~\ref{tab:ratios}, which includes the total statistical and systematic error in each case.
-The agreement shown in the 0, 1, 2, and 3 block cases relative to the uncertainty provided by the beam test setup provides strong evidence that efficiency corrections described in section~\ref{timeofflightanalysissubsec} are justified; it is not known if additional small quantities of light moderating material were present in the beamline which are not accounted for in the statistical errors.
-The larger discrepancy in the 4 block case is due to the low energy of the protons.
-In this case, the proton energy spectrum is very sensitive to the any additional material in the beamline which would cause a large number of protons to be absorbed.
+
+Table~\ref{tab:systematics} shows the systematic uncertainties on the number of protons measured in $\mathit{S3}$ and $\mathit{S4}$ in both data and Monte Carlo.
+The systematic uncertainty on the MC simulations is determined by varying a number of geometric factors within the simulation including the position of the $\mathit{S1}$ and $\mathit{S2}$ detectors.
+These variations induce changes in the direction and momenta of the propagated protons.
+Additionally, simulations are run with 1~cm of additional acrylic in the beamline.
+We are letting these variations stand in for a number of geometry uncertainties.
+
+For the data systematics, the uncertainty on the $\mathit{S4}$ angular correction is determined by varying the number of horizontal bins in figure~\ref{fig:s4PosEff} from 20 to 10.
+The uncertainty on the $\mathit{S4}$ background subtraction is determined by modelling the background as both flat and exponential. The difference in $\mathit{S4}$ proton counts in these two cases is used as the systematic.
+This has a large effect in the 4 block case because of the very small number of protons detected in $\mathit{S4}$ relative to the background.
 
 \begin{table}
 	\centering
-	\caption{List of systematic errors and values for data and Monte Carlo simulation. All values are the fractional error on the relevant ratio in table~\ref{tab:ratios} and are treated as uncorrelated.}
+	\caption{List of systematic errors and values for data and Monte Carlo simulation. All values are the fractional error on the $\mathit{S4}$ proton count with the exception of the uncertainty on the efficiency of $\mathit{S3}$, which is the fractional error in the $\mathit{S3}$ proton count. All uncertainties are treated as uncorrelated. $n_{\mathit{S4},~MC}$ refers to the number of protons reaching $\mathit{S4}$ in Monte Carlo simulations.}
 	\begin{tabular}{|c|c c c c c|}
 		\hline 
 		\multicolumn{6}{|c|}{\textbf{Monte Carlo}} \\
 		\hline
-		 & \multicolumn{5}{c|}{Number of moderator blocks} \\
-		 & 0 & 1 & 2 & 3 & 4 \\
-		 \hline
-		Systematic uncertainty on $\mathit{S4}_{MC}$ & 0.095 & 0.08 & 0.085 & 0.171 & 0.08 \\
+		& \multicolumn{5}{c|}{Number of moderator blocks} \\
+		& 0 & 1 & 2 & 3 & 4 \\
+		\hline
+		Systematic uncertainty on $n_{\mathit{S4},~MC}$ & 0.095 & 0.08 & 0.085 & 0.171 & 0.08 \\
 		\hline
 		\hline
 		\multicolumn{6}{|c|}{\textbf{Data}} \\
@@ -247,8 +254,12 @@ In this case, the proton energy spectrum is very sensitive to the any additional
 		\textbf{Total} & 0.145 & 0.143 & 0.162 & 0.192 & 0.790 \\
 		\hline 
 	\end{tabular}
+	\label{tab:systematics}
 \end{table}
 
+The agreement shown in the 0, 1, 2, and 3 block cases relative to the uncertainty provided by the beam test setup provides strong evidence that efficiency corrections described in section~\ref{timeofflightanalysissubsec} are justified; it is not known if additional small quantities of light moderating material were present in the beamline which are not accounted for in the statistical errors.
+The larger discrepancy in the 4 block case is due to the low energy of the protons.
+In this case, the proton energy spectrum is very sensitive to the any additional material in the beamline which would cause a large number of protons to be absorbed.
 
 \begin{table}
   \centering
