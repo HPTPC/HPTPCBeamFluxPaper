@@ -216,10 +216,38 @@ The momentum profile of simulated protons reaching the $\mathit{S4}$ wall is sho
 A cut is set at the momentum threshold of $\mathit{S4}$ of 140~MeV/c.
 The simulation shows a significant reduction in momentum as most particles have travelled through both steel walls of the TPC vessel.
 In particular, in the 4 moderator block case, very few particles have survived through the second vessel wall to reach $\mathit{S4}$.
-The ratio of number of protons reaching $\mathit{S4}$ to those reaching $\mathit{S3}$ is shown for both simulation and data in table~\ref{tab:ratios}, which includes the total statistical and sytematic error in each case.
+The ratio of number of protons reaching $\mathit{S4}$ to those reaching $\mathit{S3}$ is shown for both simulation and data in table~\ref{tab:ratios}, which includes the total statistical and systematic error in each case.
 The agreement shown in the 0, 1, 2, and 3 block cases to within the uncertainty provided by the beam test setup provides strong evidence that efficiency corrections described in section~\ref{timeofflightanalysissubsec} are justified; it is not known if additional small quantities material were present in the beamline which are not accounted for in the statistical errors.
 The larger discrepancy in the 4 block case is due to the low energy of the protons.
 In this case, the proton energy spectrum is very sensitive to the any additional material in the beamline which would cause a large number of protons to be absorbed.
+
+\begin{table}
+	\centering
+	\caption{List of systematic errors and values for data and Monte Carlo simulation. All values are the fractional error on the relevant ratio in table~\ref{tab:ratios} and are treated as uncorrelated.}
+	\begin{tabular}{|c|c c c c c|}
+		\hline 
+		\multicolumn{6}{|c|}{\textbf{Monte Carlo}} \\
+		\hline
+		 & \multicolumn{5}{c|}{Number of moderator blocks} \\
+		 & 0 & 1 & 2 & 3 & 4 \\
+		 \hline
+		Systematic uncertainty on $\mathit{S4}_{MC}$ & 0.095 & 0.08 & 0.085 & 0.171 & 0.08 \\
+		\hline
+		\hline
+		\multicolumn{6}{|c|}{\textbf{Data}} \\
+		\hline
+		& \multicolumn{5}{c|}{Number of moderator blocks} \\
+		Systematic & 0 & 1 & 2 & 3 & 4 \\
+		\hline
+		Absolute efficiency of $\mathit{S3}$ & 0.1 & 0.1 & 0.1 & 0.1 & 0.1 \\
+		Absolute efficiency of $\mathit{S4}$ & 0.1 & 0.1 & 0.1 & 0.1 & 0.1 \\ 
+		$\mathit{S4}$ angular correction & 0.029 & 0.015 & 0.067 & 0.082 & 0.041 \\
+		\hline
+		\textbf{Total} & 0.144 & 0.142 & 0.156 & 0.163 & 0.147 \\
+		\hline 
+	\end{tabular}
+\end{table}
+
 
 \begin{table}
   \centering
