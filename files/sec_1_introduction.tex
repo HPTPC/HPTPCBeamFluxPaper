@@ -1,16 +1,19 @@
 \section{Introduction}
-One of the major goals of the global neutrino physics programme is to explore why we live in a matter-dominated universe. Charge-parity symmetry violation (CPV) in the neutrino sector is one of the few remaining possibilities to be explored experimentally. 
+One of the major goals of the global neutrino physics programme is to explore fundamental symmetries of nature linked to why we live in a matter-dominated universe. 
+Charge-parity symmetry violation (CPV) in the neutrino sector is one of the few remaining possibilities to be explored experimentally. 
 CPV searches compare the probabilities of $\nu_{\mu}\!\rightarrow\!\nu_e$ and $\overline{\nu}_{\mu}\!\rightarrow\!\overline{\nu}_e$ oscillation, which, in the absence of CPV, should be equal. 
-To convert the measured rate of interactions to a level of CPV, experiments must accurately know the cross section for the interactions of neutrinos and anti-neutrinos with detector materials, most importantly hydrogen, carbon, oxygen, argon, and iron. 
+To convert the measured rate of interactions to a level of CPV, experiments must accurately know the cross section for the interactions of neutrinos and anti-neutrinos with detector materials, which are, most commonly, hydrogen, carbon, oxygen, argon, and iron. 
 Therefore, systematic uncertainties on neutrino-nucleus interaction cross sections are a key input to such CPV searches.  
-These interaction cross-sections are dependent on theoretical models because the target nucleon resides in a complicated nucleus, and the nuclear model has dramatic effects on the measured final-state particle kinematic distributions\cite{Mosel:2016cwa}.
+These interaction cross-sections are dependent on theoretical pictures that are based on modeling neutrino-nucleon interactions occurring within nuclei. 
+The nuclear models have substantial effects on the measured final-state particle kinematic distributions\cite{Mosel:2016cwa}.
 
-The long baseline neutrino experiments that search for CPV are T2K~\cite{abe2019constraint} and NOvA~\cite{acero2018new}.
-From the T2K experiment, the strongest current constraint on CPV in neutrinos reports neutrino interaction systematic uncertainties at the 5--8\% level \cite{Abe:2018wpn}.
+The long baseline neutrino experiments that are currently searching for CPV are T2K~\cite{Abe:2019vii} and NOvA~\cite{Acero:2019ksn}.
+From the T2K experiment, the strongest current constraint on CPV in neutrinos reports neutrino interaction systematic uncertainties at the 5--8\% level \cite{Abe:2019vii}.
 The future DUNE and Hyper-K projects assume systematic errors at the 1--2\% level to achieve their physics goals, but will be in the same position as current experiments ($>$5\% errors) if the nuclear-model uncertainties are not reduced.  
 The key to reducing these uncertainties is to precisely measure the multiplicity and momentum distribution of final-state particles. 
-However, these distributions are modified by final state interactions (FSI) of the recoiling secondary particles as traverse the target nucleus.  
-The most commonly used neutrino generator Monte Carlos (GENIE~\cite{Andreopoulos:2009rq}, NEUT~\cite{Hayato:2009zz}, and NuWro~\cite{GOLAN2012499}), simulate FSI with cascade models that are tuned with external hadron-nucleus scattering measurements.
+However, these distributions are modified by final state interactions (FSI) of the recoiling secondary particles as they traverse the target nucleus. 
+The most commonly used neutrino generator Monte Carlos (GENIE~\cite{Andreopoulos:2009rq}, NEUT~\cite{Hayato:2009zz}, and NuWro~\cite{GOLAN2012499}), simulate FSI with cascade models that are tuned with external hadron-nucleus scattering measurements. The generator GiBUU~\cite{lalakulich2013neutrino} models FSI modeled by solving the semi-classical Boltzmann-Uehling-Uhlenbeck equation.
+
 \begin{figure}%
     \centering
     \includegraphics[width=12cm]{files/Figures/DataProtonCrossSections.pdf}%
@@ -21,34 +24,32 @@ The most commonly used neutrino generator Monte Carlos (GENIE~\cite{Andreopoulos
 However, as shown in figure~\ref{fig:DataProtonXSec}, proton-nucleus scattering measurements are extremely sparse and in many cases do not exist in the relevant energy region and/or on the relevant nuclei.
 Therefore semi-empirical parameterisations are used to extrapolate in momentum and atomic mass.  
 The parametrisations are different between the three generators, and yield order-of-magnitude scale differences in the predicted multiplicity and kinematics of final state protons.
-The proton final state modeling is a key ingredient for neutrino oscillation measurements because it affects the event selection and neutrino energy reconstruction in charged-current interactions, which is the channel used to measure oscillation parameters and is, therefore, central to the search for CP violation\cite{Abe:2013hdq}.
-For these reasons, FSI contribute substantially to the total neutrino interaction systematic uncertainty~\cite{Abe:2018wpn}. 
+The proton final state modeling is a key ingredient for neutrino oscillation measurements because it affects the event selection and neutrino energy reconstruction in charged-current interactions, which is the channel used to measure oscillation parameters and is, therefore, central to the search for CPV\cite{Abe:2013hdq}.
+For these reasons, FSI contribute substantially to the total neutrino interaction systematic uncertainty~\cite{Abe:2019vii}. 
 
 Moreover, FSI models are in tension with data.  
-Recent neutrino scattering measurements have shown that the most-used models of neutrino-nucleus interactions (employed by NEUT and GENIE) differ from nature in both cross section and kinematics of final state particles by as much as 30\%~\cite{Wascko:2009cn,Wascko:2011hy}. 
+Recent neutrino scattering measurements have shown that the most-used models of neutrino-nucleus interactions (employed by NEUT and GENIE) differ from nature in both cross section and kinematics of final state particles by as much as 30\%~\cite{McFarland:2018aaa}. 
 These errors cannot be fully mitigated with near/far detector combinations because they come from theoretical model deficiencies that are not cancelled in the near–far extrapolation~\cite{Coloma:2013rqa}. 
 To achieve 1-2\% systematic uncertainties for CPV searches, interaction models must be tuned and validated against precise proton-nucleus and pion-nucleus scattering measurements covering a broad final-state particle phase space, on a range of nuclear targets~\cite{Cao:2014zra}.
 
 \begin{figure}%
     \centering
     \includegraphics[width=12cm]{files/Figures/protons_from_argon.jpeg}%
-    \caption{Predicted proton energy spectra from GENIE, NEUT, and NuWro\cite{Raaf:2018aaa}. Energy spectra up to 1 GeV are shown on the left, and zoomed in to lower energies on the right. The figure uses the Long Baseline Neutrino Facility (LBNF) simulation for DUNE's beam energy and flux. The dashed vertical line indicates the expected proton automated-reconstruction/ID threshold in liquid argon, and the solid vertical line shows the same for gaseous argon at 10 atm. These plots are taken from \cite{dune2018high}}
+    \caption{Predicted proton energy spectra from GENIE, NEUT, and NuWro\cite{Raaf:2018aaa}. Energy spectra up to 1 GeV are shown on the left, and zoomed in to lower energies on the right. The figure uses the Long Baseline Neutrino Facility (LBNF) simulation for DUNE's beam energy and flux. The dashed vertical line indicates the expected proton automated-reconstruction/ID threshold in liquid argon, and the solid vertical line shows the same for gaseous argon at 10 atm~\cite{dune2018high}}
     \label{fig:protonsfromargon}%
 \end{figure}
-% TPCs are ideal for such measurements because of the 4$\pi$ angular coverage of all final state particles with high efficiency and low momentum thresholds, which are the keys to distinguish between models.  
-The key proton kinetic energy range in which to distinguish between interaction models is the region below 100~MeV.
+
+The key proton kinetic energy range in which to distinguish interaction models is the region below 0.1~GeV.
 Figure~\ref{fig:protonsfromargon} shows the proton multiplicity and kinetic energy distributions for $\nu_{\mu}$ charged-current (CC) interactions on argon calculated by the GENIE, NEUT, and NuWro neutrino generators for the DUNE experiment.
-These distributions are highly discrepant, particularly in the fraction of events with few ejected protons, and at low proton kinetic energy as shown in the right hand panel.
-This is predominantly below the proton detection threshold in liquid Argon TPCs (40 MeV) and in water Cherenkov detectors (500 MeV).
+These distributions are highly discrepant at low proton kinetic energy as shown in the right hand panel.
+This is predominantly below the proton detection threshold in liquid Argon TPCs (0.04~GeV) and in water Cherenkov detectors (0.5~GeV).
 The lower threshold in high pressure gas provides a unique opportunity to distinguish between neutrino interaction models for the same nuclear target.
-%The threshold for a well-reconstructed proton in argon gas at 5 (10) bar is 3 MeV (5 MeV), and therefore such a detector could accurately probe the key low-momentum region of parameter space to reduce neutrino interaction cross section uncertainties. 
-%This measurement range is highly complementary to what can be learned from liquid argon detectors. 
 
 We have built a High Pressure gas Time Projection Chamber (HPTPC) prototype and exposed it to a charged particle beam in the T10 beamline at CERN in August and September 2018 \cite{SPSC-P-355}.
-The momentum profile of the T10 beam can be adjusted from 6.5~GeV/c down to 0.8~GeV/c. 
-Figure~\ref{fig:utofNoBend} shows the time of flight (ToF) spectrum for the T10 beamline tuned to 0.8~GeV/c; this measurement was made with our $\mathit{S3}$ ToF system (see section~\ref{hptpcPaper:sec:Methods} for details of the ToF systems).
-The kinetic energy of the protons calculated from the $\mathit{S3}$ ToF measurements in this sample is shown in figure~\ref{fig:keNoBend}.
-As figure~\ref{fig:keNoBend} shows, the flux of protons with kinetic energy less than 200~MeV is negligible.
+The momentum profile of the T10 beam can be tuned within the range 0.8--6.5~GeV/c (kinetic energy range 0.3--5.6~GeV). 
+Figure~\ref{fig:utofNoBend}, left, shows the time of flight (ToF) spectrum for the T10 beamline tuned to 0.8~GeV/c; this measurement was made with our $\mathit{S3}$ ToF system (see section~\ref{hptpcPaper:sec:Methods} for details of the ToF systems).
+The kinetic energy of the protons calculated from the $\mathit{S3}$ ToF measurements in this sample is shown in figure~\ref{fig:utofNoBend}, right.
+As shown, the flux of protons with kinetic energy less than 200~MeV is negligible.
 The physics objective of the HPTPC beam test is to make measurements of protons on argon at kinetic energies below 200~MeV, i.e. below what was available with the unmoderated T10 beam. 
 Furthermore, the readout speed of the CCDs employed in the HPTPC prototype motivates a limit on the total particle multiplicity in the TPC active volume.
 
@@ -58,8 +59,6 @@ Furthermore, the readout speed of the CCDs employed in the HPTPC prototype motiv
     \begin{adjustbox}{max totalsize={\textwidth},center}
       \input{files/Figures/utofNoBend.tex}
     \end{adjustbox}
-    \caption{Time of flight spectrum for the unmoderated and unbent T10 beam over a baseline of 10.8~m. In this case, the selected beam momentum is 0.8~GeV/c}
-    \label{fig:utofNoBend}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.49\textwidth}
@@ -67,9 +66,8 @@ Furthermore, the readout speed of the CCDs employed in the HPTPC prototype motiv
     \begin{adjustbox}{max totalsize={\textwidth},center}
       \input{files/Figures/protonKE.tex}
     \end{adjustbox}
-    \caption{An example of the measured kinetic energy of protons in the T10 beamline with no moderator and with no bending applied. The selected beam momentum in this case is 0.8~GeV/c.}
-    \label{fig:keNoBend}
   \end{minipage}
+  \caption{\label{fig:utofNoBend}Measurements of the unmoderated and unbent T10 beam over a baseline of 10.8~m for a selected beam momentum of 0.8~GeV/c. Left: Time of flight spectrum Right: Measured kinetic energy of protons}
 \end{figure}
 
 To enhance the low energy proton flux, a novel technique was employed:
@@ -78,5 +76,5 @@ By placing the TPC in an off-axis position, we achieved a beam composition with 
 These techniques were designed to increase the ratio of protons to minimum ionizing particles (MIP) in the HPTPC, and to decrease the proton momentum and multiplicity in the active region of the TPC.
 
 The flux and composition of beam particles was measured with two ToF systems, placed upstream and downstream of the TPC.
-Measurements of protons and minimum ionizing particles are presented as a function of the off axis angle, distance from the moderator, and thickness of the moderator.
+Measurements of protons and minimum ionizing particles are presented as a function of the off axis angle and thickness of the moderator.
 This paper provides a detailed description of the time of flight systems employed in the beamline in section~\ref{hptpcPaper:sec:Methods}, the analysis methodology of the ToF data in section~\ref{hptpcPaper:sec:Analysis}, presentation of the ToF system results in section~\ref{hptpcPaper:sec:Results}, and additional conclusions in section~\ref{hptpcPaper:sec:Conclusion}.

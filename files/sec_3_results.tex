@@ -3,7 +3,7 @@
 
 \subsection{Flux measurements with S3}
 
-The ToF systems are at an off-axis angle with respect to the beam axis (see table~\ref{tab:angS1} for values) in order to boost the low-momentum proton flux in the most relevant range for neutrino experiments.
+The ToF systems are at an off-axis angle with respect to the beam axis (see table~\ref{tab:angS1}), in order to reduce the proton momentum spectrum to cover the region most relevant for neutrino experiments.
 This is quantified in terms of the two off-axis angles.
 These angles are defined as detailed in section~\ref{sec:coord}.
 
@@ -13,17 +13,14 @@ These angles are defined as detailed in section~\ref{sec:coord}.
     \begin{adjustbox}{max totalsize={\textwidth}, center}
       \input{files/Figures/proMomS1.tex}
     \end{adjustbox}
-    \caption{Proton momentum spectrum as measured in $\mathit{S3}$.}
-    \label{fig:s3promom}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.49\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}, center}
       \input{files/Figures/proMomTpc.tex}
     \end{adjustbox}
-    \caption{Proton momentum spectrum as measured in $\mathit{S3}$ for those protons passing through the HPTPC drift volume.}
-    \label{fig:tpcpromom}
   \end{minipage}
+  \caption{\label{fig:s3promom}Proton momentum spectrum as measured in $\mathit{S3}$. Left: all protons. Right: the subset of protons passing through the HPTPC drift volume}
 \end{figure}
 
 \begin{figure}[ht]
@@ -35,82 +32,73 @@ These angles are defined as detailed in section~\ref{sec:coord}.
   \label{fig:tpcproke}
 \end{figure}
 
-The momentum of protons reaching $\mathit{S3}$ is shown in figure~\ref{fig:s3promom}. 
-The momentum of particles identified as protons was successfully reduced with increasing numbers of moderator blocks, with the range falling from 0.55-0.65~GeV/c for the unmoderated beam, to 0.30-0.45~GeV/c for 4~acrylic blocks.
-
-Figure~\ref{fig:tpcpromom} shows the momentum spectrum of those protons arriving at the HPTPC vessel.
-The angular range of the TPC is stated in table~\ref{tab:angS1}.
+The proton spectra upstream of the TPC are shown in figures~\ref{fig:s3promom} and \ref{fig:tpcproke}. 
+Figure~\ref{fig:s3promom}, left, shows the momentum of particles identified as protons is successfully reduced with increasing numbers of moderator blocks, with the range falling from 0.55-0.65~GeV/c for the unmoderated beam, to 0.30-0.45~GeV/c for 4~acrylic blocks.
+Figure~\ref{fig:s3promom}, right, shows the momentum spectrum of those protons whose trajectory will carry them through the HPTPC volume.
+%The angular range of the TPC is stated in table~\ref{tab:angS1}.
 This figure indicates that the flux of low momentum protons (those with a momentum of less than 0.4~GeV/c) reaching the TPC was increased from negligible in the 0, 1, and 2 block cases to ($9.65 \pm 0.13$) per spill for the 4 block case.
-
-Figure~\ref{fig:tpcproke} shows the kinetic energy spectrum of protons $\mathit{S3}$ crossing the time projection chamber.
+Figure~\ref{fig:tpcproke} shows the kinetic energy spectrum of protons crossing into the time projection chamber.
 Comparing figure~\ref{fig:tpcproke} with figure~\ref{fig:protonsfromargon} shows that, for the four moderator block case, the kinetic energy of protons incident upon the TPC is just above the 50~MeV region where the different neutrino interaction generators become discrepant.
 These protons lose further energy within the walls of the HPTPC vessel, resulting in a flux of protons below 50~MeV within the TPC.
 
 The combination of the use of moderator blocks and positioning the TPC in an off-axis position also caused a change in the multiplicity of protons passing through the TPC.
-Figure~\ref{fig:tpcpromom} shows that the addition of 1, 2, and 3 moderator blocks increased the number of protons passing through the TPC from ($19.0 \pm 0.9$) per spill in the unmoderated case to ($108 \pm 3$) per spill in the 3 block case.
-However, the addition of the fourth moderator block led the number of protons passing through the TPC to fall back down tos ($21.4 \pm 0.2$) per spill.
+Figure~\ref{fig:s3promom} shows that the addition of 1, 2, and 3 moderator blocks increased the number of protons passing through the TPC from ($19.0 \pm 0.9$) per spill in the unmoderated case to ($108 \pm 3$) per spill in the 3 block case.
+The addition of the fourth moderator block effectively removes the flux of protons above 100~MeV, leaving ($21.4 \pm 0.2$) per spill to traverse the TPC active volume.
   
 \begin{figure}[h]
   \begin{minipage}{0.48\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
       \input{files/Figures/thetaS1pi.tex}
     \end{adjustbox}
-    \caption{Distribution of hits in $\mathit{S3}$ identified as minimum ionizing particles, as a function the horizontal off-axis angle measured from $\mathit{S1}$ for varying numbers of moderator blocks. In this case, no coincident hit in $\mathit{S2}$ was required.}
-    \label{fig:s1s3mips}
   \end{minipage}
   \hspace{0.3cm}
   \begin{minipage}{0.48\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
       \input{files/Figures/thetaS1pro.tex}
     \end{adjustbox}
-    \caption{Distribution of hits in $\mathit{S3}$ identified as protons, as a function of the horizontal off-axis angle measured from $\mathit{S1}$ for varying numbers of moderator blocks. In this case, no coincident hit in $\mathit{S2}$ was required.}
-    \label{fig:s1s3protons}
   \end{minipage}
+    \caption{\label{fig:s1s3mips}Distribution of hits in $\mathit{S3}$ as a function of the horizontal off-axis angle, measured from $\mathit{S1}$, for varying numbers of moderator blocks. No coincident hit in $\mathit{S2}$ was required. Left: minimum ionizing particles. Right: protons.}
 \end{figure}
 
-The distribution vs. off-axis angle of MIPs and protons in $\mathit{S3}$ are shown in figures~\ref{fig:s1s3mips} and~\ref{fig:s1s3protons}.
+The distributions vs. off-axis angle of MIPs and protons in $\mathit{S3}$ are shown in figure~\ref{fig:s1s3mips}.
 In both cases, the peak beam intensity falls and broadens in $\theta$ with the increasing number of moderator blocks. 
 At off-axis angles the number of MIPs and protons is increased as the number of moderator blocks is increased.
 The TPC lies within this off-axis region.
-The spread of particles for unmoderated data was unexpected, as the beam was already diffuse: the peak in both figures for 0 blocks was already broad.
-Therefore overscattering of protons with 3 and 4 moderator blocks occurred, and the number of protons reaching $\mathit{S3}$ fell faster than the number of MIPS.
+The spread of particles for unmoderated data was unexpected; this peak was broadened by the beam steering scattering that led to the double proton peaks seen in figures~\ref{fig:s3tof} and \ref{fig:s3tof_mass}.
 
-Figures~\ref{fig:propiratio_s3_horz} and \ref{fig:propiratio_s3_vert} show the proton-MIP ratio measured in $\mathit{S3}$ as a function of the nominal off-axis angle, horizontally and vertically respectively, and for various numbers of moderator blocks.
+
+Figure~\ref{fig:propiratio_s3_horz} shows the proton-MIP ratio measured in $\mathit{S3}$ as a function of the nominal off-axis angle, horizontally and vertically respectively, and for various numbers of moderator blocks.
 For 0, 1, 2, and 3 moderator blocks the ratio falls to a minimum at approximately $1^{\circ}$ with respect to the beam axis.
 This corresponds to the true beam centre.
-
-As the angle moves to lower values of $\theta$, the ratio rises for these configurations while a similar effect is observed as $\theta$ increases.
-The peak at lower values of $\theta$ shifts to progressively smaller values of $\theta$ as more moderator blocks are added (from approximately $\theta = -0.5^{\circ}$ for 0 blocks up to approximately $\theta = -2^{\circ}$ for the 3 block case).
-At most values of $\theta$, the proton/MIP ratio falls with the addition of more moderator blocks. 
-This is due to the overscattering of protons, particularly with 4 moderator blocks, which occurred due to the unmoderated beam being broader than expected.
-However, at values of $\theta$ smaller than $-2^{\circ}$ the ratio is increased with the addition of some moderator blocks.
+As the angle moves away from the true beam centre, the ratio rises for these configurations.
+The peak of the proton-MIP ratio shifts away from the beam centre progressively as more moderator blocks are added (from approximately 1$^{\circ}$ away from beam centre for 0 blocks up to approximately 3$^{\circ}$ away from beam centre for 3 blocks).
+At most values of $\theta$, the proton-MIP ratio falls with the addition of more moderator blocks. 
+In other words, reducing the kinetic energy of the protons below 100~MeV came at the cost of reducing the purity of the proton beam.
 
 \begin{figure}[!ht]
   \begin{minipage}[t]{0.48\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
       \input{files/Figures/thetaS1ratio.tex}
     \end{adjustbox}
-    \caption{Proton/MIP ratio in $\mathit{S3}$ for varying numbers of moderator blocks as a function of horizontal off-axis angle, as measured from $\mathit{S1}$}
-    \label{fig:propiratio_s3_horz}
+    
   \end{minipage}
   \hspace{0.3cm}
   \begin{minipage}[t]{0.48\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
       \input{files/Figures/phiS1ratio.tex}
     \end{adjustbox}
-    \caption{Proton/MIP ratio in $\mathit{S3}$ for varying numbers of moderator blocks as a function of vertical off-axis angle, as measured from $\mathit{S1}$}
-    \label{fig:propiratio_s3_vert}
   \end{minipage}	
+  \caption{\label{fig:propiratio_s3_horz}Proton-MIP ratio in $\mathit{S3}$ for varying numbers of moderator blocks as a function of off-axis angle, as measured from $\mathit{S1}$.  Left: horizontal angle. Right: vertical angle. The TPC spans horizontal angles 1.4--3.6$^{ \circ }$. and vertical angles -2.6--+2.6$^{ \circ }$.}
 \end{figure}
 
-The momentum of these particles is further reduced as they pass through the steel walls of the vessel on their path to the TPC region.
+Note that the kinetic energy of these particles is further reduced as they pass through the steel walls of the vessel on their path to the TPC region.
 
 \subsection{Flux measurements with S4}
 
-Figure~\ref{fig:thetas4mip} shows the flux of particles identified as minimum ionizing particles across $\mathit{S4}$.
+Figure~\ref{fig:thetas4mip}, left, shows the flux of particles identified as minimum ionizing particles across $\mathit{S4}$.
 This flux is shown as as a function of the off-axis angles defined in section~\ref{sec:coord} for varying numbers of moderator blocks.
 For all numbers of moderator blocks, the peak number of minimum ionizing particle events occurs at a value of $\theta$ between $-1^{\circ}$ and $-2^{\circ}$.
-Similarly the number of proton events per spill, shown in figure~\ref{fig:thetas4pro} peaks at a value of $\theta$ of approximately $-2^{\circ}$.
+Similarly the number of proton events per spill, shown in figure~\ref{fig:thetas4mip}, right, peaks at a value of $\theta$ of approximately $-2^{\circ}$.
 The fall in the number of events between $\theta = -1^{\circ}$ and $\theta = 0^{\circ}$ is as a result of the beam impinging on the vessel doors at these angles.
 The positioning and shape of the pressure vessel doors means that, for particles travelling at these angles, a greater length of steel is passed through compared to those particles which strike the body of the vessel.
 
@@ -118,15 +106,14 @@ The positioning and shape of the pressure vessel doors means that, for particles
 %Figure~\ref{fig:angularDistS1} shows that, when observed from $\mathit{S1}$, a limited area of $\mathit{S4}$ is shadowed by the active area of $\mathit{S2}$.
 %Given the requirement that a signal must be observed in $\mathit{S2}$, it is clear that all of the events that are observed in $\mathit{S4}$ are from this region of overlap.
 
-Figure~\ref{fig:thetas4mip} also shows that initially, an increasing number of moderator blocks results in an increased total MIP flux through $\mathit{S4}$. 
-However, upon the addition of the fourth moderator block the flux of MIPs is seen to fall.
-This is observed due to both $\mathit{S2}$ and $\mathit{S4}$ being positioned off-axis, avoiding many of the unmoderated beam particles striking these detectors.
+Figure~\ref{fig:thetas4mip}. left, also shows that initially, an increasing number of moderator blocks results in an increased total MIP flux through $\mathit{S4}$. 
+This is because both $\mathit{S2}$ and $\mathit{S4}$ are positioned off-axis, so the unmoderated beam particles do not strike these detectors.
 Due to scattering processes in the moderator, a greater number of MIPs are incident upon $\mathit{S2}$ and $\mathit{S4}$, with more scattering occurring with greater numbers of moderator blocks.
+However, with the fourth moderator block the flux of MIPs is seen to fall.
 %The drop off in the number of MIPs observed in the four block data is likely due to the overscattering of the protons and MIPs as stated previously.
-
-When changing from an unmoderated beam to the configuration with 1 moderator block, the proton flux shown in figure~\ref{fig:thetas4pro} initially sees an increase in the total number of events in $\mathit{S4}$.
-However, upon the addition of further moderator blocks, the total number of protons observed in $\mathit{S4}$ falls.
-The initial increase is similar to that for the MIP flux, with increased scattering causing more protons to pass through the off-axis $\mathit{S2}$ and $\mathit{S4}$.
+Similarly, with the addition of the first two moderator blocks, the proton flux shown in figure~\ref{fig:thetas4mip}, right, initially sees an increase in the total number of events in $\mathit{S4}$.
+However, with three and four moderator blocks, the total number of protons observed in $\mathit{S4}$ falls.
+The initial proton flux increase is similar to that for the MIP flux, with increased scattering causing more protons to pass through the off-axis $\mathit{S2}$ and $\mathit{S4}$ detectors.
 The subsequent decrease is due to the larger loss of energy of the protons in the thicker moderator.
 In turn, this leads to attenuation of protons in the pressure vessel resulting in fewer observed events in $\mathit{S4}$.
 
@@ -135,27 +122,20 @@ In turn, this leads to attenuation of protons in the pressure vessel resulting i
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
       \input{files/Figures/piS4Horz_new.tex}
     \end{adjustbox}
-    \caption{Distribution of hits identified in $\mathit{S4}$ as minimum ionizing particles as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $\mathit{S1}$.}
-    \label{fig:thetas4mip}
+    
   \end{minipage}
   \hspace{0.3cm}
   \begin{minipage}[t]{0.48\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight},center}
       \input{files/Figures/proS4Horz_new.tex}
     \end{adjustbox}
-    \caption{Distribution of hits identified in $\mathit{S4}$ as protons as a function of the number of moderator blocks and the horizontal off-axis angle, as measured from $\mathit{S1}$.}
-    \label{fig:thetas4pro}
   \end{minipage} 
+  \caption{\label{fig:thetas4mip}Distribution of hits in $\mathit{S4}$ as a function of the number of moderator blocks and the horizontal off-axis angle. Left: minimum ionizing particles. Right: protons.}
 \end{figure}	
 
-Figures~\ref{fig:propiratio_s4_horz} and~\ref{fig:propiratio_s4_vert} show the ratio of protons to minimum ionizing particles as a function of the number of moderator blocks and the two off-axis angles.
-For all of the different block configurations, figure~\ref{fig:propiratio_s4_horz} shows the ratio remaining flat across $\theta$.
+Figure~\ref{fig:propiratio_s4_horz} shows the ratio of protons to MIPs as a function of the number of moderator blocks and the two off-axis angles.
+For all of the different block configurations, the ratio is flat across both $\theta$ and $\phi$.
 With the addition of moderator blocks, the ratio reduces from its highest level of 0.5 for the 0 block case, to 0.01 for the 4 block data.
-
-Similarly, figure~\ref{fig:propiratio_s4_vert} shows the proton-MIP ratio falling with the addition of moderator blocks.
-For all the different configurations, the ratio is flat across $\phi$.
-%For the 0, 1, 2 and 3 block configurations the ratio rises as the vertical off-axis angle ($\phi$) moves further away from $0^{\circ}$. 
-For the 4 block configuration, the value of the proton-MIP ratio is approximately 0.01 at all values of $\phi$.
 As mentioned previously, this is thought to be due to the attenuation of low energy protons within the walls of the pressure vessel.
 
 \begin{figure}[!ht]
@@ -163,35 +143,21 @@ As mentioned previously, this is thought to be due to the attenuation of low ene
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
       \input{files/Figures/ratioS4Horz_new.tex}
     \end{adjustbox}
-    \caption{Proton-MIP ratio in $\mathit{S4}$ for varying numbers of moderator blocks as a function of horizontal off-axis angle, as measured from $\mathit{S1}$.}
-    \label{fig:propiratio_s4_horz}
   \end{minipage}
   \hspace{0.3cm}
   \begin{minipage}[t]{0.48\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
       \input{files/Figures/ratioS4Vert_new.tex}
     \end{adjustbox}
-    \caption{Proton-MIP ratio in $\mathit{S4}$ for varying numbers of moderator blocks as a function of vertical off-axis angle, as measured from $\mathit{S1}$.}
-    \label{fig:propiratio_s4_vert}
   \end{minipage}	
+  \caption{\label{fig:propiratio_s4_horz}Proton-MIP ratio in $\mathit{S4}$ for varying numbers of moderator blocks as a function of off-axis angle. Left: horizontal off-axis angle. Right: vertical off-axis angle.}
 \end{figure}
 
 \subsection{Monte Carlo Studies}
-In order to ascertain the flux of protons reaching the active region of the TPC, and verify the corrections described above, a MC study was performed. 
-As the precise initial beam characteristics were not readily available, particle positions and momenta were drawn from the $\mathit{S3}$ distributions shown in figure~\ref{fig:s3promom}.
-To study protons, the same timing cuts described in section~\ref{timeofflightanalysissubsec} were applied.
-The initial simulation profile is constructed identically from the momentum profile shown in figure~\ref{fig:s3promom}.
-
-\begin{figure}[ht]
-  \centering
-     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
-      \input{files/Figures/momS4NoLog.tex}
-    \end{adjustbox}
-    \caption{Momentum profile of simulated protons reaching $\mathit{S4}$, with momentum above the detection threshold of 140~MeV/c}
-    \label{fig:MCS4}
-\end{figure}
-
-
+In order to ascertain the flux of protons reaching the active region of the TPC, and verify the corrections described above, a Monte Carlo (MC) simulation study was performed. 
+In order to match upstream conditions as closely as possible, particle momenta were drawn from the $\mathit{S3}$ distributions shown in figure~\ref{fig:s3promom}, left, and simulated with trajectories that resulted in the same position distribution as seen in figure~\ref{fig:s3XY_pion}, left.
+The same timing cuts described in section~\ref{timeofflightanalysissubsec} were applied.
+%The initial simulation profile is constructed identically from the momentum profile shown in figure~\ref{fig:s3promom}.
 
 %\begin{figure}[!ht]
 %  \begin{minipage}[t]{0.48\textwidth}
@@ -211,20 +177,29 @@ The initial simulation profile is constructed identically from the momentum prof
  % \end{minipage}	
 %\end{figure}
 
+\begin{figure}[ht]
+  \centering
+     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+      \input{files/Figures/momS4NoLog.tex}
+    \end{adjustbox}
+    \caption{Momentum profile of simulated protons reaching $\mathit{S4}$, with kinetic energy above the detection threshold of 10~MeV.}
+    \label{fig:MCS4}
+\end{figure}
+
 The simulated protons are propagated through the vessel to the $\mathit{S4}$ detector.
 The momentum profile of simulated protons reaching the $\mathit{S4}$ wall is shown in figure~\ref{fig:MCS4}.
-A cut is set at the momentum threshold of $\mathit{S4}$ of 140~MeV/c.
-The simulation shows a significant reduction in momentum as most particles have travelled through both steel walls of the TPC vessel.
+A proton detection threshold of $\mathit{S4}$ of 140~MeV/c (10~MeV kinetic energy) included.
+The simulation shows a significant reduction in kinetic energy as most particles have travelled through both steel walls of the TPC vessel.
 In particular, in the 4 moderator block case, very few particles have survived through the second vessel wall to reach $\mathit{S4}$.
 The ratio of number of protons reaching $\mathit{S4}$ to those reaching $\mathit{S3}$ is shown for both simulation and data in table~\ref{tab:ratios}, which includes the total statistical and systematic error in each case.
 
-Table~\ref{tab:systematics} shows the systematic uncertainties on the number of protons measured in $\mathit{S3}$ and $\mathit{S4}$ in both data and Monte Carlo.
-The systematic uncertainty on the MC simulations is determined by varying a number of geometric initial conditions of the simulation including the position of the $\mathit{S1}$ and $\mathit{S2}$ detectors.
+Systematic uncertainties on the number of protons measured in $\mathit{S3}$ and $\mathit{S4}$ are estimated for both data and Monte Carlo, and shown in table~\ref{tab:systematics}.
+The systematic uncertainty on the MC simulation is determined by varying the geometric initial conditions of the simulation, including the position of the $\mathit{S1}$ and $\mathit{S2}$ detectors.
 These variations induce changes in the direction and momenta of the propagated protons.
 Additionally, a study was performed with 1~cm of additional acrylic in the beamline, as a proxy for the uncertainty on other pieces of light material in the beam facility.
-This set of calculated errors represents a number of geometric sources of uncertainty.
+This set of calculated errors represents geometric sources of uncertainty in the MC simulation.
 
-For the data systematics, the uncertainty on the $\mathit{S4}$ angular correction is determined by varying the number of horizontal bins in figure~\ref{fig:s4PosEff} from 20 to 10.
+For the data, the $\mathit{S4}$ angular correction systematic uncertainty is assessed by varying the number of horizontal bins in figure~\ref{fig:s4PosEff} from 20 to 10.
 The uncertainty on the $\mathit{S4}$ background subtraction is determined by modelling the background as both flat and exponential. The difference in $\mathit{S4}$ proton counts in these two cases is used as the systematic.
 This has a very large effect in the 4 block case because of the very small number of protons detected in $\mathit{S4}$ relative to the background.
 
@@ -244,7 +219,7 @@ This has a very large effect in the 4 block case because of the very small numbe
 		\multicolumn{6}{|c|}{\textbf{Data}} \\
 		\hline
 		& \multicolumn{5}{c|}{Number of moderator blocks} \\
-		Systematic & 0 & 1 & 2 & 3 & 4 \\
+		Source of systematic error & 0 & 1 & 2 & 3 & 4 \\
 		\hline
 		Absolute efficiency of $\mathit{S3}$ & 0.1 & 0.1 & 0.1 & 0.1 & 0.1 \\
 		Absolute efficiency of $\mathit{S4}$ & 0.1 & 0.1 & 0.1 & 0.1 & 0.1 \\ 
@@ -257,13 +232,14 @@ This has a very large effect in the 4 block case because of the very small numbe
 	\label{tab:systematics}
 \end{table}
 
-The agreement shown in the 0, 1, 2, and 3 block cases relative to the uncertainty provided by the beam test setup provides strong evidence that efficiency corrections described in section~\ref{timeofflightanalysissubsec} are justified; it is not known if additional small quantities of light moderating material were present in the beamline which are not accounted for in the statistical errors.
+The agreement shown in the 0, 1, 2, and 3 block cases relative to the uncertainty provided by the beam test setup provides strong evidence that efficiency corrections described in section~\ref{timeofflightanalysissubsec} are justified.
+%it is not known if additional small quantities of light moderating material were present in the beamline which are not accounted for in the statistical errors.
 The larger discrepancy in the 4 block case is due to the low energy of the protons.
-In this case, the proton energy spectrum is very sensitive to the any additional material in the beamline which would cause a large number of protons to be absorbed.
+In this case, the proton energy spectrum is very sensitive to additional material in the beamline which would cause a large number of protons to be absorbed.
 
 \begin{table}
   \centering
-  \caption{Ratio of number protons reaching $\mathit{S4}$ to number protons reaching $\mathit{S3}$ for different numbers of moderator blocks in MC and data. In each instance, the combined statistical and systematic errors are shown.}
+  \caption{Ratio of number of protons reaching $\mathit{S4}$ to number protons reaching $\mathit{S3}$ for different numbers of moderator blocks in MC and data. In each instance, the combined statistical and systematic errors are shown.}
   \begin{tabular}{|c|c|c|c|}
     \hline 
     Number of moderator blocks & Monte Carlo & Data & Data/MC\\
@@ -281,7 +257,7 @@ In this case, the proton energy spectrum is very sensitive to the any additional
 The number of simulated particles that penetrate the active area of the TPC are shown in figures~\ref{fig:MCTPC} and~\ref{fig:MCKE} as a function of momentum and kinetic energy respectively.
 Comparing figure~\ref{fig:MCKE} with the motivation plot shown in figure~\ref{fig:protonsfromargon}, it is clear that 4 moderator blocks were required to access the momentum region of interest (below 50 MeV).
 The off axis and moderator technique were therefore successful in the extent to which the proton energy was lowered.
-The number of particles reaching the active area of the TPC was  per spill ($6.97 \pm  0.11$) for 4 moderator blocks, compared with ($12.6 \pm 0.7$) per spill without moderation. 
+The number of protons reaching the active area of the TPC was  per spill ($6.97 \pm  0.11$) for 4 moderator blocks, compared with ($12.6 \pm 0.7$) per spill without moderation. 
 For 4 moderator blocks, ($5.56 \pm  0.10$) of those protons had energies below 100~MeV.
 These values were calibrated with the full comparison between data and simulation.
 
