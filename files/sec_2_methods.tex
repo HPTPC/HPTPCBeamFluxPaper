@@ -436,23 +436,9 @@ This cut varies, depending on the SiPM in question and is determined from distri
 The cut values vary in the range 0.125~V to 0.3~V.
 
 \begin{figure}[ht]
-  \begin{minipage}[t]{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}, center}
-      \input{files/Figures/tvsa0.tex}
-    \end{adjustbox} \\
-    \begin{adjustbox}{max totalsize={\textwidth}, center}
-      \input{files/Figures/tvsa2.tex}
-    \end{adjustbox}
-  \end{minipage} 
-  \begin{minipage}[t]{0.49\textwidth}
-    \begin{adjustbox}{max totalsize={\textwidth}, center}
-      \input{files/Figures/tvsa1.tex}
-    \end{adjustbox} \\
-    \begin{adjustbox}{max totalsize={\textwidth}, center}
-      \input{files/Figures/tvsa3.tex}
-    \end{adjustbox}
-  \end{minipage}  
-  \caption{Examples of SiPM signal amplitude plotted against $\mathit{S1}$ to $\mathit{S3}$ time of flight for different numbers of moderator blocks. Clockwise from top left 0, 1, 3 and 2 moderator blocks are shown. The black dashed line shows the amplitude cut used for this particular SiPM. The population at lower values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by MIPs while the population at higher values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by protons.}
+  \centering
+  \includegraphics[width=\linewidth]{files/Figures/tvsa.pdf}
+  \caption{Examples of SiPM signal amplitude plotted against $\mathit{S1}$ to $\mathit{S3}$ time of flight for different numbers of moderator blocks. Clockwise from top left 0, 1, 3 and 2 moderator blocks are shown. The red dashed line shows the amplitude cut used for this particular SiPM. The population at lower values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by MIPs while the population at higher values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by protons.}
   \label{fig:TvsA}
 \end{figure}
 
