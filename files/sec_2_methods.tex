@@ -171,7 +171,7 @@ The overlap between bars was set to 5~mm, thus the active area of the detector w
 
 The bars are made from EJ-200~\cite{SCIONIX} plastic scintillator, which provides a brightness of 10,000~photons/MeV~deposited.
 It also has a suitable optical attenuation length of 4~m and fast timing, with a rise time of 0.9~ns and decay time constant of 2.1~ns.
-The scintillation emission spectrum of EJ-200 resides peaks in the violet region of the visible spectrum (435~nm)~\cite{EJ200}, which corresponds well to the photon detection efficiency wavelength range of the photosensors used for the readout.
+The scintillation emission spectrum of EJ-200 peaks in the violet region of the visible spectrum (435~nm)~\cite{EJ200}, which corresponds well to the photon detection efficiency wavelength range of the photosensors used for the readout.
 The bars were wrapped with an aluminium foil to maximize the light collected.
 The foil used had a reflectivity of approximately 60\%.
 
@@ -188,7 +188,7 @@ The trigger conditions are as follows. At least three out of the four $\mathit{S
 Additionally, there must be at least one signal in $\mathit{S3}$ above 30~mV.
 These $\mathit{S1}$ and $\mathit{S3}$ signals must be coincident within a gate of 70~ns.
 A fourth ASIC was used to acquire data from $\mathit{S1}$, the coincidence signal $\mathit{S1} \cap \mathit{S2}$, and the start-of-spill signal from the PS.
-A second level trigger was implemented in firmware and run on the level of the ASICs: the data were only sent to the hard disk of the DAQ computer if there was a coincidence between the $\mathit{S1}$ channels and at least three channels in the ASICs used for $\mathit{S3}$.
+A second level trigger was implemented in firmware and run on the level of the ASICs: the data were only sent to the hard disk of the DAQ computer if there was a coincidence between the $\mathit{S1}$ channels and at least one of the channels in the ASICs used for $\mathit{S3}$.
 The mean time of light signals detected at both ends of a single bar provides a time reference with a resolution of about 100~ps, while the difference between the time of the light signals gives the position of the interaction along the bar, with a resolution of 1.6~cm.
 
 Examples of reconstructed $XY$ distributions are shown in figure~\ref{fig:s3XY_pion}.
@@ -266,10 +266,10 @@ The $\mathit{S1-S2}$ coincidence signal is digitized by the same time-to-digital
 For the characterisation of the beam using the ToF systems described in this paper, the relevant characteristics of the HPTPC prototype are the location and thickness of the steel vessel walls.
 The cylindrical steel vessel has a 142~cm outer diameter; the main body is 60 cm in length and the rounded end caps protrude an additional 37~cm on each end.
 With 1~cm thick walls it is rated to 6~barA of pressure. 
-The angular position of the center of the TPC is approximately 2.5$^{\circ}$. 
+The angular position of the center of the TPC is approximately $\theta = -2.5^{\circ}$. 
 More details of the position and extent of the TPC are given in table~\ref{tab:angS1} and table~\ref{tab:distances}.
  
-The active TPC is a cylinder 11~cm in diameter and 48~cm in length; the TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field. 
+The active TPC is a cylinder 111~cm in diameter and 48~cm in length; the TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field. 
 Data taking with the TPC made use of both optical and charge readout.
 The vessel, electrodes, and drift region of the TPC are shown in figure~\ref{fig:TPC}.
 
@@ -319,7 +319,7 @@ More data were collected for 4 blocks as that was the configuration used for the
 %Distinguishing these MIPs from one another is more difficult due to their similar masses and can be only determined by the upstream ToF system.
 %From the particle flux data, it is possible to measure the ratio of protons to other particles over the range of off-axis angles covered by the \textit{S3} and \textit{S4} walls, and for varying numbers of moderator blocks.
 
-A particle of mass $m$ with momentum $p$ will traverse a distance $d$ a time
+A particle of mass $m$ with momentum $p$ will traverse a distance $d$ in a time
 \begin{align}
   t = d \sqrt{\frac{m^2}{p^2} + \frac{1}{c^2}} \,, 
 \end{align}
@@ -349,9 +349,9 @@ Figure~\ref{fig:s1s3PredTimes} shows the predicted time of flight for various pa
 
 Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $\mathit{S3}$ timing point for varying numbers of moderator blocks.
 The quicker peak is formed by minimum ionizing particles, while the peak at higher values of $\mathit{t_{S3}} - \mathit{t_{S1}}$ corresponds to protons.
-The proton peaks show a double peak feature, with a smaller delayed peak closely following the main proton peak; this feature appeared after the beam was steered so that the full 2.5 degree off-axis able could be achieved and is due to beam scattering in the steering magnets.
+The proton peaks show a double peak feature, with a smaller delayed peak closely following the main proton peak; this feature appeared after the beam was steered so that the full 2.5 degree off-axis angle could be achieved and is due to beam scattering in the steering magnets.
 Figures 3 and 4 show the proton peak for unsteered beam and the double peak structure is gone.
-In the black curve, which shows 0 block data, the peak at 95~ns corresponds to deuterons.
+In the black curve, which shows the 0 block data, a deuteron peak can be seen centered at 95~ns.
 The timing ranges are chosen using the analytic expectations shown in figure~\ref{fig:s1s3PredTimes}.
 
 \begin{figure}[ht]
@@ -407,7 +407,7 @@ before the Lorentz factor is expanded to give
 \begin{align}
   m^{2} = p^{2}\left(\frac{1}{v^{2}} - \frac{1}{c^{2}}\right) \,,
 \end{align}
-where $c$ is the speed of light in a vacuum. Expressing $v$ as the distance between $\mathit{S1}$ and $\mathit{S3}$ ($x_{\mathit{S3}}-x_{\mathit{S1}} = 10.9~\text{m}$) divided by the time difference between the $\mathit{S1}$ and $\mathit{S3}$ counters ($t_{\mathit{S3}} - t_{\mathit{S1}}$) and expressing in natural units 
+where $c$ is the speed of light in a vacuum. Expressing $v$ as the distance between $\mathit{S1}$ and $\mathit{S3}$ ($x_{\mathit{S3}}-x_{\mathit{S1}} = 10.8~\text{m}$) divided by the time difference between the $\mathit{S1}$ and $\mathit{S3}$ counters ($t_{\mathit{S3}} - t_{\mathit{S1}}$) and expressing in natural units 
 \begin{equation} 
   m^2 = p^2 \left( 
   \left(\frac{t_{\mathit{S3}}-t_{\mathit{S1}}}{x_{\mathit{S3}}-x_{\mathit{S1}}} \cdot c \right)^2
@@ -459,6 +459,7 @@ Additionally, the predicted proton position does not line up with the measured p
 This is again thought to be caused by the positioning of the TPC in front of $\mathit{S4}$.
 Protons passing through the TPC lose energy, resulting in them having less than the original 0.8~GeV/c beam momentum.
 In turn, this leads to protons having a larger reconstructed mass than predicted.
+The displacement of the proton mass peak in figure~\ref{fig:s4tof_mass} is consistent with the expected energy loss in the vessel walls.
 
 \begin{figure}[ht]
   \centering
@@ -473,7 +474,7 @@ A correction is made for the variation in particle detection efficiency between 
 This correction is performed using the cosmic ray flux.
 It is assumed that the flux of cosmic rays passing through each part of $\mathit{S4}$ is equal.
 Each $\mathit{S4}$ bar is divided into 7~cm segments for analysis, and the number of cosmic rays passing through each segment is measured by assuming that all signals occurring outside of beam spills are produced by cosmic rays.
-The efficiency is then derived from this distribution by scaling with a constant factor found by letting the bin with the highest number of cosmics have a value of 1.
+The efficiency is then found from this distribution by normalising the bin with the highest number of cosmic ray signals to 1.
 An example of one of these distributions is shown in figure~\ref{fig:s4PosEff}.
 Events are then weighted according to the bar in which they are observed and their measured position along this bar.
 The weight applied is the inverse of the value shown in figure~\ref{fig:s4PosEff}.
@@ -494,7 +495,7 @@ Using figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts.
 These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
 The signal functions are taken to be Gaussians while the background is taken to be flat. 
 An example of this is shown in figure~\ref{fig:fitEx}.
-The particles in the quicker timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>36~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<85~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>62~\text{ns}$) are considered to be protons.
+The particles in the quicker timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>36~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<285~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>62~\text{ns}$) are considered to be protons.
 
 \begin{figure}[ht]
   \begin{adjustbox}{max totalsize={.7\textwidth}{.62\textheight},center}
