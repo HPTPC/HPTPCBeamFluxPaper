@@ -155,7 +155,7 @@ As mentioned previously, this is thought to be due to the attenuation of low ene
 
 \subsection{Monte Carlo Studies}
 In order to ascertain the flux of protons reaching the active region of the TPC, and verify the corrections described above, a Monte Carlo (MC) simulation study was performed. 
-In order to match upstream conditions as closely as possible, particle momenta were drawn from the $\mathit{S3}$ distributions shown in figure~\ref{fig:s3promom}, left, and simulated with trajectories that resulted in the same position distribution as seen in figure~\ref{fig:s3XY_pion}, left.
+In order to match upstream conditions as closely as possible, particle momenta were drawn from the $\mathit{S3}$ distributions shown in figure~\ref{fig:s3promom}, left, and simulated with trajectories that resulted in the same position distribution as seen in figure~\ref{fig:s3XY_pion}, right.
 The same timing cuts described in section~\ref{timeofflightanalysissubsec} were applied.
 %The initial simulation profile is constructed identically from the momentum profile shown in figure~\ref{fig:s3promom}.
 
@@ -188,10 +188,27 @@ The same timing cuts described in section~\ref{timeofflightanalysissubsec} were 
 
 The simulated protons are propagated through the vessel to the $\mathit{S4}$ detector.
 The momentum profile of simulated protons reaching the $\mathit{S4}$ wall is shown in figure~\ref{fig:MCS4}.
-A proton detection threshold of $\mathit{S4}$ of 140~MeV/c (10~MeV kinetic energy) included.
+A proton detection threshold of $\mathit{S4}$ of 140~MeV/c (10~MeV kinetic energy) is included.
 The simulation shows a significant reduction in kinetic energy as most particles have travelled through both steel walls of the TPC vessel.
 In particular, in the 4 moderator block case, very few particles have survived through the second vessel wall to reach $\mathit{S4}$.
 The ratio of number of protons reaching $\mathit{S4}$ to those reaching $\mathit{S3}$ is shown for both simulation and data in table~\ref{tab:ratios}, which includes the total statistical and systematic error in each case.
+
+\begin{table}
+	\centering
+	\caption{Ratio of number of protons reaching $\mathit{S4}$ to number protons reaching $\mathit{S3}$ for different numbers of moderator blocks in MC and data. In each instance, the combined statistical and systematic errors are shown.}
+	\begin{tabular}{|c|c|c|c|}
+		\hline 
+		Number of moderator blocks & Monte Carlo & Data & Data/MC\\
+		\hline
+		$0$ & $0.027 \pm 0.003$ & $0.050 \pm 0.005$ & $1.8 \pm 0.3$ \\
+		$1$ & $0.067 \pm 0.005$ & $0.090 \pm 0.009$ & $1.3 \pm 0.2$ \\
+		$2$ & $0.084 \pm 0.007$ & $0.104 \pm 0.013$ & $1.2 \pm 0.2$ \\
+		$3$ & $0.055 \pm 0.010$ & $0.046 \pm 0.008$ & $0.8 \pm 0.2$ \\
+		$4$ & $0.0115 \pm 0.0010$ & $0.035 \pm 0.027$ & $3.0 \pm 2.4$ \\
+		\hline
+	\end{tabular}
+	\label{tab:ratios}
+\end{table}
 
 Systematic uncertainties on the number of protons measured in $\mathit{S3}$ and $\mathit{S4}$ are estimated for both data and Monte Carlo, and shown in table~\ref{tab:systematics}.
 The systematic uncertainty on the MC simulation is determined by varying the geometric initial conditions of the simulation, including the position of the $\mathit{S1}$ and $\mathit{S2}$ detectors.
@@ -205,7 +222,7 @@ This has a very large effect in the 4 block case because of the very small numbe
 
 \begin{table}
 	\centering
-	\caption{List of systematic errors and values for data and Monte Carlo simulation. All values are the fractional error on the $\mathit{S4}$ proton count with the exception of the uncertainty on the efficiency of $\mathit{S3}$, which is the fractional error in the $\mathit{S3}$ proton count. All uncertainties are treated as uncorrelated. $n_{\mathit{S4},~MC}$ refers to the number of protons reaching $\mathit{S4}$ in Monte Carlo simulations.}
+	\caption{List of systematic errors and values for data and Monte Carlo simulation. All values are the percent error on the $\mathit{S4}$ proton count with the exception of the uncertainty on the efficiency of $\mathit{S3}$, which is the fractional error in the $\mathit{S3}$ proton count. All uncertainties are treated as uncorrelated. $n_{\mathit{S4},~MC}$ refers to the number of protons reaching $\mathit{S4}$ in Monte Carlo simulations.}
 	\begin{tabular}{|c|c c c c c|}
 		\hline 
 		\multicolumn{6}{|c|}{\textbf{Monte Carlo}} \\
@@ -213,7 +230,7 @@ This has a very large effect in the 4 block case because of the very small numbe
 		& \multicolumn{5}{c|}{Number of moderator blocks} \\
 		& 0 & 1 & 2 & 3 & 4 \\
 		\hline
-		Systematic uncertainty on $n_{\mathit{S4},~MC}$ & 0.095 & 0.08 & 0.085 & 0.171 & 0.08 \\
+		Systematic uncertainty on $n_{\mathit{S4},~MC}$ & 9.5\% & 8.0\% & 8.5\% & 17\% & 8.0\% \\
 		\hline
 		\hline
 		\multicolumn{6}{|c|}{\textbf{Data}} \\
@@ -221,12 +238,12 @@ This has a very large effect in the 4 block case because of the very small numbe
 		& \multicolumn{5}{c|}{Number of moderator blocks} \\
 		Source of systematic error & 0 & 1 & 2 & 3 & 4 \\
 		\hline
-		Absolute efficiency of $\mathit{S3}$ & 0.1 & 0.1 & 0.1 & 0.1 & 0.1 \\
-		Absolute efficiency of $\mathit{S4}$ & 0.1 & 0.1 & 0.1 & 0.1 & 0.1 \\ 
-		$\mathit{S4}$ angular correction & 0.029 & 0.015 & 0.067 & 0.082 & 0.041 \\
-		$\mathit{S4}$ background uncertainty & 0.016 & 0.014 & 0.042 & 0.100 & 0.776 \\
+		Absolute efficiency of $\mathit{S3}$ & 10\% & 10\% & 10\% & 10\% & 10\% \\
+		Absolute efficiency of $\mathit{S4}$ & 10\% & 10\% & 10\% & 10\% & 10\% \\ 
+		$\mathit{S4}$ angular correction & 2.9\% & 1.5\% & 6.7\% & 8.2\% & 4.1\% \\
+		$\mathit{S4}$ background uncertainty & 1.6\% & 1.4\% & 4.2\% & 10\% & 78\% \\
 		\hline
-		\textbf{Total} & 0.145 & 0.143 & 0.162 & 0.192 & 0.790 \\
+		\textbf{Total} & 15\% & 14\% & 16\% & 19\% & 79\% \\
 		\hline 
 	\end{tabular}
 	\label{tab:systematics}
@@ -236,23 +253,6 @@ The agreement shown in the 0, 1, 2, and 3 block cases relative to the uncertaint
 %it is not known if additional small quantities of light moderating material were present in the beamline which are not accounted for in the statistical errors.
 The larger discrepancy in the 4 block case is due to the low energy of the protons.
 In this case, the proton energy spectrum is very sensitive to additional material in the beamline which would cause a large number of protons to be absorbed.
-
-\begin{table}
-  \centering
-  \caption{Ratio of number of protons reaching $\mathit{S4}$ to number protons reaching $\mathit{S3}$ for different numbers of moderator blocks in MC and data. In each instance, the combined statistical and systematic errors are shown.}
-  \begin{tabular}{|c|c|c|c|}
-    \hline 
-    Number of moderator blocks & Monte Carlo & Data & Data/MC\\
-    \hline
-    $0$ & $0.027 \pm 0.003$ & $0.050 \pm 0.005$ & $1.8 \pm 0.3$ \\
-    $1$ & $0.067 \pm 0.005$ & $0.090 \pm 0.009$ & $1.3 \pm 0.2$ \\
-    $2$ & $0.084 \pm 0.007$ & $0.104 \pm 0.013$ & $1.2 \pm 0.2$ \\
-    $3$ & $0.055 \pm 0.010$ & $0.046 \pm 0.008$ & $0.8 \pm 0.2$ \\
-    $4$ & $0.0115 \pm 0.0010$ & $0.035 \pm 0.027$ & $3.0 \pm 2.4$ \\
-    \hline
-  \end{tabular}
-  \label{tab:ratios}
-\end{table}
 
 The number of simulated particles that penetrate the active area of the TPC are shown in figures~\ref{fig:MCTPC} and~\ref{fig:MCKE} as a function of momentum and kinetic energy respectively.
 Comparing figure~\ref{fig:MCKE} with the motivation plot shown in figure~\ref{fig:protonsfromargon}, it is clear that 4 moderator blocks were required to access the momentum region of interest (below 50 MeV).
