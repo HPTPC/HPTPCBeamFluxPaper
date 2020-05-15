@@ -135,7 +135,7 @@ In turn, this leads to attenuation of protons in the pressure vessel resulting i
 
 Figure~\ref{fig:propiratio_s4_horz} shows the ratio of protons to MIPs as a function of the number of moderator blocks and the two off-axis angles.
 For all of the different block configurations, the ratio is flat across both $\theta$ and $\phi$.
-With the addition of moderator blocks, the ratio reduces from its highest level of 0.5 for the 0 block case, to 0.01 for the 4 block data.
+With the addition of moderator blocks, the ratio reduces from its highest level of 0.5 for the 0 block case, to 0.002 for the 4 block data.
 As mentioned previously, this is thought to be due to the attenuation of low energy protons within the walls of the pressure vessel.
 
 \begin{figure}[!ht]
@@ -179,7 +179,7 @@ The same timing cuts described in section~\ref{timeofflightanalysissubsec} were 
 
 \begin{figure}[ht]
   \centering
-     \begin{adjustbox}{max totalsize={\textwidth}{.4\textheight}, center}
+     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
       \input{files/Figures/proKeS4Mc.tex}
     \end{adjustbox}
     \caption{Energy profile of simulated protons reaching $\mathit{S4}$, with kinetic energy above the detection threshold of 10~MeV.}
@@ -200,11 +200,11 @@ The ratio of number of protons reaching $\mathit{S4}$ to those reaching $\mathit
 		\hline 
 		Number of moderator blocks & Monte Carlo & Data & Data/MC\\
 		\hline
-		$0$ & $0.027 \pm 0.003$ & $0.050 \pm 0.005$ & $1.8 \pm 0.3$ \\
-		$1$ & $0.067 \pm 0.005$ & $0.090 \pm 0.009$ & $1.3 \pm 0.2$ \\
-		$2$ & $0.084 \pm 0.007$ & $0.104 \pm 0.013$ & $1.2 \pm 0.2$ \\
-		$3$ & $0.055 \pm 0.010$ & $0.046 \pm 0.008$ & $0.8 \pm 0.2$ \\
-		$4$ & $0.0115 \pm 0.0010$ & $0.035 \pm 0.027$ & $3.0 \pm 2.4$ \\
+		$0$ & $0.027 \pm 0.003$ & $0.049 \pm 0.007$ & $1.8 \pm 0.3$ \\
+		$1$ & $0.067 \pm 0.005$ & $0.088 \pm 0.013$ & $1.3 \pm 0.2$ \\
+		$2$ & $0.084 \pm 0.007$ & $0.098 \pm 0.015$ & $1.2 \pm 0.2$ \\
+		$3$ & $0.055 \pm 0.010$ & $0.036 \pm 0.006$ & $0.7 \pm 0.2$ \\
+		$4$ & $0.0115 \pm 0.0010$ & $0.0079 \pm 0.0016$ & $0.7 \pm 0.2$ \\
 		\hline
 	\end{tabular}
 	\label{tab:ratios}
@@ -217,8 +217,8 @@ Additionally, a study was performed with 1~cm of additional acrylic in the beaml
 This set of calculated errors represents geometric sources of uncertainty in the MC simulation.
 
 For the data, the $\mathit{S4}$ angular correction systematic uncertainty is assessed by varying the number of horizontal bins in figure~\ref{fig:s4PosEff} from 20 to 10.
-The uncertainty on the $\mathit{S4}$ background subtraction is determined by modelling the background as both flat and exponential. The difference in $\mathit{S4}$ proton counts in these two cases is used as the systematic.
-This has a very large effect in the 4 block case because of the very small number of protons detected in $\mathit{S4}$ relative to the background.
+The uncertainty on the $\mathit{S4}$ background subtraction is determined by taking the $1\sigma$ error on the fitted flat background and determining the resulting change in the number of protons.
+This has a larger effect in the 4 block case because of the very small number of protons detected in $\mathit{S4}$ relative to the background.
 
 \begin{table}
 	\centering
@@ -241,18 +241,18 @@ This has a very large effect in the 4 block case because of the very small numbe
 		Absolute efficiency of $\mathit{S3}$ & 10\% & 10\% & 10\% & 10\% & 10\% \\
 		Absolute efficiency of $\mathit{S4}$ & 10\% & 10\% & 10\% & 10\% & 10\% \\ 
 		$\mathit{S4}$ angular correction & 2.9\% & 1.5\% & 6.7\% & 8.2\% & 4.1\% \\
-		$\mathit{S4}$ background uncertainty & 1.6\% & 1.4\% & 4.2\% & 10\% & 78\% \\
+		$\mathit{S4}$ background uncertainty & 0.18\% & 0.16\% & 1.1\% & 1.4\% & 8.1\% \\
 		\hline
-		\textbf{Total} & 15\% & 14\% & 16\% & 19\% & 79\% \\
+		\textbf{Total} & 15\% & 14\% & 16\% & 17\% & 20\% \\
 		\hline 
 	\end{tabular}
 	\label{tab:systematics}
 \end{table}
 
-The agreement shown in the 0, 1, 2, and 3 block cases relative to the uncertainty provided by the beam test setup provides strong evidence that efficiency corrections described in section~\ref{timeofflightanalysissubsec} are justified.
+The agreement shown relative to the uncertainty provided by the beam test setup provides strong evidence that efficiency corrections described in section~\ref{timeofflightanalysissubsec} are justified.
 %it is not known if additional small quantities of light moderating material were present in the beamline which are not accounted for in the statistical errors.
-The larger discrepancy in the 4 block case is due to the low energy of the protons.
-In this case, the proton energy spectrum is very sensitive to additional material in the beamline which would cause a large number of protons to be absorbed.
+%The larger discrepancy in the 4 block case is due to the low energy of the protons.
+%In this case, the proton energy spectrum is very sensitive to additional material in the beamline which would cause a large number of protons to be absorbed.
 
 The number of simulated particles that penetrate the active area of the TPC are shown in figures~\ref{fig:MCTPC} and~\ref{fig:MCKE} as a function of momentum and kinetic energy respectively.
 Comparing figure~\ref{fig:MCKE} with the motivation plot shown in figure~\ref{fig:protonsfromargon}, it is clear that 4 moderator blocks were required to access the momentum region of interest (below 50 MeV).
