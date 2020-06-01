@@ -2,7 +2,7 @@
 \label{hptpcPaper:sec:Methods}
 
 \subsection{Beam Test Overview}
-The beam test took place in the T10 beam line, in the East Area at the Proton Synchrotron (PS) at CERN from 15 August to 18 September 2018.
+The beam test took place in the T10 beam line, in the East Area at the Proton Synchrotron (PS) at CERN.
 The T10 beamline at CERN is a secondary beam derived from the PS beam which consists primarily of protons, electrons and charged pions~\cite{T10Report}.
 %The results in this paper use data taken on the 28th August and 1st September, during which the setup configuration was varied as described below.
 The primary components of the experimental setup are shown schematically in figure~\ref{fig:setup}.
@@ -20,7 +20,7 @@ The primary components of the experimental setup are shown schematically in figu
 \end{figure}
 
 A beam position monitor (BPM) was situated at the beam entrance into the test area, upstream of all the ToF constituents and the TPC. 
-The TPC was placed 13~m downstream of the BPM. The optimal TPC position was determined to be between 2$^{ \circ }$ and 3$^{ \circ }$ off the beam axis, but space constraints meant the TPC could not be placed that far away from the nominal beam centre. So, the beam was steered approximately 1$^{ \circ }$ away from its nominal position, and the TPC placed 1.5$^{ \circ }$ away from the nominal beam centre so that the TPC active region spanned off-axis angles 1.4--3.8$^{ \circ }$.
+The TPC was placed 13~m downstream of the BPM. The optimal TPC position was determined to be between 2$^{ \circ }$ and 3$^{ \circ }$ off the beam axis, but space constraints meant the TPC could not be placed that far away from the nominal beam centre. So, the beam was steered approximately 1$^{ \circ }$ away from its nominal position, and the TPC placed 1.5$^{ \circ }$ away from the nominal beam centre so that the TPC active region subtended an off-axis angular range of 1.4--3.8$^{ \circ }$.
 
 There were four ToF constituents: 
 \begin{itemize}
@@ -37,7 +37,7 @@ The moderator blocks have the effect of both reducing the energies of incoming p
 This tends to increase the proton-to-MIP ratio at low off-axis angles from the beam, while decreasing the total number of protons and MIPs traversing the TPC.
 Data were collected with the T10 beam momentum setting at 0.8~GeV/c, and with each configuration of 0 to 4 moderator blocks.
 
-The ToF systems were placed in off-axis positions with respect to the direction of the beam to match the TPC position.
+%The ToF systems were placed in off-axis positions with respect to the direction of the beam to match the TPC position.
 The data acquisition (DAQ) systems of the $\mathit{S3}$ (upstream) and $\mathit{S4}$ (downstream) ToF systems were completely independent.
 Synchronization between ToF DAQ systems was performed offline using the reference signal from the PS at the beginning of every spill.
 T10 received 1--3 spills from the PS during each supercycle, which has a typical duration of 33~s.
@@ -46,7 +46,7 @@ The minimum separation in time between two spills is 1 second, so the start-of-s
 The trigger condition of the upstream ToF ($\mathit{S3}$) was based on the coincidence between $\mathit{S1}$ and $\mathit{S3}$ constituents.
 $\mathit{S2}$ signals were also recorded by the upstream ToF DAQ but were not used in the trigger.
 The DAQ of the downstream ToF ($\mathit{S4}$) was run in self-triggering mode with a gate open during the spill.
-Coincidence signals between $\mathit{S1}$ and $\mathit{S2}$ counters were also recorded by the downstream ToF DAQ and were used in the particle identification (PID) analysis, described in section~\ref{hptpcPaper:sec:Results}.  
+Coincidence signals between $\mathit{S1}$ and $\mathit{S2}$ counters were also recorded by the downstream ToF ($\mathit{S4}$) DAQ and were used in the particle identification (PID) analysis, described in section~\ref{hptpcPaper:sec:Results}.  
 
 \subsection{Survey and coordinate system}
 \label{sec:coord}
@@ -136,7 +136,7 @@ These distances were calculated using the data gathered by the survey team.
 The beam counters $\mathit{S1}$ and $\mathit{S2}$ are shown in figure~\ref{fig:S1S2headon}.
 The $\mathit{S1}$ counter is a $40\times40\times5$~mm$^3$ plastic scintillator cross which is attached to four 1'' Hamamatsu R4998 phototubes at each end for the light readout.
 The time resolution of the counter, as measured by the DAQ system of the upstream ToF, was about 30~ps. This is estimated with the distribution of the average PMT hit times; the quantity $t_{\textrm{ave}}=\frac{1}{4}((t_{\textrm{PMT0}}+t_{\textrm{PMT1}})-(t_{\textrm{PMT2}}+t_{\textrm{PMT3}}))$ has the same spread as the simple average but is conveniently centered at zero.
-An example of the $t_{\textrm{ave}}$ distribution for one run of $\mathit{S1}$ data is shown in figure~\ref{fig:s1Res}. The FWHM of the distribution is 62 ps.
+An example of the $t_{\textrm{ave}}$ distribution for one run of $\mathit{S1}$ data is shown in figure~\ref{fig:s1Res}. The full width at half maximum (FWHM) of the distribution is 62 ps.
 
 \begin{figure}
   \begin{adjustbox}{width=0.7\linewidth, center}
@@ -146,12 +146,12 @@ An example of the $t_{\textrm{ave}}$ distribution for one run of $\mathit{S1}$ d
   \label{fig:s1Res}
 \end{figure}
 
-The $\mathit{S2}$ counter is a scintillator tile of size $120\times120\times5$~mm$^3$, coupled to a 2" PMT R1309, which was connected to the scintillator via a long light-guide as shown in figure~\ref{fig:modblocks}.
+The $\mathit{S2}$ counter is a scintillator tile of size $120\times120\times5$~mm$^3$, coupled to a 2" PMT R1309, via a long light-guide as shown in figure~\ref{fig:modblocks}.
 The $\mathit{S2}$ counter was placed $(1.4194 \pm 0.0014)~\text{m}$ downstream of $\mathit{S1}$.
 The transverse position of $\mathit{S2}$ was adjusted to account for the beam divergence in the moderator blocks.
 
-The analog signals from one of the $\mathit{S1}$ PMTs and $\mathit{S2}$ PMT were fed into NIM discriminator units with a threshold of 30~mV.
-Subsequently, the discriminated signals were fed into a NIM coincidence unit, and the coincidence of the two signals was recorded by the DAQ systems of the $\mathit{S4}$ (downstream) ToF wall.
+The analog signals from one of the $\mathit{S1}$ PMTs and the $\mathit{S2}$ PMT were fed into NIM discriminator units with a threshold of 30~mV.
+Subsequently, the discriminated signals were fed into a NIM coincidence unit, whose output was recorded by the DAQ systems of the downstream ToF ($\mathit{S4}$) wall.
 This information was further used for the time-of-flight analysis of $\mathit{S4}$.
 
 \subsection{Upstream Time of Flight instrumentation (S3)}
@@ -173,11 +173,12 @@ The overlap between bars was set to 5~mm, thus the active area of the detector w
 
 The bars are made from EJ-200~\cite{SCIONIX} plastic scintillator, which provides a brightness of 10,000~photons/MeV~deposited.
 It also has a suitable optical attenuation length of 4~m and fast timing, with a rise time of 0.9~ns and decay time constant of 2.1~ns.
-The scintillation emission spectrum of EJ-200 peaks in the violet region of the visible spectrum (435~nm)~\cite{EJ200}, which corresponds well to the photon detection efficiency wavelength range of the photosensors used for the readout.
+The scintillation emission spectrum of EJ-200 peaks in the violet region of the visible spectrum (435~nm)~\cite{EJ200}, which matches well to the photon detection efficiency wavelength range of the photosensors used for the readout.
 The bars were wrapped with an aluminium foil to maximize the light collected.
 The foil used had a reflectivity of approximately 60\%.
 
 Arrays of eight $6 \times 6$~mm$^2$ area silicon photomultipliers (SiPMs) S13360-6050PE from Hamamatsu Photonics \cite{Hamamatsu} were coupled to each end of the bar to collect scintillation photons.
+The photon detection efficiency at the peak sensitivity wavelength (450~nm) is 40\%~\cite{Hamamatsu}.
 The anode signals of the SiPMs are read out, summed and shaped by a dedicated circuit as described in Ref.\,\cite{S3-readout}.
 %an 8-channel SiPM anode readout integrated circuit MUSIC-R1. %The construction of the prototype was a joint effort between groups of Geneva and Zurich universities as a part of R\&D for the Timing detector of the SHIP experiment \cite{AK}.
 
