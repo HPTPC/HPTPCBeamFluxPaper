@@ -1,15 +1,18 @@
 \section{Introduction}
 One of the major goals of the global neutrino physics programme is to explore fundamental symmetries of nature linked to why we live in a matter-dominated universe. 
 Charge-parity symmetry violation (CPV) in the neutrino sector is one possibility remaining to be explored experimentally. 
-CPV searches compare the number of $\nu_{\mu}\!\rightarrow\!\nu_e$ and $\overline{\nu}_{\mu}\!\rightarrow\!\overline{\nu}_e$ oscillations, which, in the absence of CPV and accounting for matter effects, should be equal. 
+CPV is obtained from the simultaneous fit of the $\nu_{\mu}$ appearance and $\nu_e$ disappearence oscillation channels separately for neutrinos and anti-neutrinos.
+In the absence of CPV and accounting for matter effects, the rates of $\nu_{\mu}\!\rightarrow\!\nu_e$ and $\overline{\nu}_{\mu}\!\rightarrow\!\overline{\nu}_e$ oscillations should be equal.
+%CPV searches compare the number of $\nu_{\mu}\!\rightarrow\!\nu_e$ and $\overline{\nu}_{\mu}\!\rightarrow\!\overline{\nu}_e$ oscillations, which, in the absence of CPV and accounting for matter effects, should be equal. 
 To convert the measured rate of interactions to a level of CPV, experiments must accurately know the cross section for the interactions of neutrinos and anti-neutrinos with detector materials, which are, most commonly, hydrogen, carbon, oxygen, argon, and iron. 
 Therefore, systematic uncertainties on neutrino-nucleus interaction cross sections are a key input to such CPV searches.  
 These interaction cross sections are dependent on modeling neutrino-nucleon interactions occurring within nuclei. 
 The nuclear models informed by these cross sections have substantial effects on the measured final-state particle kinematic distributions~\cite{Mosel:2016cwa}.
 
 The long baseline neutrino experiments that are currently searching for CPV are the Tokai to Kamioka experiment~(T2K)~\cite{Abe:2019vii} and the NuMI Off-Axis $\nu_{e}$ Appearance experiment~(NOvA)~\cite{Acero:2019ksn}.
-The T2K experiment, which currently reports the strongest constraint on CPV in neutrinos, has 5--8\% systematic uncertainties on the rate of neutrino interactions containing a single lepton, with cross section uncertainties being the largest contribution~\cite{Abe:2019vii}.
-The future Deep Underground Neutrino Experiment~(DUNE)~\cite{abi2020deep} and Hyper-Kamiokande~\cite{abe2011letter} projects assume systematic errors at the 1--2\% level to achieve their physics goals, but will be in the same position as current experiments ($>$5\% errors) if the nuclear-model uncertainties are not reduced.  
+The long baseline neutrino experiments that are currently searching for CPV are the Tokai to Kamioka experiment~(T2K)~\cite{Abe:2019vii} and the NuMI Off-Axis $\nu_{e}$ Appearance experiment~(NOvA)~\cite{Acero:2019ksn}.
+The T2K experiment, which currently reports the strongest constraint on CPV in neutrinos, has systematic uncertainties on the prediction of the rate of far detector electron-like events of 7-9\% after near-detector constraint, with cross section uncertainties being the largest contribution~\cite{Abe:2019vii}.
+The future Deep Underground Neutrino Experiment~(DUNE)~\cite{abi2020deep} and Hyper-Kamiokande~\cite{abe2011letter} projects will seek to reach 1-3\% on that same rate of far detector electron-like events~\cite{acciarri2016long}, with improved systematic errors providing better precision on the CP violating phase.
 The key to reducing these uncertainties is to precisely measure the multiplicity and momentum distribution of final-state particles. 
 However, these distributions are modified by final state interactions (FSI) of the recoiling secondary particles as they traverse the target nucleus. 
 The most commonly used neutrino generator Monte Carlos (GENIE~\cite{Andreopoulos:2009rq}, NEUT~\cite{Hayato:2009zz}, and NuWro~\cite{GOLAN2012499}), simulate FSI with cascade models that are tuned with external hadron-nucleus scattering measurements. The generator GiBUU~\cite{lalakulich2013neutrino} models FSI by solving the semi-classical Boltzmann-Uehling-Uhlenbeck equation.
@@ -21,9 +24,9 @@ The most commonly used neutrino generator Monte Carlos (GENIE~\cite{Andreopoulos
     \label{fig:DataProtonXSec}%
 \end{figure}
 
-However, as shown in figure~\ref{fig:DataProtonXSec}, proton-nucleus scattering measurements are extremely sparse and in many cases do not exist in the relevant energy region and/or on the relevant nuclei.
-Therefore semi-empirical parameterisations are used to extrapolate in momentum and atomic mass.  
-The parametrisations are different between the three generators, and yield order-of-magnitude scale differences in the predicted multiplicity and kinematics of final state protons.
+However, as shown in Figure~\ref{fig:DataProtonXSec}, proton-nucleus scattering measurements are extremely sparse and in many cases do not exist in the relevant energy region and/or on the relevant nuclei.
+Therefore semi-empirical parameterisations are used to extrapolate in momentum and atomic mass~\cite{wellisch1996total}.  
+The parametrisations are different between the three generators, and yield order-of-magnitude scale differences in the predicted multiplicity and kinematics of final state protons~\cite{dune2018high}.
 The proton final state modeling is a key ingredient for neutrino oscillation measurements because it affects the event selection and neutrino energy reconstruction in charged-current (CC) interactions, which is the channel used to measure oscillation parameters and is, therefore, central to the search for CPV~\cite{Abe:2013hdq}.
 For these reasons, FSI contribute substantially to the total neutrino interaction systematic uncertainty~\cite{Abe:2019vii}. 
 
@@ -35,20 +38,20 @@ These errors cannot be fully mitigated with near/far detector combinations becau
 \begin{figure}%
     \centering
     \includegraphics[width=12cm]{files/Figures/protons_from_argon.jpeg}%
-    \caption{Predicted proton energy spectra from GENIE, NEUT, and NuWro\cite{Raaf:2018aaa}. Energy spectra up to 1 GeV are shown on the left, and zoomed in to lower energies on the right. The figure uses the Long Baseline Neutrino Facility (LBNF) simulation for DUNE's beam energy and flux. The dashed vertical line indicates the expected proton automated-reconstruction/ideentification threshold in liquid argon, and the solid vertical line shows the same for gaseous argon at 10 atm~\cite{dune2018high}}
+    \caption{Predicted proton energy spectra from GENIE, NEUT, and NuWro\cite{Raaf:2018aaa}. Energy spectra up to 1 GeV are shown on the left, and zoomed in to lower energies on the right. The figure uses the Long Baseline Neutrino Facility (LBNF)  simulation for DUNE's beam energy and flux. The LBNF beam has a mean energy of approximately 2.5~GeV\cite{abi2020deep}. The dashed vertical line indicates the expected proton automated-reconstruction/ideentification threshold in liquid argon, and the solid vertical line shows the same for gaseous argon at 10 atm~\cite{dune2018high}}
     \label{fig:protonsfromargon}%
 \end{figure}
 
 The key proton kinetic energy range in which to distinguish interaction models is the region below 0.1~GeV.
 Figure~\ref{fig:protonsfromargon} shows the proton multiplicity and kinetic energy distributions for $\nu_{\mu}$ CC interactions on argon calculated by the GENIE, NEUT, and NuWro neutrino generators for the DUNE experiment.
 These distributions are highly discrepant at low proton kinetic energy as shown in the right hand panel.
-This is predominantly below the proton detection threshold in liquid Argon TPCs (0.04~GeV) and in water Cherenkov detectors (0.5~GeV).
+This is predominantly below the proton detection threshold in liquid Argon TPCs (0.04~GeV), such as those that will be used by DUNE, and in water Cherenkov detectors (0.5~GeV).
 The lower threshold in high pressure gas provides a unique opportunity to distinguish between neutrino interaction models for the same nuclear target.
 
 We have built a High Pressure gas Time Projection Chamber (HPTPC) prototype and exposed it to a charged particle beam in the T10 beamline at CERN in August and September 2018 \cite{SPSC-P-355}.
 The momentum profile of the T10 beam can be tuned within the range 0.8--6.5~GeV/c (kinetic energy range 0.3--5.6~GeV). 
-Figure~\ref{fig:utofNoBend}, left, shows the time of flight (ToF) spectrum for the T10 beamline tuned to a momentum of 0.8~GeV/c; this measurement was made with our upstream ToF system (see section~\ref{hptpcPaper:sec:Methods} for details of the ToF systems).
-The kinetic energy of the protons calculated from the upstream ToF measurements in this sample is shown in figure~\ref{fig:utofNoBend}, right.
+Figure~\ref{fig:utofNoBend}, left, shows the time of flight (ToF) spectrum for the T10 beamline tuned to a momentum of 0.8~GeV/c; this measurement was made with our upstream ToF system (see Section~\ref{hptpcPaper:sec:Methods} for details of the ToF systems).
+The kinetic energy of the protons calculated from the upstream ToF measurements in this sample is shown in Figure~\ref{fig:utofNoBend}, right.
 As shown, the flux of protons with kinetic energy less than 200~MeV is negligible.
 The physics objective of the HPTPC beam test was to make measurements of protons on argon at kinetic energies below 200~MeV, i.e. below what was available with the T10 beam. 
 Furthermore, the readout speed of the charge-coupled device cameras (CCD) employed in the HPTPC prototype motivates a limit on the total particle multiplicity in the TPC active volume.
@@ -77,4 +80,4 @@ These techniques were designed to increase the ratio of protons to minimum ioniz
 
 The flux and composition of beam particles were measured with two ToF systems, placed upstream and downstream of the TPC.
 Measurements of protons and MIPs are presented as a function of the off axis angle and thickness of the moderator.
-This paper provides a detailed description of the time of flight systems employed in the beamline in section~\ref{hptpcPaper:sec:Methods}, the analysis methodology of the ToF data in section~\ref{hptpcPaper:sec:Analysis}, presentation of the ToF system results in section~\ref{hptpcPaper:sec:Results}, and additional conclusions in section~\ref{hptpcPaper:sec:Conclusion}.
+This paper provides a detailed description of the time of flight systems employed in the beamline in Section~\ref{hptpcPaper:sec:Methods}, the analysis methodology of the ToF data in Section~\ref{hptpcPaper:sec:Analysis}, presentation of the ToF system results in Section~\ref{hptpcPaper:sec:Results}, and additional conclusions in Section~\ref{hptpcPaper:sec:Conclusion}.
