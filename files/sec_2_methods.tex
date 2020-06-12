@@ -133,7 +133,7 @@ The $\mathit{S2}$ counter is a scintillator tile of size $120\times120\times5$~m
 The $\mathit{S2}$ counter was placed $(1.4194 \pm 0.0014)~\text{m}$ downstream of $\mathit{S1}$.
 The transverse position of $\mathit{S2}$ was adjusted to account for the beam divergence in the moderator blocks.
 
-The analog signals from one of the $\mathit{S1}$ PMTs and the $\mathit{S2}$ PMT were fed into NIM discriminator units with a threshold of 30~mV.
+The analog signals from one of the $\mathit{S1}$ PMTs and the $\mathit{S2}$ PMT were fed into LeCroy 620AL NIM discriminator units with a threshold of 30~mV.
 Subsequently, the discriminated signals were fed into a NIM coincidence unit, whose output was recorded by the DAQ systems of the downstream ToF ($\mathit{S4}$) wall.
 This information was further used for the time-of-flight analysis of $\mathit{S4}$.
 
@@ -173,16 +173,14 @@ The trigger conditions are as follows. At least three out of the four $\mathit{S
 Additionally, there must be at least one signal in $\mathit{S3}$ above 30~mV.
 These $\mathit{S1}$ and $\mathit{S3}$ signals must be coincident within a gate of 70~ns.
 A fourth ASIC was used to acquire data from $\mathit{S1}$, the coincidence signal $\mathit{S1} \cap \mathit{S2}$, and the start-of-spill signal from the PS.
-A second level trigger was implemented in firmware and run on the level of the ASICs: the data were only sent to the hard disk of the DAQ computer if there was a coincidence between the $\mathit{S1}$ channels and at least one of the channels in the ASICs used for $\mathit{S3}$.
+%A second level trigger was implemented in firmware and run on the level of the ASICs: the data were only sent to the hard disk of the DAQ computer if there was a coincidence between the $\mathit{S1}$ channels and at least one of the channels in the ASICs used for $\mathit{S3}$.
 The mean time of light signals detected at both ends of a single bar provides a time reference with a resolution of about 100~ps, while the difference between the time of the light signals gives the position of the interaction along the bar, with a resolution of 1.6~cm.
 
-Examples of reconstructed $XY$ distributions are shown in Figure~\ref{fig:s3XY_pion}.
-Figure~\ref{fig:s3XY_pion} uses local $\mathit{S3}$ coordinates in which $y=0~\text{cm}$ is the bottom of the active area and $y=120~\text{cm}$ is the top of the active area.
-In the $x$ direction, 0~cm is the left-hand side of $\mathit{S3}$ as viewed from $\mathit{S1}$, while $x = 170~\text{cm}$ is the right-hand edge of $\mathit{S3}$.
+Examples of reconstructed $\mathit{S3}$ spatial distributions are shown in Figure~\ref{fig:s3XY_pion}.
 Figure~\ref{fig:s3XY_pion}, left, shows the spatial distribution of hits in $\mathit{S3}$ thought to be produced by MIPs when no moderator was present in the beamline.
-This distribution shows that most of the hits are concentrated in one small spot of the detector (the beam centre).
 Figure~\ref{fig:s3XY_pion}, right, shows the spatial distribution of hits identified in $\mathit{S3}$ as protons when 4 moderator blocks were in the beamline.
 The pattern of hits is more diffuse, illustrating the scattering effect of the moderator blocks.
+When in this position the horizontal FWHM of the beam is 16.8~cm while the vertical FWHM is 5.5~cm.
 
 \begin{figure}[t]
   \begin{minipage}[t]{0.49\textwidth}
@@ -198,11 +196,11 @@ The pattern of hits is more diffuse, illustrating the scattering effect of the m
       \input{files/Figures/4_protonXY.tex}
     \end{adjustbox}
   \end{minipage}  
-   \caption{ \label{fig:s3XY_pion}Reconstructed positions of hits observed in $\mathit{S3}$. Left: minimum ionizing particles with zero moderator blocks placed in the beamline. Right: protons detected with four moderator blocks placed in the beamline.}
+   \caption{ \label{fig:s3XY_pion}Reconstructed positions of hits observed in $\mathit{S3}$. Left: minimum ionizing particles with zero moderator blocks placed in the beamline. Right: protons detected with four moderator blocks placed in the beamline. This figure uses local $\mathit{S3}$ coordinates in which $y,x=0~\text{cm}$ is the bottom right corner of the active area when viewed from $\mathit{S1}$}
 \end{figure}
 
 %    The placement of each of the four time of flight constituents in respect to the TPC is shown in Figure~\ref{fig:S1S2S3S4}.
-%    \begin{figure}
+R%    \begin{figure}
 %      \centering
 %%    \includegraphics[width=0.6\linewidth]{files/Figures/S1S2S3S4.png}
 %   	\caption{Position of the time of flight constituents in the T10 beam hall. The TPC prototype and beam entrance are also shown}
@@ -216,13 +214,14 @@ It consists of 10 bars of Nuvia NuDET plastic scintillator which has a wavelengt
 Each of these bars measure $10 \times 1 \times 140$~cm$^3$. 
 Attached to each end of these scintillator bars is a 5" Hamamatsu Photonics R6594 PMT~\cite{Hamamatsu}.
 The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector.
-The total active area of the $\mathit{S4}$ wall is $1.4 \times 0.78$~m$^2$.
+The bar are wrapped individually in reflective milar sheets to increase the light yield.
+The total active area of the $\mathit{S4}$ wall is $1.40 \times 0.78$~m$^2$.
 A diagram of $\mathit{S4}$ along with its dimensions is presented in Figure~\ref{fig:dstofDiagram}.
 
 The time resolution of the bars and PMTs is measured to be 1~ns using a $^{90}$Sr source placed at measured distances along the bar.
-Figure~\ref{fig:s4Res} shows an example of the distribution from which this value was derived.
-Figure~\ref{fig:s4Res} is the measured time difference for signals coming from the PMTs at either end of a bar caused by the $^{90}$Sr at a given position.
-The corresponding spatial resolution of the bars and PMTs was measured to be 8.3~cm.
+Figure~\ref{fig:s4Res} is the measured time difference for signals coming from the PMTs at either end of a bar caused by the $^{90}$Sr at a given position
+Figre~\ref{fig:s4Res} shows an example of the distribution from which the time resolution was derived.
+The corresponding spatial resolution of the bars and PMTs was measured to be 7~cm.
 
 \begin{figure}[ht]
   \begin{adjustbox}{max totalsize={.6\textwidth}{.5\textheight},center}
@@ -250,17 +249,18 @@ The $\mathit{S1-S2}$ coincidence signal is digitized by the same TDC. This signa
 \subsection{The HPTPC Prototype}
 For the characterisation of the beam using the ToF systems described in this paper, the relevant characteristics of the HPTPC prototype are the location and thickness of the steel vessel walls.
 The cylindrical steel vessel has a 142~cm outer diameter; the main body is 60 cm in length and the rounded end caps protrude an additional 37~cm on each end.
-With 1~cm thick walls it is rated to 6~barA of pressure. 
+With 1~cm thick walls it is rated to 6~barA of pressure.
+The vessel wall thickness is equivalent to the range of a proton with a kinetic energy of approximately 80~MeV~\cite{rangeTables}.
 The angular position of the center of the TPC is approximately $\theta = -2.5^{\circ}$. 
 More details of the position and extent of the TPC are given in Table~\ref{tab:angS1} and Table~\ref{tab:distances}.
  
-The active TPC is a cylinder 111~cm in diameter and 48~cm in length; the TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field. 
+The active TPC is a cylinder, 111~cm in diameter and 48~cm in length; the TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field. 
 Data taking with the TPC made use of both optical and charge readout.
 The vessel, electrodes, and drift region of the TPC are shown in Figure~\ref{fig:TPC}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\linewidth]{files/Figures/IMG_20180830_170947192-3.jpg}
+  \includegraphics[width=.88\linewidth]{files/Figures/vesselView.pdf}
   \caption{Cross-sectional view of the TPC; the thin mesh electrodes and copper ring drift volume can be seen inside the steel vessel. The walls of the vessel shown are 1~cm thick with a vessel outer diameter of 142~cm. At the point of hitting the vessel, the beam centre was 1~cm below the centre of the vessel vertically, where the distance from the inside of the vessel wall to the drift region was 15~cm.}
    \label{fig:TPC}
    %Vessel: wall thickness 1cm, beam centre height -1.14cm, 
@@ -273,7 +273,7 @@ The performance of this TPC is the subject of a forthcoming publication~\cite{De
 \label{hptpcPaper:sec:Analysis}
 \subsection{Analysis Goals}
 
-The primary aim of this analysis are to assess the feasibility of using the combination of off-axis positioning and a moderated beam to produce momenta more closely in line with neutrino cross-section studies and to characterize the incident flux on the TPC and exiting the TPC, for the TPC data analysis.
+The primary aim of this analysis are to assess the feasibility of using the combination of off-axis positioning and a moderated beam to produce particles with momenta covering the range of momenta of particles produced in GeV-scale neutrino interactions and to characterize the incident flux on the TPC and exiting the TPC, for the TPC data analysis.
 
 The numbers of spills recorded for each number of moderator blocks are shown in Table~\ref{tab:spills}.
 More data were collected for 4 blocks as that was the configuration used for the majority of the beam test.
@@ -337,7 +337,7 @@ The quicker peak is formed by minimum ionizing particles, while the peak at high
 The proton peaks show a double peak feature, with a smaller delayed peak closely following the main proton peak; this feature appeared after the beam was steered so that the full 2.5 degree off-axis angle could be achieved and is due to beam scattering in the steering magnets.
 Figure~\ref{fig:utofNoBend}, left and right, shows the proton peak for unsteered beam and the double peak structure is gone.
 In the black curve, which shows the 0 block data, a deuteron peak can be seen centered at 95~ns.
-The timing ranges are chosen using the analytic expectations shown in Figure~\ref{fig:s1s3PredTimes}.
+The timing ranges for particle species selection are chosen using the analytic expectations shown in Figure~\ref{fig:s1s3PredTimes}.
 
 \begin{figure}[ht]
   \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
@@ -377,8 +377,8 @@ This shift is applied to all measured times to give the value of $t_{\mathit{S4}
 The process is repeated for the $\mathit{S3}$ data.
 In this case the required shift is 65.0~ns.
 
-The mass distribution calculated for the data set without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}.
-The time difference between $\mathit{S3}$ and $\mathit{S1}$ counters corresponding to a single particle was converted to mass.
+The mass distribution calculated for the dataset without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}.
+The time difference between $\mathit{S3}$ and $\mathit{S1}$ counters corresponding to a single particle was converted to the mass of the particle.
 Starting from the equation for relativistic momentum
 \begin{align}
 p = \gamma m v \,,
@@ -395,12 +395,12 @@ before the Lorentz factor is expanded to give
 where $c$ is the speed of light in a vacuum. Expressing $v$ as the distance between $\mathit{S1}$ and $\mathit{S3}$ ($x_{\mathit{S3}}-x_{\mathit{S1}} = 10.8~\text{m}$) divided by the time difference between the $\mathit{S1}$ and $\mathit{S3}$ counters ($t_{\mathit{S3}} - t_{\mathit{S1}}$) and expressing in natural units 
 \begin{equation} 
   m^2 = p^2 \left( 
-  \left(\frac{t_{\mathit{S3}}-t_{\mathit{S1}}}{x_{\mathit{S3}}-x_{\mathit{S1}}} \cdot c \right)^2
+  \left(\frac{t_{\mathit{S3}}-t_{\mathit{S1}}}{x_{\mathit{S3}}-x_{\mathit{S1}}} \right)^2
   - 1  \right) \,,
   \label{eq:recoMass}
 \end{equation}
 where the particle momentum $p$ is assumed to be 0.8~GeV/c.
-The true proton and pion mass positions in Figure~\ref{fig:s3tof_mass} are indicated by vertical arrows.
+The proton and pion mass positions in Figure~\ref{fig:s3tof_mass} are indicated by vertical arrows.
 One can clearly observe distinct peaks corresponding to protons and deuterons. 
 The insert in the figure shows a zoomed region corresponding to the MIPs. 
 
@@ -421,7 +421,7 @@ The cut values vary in the range 0.125~V to 0.3~V.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\linewidth]{files/Figures/tvsa.pdf}
-  \caption{Examples of SiPM signal amplitude plotted against $\mathit{S1}$ to $\mathit{S3}$ time of flight for different numbers of moderator blocks. Clockwise from top left 0, 1, 3 and 2 moderator blocks are shown. The red dashed line shows the amplitude cut used for this particular SiPM. The population at lower values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by MIPs while the population at higher values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by protons.}
+  \caption{Examples of SiPM signal amplitude plotted against $\mathit{S1}$ to $\mathit{S3}$ time of flight for different numbers of moderator blocks. Clockwise from top left 0, 1, 3 and 2 moderator blocks are shown. The red dashed line shows the amplitude cut used for this particular SiPM. A1 is the voltage recorded in the SiPM at the end of the bar. The population at lower values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by MIPs while the population at higher values of $t_{\mathit{S3}}-t_{\mathit{S1}}$ is caused by protons.}
   \label{fig:TvsA}
 \end{figure}
 
@@ -472,7 +472,7 @@ Using this source, it was determined that the maximum measured rate of signals p
   \begin{adjustbox}{width=.7\textwidth, center}
     \input{files/Figures/relativeEff1Blocks.tex}
   \end{adjustbox}
-  \caption{Relative detection efficiency of $\mathit{S4}$ as a function of bar number and position along each bar. The data from bar 10 was not used in the analysis due to the poor efficiency along the bar.}
+  \caption{Relative detection efficiency of $\mathit{S4}$ as a function of bar number and position along each bar as measured with cosmic rays. The data from bar 10 was not used in the analysis due to the poor efficiency along the bar.}
   \label{fig:s4PosEff}
 \end{figure}
 
