@@ -5,7 +5,7 @@
 The beam test took place in the T10 beam line, in the East Area at the Proton Synchrotron (PS) at CERN.
 The T10 beamline at CERN is a secondary beam derived from the PS beam which consists primarily of protons, electrons and charged pions~\cite{T10Report}.
 %The results in this paper use data taken on the 28th August and 1st September, during which the setup configuration was varied as described below.
-The primary components of the experimental setup are shown schematically in figure~\ref{fig:setup}.
+The primary components of the experimental setup are shown schematically in Figure~\ref{fig:setup}.
 
 \begin{figure}
   \includegraphics[width=1.0\linewidth]{files/Figures/hptpc_t10_planview.pdf}
@@ -20,14 +20,15 @@ The primary components of the experimental setup are shown schematically in figu
 \end{figure}
 
 A beam position monitor (BPM) was situated at the beam entrance into the test area, upstream of all the ToF constituents and the TPC. 
-The TPC was placed 13~m downstream of the BPM. The optimal TPC position was determined to be between 2$^{ \circ }$ and 3$^{ \circ }$ off the beam axis, but space constraints meant the TPC could not be placed that far away from the nominal beam centre. So, the beam was steered approximately 1$^{ \circ }$ away from its nominal position, and the TPC placed 1.5$^{ \circ }$ away from the nominal beam centre so that the TPC active region subtended an off-axis angular range of 1.4--3.8$^{ \circ }$.
+The TPC was placed 13~m downstream of the BPM. 
+From initial GEANT4~\cite{brun1993geant} beam simulations, the optimal TPC position was determined to be between 2$^{ \circ }$ and 3$^{ \circ }$ off the beam axis, but space constraints meant the TPC could not be placed that far away from the nominal beam centre. So, the beam was steered approximately 1$^{ \circ }$ away from its nominal position, and the TPC placed 1.5$^{ \circ }$ away from the nominal beam centre so that the TPC active region subtended an off-axis angular range of 1.4--3.8$^{ \circ }$.
 
 There were four ToF constituents: 
 \begin{itemize}
-    \item $\mathit{S1}$, a small-area beam trigger, see section~\ref{subsec:s1s2Exp};
-    \item $\mathit{S2}$, a coincidence measurement with $\mathit{S1}$, see section~\ref{subsec:s1s2Exp};
-    \item $\mathit{S3}$, a wall of plastic scintillator bars placed directly upstream of the TPC vessel, see section~\ref{subsec:s3Exp};
-    \item $\mathit{S4}$, a wall of plastic scintillator bars placed directly downstream of the TPC vessel, see section~\ref{subsec:s4Exp}.
+    \item $\mathit{S1}$, a small-area beam trigger, see Section~\ref{subsec:s1s2Exp};
+    \item $\mathit{S2}$, a coincidence measurement with $\mathit{S1}$, see Section~\ref{subsec:s1s2Exp};
+    \item $\mathit{S3}$, a wall of plastic scintillator bars placed directly upstream of the TPC vessel, see Section~\ref{subsec:s3Exp};
+    \item $\mathit{S4}$, a wall of plastic scintillator bars placed directly downstream of the TPC vessel, see Section~\ref{subsec:s4Exp}.
 \end{itemize}
 
 A series of acrylic (polymethyl methacrylate) blocks was placed between the $\mathit{S1}$ and $\mathit{S2}$ counters.
@@ -46,14 +47,14 @@ The minimum separation in time between two spills is 1 second, so the start-of-s
 The trigger condition of the upstream ToF ($\mathit{S3}$) was based on the coincidence between $\mathit{S1}$ and $\mathit{S3}$ constituents.
 $\mathit{S2}$ signals were also recorded by the upstream ToF DAQ but were not used in the trigger.
 The DAQ of the downstream ToF ($\mathit{S4}$) was run in self-triggering mode with a gate open during the spill.
-Coincidence signals between $\mathit{S1}$ and $\mathit{S2}$ counters were also recorded by the downstream ToF ($\mathit{S4}$) DAQ and were used in the particle identification (PID) analysis, described in section~\ref{hptpcPaper:sec:Results}.  
+Coincidence signals between $\mathit{S1}$ and $\mathit{S2}$ counters were also recorded by the downstream ToF ($\mathit{S4}$) DAQ and were used in the particle identification (PID) analysis, described in Section~\ref{hptpcPaper:sec:Results}.  
 
 \subsection{Survey and coordinate system}
 \label{sec:coord}
 The T10 beamline area was surveyed, and the distances to specific components measured with a precision of 0.5~mm by the CERN Survey, Mechatronics and Measurements (SMM) group.
 Multiple points on each of $\mathit{S1}$, $\mathit{S2}$, $\mathit{S3}$, $\mathit{S4}$ and the TPC frame have had their positions measured.
 
-The axes of a right-handed coordinate system are defined as follows: $\hat{x}$ refers to the non-beam horizontal direction, $\hat{y}$ to the vertical direction, and $\hat{z}$ the beam direction, as shown in figure~\ref{fig:setup}.
+The axes of a right-handed coordinate system are defined as follows: $\hat{x}$ refers to the non-beam horizontal direction, $\hat{y}$ to the vertical direction, and $\hat{z}$ the beam direction, as shown in Figure~\ref{fig:setup}.
 We show results in terms of two off-axis angles: $\theta$, which is measured in the $\hat{x}-\hat{z}$ plane with positive angles measured in the $+\hat{x}$ direction, and $\phi$, which is measured in the $\hat{y}-\hat{z}$ plane with positive angles measured in the $+\hat{y}$ direction.
 The origin is taken to be at $\mathit{S1}$.
 
@@ -115,10 +116,10 @@ These distances were calculated using the data gathered by the survey team.
   \caption{The S1 and S2 beam counters. Together the coincidence of signals in the beam counters were recorded by the DAQ systems}
   \label{fig:S1S2headon}
 \end{figure}
-The beam counters $\mathit{S1}$ and $\mathit{S2}$ are shown in figure~\ref{fig:S1S2headon}.
+The beam counters $\mathit{S1}$ and $\mathit{S2}$ are shown in Figure~\ref{fig:S1S2headon}.
 The $\mathit{S1}$ counter is a $40\times40\times5$~mm$^3$ plastic scintillator cross which is attached to four 1'' Hamamatsu Photonics R4998 photomultiplier tubes (PMTs) at each end for the light readout.
 The time resolution of the counter, as measured by the DAQ system of the upstream ToF, was about 30~ps. This is estimated with the distribution of the average PMT hit times; the quantity $t_{\textrm{ave}}=\frac{1}{4}((t_{\textrm{PMT0}}+t_{\textrm{PMT1}})-(t_{\textrm{PMT2}}+t_{\textrm{PMT3}}))$ has the same spread as the simple average but is conveniently centered at zero.
-An example of the $t_{\textrm{ave}}$ distribution for one run of $\mathit{S1}$ data is shown in figure~\ref{fig:s1Res}. The full width at half maximum (FWHM) of the distribution is 62 ps.
+An example of the $t_{\textrm{ave}}$ distribution for one run of $\mathit{S1}$ data is shown in Figure~\ref{fig:s1Res}. The full width at half maximum (FWHM) of the distribution is 62 ps.
 
 \begin{figure}
   \begin{adjustbox}{width=0.7\linewidth, center}
@@ -128,7 +129,7 @@ An example of the $t_{\textrm{ave}}$ distribution for one run of $\mathit{S1}$ d
   \label{fig:s1Res}
 \end{figure}
 
-The $\mathit{S2}$ counter is a scintillator tile of size $120\times120\times5$~mm$^3$, coupled to a 2" Hamamatsu Photonics R1309 PMT~\cite{Hamamatsu}, via a long light-guide as shown in figure~\ref{fig:modblocks}.
+The $\mathit{S2}$ counter is a scintillator tile of size $120\times120\times5$~mm$^3$, coupled to a 2" Hamamatsu Photonics R1309 PMT~\cite{Hamamatsu}, via a long light-guide as shown in Figure~\ref{fig:modblocks}.
 The $\mathit{S2}$ counter was placed $(1.4194 \pm 0.0014)~\text{m}$ downstream of $\mathit{S1}$.
 The transverse position of $\mathit{S2}$ was adjusted to account for the beam divergence in the moderator blocks.
 
@@ -139,7 +140,7 @@ This information was further used for the time-of-flight analysis of $\mathit{S4
 \subsection{Upstream Time of Flight instrumentation (S3)}
 \label{subsec:s3Exp}
 The $\mathit{S3}$ `upstream' ToF constituent was placed $(1.3225 \pm 0.0014)~\text{m}$ upstream of the upstream side of the HPTPC drift volume in the beamline.
-A schematic drawing of the $\mathit{S3}$ ToF wall is shown in figure~\ref{fig:S3sketch}.
+A schematic drawing of the $\mathit{S3}$ ToF wall is shown in Figure~\ref{fig:S3sketch}.
 The detector comprises 22 staggered scintillator bars:  20 bars with dimensions $168 \times 6.0 \times 1.0$~cm$^3$ and 2 bars of  $150 \times 6.0 \times 1.0$~cm$^3$ placed on top and bottom~\cite{S3-proceedings}.
 The overlap between bars was set to 5~mm, thus the active area of the detector was $2.0214~\text{cm}^{2}$.
 
@@ -175,7 +176,7 @@ A fourth ASIC was used to acquire data from $\mathit{S1}$, the coincidence signa
 A second level trigger was implemented in firmware and run on the level of the ASICs: the data were only sent to the hard disk of the DAQ computer if there was a coincidence between the $\mathit{S1}$ channels and at least one of the channels in the ASICs used for $\mathit{S3}$.
 The mean time of light signals detected at both ends of a single bar provides a time reference with a resolution of about 100~ps, while the difference between the time of the light signals gives the position of the interaction along the bar, with a resolution of 1.6~cm.
 
-Examples of reconstructed $XY$ distributions are shown in figure~\ref{fig:s3XY_pion}.
+Examples of reconstructed $XY$ distributions are shown in Figure~\ref{fig:s3XY_pion}.
 Figure~\ref{fig:s3XY_pion} uses local $\mathit{S3}$ coordinates in which $y=0~\text{cm}$ is the bottom of the active area and $y=120~\text{cm}$ is the top of the active area.
 In the $x$ direction, 0~cm is the left-hand side of $\mathit{S3}$ as viewed from $\mathit{S1}$, while $x = 170~\text{cm}$ is the right-hand edge of $\mathit{S3}$.
 Figure~\ref{fig:s3XY_pion}, left, shows the spatial distribution of hits in $\mathit{S3}$ thought to be produced by MIPs when no moderator was present in the beamline.
@@ -200,7 +201,7 @@ The pattern of hits is more diffuse, illustrating the scattering effect of the m
    \caption{ \label{fig:s3XY_pion}Reconstructed positions of hits observed in $\mathit{S3}$. Left: minimum ionizing particles with zero moderator blocks placed in the beamline. Right: protons detected with four moderator blocks placed in the beamline.}
 \end{figure}
 
-%    The placement of each of the four time of flight constituents in respect to the TPC is shown in figure~\ref{fig:S1S2S3S4}.
+%    The placement of each of the four time of flight constituents in respect to the TPC is shown in Figure~\ref{fig:S1S2S3S4}.
 %    \begin{figure}
 %      \centering
 %%    \includegraphics[width=0.6\linewidth]{files/Figures/S1S2S3S4.png}
@@ -216,7 +217,7 @@ Each of these bars measure $10 \times 1 \times 140$~cm$^3$.
 Attached to each end of these scintillator bars is a 5" Hamamatsu Photonics R6594 PMT~\cite{Hamamatsu}.
 The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector.
 The total active area of the $\mathit{S4}$ wall is $1.4 \times 0.78$~m$^2$.
-A diagram of $\mathit{S4}$ along with its dimensions is presented in figure~\ref{fig:dstofDiagram}.
+A diagram of $\mathit{S4}$ along with its dimensions is presented in Figure~\ref{fig:dstofDiagram}.
 
 The time resolution of the bars and PMTs is measured to be 1~ns using a $^{90}$Sr source placed at measured distances along the bar.
 Figure~\ref{fig:s4Res} shows an example of the distribution from which this value was derived.
@@ -251,11 +252,11 @@ For the characterisation of the beam using the ToF systems described in this pap
 The cylindrical steel vessel has a 142~cm outer diameter; the main body is 60 cm in length and the rounded end caps protrude an additional 37~cm on each end.
 With 1~cm thick walls it is rated to 6~barA of pressure. 
 The angular position of the center of the TPC is approximately $\theta = -2.5^{\circ}$. 
-More details of the position and extent of the TPC are given in table~\ref{tab:angS1} and table~\ref{tab:distances}.
+More details of the position and extent of the TPC are given in Table~\ref{tab:angS1} and Table~\ref{tab:distances}.
  
 The active TPC is a cylinder 111~cm in diameter and 48~cm in length; the TPC comprised thin steel mesh electrodes (one cathode and three anodes), and 12 copper rings to create the uniform drift field. 
 Data taking with the TPC made use of both optical and charge readout.
-The vessel, electrodes, and drift region of the TPC are shown in figure~\ref{fig:TPC}.
+The vessel, electrodes, and drift region of the TPC are shown in Figure~\ref{fig:TPC}.
 
 \begin{figure}
   \centering
@@ -274,7 +275,7 @@ The performance of this TPC is the subject of a forthcoming publication~\cite{De
 
 The primary aim of this analysis are to assess the feasibility of using the combination of off-axis positioning and a moderated beam to produce momenta more closely in line with neutrino cross-section studies and to characterize the incident flux on the TPC and exiting the TPC, for the TPC data analysis.
 
-The numbers of spills recorded for each number of moderator blocks are shown in table~\ref{tab:spills}.
+The numbers of spills recorded for each number of moderator blocks are shown in Table~\ref{tab:spills}.
 More data were collected for 4 blocks as that was the configuration used for the majority of the beam test.
 
 \begin{table}
@@ -336,7 +337,7 @@ The quicker peak is formed by minimum ionizing particles, while the peak at high
 The proton peaks show a double peak feature, with a smaller delayed peak closely following the main proton peak; this feature appeared after the beam was steered so that the full 2.5 degree off-axis angle could be achieved and is due to beam scattering in the steering magnets.
 Figure~\ref{fig:utofNoBend}, left and right, shows the proton peak for unsteered beam and the double peak structure is gone.
 In the black curve, which shows the 0 block data, a deuteron peak can be seen centered at 95~ns.
-The timing ranges are chosen using the analytic expectations shown in figure~\ref{fig:s1s3PredTimes}.
+The timing ranges are chosen using the analytic expectations shown in Figure~\ref{fig:s1s3PredTimes}.
 
 \begin{figure}[ht]
   \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
@@ -371,12 +372,12 @@ In order to determine $t_{f_{\text{delay}}} - t_{i_{\text{delay}}}$, a Gaussian 
 
 A charged pion with a momentum of 0.8~GeV/c will have a speed of $0.985c$ and will therefore traverse the distance between $\mathit{S2}$ and $\mathit{S4}$ (12.7~m) in a time of 42.6~ns.
 When a Gaussian is fitted to the data, the mean of the MIP peak lies at $(86.31 \pm 0.019)~\text{ns}$.
-Rearranging equation~\ref{eq:delayTof} and substituting in 86.31~ns for $t_{\mathit{S4}_{\text{rec}}} - t_{\mathit{S2}_{\text{rec}}}$ gives a value for $t_{\mathit{S4}_{\text{delay}}} - t_{\mathit{S2}_{\text{delay}}}$ of 43.7~ns.
+Rearranging Equation~\ref{eq:delayTof} and substituting in 86.31~ns for $t_{\mathit{S4}_{\text{rec}}} - t_{\mathit{S2}_{\text{rec}}}$ gives a value for $t_{\mathit{S4}_{\text{delay}}} - t_{\mathit{S2}_{\text{delay}}}$ of 43.7~ns.
 This shift is applied to all measured times to give the value of $t_{\mathit{S4}} - t_{\mathit{S2}}$ used in the analysis.
 The process is repeated for the $\mathit{S3}$ data.
 In this case the required shift is 65.0~ns.
 
-The mass distribution calculated for the data set without moderator blocks is shown in figure~\ref{fig:s3tof_mass}.
+The mass distribution calculated for the data set without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}.
 The time difference between $\mathit{S3}$ and $\mathit{S1}$ counters corresponding to a single particle was converted to mass.
 Starting from the equation for relativistic momentum
 \begin{align}
@@ -399,7 +400,7 @@ where $c$ is the speed of light in a vacuum. Expressing $v$ as the distance betw
   \label{eq:recoMass}
 \end{equation}
 where the particle momentum $p$ is assumed to be 0.8~GeV/c.
-The true proton and pion mass positions in figure~\ref{fig:s3tof_mass} are indicated by vertical arrows.
+The true proton and pion mass positions in Figure~\ref{fig:s3tof_mass} are indicated by vertical arrows.
 One can clearly observe distinct peaks corresponding to protons and deuterons. 
 The insert in the figure shows a zoomed region corresponding to the MIPs. 
 
@@ -414,7 +415,7 @@ For the data collected in $\mathit{S3}$, both timing and signal amplitude cuts w
 Figure~\ref{fig:TvsA} shows an example of the signal size recorded in one of the SiPMs on one of the scintillator bars against the measured value of $t_{\mathit{S3}} - t_{\mathit{S1}}$.
 At the beam energies used, due to their higher mass, the protons typically deposit more energy in the detector, resulting in the observation of greater amplitudes.
 Therefore, to reduce the number of background events in the proton sample, a minimum signal amplitude is required.
-This cut varies, depending on the SiPM in question and is determined from distributions such as those shown in figure~\ref{fig:TvsA}. 
+This cut varies, depending on the SiPM in question and is determined from distributions such as those shown in Figure~\ref{fig:TvsA}. 
 The cut values vary in the range 0.125~V to 0.3~V.
 
 \begin{figure}[ht]
@@ -431,19 +432,19 @@ This spectrum is given by the difference in time between observation of a coinci
   \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
     \input{files/Figures/tofS4_correct.tex}
   \end{adjustbox}
-  \caption{$\mathit{S4}$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, a flat background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars and for the variation in efficiency as a function of position along the bar, as described in section~\ref{timeofflightanalysissubsec}.}
+  \caption{$\mathit{S4}$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, a flat background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars and for the variation in efficiency as a function of position along the bar, as described in Section~\ref{timeofflightanalysissubsec}.}
   \label{fig:s4tof}	
 \end{figure}
 
-Additionally, the reconstructed mass distribution for particles travelling from $\mathit{S2}$ to $\mathit{S4}$ is shown in figure~\ref{fig:s4tof_mass}, produced using equation~\ref{eq:recoMass}.
+Additionally, the reconstructed mass distribution for particles travelling from $\mathit{S2}$ to $\mathit{S4}$ is shown in Figure~\ref{fig:s4tof_mass}, produced using Equation~\ref{eq:recoMass}.
 In this case, $x_{\mathit{S4}}-x_{\mathit{S2}} = 12.7~\text{m}$.
-Unlike the same distribution produced for particles travelling from $\mathit{S1}$ to $\mathit{S3}$ (see figure~\ref{fig:s3tof_mass}), no deuteron peak is visible.
+Unlike the same distribution produced for particles travelling from $\mathit{S1}$ to $\mathit{S3}$ (see Figure~\ref{fig:s3tof_mass}), no deuteron peak is visible.
 This is thought to be due to the attenuation of deuterons within the walls of the TPC.
 Additionally, the predicted proton position does not line up with the measured proton position. 
 This is again thought to be caused by the positioning of the TPC in front of $\mathit{S4}$.
 Protons passing through the TPC lose energy, resulting in them having less than the original 0.8~GeV/c beam momentum.
 In turn, this leads to protons having a larger reconstructed mass than predicted.
-The displacement of the proton mass peak in figure~\ref{fig:s4tof_mass} is consistent with the expected energy loss in the vessel walls.
+The displacement of the proton mass peak in Figure~\ref{fig:s4tof_mass} is consistent with the expected energy loss in the vessel walls.
 
 \begin{figure}[ht]
   \centering
@@ -459,9 +460,9 @@ This correction is performed using the cosmic ray flux.
 It is assumed that the flux of cosmic rays passing through each part of $\mathit{S4}$ is equal.
 Each $\mathit{S4}$ bar is divided into 7~cm segments for analysis, and the number of cosmic rays passing through each segment is measured by assuming that all signals occurring outside of beam spills are produced by cosmic rays.
 The efficiency is then found from this distribution by normalising the bin with the highest number of cosmic ray signals to 1.
-An example of one of these distributions is shown in figure~\ref{fig:s4PosEff}.
+An example of one of these distributions is shown in Figure~\ref{fig:s4PosEff}.
 Events are then weighted according to the bar in which they are observed and their measured position along this bar.
-The weight applied is the inverse of the value shown in figure~\ref{fig:s4PosEff}.
+The weight applied is the inverse of the value shown in Figure~\ref{fig:s4PosEff}.
 Additionally, a further weight is applied to all $\mathit{S4}$ events of 1.25.
 This weight is derived from tests performed on the $\mathit{S4}$ bars with a $^{90}$Sr source.
 Using this source, it was determined that the maximum measured rate of signals produced by the $^{90}$Sr source was equal to 0.8 of the true rate.
@@ -475,10 +476,10 @@ Using this source, it was determined that the maximum measured rate of signals p
   \label{fig:s4PosEff}
 \end{figure}
 
-Using figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
-These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in figure~\ref{fig:s4tof}. 
+Using Figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
+These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in Figure~\ref{fig:s4tof}. 
 The signal functions are taken to be Gaussians while the background is taken to be flat. 
-An example of this is shown in figure~\ref{fig:fitEx}.
+An example of this is shown in Figure~\ref{fig:fitEx}.
 The particles in the quicker timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>36~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $t_{\mathit{S4}}-t_{\mathit{S2}}<125~\text{ns}$ and $t_{\mathit{S4}}-t_{\mathit{S2}}>62~\text{ns}$) are considered to be protons.
 
 \begin{figure}[ht]
