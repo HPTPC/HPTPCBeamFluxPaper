@@ -10,38 +10,36 @@ This is quantified in terms of $\theta$ and $\phi$ (see Section~\ref{sec:coord})
   \centering
   \begin{minipage}[t]{0.49\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}, center}
-      \input{files/Figures/proMomS1.tex}
+      \input{files/Figures/proKeAll.tex}
     \end{adjustbox}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{0.49\textwidth}
     \begin{adjustbox}{max totalsize={\textwidth}, center}
-      \input{files/Figures/proMomTpc.tex}
+      \input{files/Figures/protonKeTpc.tex}
     \end{adjustbox}
   \end{minipage}
-  \caption{\label{fig:s3promom}Proton momentum spectrum as measured in $\mathit{S3}$. Left: all protons. Right: the subset of protons passing through the HPTPC drift volume}
+  \caption{\label{fig:s3proke}Proton kinetic energy spectrum as measured in $\mathit{S3}$. Left: all protons. Right: the subset of protons passing through the HPTPC drift volume}
 \end{figure}
 
-\begin{figure}[ht]
-  \centering
-  \begin{adjustbox}{max totalsize={0.5\textwidth}, center}
-      \input{files/Figures/protonKeTpc.tex}
-  \end{adjustbox}
-  \caption{Proton kinetic energy spectrum as measured in $\mathit{S3}$ for those protons passing through the HPTPC drift volume.}
-  \label{fig:tpcproke}
-\end{figure}
+%\begin{figure}[ht]
+%  \centering
+%  \begin{adjustbox}{max totalsize={0.5\textwidth}, center}
+%      \input{files/Figures/protonKeTpc.tex}
+%  \end{adjustbox}
+%  \caption{Proton kinetic energy spectrum as measured in $\mathit{S3}$ for those protons passing through the HPTPC drift volume.}
+%  \label{fig:tpcproke}
+%\end{figure} 
 
-The proton spectra upstream of the TPC are shown in figures~\ref{fig:s3promom} and \ref{fig:tpcproke}. 
-Figure~\ref{fig:s3promom}, left, shows the momentum of particles identified as protons is successfully reduced with increasing numbers of moderator blocks, with the range falling from 0.65-0.85~GeV/c for the unmoderated beam, to 0.30-0.45~GeV/c for 4~acrylic blocks.
-Figure~\ref{fig:s3promom}, right, shows the momentum spectrum of those protons whose trajectory will carry them through the HPTPC volume.
-%The angular range of the TPC is stated in Table~\ref{tab:angS1}.
-This figure indicates that the flux of low momentum protons (those with a momentum of less than 0.4~GeV/c) reaching the TPC was increased from negligible in the 0, 1, and 2 block cases to ($9.65 \pm 0.13$) per spill for the 4 block case.
-Figure~\ref{fig:tpcproke} shows the kinetic energy spectrum of protons crossing into the TPC.
-Comparing Figure~\ref{fig:tpcproke} with Figure~\ref{fig:protonsfromargon} shows that, for the four moderator block case, the kinetic energy of protons incident upon the TPC is just above the 50~MeV region where the different neutrino interaction generators become discrepant.
+The proton spectra upstream of the TPC are shown in figures~\ref{fig:s3proke}.
+Figure~\ref{fig:s3proke}, left, shows the kinetic energy of particles identified as protons is successfully reduced with increasing numbers of moderator blocks, with the range falling from 210-320~MeV for the unmoderated beam, to 60-110~MeV for 4~acrylic blocks.
+Figure~\ref{fig:s3proke}, right, shows the kinetic energy spectrum of protons crossing into the TPC.
+This figure indicates that the flux of low energy protons (those with a kinetic energy of less than 80~MeV) reaching the TPC was increased from negligible in the 0, 1, and 2 block cases to ($9.65 \pm 0.13$) per spill for the 4 block case.
+Comparing Figure~\ref{fig:s3proke}, right, with Figure~\ref{fig:protonsfromargon} shows that, for the four moderator block case, the kinetic energy of protons incident upon the TPC is just above the 50~MeV region where the different neutrino interaction generators become discrepant.
 These protons lose further energy within the walls of the HPTPC vessel, resulting in a flux of protons below 50~MeV within the TPC.
 
 The combination of the use of moderator blocks and positioning the TPC in an off-axis position also caused a change in the multiplicity of protons passing through the TPC.
-Figure~\ref{fig:s3promom} shows that the addition of 1, 2, and 3 moderator blocks increased the number of protons passing through the TPC from ($19.0 \pm 0.9$) per spill in the unmoderated case to ($108 \pm 3$) per spill in the 3 block case.
+Figure~\ref{fig:s3proke}, right, shows that the addition of 1, 2, and 3 moderator blocks increased the number of protons passing through the TPC from ($19.0 \pm 0.9$) per spill in the unmoderated case to ($108 \pm 3$) per spill in the 3 block case.
 The addition of the fourth moderator block effectively removes the flux of protons above 100~MeV, leaving ($21.4 \pm 0.2$) per spill to traverse the TPC active volume.
   
 \begin{figure}[h]
@@ -155,7 +153,7 @@ As mentioned previously, this is thought to be due to the attenuation of low ene
 \subsection{Monte Carlo Studies}
 In order to ascertain the flux of protons reaching the active region of the TPC, and verify the corrections described above, a Monte Carlo (MC) simulation study was performed.
 The simulation was performed using GEANT4~\cite{brun1993geant}, with geometric volumes approximating the vessel, TPC, and time of flight systems.
-In order to match upstream conditions as closely as possible, particle momenta were drawn from the $\mathit{S3}$ distributions shown in Figure~\ref{fig:s3promom}, left, and simulated with trajectories that resulted in the same position distribution as seen in Figure~\ref{fig:s3XY_pion}, right.
+In order to match upstream conditions as closely as possible, particle momenta were drawn from the $\mathit{S3}$ distributions shown in Figure~\ref{fig:s3proke}, left, and simulated with trajectories that resulted in the same position distribution as seen in Figure~\ref{fig:s3XY_pion}, right.
 The same timing cuts described in Section~\ref{timeofflightanalysissubsec} were applied.
 %The initial simulation profile is constructed identically from the momentum profile shown in Figure~\ref{fig:s3promom}.
 
