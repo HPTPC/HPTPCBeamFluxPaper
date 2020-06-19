@@ -1,0 +1,221 @@
+\section{Analysis}
+\label{hptpcPaper:sec:Analysis}
+\subsection{Analysis Goals}
+
+The primary aim of this analysis are to assess the feasibility of using the combination of off-axis positioning and a moderated beam to produce particles with momenta covering the range of momenta of particles produced in GeV-scale neutrino interactions and to characterize the incident flux on the TPC and exiting the TPC, for the TPC data analysis.
+
+The numbers of spills recorded for each number of moderator blocks are shown in Table~\ref{tab:spills}.
+More data were collected for 4 blocks as that was the configuration used for the majority of the beam test.
+
+\begin{table}
+  \centering
+  \caption{Total number of spills recorded for each moderator block configuration included in this paper.}
+  \begin{tabular}{c|c}
+    \hline
+    \hline
+    Number of moderator blocks & Recorded spills \\
+    \hline
+    0 & 257 \\
+    1 & 254 \\
+    2 & 267 \\
+    3 & 220 \\
+    4 & 3884 \\
+    \hline
+  \end{tabular}
+  \label{tab:spills}
+\end{table}
+
+
+\subsection{Time of flight analysis}
+\label{timeofflightanalysissubsec}
+
+%Protons take longer to travel the distance from \textit{S1} to \textit{S3} or \textit{S4} than lighter particles that are close to being minimum ionising.
+%This difference in time of flight can be used to distinguish between the two types of particles.
+%Distinguishing these MIPs from one another is more difficult due to their similar masses and can be only determined by the upstream ToF system.
+%From the particle flux data, it is possible to measure the ratio of protons to other particles over the range of off-axis angles covered by the \textit{S3} and \textit{S4} walls, and for varying numbers of moderator blocks.
+
+A particle of mass $m$ with momentum $p$ will traverse a distance $d$ in a time
+\begin{align}
+  t = d \sqrt{\frac{m^2}{p^2} + \frac{1}{c^2}} \,, 
+\end{align}
+where $c$ is the speed of light in a vacuum.
+Therefore, particles with a greater momentum or smaller mass will cross the same distance in a shorter time.
+This means that a beam of particles of different species but with the same momenta (as is produced by magnetic selection) can be separated by particle mass by measuring the time of flight, $t$.
+
+For example, a charged pion with a momentum of 0.8~GeV/c will have a time of flight from $\mathit{S1}$ to $\mathit{S3}$ (a distance of 10.8~m) of 37~ns, while a proton with the same momentum will have a time of flight of 55~ns.
+For the same two particles travelling between $\mathit{S2}$ and $\mathit{S4}$ (a distance of 12.7~m), the charged pion would have a time of flight of 43~ns and the proton would have a time of flight of 65~ns.
+Figure~\ref{fig:s1s3PredTimes} shows the predicted time of flight for various particle species across the $\mathit{S1}-\mathit{S3}$ distance and the $\mathit{S2}-\mathit{S4}$ distance respectively.
+
+\begin{figure}[ht]
+  
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+      \input{files/Figures/s1s3Times.tex}
+    \end{adjustbox}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.49\textwidth}
+    \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+      \input{files/Figures/s2s4Times.tex}
+    \end{adjustbox}
+  \end{minipage}
+   \caption{\label{fig:s1s3PredTimes}Calculated time of flight for a number of different particle species as a function of particle momentum. Left: ToF between $\mathit{S1}$ and $\mathit{S3}$. Right: ToF between $\mathit{S2}$ and $\mathit{S4}$.}
+\end{figure}
+
+Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $\mathit{S3}$ timing point for varying numbers of moderator blocks.
+The quicker peak is formed by minimum ionizing particles, while the peak at higher values of $\mathit{t_{S3}} - \mathit{t_{S1}}$ corresponds to protons.
+The proton peaks show a double peak feature, with a smaller delayed peak closely following the main proton peak; this feature appeared after the beam was steered so that the full 2.5 degree off-axis angle could be achieved and is due to beam scattering in the steering magnets.
+Figure~\ref{fig:utofNoBend}, left and right, shows the proton peak for unsteered beam and the double peak structure is gone.
+In the black curve, which shows the 0 block data, a deuteron peak can be seen centered at 95~ns.
+The timing ranges for particle species selection are chosen using the analytic expectations shown in Figure~\ref{fig:s1s3PredTimes}.
+
+\begin{figure}[ht]
+  \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
+    \input{files/Figures/utofS1.tex}
+  \end{adjustbox}
+  \caption{$\mathit{S3}$ time of flight spectra for varying numbers of moderator blocks.}
+  \label{fig:s3tof}
+\end{figure}
+
+To calculate the correct time of flight, timing delays caused by cabling and equipment are taken into account.
+The same method is used to correct the measurements of the time of flight between $\mathit{S1}$ and $\mathit{S3}$, and $\mathit{S2}$ and $\mathit{S4}$.
+The initial recorded time, $t_i$, is either $t_{\mathit{S1}}$ or $t_{\mathit{S2}}$ while the final recorded time, $t_f$ is then $t_{\mathit{S3}}$ or $t_{\mathit{S4}}$ respectively.
+
+A signal measured in the more downstream of the detectors ($\mathit{S3}$ or $\mathit{S4}$) which occurs at a true time $t_f$ will be recorded as happening at a time
+\begin{align}
+  t_{f_{\text{rec}}} = t_f + t_{f_{\text{delay}}} \,,
+  \label{eq:delayS4}
+\end{align}
+while a signal measured in the same DAQ from the more upstream of the detectors ($\mathit{S1}$ or $\mathit{S2}$) will be recorded at a time
+\begin{align}
+  t_{i_{\text{rec}}} = t_{i} + t_{i_{\text{delay}}} \,,
+  \label{eq:delayS2}
+\end{align}
+where $t_{f_{\text{delay}}}$ and $t_{i_{\text{delay}}}$ are the total delays caused by cabling and equipment between the respective detectors and the DAQ.
+Therefore, the true time of flight, $t_{f} - t_{i}$, will be given by
+\begin{align}
+  t_{f} - t_{i} = t_{f_{\text{rec}}} - t_{i_{\text{rec}}} - \left( t_{f_{\text{delay}}} - t_{i_{\text{delay}}} \right) \,,
+  \label{eq:delayTof}
+\end{align}
+where $t_{f_{\text{delay}}} - t_{i_{\text{delay}}}$ is to be determined.
+In order to determine $t_{f_{\text{delay}}} - t_{i_{\text{delay}}}$, a Gaussian is fitted to the faster peak observed in the 0 block data which is thought to be produced by minimum ionizing particles.
+
+A charged pion with a momentum of 0.8~GeV/c will have a speed of $0.985c$ and will therefore traverse the distance between $\mathit{S2}$ and $\mathit{S4}$ (12.7~m) in a time of 42.6~ns.
+When a Gaussian is fitted to the data, the mean of the MIP peak lies at $(86.31 \pm 0.02)~\text{ns}$.
+Rearranging Equation~\ref{eq:delayTof} and substituting in 86.31~ns for $t_{\mathit{S4}_{\text{rec}}} - t_{\mathit{S2}_{\text{rec}}}$ gives a value for $t_{\mathit{S4}_{\text{delay}}} - t_{\mathit{S2}_{\text{delay}}}$ of 43.7~ns.
+This shift is applied to all measured times to give the value of $t_{\mathit{S4}} - t_{\mathit{S2}}$ used in the analysis.
+The process is repeated for the $\mathit{S3}$ data.
+In this case the required shift is 65.0~ns.
+
+The mass distribution calculated for the dataset without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}.
+The time difference between $\mathit{S3}$ and $\mathit{S1}$ counters corresponding to a single particle was converted to the mass of the particle.
+Starting from the equation for relativistic momentum
+\begin{align}
+p = \gamma m v \,,
+\end{align}
+where $m$ is the mass of the particle, $v$ is the speed of particle and $\gamma$ is the Lorentz factor.
+Squaring and rearranging gives
+\begin{align}
+  m^{2} = \frac{p^{2}}{\gamma^{2} v^{2}} \,,
+\end{align}
+before the Lorentz factor is expanded to give
+\begin{align}
+  m^{2} = p^{2}\left(\frac{1}{v^{2}} - \frac{1}{c^{2}}\right) \,,
+\end{align}
+where $c$ is the speed of light in a vacuum. Expressing $v$ as the distance between $\mathit{S1}$ and $\mathit{S3}$ ($x_{\mathit{S3}}-x_{\mathit{S1}} = 10.8~\text{m}$) divided by the time difference between the $\mathit{S1}$ and $\mathit{S3}$ counters ($t_{\mathit{S3}} - t_{\mathit{S1}}$) and expressing in natural units 
+\begin{equation} 
+  m^2 = p^2 \left( 
+  \left(\frac{t_{\mathit{S3}}-t_{\mathit{S1}}}{x_{\mathit{S3}}-x_{\mathit{S1}}} \right)^2
+  - 1  \right) \,,
+  \label{eq:recoMass}
+\end{equation}
+where the particle momentum $p$ is assumed to be 0.8~GeV/c.
+The proton and pion mass positions in Figure~\ref{fig:s3tof_mass} are indicated by vertical arrows.
+One can clearly observe distinct peaks corresponding to protons and deuterons. 
+The insert in the figure shows a zoomed region corresponding to the MIPs. 
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.9\linewidth]{files/Figures/Data_2018_8_31_b2_800MeV_0block_All.pdf}
+  \caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between $\mathit{S3}$ and $\mathit{S1}$. Vertical arrows show predicted position of particles given a momentum of 0.8~GeV/c.}
+  \label{fig:s3tof_mass}
+\end{figure}
+
+For the data collected in $\mathit{S3}$, both timing and signal amplitude cuts were used to select protons and MIPs.
+Figure~\ref{fig:TvsA} shows an example of the signal size recorded in one of the SiPMs on one of the scintillator bars against the measured value of $t_{\mathit{S3}} - t_{\mathit{S1}}$.
+At the beam energies used, due to their higher mass, the protons typically deposit more energy in the detector, resulting in the observation of greater amplitudes.
+Therefore, to reduce the number of background events in the proton sample, a minimum signal amplitude is required.
+This cut varies, depending on the SiPM in question and is determined from distributions such as those shown in Figure~\ref{fig:TvsA}. 
+The cut values vary in the range 0.125~V to 0.3~V.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\linewidth]{files/Figures/tvsa.pdf}
+  \caption{Examples of SiPM signal amplitude plotted against $\mathit{S1}$ to $\mathit{S3}$ time of flight for different numbers of moderator blocks. Clockwise from top left 0, 1, 3 and 2 moderator blocks are shown. A1 is the voltage recorded in the SiPM at the end of the bar. The red horizontal dashed line shows the amplitude cut used for this particular SiPM. Events in the area enclosed by the red dashed lines are selected as protons. Events enclosed by the green dashed lines are selected as MIPs.}
+  \label{fig:TvsA}
+\end{figure}
+
+Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by $\mathit{S4}$ with a changing number of moderator blocks.
+This spectrum is given by the difference in time between observation of a coincidence in the $\mathit{S1}$ and $\mathit{S2}$ timing points and a signal being recorded in $\mathit{S4}$ (the definition of an $\mathit{S4}$ signal is given above).
+
+\begin{figure}[ht]
+  \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+    \input{files/Figures/tofS4_correct.tex}
+  \end{adjustbox}
+  \caption{$\mathit{S4}$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, a flat background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars and for the variation in efficiency as a function of position along the bar, as described in Section~\ref{timeofflightanalysissubsec}.}
+  \label{fig:s4tof}	
+\end{figure}
+
+Additionally, the reconstructed mass distribution for particles travelling from $\mathit{S2}$ to $\mathit{S4}$ is shown in Figure~\ref{fig:s4tof_mass}, produced using Equation~\ref{eq:recoMass}.
+%In this case, $x_{\mathit{S4}}-x_{\mathit{S2}} = 12.7~\text{m}$.
+Unlike the same distribution produced for particles travelling from $\mathit{S1}$ to $\mathit{S3}$ (see Figure~\ref{fig:s3tof_mass}), no deuteron peak is visible.
+This is thought to be due to the attenuation of deuterons within the walls of the TPC.
+Additionally, the predicted proton position does not line up with the measured proton position. 
+This is again thought to be caused by the positioning of the TPC in front of $\mathit{S4}$.
+Protons passing through the TPC lose energy, resulting in them having less than the original 0.8~GeV/c beam momentum.
+In turn, this leads to protons having a larger reconstructed mass than predicted.
+The displacement of the proton mass peak in Figure~\ref{fig:s4tof_mass} is consistent with the expected energy loss in the vessel walls.
+
+\begin{figure}[ht]
+  \centering
+  \begin{adjustbox}{max totalsize={.9\textwidth}{.5\textheight},center}
+    \input{files/Figures/s4TofMass.tex}
+  \end{adjustbox}
+  \caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between $\mathit{S4}$ and $\mathit{S2}$. Vertical arrows show predicted position of particles.}
+  \label{fig:s4tof_mass}
+\end{figure}
+
+A correction is made for the variation in particle detection efficiency between the bars and for the variation in this efficiency as a function of the position along each bar.
+This correction is performed using the cosmic ray flux.
+It is assumed that the flux of cosmic rays passing through each part of $\mathit{S4}$ is equal.
+Each $\mathit{S4}$ bar is divided into 7~cm segments for analysis, and the number of cosmic rays passing through each segment is measured by assuming that all signals occurring outside of beam spills are produced by cosmic rays.
+The efficiency is then found from this distribution by normalising the bin with the highest number of cosmic ray signals to 1.
+An example of one of these distributions is shown in Figure~\ref{fig:s4PosEff}.
+Events are then weighted according to the bar in which they are observed and their measured position along this bar.
+The weight applied is the inverse of the value shown in Figure~\ref{fig:s4PosEff}.
+Additionally, a further weight is applied to all $\mathit{S4}$ events of 1.25.
+This weight is derived from tests performed on the $\mathit{S4}$ bars with a $^{90}$Sr source.
+Using this source, it was determined that the maximum measured rate of signals produced by the $^{90}$Sr source was equal to 0.8 of the true rate.
+
+
+\begin{figure}
+  \begin{adjustbox}{width=.7\textwidth, center}
+    \input{files/Figures/relativeEff1Blocks.tex}
+  \end{adjustbox}
+  \caption{Relative detection efficiency of $\mathit{S4}$ as a function of bar number and position along each bar as measured with cosmic rays. The data from bar 10 was not used in the analysis due to the poor efficiency along the bar.}
+  \label{fig:s4PosEff}
+\end{figure}
+
+Using Figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
+These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in Figure~\ref{fig:s4tof}. 
+The signal functions are taken to be Gaussians while the background is taken to be flat. 
+An example of this is shown in Figure~\ref{fig:fitEx}.
+The particles in the quicker timing window (those for which $36~\text{ns}<t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $62~\text{ns}<t_{\mathit{S4}}-t_{\mathit{S2}}<125~\text{ns}$) are considered to be protons.
+
+\begin{figure}[ht]
+  \begin{adjustbox}{max totalsize={\textwidth}{.62\textheight},center}
+    \input{files/Figures/bkgSubPaper.tex}
+  \end{adjustbox}
+  \caption{Example of the time of flight spectrum observed in $\mathit{S4}$ with combined signal and background functions fitted (shown in red).}
+  \label{fig:fitEx}
+\end{figure}
