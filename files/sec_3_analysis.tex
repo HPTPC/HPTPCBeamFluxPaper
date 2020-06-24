@@ -165,6 +165,10 @@ The cut values vary in the range 0.125~V to 0.3~V.
   \label{fig:TvsA}
 \end{figure}
 
+Particles for which $35.75~\text{ns}<t_{\mathit{S3}}-t_{\mathit{S1}}<37.75~\text{ns}$ are identified as MIPs.
+Particles which pass the amplitude cut and for which $53~\text{ns}<t_{\mathit{S3}}-t_{\mathit{S1}}<115~\text{ns}$ are identified as protons.
+The upper bound of this timing cut is reduced to 80~ns for the unmoderated sample in order to exclude deuterons.
+
 Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by $\mathit{S4}$ with a changing number of moderator blocks.
 This spectrum is given by the difference in time between observation of a coincidence in the $\mathit{S1}$ and $\mathit{S2}$ timing points and a signal being recorded in $\mathit{S4}$ (the definition of an $\mathit{S4}$ signal is given above).
 
@@ -208,7 +212,6 @@ Additionally, a further weight is applied to all $\mathit{S4}$ events of 1.25.
 This weight is derived from tests performed on the $\mathit{S4}$ bars with a $^{90}$Sr source.
 Using this source, it was determined that the maximum measured rate of signals produced by the $^{90}$Sr source was equal to 0.8 of the true rate.
 
-
 \begin{figure}
   \begin{adjustbox}{width=.7\textwidth, center}
     \input{files/Figures/relativeEff1Blocks.tex}
@@ -217,11 +220,14 @@ Using this source, it was determined that the maximum measured rate of signals p
   \label{fig:s4PosEff}
 \end{figure}
 
-Using Figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts. 
-These timing cuts are chosen by fitting a sum of signal and background functions to the time of flight spectra shown in Figure~\ref{fig:s4tof}. 
+Using Figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts and a flat background is then subtracted.
+The particles in the quicker timing window (those for which $36~\text{ns}<t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $62~\text{ns}<t_{\mathit{S4}}-t_{\mathit{S2}}<125~\text{ns}$) are considered to be protons.
+
+The background is determined by fitting a sum of signal and background functions to the time of flight spectra shown in Figure~\ref{fig:s4tof}.
 The signal functions are taken to be Gaussians while the background is taken to be flat. 
 An example of this is shown in Figure~\ref{fig:fitEx}.
-The particles in the quicker timing window (those for which $36~\text{ns}<t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $62~\text{ns}<t_{\mathit{S4}}-t_{\mathit{S2}}<125~\text{ns}$) are considered to be protons.
+The background rates for each sample are shown in Table~\ref{tab:backgrounds}.
+These backgrounds have been subtracted from the totals shown in Section~\ref{sec:s4Flux}.
 
 \begin{figure}[ht]
   \begin{adjustbox}{max totalsize={\textwidth}{.62\textheight},center}
@@ -230,3 +236,23 @@ The particles in the quicker timing window (those for which $36~\text{ns}<t_{\ma
   \caption{Example of the time of flight spectrum observed in $\mathit{S4}$ with combined signal and background functions fitted (shown in red).}
   \label{fig:fitEx}
 \end{figure}
+
+\begin{table}
+  \centering
+  \caption{Background rates for the time of flight spectra measured in $\mathit{S4}$. To convert these to the number of expected background events in a spill, the rate is multiplied by the size of the timing window for either MIPs or protons.}
+  \begin{tabular}{c|c}
+    \hline
+    \hline
+    Number of moderator blocks & Background / $\text{Events} \times \text{spill}^{-1} \times \text{ns}^{-1}$ \\
+    \hline
+    0 & $0.037 \pm 0.004$ \\
+    1 & $0.066 \pm 0.005$ \\
+    2 & $0.165 \pm 0.007$ \\
+    3 & $0.124 \pm 0.009$ \\
+    4 & $0.085 \pm 0.002$ \\
+    \hline
+  \end{tabular}
+  \label{tab:backgrounds}
+\end{table}
+
+
