@@ -81,55 +81,64 @@ To calculate the correct time of flight, timing delays caused by cabling and equ
 The same method is used to correct the measurements of the time of flight between $\mathit{S1}$ and $\mathit{S3}$, and $\mathit{S2}$ and $\mathit{S4}$.
 The initial recorded time, $t_i$, is either $t_{\mathit{S1}}$ or $t_{\mathit{S2}}$ while the final recorded time, $t_f$ is then $t_{\mathit{S3}}$ or $t_{\mathit{S4}}$ respectively.
 
-A signal measured in the more downstream of the detectors ($\mathit{S3}$ or $\mathit{S4}$) which occurs at a true time $t_f$ will be recorded as happening at a time
-\begin{align}
-  t_{f_{\text{rec}}} = t_f + t_{f_{\text{delay}}} \,,
-  \label{eq:delayS4}
-\end{align}
-while a signal measured in the same DAQ from the more upstream of the detectors ($\mathit{S1}$ or $\mathit{S2}$) will be recorded at a time
-\begin{align}
-  t_{i_{\text{rec}}} = t_{i} + t_{i_{\text{delay}}} \,,
-  \label{eq:delayS2}
-\end{align}
-where $t_{f_{\text{delay}}}$ and $t_{i_{\text{delay}}}$ are the total delays caused by cabling and equipment between the respective detectors and the DAQ.
-Therefore, the true time of flight, $t_{f} - t_{i}$, will be given by
-\begin{align}
-  t_{f} - t_{i} = t_{f_{\text{rec}}} - t_{i_{\text{rec}}} - \left( t_{f_{\text{delay}}} - t_{i_{\text{delay}}} \right) \,,
-  \label{eq:delayTof}
-\end{align}
-where $t_{f_{\text{delay}}} - t_{i_{\text{delay}}}$ is to be determined.
-In order to determine $t_{f_{\text{delay}}} - t_{i_{\text{delay}}}$, a Gaussian is fitted to the faster peak observed in the 0 block data which is thought to be produced by minimum ionizing particles.
+Timing offsets are measured in the beamline by assuming that the fastest peak in the $t_{f}-t_{i}$ spectrum for the unmoderated data is produced by charged pions with a momentum of 0.8~GeV/c.
+The required timing shift is then the shift required to move the fastest peak to its expected position, given this assumption.
+This shift is then applied to all measured times of flight.
+This correction is peformed separately for both the $t_{\mathit{S3}}-t_{\mathit{S1}}$ time of flight measurement and for the $t_{\mathit{S4}}-t_{\mathit{S2}}$ time of flight measurement.
+The required timing shift for the $t_{\mathit{S4}}-t_{\mathit{S2}}$ measurement is 43.7~ns.
+For the $t_{\mathit{S3}}-t_{\mathit{S1}}$ measurement, the required timing shift is 65.0~ns.
 
-A charged pion with a momentum of 0.8~GeV/c will have a speed of $0.985c$ and will therefore traverse the distance between $\mathit{S2}$ and $\mathit{S4}$ (12.7~m) in a time of 42.6~ns.
-When a Gaussian is fitted to the data, the mean of the MIP peak lies at $(86.31 \pm 0.02)~\text{ns}$.
-Rearranging Equation~\ref{eq:delayTof} and substituting in 86.31~ns for $t_{\mathit{S4}_{\text{rec}}} - t_{\mathit{S2}_{\text{rec}}}$ gives a value for $t_{\mathit{S4}_{\text{delay}}} - t_{\mathit{S2}_{\text{delay}}}$ of 43.7~ns.
-This shift is applied to all measured times to give the value of $t_{\mathit{S4}} - t_{\mathit{S2}}$ used in the analysis.
-The process is repeated for the $\mathit{S3}$ data.
-In this case the required shift is 65.0~ns.
+%A signal measured in the more downstream of the detectors ($\mathit{S3}$ or $\mathit{S4}$) which occurs at a true time $t_f$ will be recorded as happening at a time
+%\begin{align}
+%  t_{f_{\text{rec}}} = t_f + t_{f_{\text{delay}}} \,,
+%  \label{eq:delayS4}
+%\end{align}
+%while a signal measured in the same DAQ from the more upstream of the detectors ($\mathit{S1}$ or $\mathit{S2}$) will be recorded at a time
+%\begin{align}
+%  t_{i_{\text{rec}}} = t_{i} + t_{i_{\text{delay}}} \,,
+%  \label{eq:delayS2}
+%\end{align}
+%where $t_{f_{\text{delay}}}$ and $t_{i_{\text{delay}}}$ are the total delays caused by cabling and equipment between the respective detectors and the DAQ.
+%Therefore, the true time of flight, $t_{f} - t_{i}$, will be given by
+%\begin{align}
+%  t_{f} - t_{i} = t_{f_{\text{rec}}} - t_{i_{\text{rec}}} - \left( t_{f_{\text{delay}}} - t_{i_{\text{delay}}} \right) \,,
+%  \label{eq:delayTof}
+%\end{align}
+%where $t_{f_{\text{delay}}} - t_{i_{\text{delay}}}$ is to be determined.
+%In order to determine $t_{f_{\text{delay}}} - t_{i_{\text{delay}}}$, a Gaussian is fitted to the faster peak observed in the 0 block data which is thought to be produced by minimum ionizing particles.
+
+%A charged pion with a momentum of 0.8~GeV/c will have a speed of $0.985c$ and will therefore traverse the distance between $\mathit{S2}$ and $\mathit{S4}$ (12.7~m) in a time of 42.6~ns.
+%When a Gaussian is fitted to the data, the mean of the MIP peak lies at $(86.31 \pm 0.02)~\text{ns}$.
+%Rearranging Equation~\ref{eq:delayTof} and substituting in 86.31~ns for $t_{\mathit{S4}_{\text{rec}}} - t_{\mathit{S2}_{\text{rec}}}$ gives a value for $t_{\mathit{S4}_{\text{delay}}} - t_{\mathit{S2}_{\text{delay}}}$ of 43.7~ns.
+%This shift is applied to all measured times to give the value of $t_{\mathit{S4}} - t_{\mathit{S2}}$ used in the analysis.
+%The process is repeated for the $\mathit{S3}$ data.
+%In this case the required shift is 65.0~ns.
 
 The mass distribution calculated for the dataset without moderator blocks is shown in Figure~\ref{fig:s3tof_mass}.
-The time difference between $\mathit{S3}$ and $\mathit{S1}$ counters corresponding to a single particle was converted to the mass of the particle.
-Starting from the equation for relativistic momentum
-\begin{align}
-p = \gamma m v \,,
-\end{align}
-where $m$ is the mass of the particle, $v$ is the speed of particle and $\gamma$ is the Lorentz factor.
-Squaring and rearranging gives
-\begin{align}
-  m^{2} = \frac{p^{2}}{\gamma^{2} v^{2}} \,,
-\end{align}
-before the Lorentz factor is expanded to give
-\begin{align}
-  m^{2} = p^{2}\left(\frac{1}{v^{2}} - \frac{1}{c^{2}}\right) \,,
-\end{align}
-where $c$ is the speed of light in a vacuum. Expressing $v$ as the distance between $\mathit{S1}$ and $\mathit{S3}$ ($x_{\mathit{S3}}-x_{\mathit{S1}} = 10.8~\text{m}$) divided by the time difference between the $\mathit{S1}$ and $\mathit{S3}$ counters ($t_{\mathit{S3}} - t_{\mathit{S1}}$) and expressing in natural units 
+The time difference between $\mathit{S3}$ and $\mathit{S1}$ counters corresponding to a single particle ($t_{\mathit{S3}}-t_{\mathit{S1}}$) is converted to the mass of the particle, $m$, using Equation~\ref{eq:recoMass}, where the equation is in natural units.
+The particle momentum, $p$, is assumed to be 0.8~GeV/c.
+
+%Starting from the equation for relativistic momentum
+%\begin{align}
+%p = \gamma m v \,,
+%\end{align}
+%where $m$ is the mass of the particle, $v$ is the speed of particle and $\gamma$ is the Lorentz fac%tor.
+%Squaring and rearranging gives
+%\begin{align}
+%  m^{2} = \frac{p^{2}}{\gamma^{2} v^{2}} \,,
+%\end{align}
+%before the Lorentz factor is expanded to give
+%\begin{align}
+%  m^{2} = p^{2}\left(\frac{1}{v^{2}} - \frac{1}{c^{2}}\right) \,,
+%\end{align}
+%where $c$ is the speed of light in a vacuum. Expressing $v$ as the distance between $\mathit{S1}$ and $\mathit{S3}$ ($x_{\mathit{S3}}-x_{\mathit{S1}} = 10.8~\text{m}$) divided by the time difference between the $\mathit{S1}$ and $\mathit{S3}$ counters ($t_{\mathit{S3}} - t_{\mathit{S1}}$) and expressing in natural units
+
 \begin{equation} 
   m^2 = p^2 \left( 
-  \left(\frac{t_{\mathit{S3}}-t_{\mathit{S1}}}{x_{\mathit{S3}}-x_{\mathit{S1}}} \right)^2
-  - 1  \right) \,,
+  \left(\frac{t_{\mathit{S3}}-t_{\mathit{S1}}}{x_{\mathit{S3}}-x_{\mathit{S1}}} \right)^2 - 1  \right) \,,
   \label{eq:recoMass}
 \end{equation}
-where the particle momentum $p$ is assumed to be 0.8~GeV/c.
+
 The proton and pion mass positions in Figure~\ref{fig:s3tof_mass} are indicated by vertical arrows.
 One can clearly observe distinct peaks corresponding to protons and deuterons. 
 The insert in the figure shows a zoomed region corresponding to the MIPs. 
@@ -138,7 +147,7 @@ The insert in the figure shows a zoomed region corresponding to the MIPs.
   \begin{adjustbox}{max totalsize={\linewidth}, center}
     \input{files/Figures/mSqAnnot.tex}
   \end{adjustbox}
-  \caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between $\mathit{S3}$ and $\mathit{S1}$. Vertical arrows show predicted position of particles given a momentum of 0.8~GeV/c. Inset: Zoomed view of MIP region of the same spectrum.}
+  \caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between $\mathit{S3}$ and $\mathit{S1}$. Vertical arrows show predicted position of particles given a momentum of 0.8~GeV/c. Insert: Zoomed view of MIP region of the same spectrum.}
   \label{fig:s3tof_mass}
 \end{figure}
 
@@ -176,6 +185,7 @@ This is again thought to be caused by the positioning of the TPC in front of $\m
 Protons passing through the TPC lose energy, resulting in them having less than the original 0.8~GeV/c beam momentum.
 In turn, this leads to protons having a larger reconstructed mass than predicted.
 The displacement of the proton mass peak in Figure~\ref{fig:s4tof_mass} is consistent with the expected energy loss in the vessel walls.
+This consistency is shown with Monte Carlo studies in Section~\ref{sec:mcStudies}.
 
 \begin{figure}[ht]
   \centering
