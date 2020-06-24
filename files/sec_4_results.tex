@@ -1,4 +1,4 @@
-\section{Beam Flux Measurement}
+section{Beam Flux Measurement}
 \label{hptpcPaper:sec:Results}
 
 \subsection{Flux measurements with S3}
@@ -158,7 +158,7 @@ The same timing cuts described in Section~\ref{timeofflightanalysissubsec} were 
 
 \begin{figure}[ht]
   \centering
-     \begin{adjustbox}{max totalsize={\textwidth}{.35\textheight}, center}
+     \begin{adjustbox}{max totalsize={\textwidth}{.3\textheight}, center}
       \input{files/Figures/proKeS4Mc.tex}
     \end{adjustbox}
     \caption{Energy profile of simulated protons reaching $\mathit{S4}$, with kinetic energy above the detection threshold of 10~MeV.}
@@ -171,7 +171,20 @@ A proton detection threshold of $\mathit{S4}$ of 140~MeV/c (10~MeV kinetic energ
 The simulation shows a significant reduction in kinetic energy as most particles have travelled through both steel walls of the TPC vessel.
 In particular, in the 4 moderator block case, very few particles have survived through the second vessel wall to reach $\mathit{S4}$.
 
-Systematic uncertainties on the number of protons measured in $\mathit{S3}$ and $\mathit{S4}$ are estimated for both data and Monte Carlo, and shown in Table~\ref{tab:systematics}.
+\begin{figure}[h]
+  \centering
+  \begin{adjustbox}{max totalsize={.35\textheight}, center}
+    \input{files/Figures/tofS4Sim.tex}
+  \end{adjustbox}
+  \caption{Comparison of simulated and measured proton ToF between $\mathit{S2}$ and $\mathit{S4}$. The solid lines indicate the simulated distribution while the points are data. All distributions are area normalised to 1.}
+  \label{fig:tofMC}
+\end{figure}
+
+Comparisons of $\mathit{S2}$ to $\mathit{S4}$ time of flight for data and MC are shown in Figure~\ref{fig:tofMC} for varying numbers of moderator blocks.
+Figure~\ref{fig:tofMC} shows that, for all numbers of moderator blocks, the peak positions in the data and MC spectra agree to within 2~ns.
+This level of agreement shows that the simulated energy loss in the vessel and TPC is similar to the energy loss in the data.
+  
+Systematic uncertainties on the number of protons measured in $\mathit{S3}$ and $\mathit{S4}$ are estimated for both data and MC, and shown in Table~\ref{tab:systematics}.
 The systematic uncertainty on the MC simulation is determined by varying the geometric initial conditions of the simulation, including the position of the $\mathit{S1}$ and $\mathit{S2}$ detectors.
 These variations induce changes in the direction and momenta of the propagated protons.
 Additionally, a study was performed with 1~cm of additional acrylic in the beamline, as a proxy for the uncertainty on other pieces of light material in the beam facility.
@@ -183,7 +196,7 @@ This has a larger effect in the 4 block case because of the very small number of
 
 \begin{table}
   \centering
-  \caption{List of systematic errors and values for data and Monte Carlo simulation. All values are the percent error on the $\mathit{S4}$ proton count with the exception of the uncertainty on the efficiency of $\mathit{S3}$, which is the percent error in the $\mathit{S3}$ proton count. All uncertainties are treated as uncorrelated. $n_{\mathit{S4},~MC}$ refers to the number of protons reaching $\mathit{S4}$ in Monte Carlo simulations.}
+  \caption{List of systematic errors and values for data and MC simulation. All values are the percent error on the $\mathit{S4}$ proton count with the exception of the uncertainty on the efficiency of $\mathit{S3}$, which is the percent error in the $\mathit{S3}$ proton count. All uncertainties are treated as uncorrelated. $n_{\mathit{S4},~MC}$ refers to the number of protons reaching $\mathit{S4}$ in MC simulations.}
   \begin{tabular}{c|c c c c c}
     \hline
     \hline
@@ -192,7 +205,7 @@ This has a larger effect in the 4 block case because of the very small number of
     & \multicolumn{5}{c}{Number of moderator blocks} \\
     & 0 & 1 & 2 & 3 & 4 \\
     \hline
-    Systematic uncertainty on $n_{\mathit{S4},~MC}$ & 9.5\% & 8.0\% & 8.5\% & 17\% & 8.0\% \\
+    Systematic uncertainty on $n_{\mathit{S4},~MC}$ & 9.5\% & 8.0\% & 8.5\% & 17.0\% & 8.0\% \\
     \hline
     \multicolumn{6}{c}{} \\
     \multicolumn{6}{c}{} \\
@@ -203,12 +216,12 @@ This has a larger effect in the 4 block case because of the very small number of
     & \multicolumn{5}{c}{Number of moderator blocks} \\
     Source of systematic error & 0 & 1 & 2 & 3 & 4 \\
     \hline
-    Absolute efficiency of $\mathit{S3}$ & 10\% & 10\% & 10\% & 10\% & 10\% \\
-    Absolute efficiency of $\mathit{S4}$ & 10\% & 10\% & 10\% & 10\% & 10\% \\ 
+    Absolute efficiency of $\mathit{S3}$ & 1.1\% & 11.4\% & 7.0\% & 11.4\% & 4.9\% \\
+    Absolute efficiency of $\mathit{S4}$ & 11.0\% & 11.0\% & 11.0\% & 11.0\% & 11.0\% \\ 
     $\mathit{S4}$ angular correction & 2.9\% & 1.5\% & 6.7\% & 8.2\% & 4.1\% \\
     $\mathit{S4}$ background uncertainty & 0.18\% & 0.16\% & 1.1\% & 1.4\% & 8.1\% \\
     \hline
-    \textbf{Total} & 15\% & 14\% & 16\% & 17\% & 20\% \\
+    \textbf{Total} & 11.5\% & 16.0\% & 14.7\% & 18.3\% & 18.9\% \\
     \hline 
   \end{tabular}
   \label{tab:systematics}
@@ -216,8 +229,15 @@ This has a larger effect in the 4 block case because of the very small number of
 
 The ratio of number of protons reaching $\mathit{S4}$ to those reaching $\mathit{S3}$ is shown for both simulation and data in Table~\ref{tab:ratios}, which includes the total statistical and systematic error in each case.
 The agreement shown relative to the uncertainty provided by the beam test setup provides strong evidence that efficiency corrections described in Section~\ref{timeofflightanalysissubsec} are justified.
-The discrepancy in the 4 block case is due to the low energy of the protons.
-In this case, the proton energy spectrum is very sensitive to additional material in the beamline which would cause a large number of protons to be absorbed.
+%The discrepancy in the 4 block case is due to the low energy of the protons.
+%In this case, the proton energy spectrum is very sensitive to additional material in the beamline which would cause a large number of protons to be absorbed.
+
+The number of simulated particles that penetrate the active area of the TPC are shown in Figure~\ref{fig:MCTPC}, left and right, as a function of momentum and kinetic energy respectively.
+Comparing Figure~\ref{fig:MCTPC}, right, with the motivation plot shown in Figure~\ref{fig:protonsfromargon}, it is clear that 4 moderator blocks were required to access the momentum region of interest (below 50 MeV).
+The off axis and moderator technique were therefore successful in the extent to which the proton energy was lowered.
+The number of protons reaching the active area of the TPC was  per spill ($7.0 \pm  0.1$) for 4 moderator blocks, compared with ($12.6 \pm 0.7$) per spill without moderation. 
+For 4 moderator blocks, ($5.6 \pm  0.1$) of those protons had energies below 100~MeV.
+These values were calibrated with the full comparison between data and simulation.
 
 \begin{table}
   \centering
@@ -229,20 +249,13 @@ In this case, the proton energy spectrum is very sensitive to additional materia
     \hline
     $0$ & $0.027 \pm 0.003$ & $0.049 \pm 0.007$ & $1.8 \pm 0.3$ \\
     $1$ & $0.067 \pm 0.005$ & $0.09 \pm 0.01$ & $1.3 \pm 0.2$ \\
-    $2$ & $0.084 \pm 0.007$ & $0.10 \pm 0.02$ & $1.2 \pm 0.2$ \\
-    $3$ & $0.06 \pm 0.01$ & $0.036 \pm 0.006$ & $0.7 \pm 0.2$ \\
-    $4$ & $0.012 \pm 0.001$ & $0.008 \pm 0.002$ & $0.7 \pm 0.2$ \\
+    $2$ & $0.084 \pm 0.007$ & $0.10 \pm 0.01$ & $1.2 \pm 0.2$ \\
+    $3$ & $0.06 \pm 0.01$ & $0.036 \pm 0.007$ & $0.7 \pm 0.2$ \\
+    $4$ & $0.011 \pm 0.001$ & $0.008 \pm 0.001$ & $0.7 \pm 0.1$ \\
     \hline
   \end{tabular}
   \label{tab:ratios}
 \end{table}
-
-The number of simulated particles that penetrate the active area of the TPC are shown in Figure~\ref{fig:MCTPC}, left and right, as a function of momentum and kinetic energy respectively.
-Comparing Figure~\ref{fig:MCTPC}, right, with the motivation plot shown in Figure~\ref{fig:protonsfromargon}, it is clear that 4 moderator blocks were required to access the momentum region of interest (below 50 MeV).
-The off axis and moderator technique were therefore successful in the extent to which the proton energy was lowered.
-The number of protons reaching the active area of the TPC was  per spill ($7.0 \pm  0.1$) for 4 moderator blocks, compared with ($12.6 \pm 0.7$) per spill without moderation. 
-For 4 moderator blocks, ($5.6 \pm  0.1$) of those protons had energies below 100~MeV.
-These values were calibrated with the full comparison between data and simulation.
 
 \begin{figure}[!ht]
   \begin{minipage}[t]{0.48\textwidth}
