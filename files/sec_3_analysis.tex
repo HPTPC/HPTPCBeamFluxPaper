@@ -40,11 +40,11 @@ A particle of mass $m$ with momentum $p$ will traverse a distance $d$ in a time
 \end{align}
 where $c$ is the speed of light in a vacuum.
 Therefore, particles with a greater momentum or smaller mass will cross the same distance in a shorter time.
-This means that a beam of particles of different species but with the same momenta (as is produced by magnetic selection) can be separated by particle mass by measuring the time of flight, $t$.
+This means that a beam of particles of different species but with the same momenta (as is produced by magnetic selection) can be separated by particle mass by measuring their time of flight, $t$.
 
 For example, a charged pion with a momentum of 0.8~GeV/c will have a time of flight from $\mathit{S1}$ to $\mathit{S3}$ (a distance of 10.8~m) of 37~ns, while a proton with the same momentum will have a time of flight of 55~ns.
 For the same two particles travelling between $\mathit{S2}$ and $\mathit{S4}$ (a distance of 12.7~m), the charged pion would have a time of flight of 43~ns and the proton would have a time of flight of 65~ns.
-Figure~\ref{fig:s1s3PredTimes} shows the predicted time of flight for various particle species across the $\mathit{S1}-\mathit{S3}$ distance and the $\mathit{S2}-\mathit{S4}$ distance respectively.
+Figure~\ref{fig:s1s3PredTimes}, left and right, shows the predicted time of flight for various particle species across the $\mathit{S1}-\mathit{S3}$ distance and the $\mathit{S2}-\mathit{S4}$ distance respectively.
 
 \begin{figure}[ht]
   
@@ -84,7 +84,7 @@ The initial recorded time, $t_i$, is either $t_{\mathit{S1}}$ or $t_{\mathit{S2}
 Timing offsets are measured in the beamline by assuming that the fastest peak in the $t_{f}-t_{i}$ spectrum for the unmoderated data is produced by charged pions with a momentum of 0.8~GeV/c.
 The required timing shift is then the shift required to move the fastest peak to its expected position, given this assumption.
 This shift is then applied to all measured times of flight.
-This correction is peformed separately for both the $t_{\mathit{S3}}-t_{\mathit{S1}}$ time of flight measurement and for the $t_{\mathit{S4}}-t_{\mathit{S2}}$ time of flight measurement.
+This correction is peformed separately for both the measurement of $t_{\mathit{S3}}-t_{\mathit{S1}}$ and for the measurement of $t_{\mathit{S4}}-t_{\mathit{S2}}$.
 The required timing shift for the $t_{\mathit{S4}}-t_{\mathit{S2}}$ measurement is 43.7~ns.
 For the $t_{\mathit{S3}}-t_{\mathit{S1}}$ measurement, the required timing shift is 65.0~ns.
 
@@ -173,18 +173,18 @@ A correction must be applied to the upstream ToF DAQ ($\mathit{S1}$, $\mathit{S2
 The $\mathit{S1} \cap \mathit{S2}$ signal is digitised by both the upstream and downstream ToF DAQ.
 The dead time of the downstream ToF DAQ is found to be negligible.
 A linear relationship between the number of $\mathit{S1} \cap \mathit{S2}$ signals measured in each DAQ is determined for each moderator block sample.
-Therefore, events measured in the upstream ToF DAQ are weighted, such that the number of $\mathit{S1} \cap \mathit{S2}$ signals measured in the upstream and downstream ToF DAQs are equal.
-
-Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by $\mathit{S4}$ with a changing number of moderator blocks.
-This spectrum is given by the difference in time between observation of a coincidence in the $\mathit{S1}$ and $\mathit{S2}$ timing points and a signal being recorded in $\mathit{S4}$ (the definition of an $\mathit{S4}$ signal is given above).
+Therefore, events measured in the upstream ToF DAQ are weighted, such that the number of $\mathit{S1} \cap \mathit{S2}$ signals measured in the upstream and downstream ToF DAQs are approximately equal.
 
 \begin{figure}[ht]
-  \begin{adjustbox}{max totalsize={\textwidth}{.5\textheight},center}
+  \begin{adjustbox}{max totalsize={.9\textwidth}{.5\textheight},center}
     \input{files/Figures/tofS4_correct.tex}
   \end{adjustbox}
   \caption{$\mathit{S4}$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, a flat background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars and for the variation in efficiency as a function of position along the bar, as described in Section~\ref{timeofflightanalysissubsec}.}
   \label{fig:s4tof}	
 \end{figure}
+
+Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by $\mathit{S4}$ with a changing number of moderator blocks.
+This spectrum is given by the difference in time between observation of a coincidence in the $\mathit{S1}$ and $\mathit{S2}$ timing points and a signal being recorded in $\mathit{S4}$ (the definition of an $\mathit{S4}$ signal is given above).
 
 Additionally, the reconstructed mass distribution for particles travelling from $\mathit{S2}$ to $\mathit{S4}$ is shown in Figure~\ref{fig:s4tof_mass}, produced using Equation~\ref{eq:recoMass}.
 %In this case, $x_{\mathit{S4}}-x_{\mathit{S2}} = 12.7~\text{m}$.
@@ -213,13 +213,13 @@ Each $\mathit{S4}$ bar is divided into 7~cm segments for analysis, and the numbe
 The efficiency is then found from this distribution by normalising the bin with the highest number of cosmic ray signals to 1.
 An example of one of these distributions is shown in Figure~\ref{fig:s4PosEff}.
 Events are then weighted according to the bar in which they are observed and their measured position along this bar.
-The weight applied is the inverse of the value shown in Figure~\ref{fig:s4PosEff}.
+The weight applied is the inverse of the value shown on the z-axis of Figure~\ref{fig:s4PosEff}.
 Additionally, a further weight is applied to all $\mathit{S4}$ events of 1.25.
 This weight is derived from tests performed on the $\mathit{S4}$ bars with a $^{90}$Sr source.
 Using this source, it was determined that the maximum measured rate of signals produced by the $^{90}$Sr source was equal to 0.8 of the true rate.
 
 \begin{figure}
-  \begin{adjustbox}{width=.7\textwidth, center}
+  \begin{adjustbox}{width=.68\textwidth, center}
     \input{files/Figures/relativeEff1Blocks.tex}
   \end{adjustbox}
   \caption{Relative detection efficiency of $\mathit{S4}$ as a function of bar number and position along each bar as measured with cosmic rays. The data from bar 10 was not used in the analysis due to the poor efficiency along the bar.}
@@ -229,14 +229,14 @@ Using this source, it was determined that the maximum measured rate of signals p
 Using Figure~\ref{fig:s4tof}, protons and MIPs are selected with timing cuts and a flat background is then subtracted.
 The particles in the quicker timing window (those for which $36~\text{ns}<t_{\mathit{S4}}-t_{\mathit{S2}}<51~\text{ns}$) are considered to be minimum ionizing particles while those in the slower timing window (those for which $62~\text{ns}<t_{\mathit{S4}}-t_{\mathit{S2}}<125~\text{ns}$) are considered to be protons.
 
-The background is determined by fitting a sum of signal and background functions to the time of flight spectra shown in Figure~\ref{fig:s4tof}.
+The background is determined by fitting a sum of signal and background functions to the time of flight spectra.
 The signal functions are taken to be Gaussians while the background is taken to be flat. 
 An example of this is shown in Figure~\ref{fig:fitEx}.
 The background rates for each sample are shown in Table~\ref{tab:backgrounds}.
 These backgrounds have been subtracted from the totals shown in Section~\ref{sec:s4Flux}.
 
-\begin{figure}[ht]
-  \begin{adjustbox}{max totalsize={\textwidth}{.62\textheight},center}
+\begin{figure}[h]
+  \begin{adjustbox}{max totalsize={.8\textwidth}{.62\textheight},center}
     \input{files/Figures/bkgSubPaper.tex}
   \end{adjustbox}
   \caption{Example of the time of flight spectrum observed in $\mathit{S4}$ with combined signal and background functions fitted (shown in red).}

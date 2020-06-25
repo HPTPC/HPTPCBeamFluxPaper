@@ -3,7 +3,7 @@
 
 \subsection{Flux measurements with S3}
 
-The ToF systems are at an off-axis angle with respect to the beam axis (see Table~\ref{tab:angS1}), in order to probe the reduced proton momentum spectrum, to cover the region most relevant for neutrino experiments and the measure the flux passing through the TPC.
+The ToF systems are at an off-axis angle with respect to the beam axis (see Table~\ref{tab:angS1}), in order to probe the reduced proton momentum spectrum, to cover the region most relevant for neutrino experiments and to measure the flux passing through the TPC.
 This is quantified in terms of $\theta$ and $\phi$ (see Section~\ref{sec:coord}).
 
 \begin{figure}[ht]
@@ -31,7 +31,7 @@ This is quantified in terms of $\theta$ and $\phi$ (see Section~\ref{sec:coord})
 %  \label{fig:tpcproke}
 %\end{figure} 
 
-The proton spectra upstream of the TPC are shown in figures~\ref{fig:s3proke}.
+The proton spectra upstream of the TPC are shown in Figure~\ref{fig:s3proke}.
 Figure~\ref{fig:s3proke}, left, shows the kinetic energy of particles identified as protons is successfully reduced with increasing numbers of moderator blocks, with the range falling from 210-320~MeV for the unmoderated beam, to 60-110~MeV for 4~acrylic blocks.
 Figure~\ref{fig:s3proke}, right, shows the kinetic energy spectrum of protons crossing into the TPC.
 This figure indicates that the flux of low energy protons (those with a kinetic energy of less than 80~MeV) reaching the TPC was increased from negligible in the 0, 1, and 2 block cases to ($9.7 \pm 0.1$) per spill for the 4 block case.
@@ -62,7 +62,7 @@ In both cases, the peak beam intensity falls and broadens in $\theta$ with the i
 At off-axis angles the number of MIPs and protons is increased as the number of moderator blocks is increased.
 The TPC lies within this off-axis region.
 The spread of particles for unmoderated data was unexpected; this peak was broadened by the beam steering scattering that led to the double proton peaks seen in figures~\ref{fig:s3tof} and \ref{fig:s3tof_mass}.
-For the unbent and unmoderated beam, the measured horizontal FWHM is 9.6~cm while the vertical FWHM is 11.0~cm.
+For the unsteered and unmoderated beam, the measured horizontal FWHM is 9.6~cm while the vertical FWHM is 11.0~cm.
 This is compared with the measured horizontal FWHM for the unmoderated and steered beam of 16.8~cm.
 
 Figure~\ref{fig:propiratio_s3_horz} shows the proton-MIP ratio measured in $\mathit{S3}$ as a function of the nominal off-axis angle, horizontally and vertically respectively, and for various numbers of moderator blocks.
@@ -103,7 +103,7 @@ The positioning and shape of the pressure vessel doors means that, for particles
 %Figure~\ref{fig:angularDistS1} shows that, when observed from $\mathit{S1}$, a limited area of $\mathit{S4}$ is shadowed by the active area of $\mathit{S2}$.
 %Given the requirement that a signal must be observed in $\mathit{S2}$, it is clear that all of the events that are observed in $\mathit{S4}$ are from this region of overlap.
 
-Figure~\ref{fig:thetas4mip}. left, also shows that initially, an increasing number of moderator blocks results in an increased total MIP flux through $\mathit{S4}$. 
+Figure~\ref{fig:thetas4mip}, left, also shows that initially, an increasing number of moderator blocks results in an increased total MIP flux through $\mathit{S4}$. 
 This is because both $\mathit{S2}$ and $\mathit{S4}$ are positioned off-axis, so the unmoderated beam particles do not strike these detectors.
 Due to scattering processes in the moderator, a greater number of MIPs are incident upon $\mathit{S2}$ and $\mathit{S4}$, with more scattering occurring with greater numbers of moderator blocks.
 However, with the fourth moderator block the flux of MIPs is seen to fall.
@@ -191,19 +191,20 @@ These variations induce changes in the direction and momenta of the propagated p
 Additionally, a study was performed with 1~cm of additional acrylic in the beamline, as a proxy for the uncertainty on other pieces of light material in the beam facility.
 This set of calculated errors represents geometric sources of uncertainty in the MC simulation.
 
-The uncertainty on the overall efficiency of $\mathit{S3}$ is calculated by taking the $\pm1\sigma$ uncertainty on the linear relationship between $\mathit{S1} \cap \mathit{S2}$ signals in the upstream and downstream ToF DAQs (see Section~\ref{timeofflightanalysissubsec}) and calculating the fractional change this causes in the $\mathit{S3}$ proton count.
+For the data, the uncertainty on the overall efficiency of $\mathit{S3}$ is calculated by taking the $\pm1\sigma$ uncertainty on the fitted linear relationship between $\mathit{S1} \cap \mathit{S2}$ signals in the upstream and downstream ToF DAQs (see Section~\ref{timeofflightanalysissubsec}) and calculating the fractional change this causes in the $\mathit{S3}$ proton count.
 
 The uncertainty on the overall efficiency of $\mathit{S4}$ is calculated from the calibration tests performed on the $\mathit{S4}$ bars with a Sr$^{90}$ source, as discussed in Section~\ref{timeofflightanalysissubsec}.
 The overall efficiency factor of 0.8 was calculated using data taken with a significantly different readout to that used in the beam test and therefore is subject to variation. 
 The spread in maximum bar efficiencies measured in these Sr$^{90}$ source tests for the various $\mathit{S4}$ bars is used as the systematic uncertainty on the overall $\mathit{S4}$ efficiency.
 
-For the data, the $\mathit{S4}$ angular correction systematic uncertainty is assessed by varying the number of horizontal bins in Figure~\ref{fig:s4PosEff} from 20 to 10.
+The $\mathit{S4}$ angular correction systematic uncertainty is assessed by varying the number of horizontal bins in Figure~\ref{fig:s4PosEff} from 20 to 10 and taking the fractional change in the number of measured $\mathit{S4}$ protons.
+
 The uncertainty on the $\mathit{S4}$ background subtraction is determined by taking the $1\sigma$ error on the fitted flat background and determining the resulting change in the number of protons.
 This has a larger effect in the 4 block case because of the very small number of protons detected in $\mathit{S4}$ relative to the background.
 
 \begin{table}
   \centering
-  \caption{List of systematic errors and values for data and MC simulation. All values are the percent error on the $\mathit{S4}$ proton count with the exception of the uncertainty on the efficiency of $\mathit{S3}$, which is the percent error in the $\mathit{S3}$ proton count. All uncertainties are treated as uncorrelated. $n_{\mathit{S4},~MC}$ refers to the number of protons reaching $\mathit{S4}$ in MC simulations.}
+  \caption{List of systematic errors and values for data and MC simulation. All values are the percent error on the $\mathit{S4}$ proton count with the exception of the uncertainty on the efficiency of $\mathit{S3}$, which is the percent error on the $\mathit{S3}$ proton count. All uncertainties are treated as uncorrelated. $n_{\mathit{S4},~\text{MC}}$ refers to the number of protons reaching $\mathit{S4}$ in MC simulations.}
   \begin{tabular}{c|c c c c c}
     \hline
     \hline
@@ -212,7 +213,7 @@ This has a larger effect in the 4 block case because of the very small number of
     & \multicolumn{5}{c}{Number of moderator blocks} \\
     & 0 & 1 & 2 & 3 & 4 \\
     \hline
-    Systematic uncertainty on $n_{\mathit{S4},~MC}$ & 9.5\% & 8.0\% & 8.5\% & 17.0\% & 8.0\% \\
+    Systematic uncertainty on $n_{\mathit{S4},~\text{MC}}$ & 9.5\% & 8.0\% & 8.5\% & 17.0\% & 8.0\% \\
     \hline
     \multicolumn{6}{c}{} \\
     \multicolumn{6}{c}{} \\
@@ -241,7 +242,7 @@ The agreement shown relative to the uncertainty provided by the beam test setup 
 
 The number of simulated particles that penetrate the active area of the TPC are shown in Figure~\ref{fig:MCTPC}, left and right, as a function of momentum and kinetic energy respectively.
 Comparing Figure~\ref{fig:MCTPC}, right, with the motivation plot shown in Figure~\ref{fig:protonsfromargon}, it is clear that 4 moderator blocks were required to access the momentum region of interest (below 50 MeV).
-The off axis and moderator technique were therefore successful in the extent to which the proton energy was lowered.
+The off-axis and moderator technique were therefore successful in the extent to which the proton energy was lowered.
 The number of protons reaching the active area of the TPC was  per spill ($7.0 \pm  0.1$) for 4 moderator blocks, compared with ($12.6 \pm 0.7$) per spill without moderation. 
 For 4 moderator blocks, ($5.6 \pm  0.1$) of those protons had energies below 100~MeV.
 These values were calibrated with the full comparison between data and simulation.
