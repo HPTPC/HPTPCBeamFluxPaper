@@ -169,6 +169,12 @@ Particles for which $35.75~\text{ns}<t_{\mathit{S3}}-t_{\mathit{S1}}<37.75~\text
 Particles which pass the amplitude cut and for which $53~\text{ns}<t_{\mathit{S3}}-t_{\mathit{S1}}<115~\text{ns}$ are identified as protons.
 The upper bound of this timing cut is reduced to 80~ns for the unmoderated sample in order to exclude deuterons.
 
+A correction must be applied to the upstream ToF DAQ ($\mathit{S1}$, $\mathit{S2}$ and $\mathit{S3}$) to account for its large dead time.
+The $\mathit{S1} \cap \mathit{S2}$ signal is digitised by both the upstream and downstream ToF DAQ.
+The dead time of the downstream ToF DAQ is found to be negligible.
+A linear relationship between the number of $\mathit{S1} \cap \mathit{S2}$ signals measured in each DAQ is determined for each moderator block sample.
+Therefore, events measured in the upstream ToF DAQ are weighted, such that the number of $\mathit{S1} \cap \mathit{S2}$ signals measured in the upstream and downstream ToF DAQs are equal.
+
 Figure~\ref{fig:s4tof} shows the variation in the time of flight spectrum as recorded by $\mathit{S4}$ with a changing number of moderator blocks.
 This spectrum is given by the difference in time between observation of a coincidence in the $\mathit{S1}$ and $\mathit{S2}$ timing points and a signal being recorded in $\mathit{S4}$ (the definition of an $\mathit{S4}$ signal is given above).
 
