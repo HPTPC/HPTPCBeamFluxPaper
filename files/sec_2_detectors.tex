@@ -21,14 +21,14 @@ The primary components of the experimental setup are shown schematically in Figu
 
 A beam position monitor (BPM) was situated at the beam entrance into the test area, upstream of all the ToF constituents and the TPC. 
 The TPC was placed 13~m downstream of the BPM. 
-From initial GEANT4~\cite{brun1993geant} beam simulations, the optimal TPC position was determined to be between 2$^{ \circ }$ and 3$^{ \circ }$ off the beam axis, but space constraints meant the TPC could not be placed that far away from the nominal beam centre. So, the beam was steered approximately 1$^{ \circ }$ away from its nominal position, and the TPC placed 1.5$^{ \circ }$ away from the nominal beam centre so that the TPC active region subtended an off-axis angular range of 1.4--3.8$^{ \circ }$.
+From initial GEANT4~\cite{brun1993geant} beam simulations, the optimal TPC position to reduce the momentum of particles reaching the detector, without excessively reducing particle flux, was determined to be between 2$^{ \circ }$ and 3$^{ \circ }$ off the beam axis, but space constraints meant the TPC could not be placed that far away from the nominal beam centre. So, the beam was steered approximately 1$^{ \circ }$ away from its nominal position, and the TPC placed 1.5$^{ \circ }$ away from the nominal beam centre so that the TPC active region subtended an off-axis angular range of 1.4--3.8$^{ \circ }$.
 
 There were four ToF constituents: 
 \begin{itemize}
     \item $\mathit{S1}$, a small-area beam trigger, see Section~\ref{subsec:s1s2Exp};
     \item $\mathit{S2}$, a coincidence measurement with $\mathit{S1}$, see Section~\ref{subsec:s1s2Exp};
-    \item $\mathit{S3}$, a wall of plastic scintillator bars placed directly upstream of the TPC vessel, see Section~\ref{subsec:s3Exp};
-    \item $\mathit{S4}$, a wall of plastic scintillator bars placed directly downstream of the TPC vessel, see Section~\ref{subsec:s4Exp}.
+    \item $\mathit{S3}$, a panel of plastic scintillator bars placed directly upstream of the TPC vessel, see Section~\ref{subsec:s3Exp};
+    \item $\mathit{S4}$, a panel of plastic scintillator bars placed directly downstream of the TPC vessel, see Section~\ref{subsec:s4Exp}.
 \end{itemize}
 
 A series of acrylic (polymethyl methacrylate) blocks was placed between the $\mathit{S1}$ and $\mathit{S2}$ counters.
@@ -113,7 +113,7 @@ These distances were calculated using the data gathered by the survey team.
 \begin{figure}
   \centering
   \includegraphics[width=0.7\linewidth]{files/Figures/S1S2FrontOn.png}
-  \caption{The S1 and S2 beam counters. Together the coincidence of signals in the beam counters were recorded by the DAQ systems}
+  \caption{The S1 and S2 beam counters. Together the coincidence of signals in the beam counters were recorded by the DAQ systems.}
   \label{fig:S1S2headon}
 \end{figure}
 The beam counters $\mathit{S1}$ and $\mathit{S2}$ are shown in Figure~\ref{fig:S1S2headon}.
@@ -134,13 +134,13 @@ The $\mathit{S2}$ counter was placed $(1.419 \pm 0.001)~\text{m}$ downstream of 
 The transverse position of $\mathit{S2}$ was adjusted to account for the beam divergence in the moderator blocks.
 
 The analog signals from one of the $\mathit{S1}$ PMTs and the $\mathit{S2}$ PMT were fed into LeCroy 620AL NIM discriminator units with a threshold of 30~mV.
-Subsequently, the discriminated signals were fed into a NIM coincidence unit, whose output was recorded by the DAQ systems of the downstream ToF ($\mathit{S4}$) wall.
+Subsequently, the discriminated signals were fed into a NIM coincidence unit, whose output was recorded by the DAQ systems of the downstream ToF ($\mathit{S4}$) panel.
 This information was further used for the time-of-flight analysis of $\mathit{S4}$.
 
 \subsection{Upstream Time of Flight instrumentation (S3)}
 \label{subsec:s3Exp}
 The $\mathit{S3}$ `upstream' ToF constituent was placed $(1.323 \pm 0.001)~\text{m}$ upstream of the upstream side of the HPTPC drift volume in the beamline.
-A schematic drawing of the $\mathit{S3}$ ToF wall is shown in Figure~\ref{fig:S3sketch}.
+A schematic drawing of the $\mathit{S3}$ ToF panel is shown in Figure~\ref{fig:S3sketch}.
 The detector comprises 22 staggered scintillator bars:  20 bars with dimensions $168 \times 6.0 \times 1.0$~cm$^3$ and 2 bars of  $150 \times 6.0 \times 1.0$~cm$^3$ placed on top and bottom~\cite{S3-proceedings}.
 The overlap between bars was set to 5~mm, thus the active area of the detector was $2.0214~\text{cm}^{2}$.
 
@@ -149,7 +149,7 @@ The overlap between bars was set to 5~mm, thus the active area of the detector w
   \includegraphics[width=0.54\linewidth]{files/Figures/uToF_sketch.pdf}
   \hfill
   \includegraphics[width=0.43\linewidth]{files/Figures/uTOF_rot.pdf}
-  \caption{Sketch of the $\mathit{S3}$ wall \cite{S3-proceedings}.
+  \caption{Sketch of the $\mathit{S3}$ panel \cite{S3-proceedings}.
   Left: front view. Right: rotated view.}
   \label{fig:S3sketch}
 \end{figure}
@@ -196,7 +196,7 @@ When in this position, the measured horizontal FWHM of the unmoderated beam is 1
       \input{files/Figures/4_protonXY.tex}
     \end{adjustbox}
   \end{minipage}  
-   \caption{ \label{fig:s3XY_pion}Reconstructed positions of hits observed in $\mathit{S3}$. Left: minimum ionizing particles with zero moderator blocks placed in the beamline. Right: protons detected with four moderator blocks placed in the beamline. This figure uses local $\mathit{S3}$ coordinates in which $y,x=0~\text{cm}$ is the bottom right corner of the active area when viewed from $\mathit{S1}$}
+   \caption{ \label{fig:s3XY_pion}Reconstructed positions of hits observed in $\mathit{S3}$. Left: minimum ionizing particles with zero moderator blocks placed in the beamline. Right: protons detected with four moderator blocks placed in the beamline. This figure uses local $\mathit{S3}$ coordinates in which $y,x=0~\text{cm}$ is the bottom right corner of the active area when viewed from $\mathit{S1}$.}
 \end{figure}
 
 %    The placement of each of the four time of flight constituents in respect to the TPC is shown in Figure~\ref{fig:S1S2S3S4}.
@@ -215,12 +215,12 @@ Each of these bars measure $10 \times 1 \times 140$~cm$^3$.
 Attached to each end of these scintillator bars is a 5" Hamamatsu Photonics R6594 PMT~\cite{Hamamatsu}.
 The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector.
 The bars are wrapped individually in reflective milar sheets to increase the light yield.
-The total active area of the $\mathit{S4}$ wall is $1.40 \times 0.78$~m$^2$.
+The total active area of the $\mathit{S4}$ panel is $1.40 \times 0.78$~m$^2$.
 A diagram of $\mathit{S4}$ along with its dimensions is presented in Figure~\ref{fig:dstofDiagram}.
 
 The time resolution of the bars and PMTs is measured to be 0.8~ns using a $^{90}$Sr source placed at measured distances along the bar.
-Figure~\ref{fig:s4Res} is the measured time difference for signals coming from the PMTs at either end of a bar caused by the $^{90}$Sr at a given position
-Figre~\ref{fig:s4Res} shows an example of the distribution from which the time resolution was derived.
+Figure~\ref{fig:s4Res} is the measured time difference for signals coming from the PMTs at either end of a bar caused by the $^{90}$Sr at a given position.
+Figure~\ref{fig:s4Res} shows an example of the distribution from which the time resolution was derived.
 The corresponding spatial resolution of the bars and PMTs was measured to be 7~cm.
 
 \begin{figure}[ht]
@@ -249,7 +249,7 @@ The $\mathit{S1-S2}$ coincidence signal is digitized by the same TDC. This signa
 \subsection{The HPTPC Prototype}
 For the characterisation of the beam using the ToF systems described in this paper, the relevant characteristics of the HPTPC prototype are the location and thickness of the steel vessel walls.
 The cylindrical steel vessel has a 142~cm outer diameter; the main body is 60 cm in length and the rounded end caps protrude an additional 37~cm on each end.
-With 1~cm thick walls it is rated to 6~barA of pressure.
+With 1~cm thick walls it is rated to 6~bar of absolute pressure.
 The vessel wall thickness is equivalent to the range of a proton with a kinetic energy of approximately 80~MeV~\cite{rangeTables}.
 The angular position of the center of the TPC is approximately $\theta = -2.5^{\circ}$. 
 More details of the position and extent of the TPC are given in Table~\ref{tab:angS1} and Table~\ref{tab:distances}.
