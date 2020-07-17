@@ -140,17 +140,17 @@ This information was further used for the time-of-flight analysis of $\mathit{S4
 \subsection{Upstream Time of Flight instrumentation (S3)}
 \label{subsec:s3Exp}
 The $\mathit{S3}$ `upstream' ToF constituent was placed $(1.323 \pm 0.001)~\text{m}$ upstream of the upstream side of the HPTPC drift volume in the beamline.
-A schematic drawing of the $\mathit{S3}$ ToF panel is shown in Figure~\ref{fig:S3sketch}.
+A schematic drawing of the $\mathit{S3}$ ToF panel is shown in Figure~\ref{fig:S3sketch}, left.
 The detector comprises 22 staggered scintillator bars:  20 bars with dimensions $168 \times 6.0 \times 1.0$~cm$^3$ and 2 bars of  $150 \times 6.0 \times 1.0$~cm$^3$ placed on top and bottom~\cite{S3-proceedings}.
 The overlap between bars was set to 5~mm, thus the active area of the detector was $2.0214~\text{cm}^{2}$.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.54\linewidth]{files/Figures/uToF_sketch.pdf}
+  \includegraphics[width=0.52\linewidth]{files/Figures/uToF_sketch.pdf}
   \hfill
-  \includegraphics[width=0.43\linewidth]{files/Figures/uTOF_rot.pdf}
-  \caption{Sketch of the $\mathit{S3}$ panel \cite{S3-proceedings}.
-  Left: front view. Right: rotated view.}
+  \includegraphics[width=0.47\linewidth]{files/Figures/dstofFront2.png}
+  \caption{View of the time of flight panels.
+  Left: The $\mathit{S3}$ panel~\cite{S3-proceedings} upstream of the TPC. Right: The $\mathit{S4}$ panel downstream of the TPC.}
   \label{fig:S3sketch}
 \end{figure}
 
@@ -217,7 +217,7 @@ Attached to each end of these scintillator bars is a 5" Hamamatsu Photonics R659
 The bars are arranged in two rows of five, such that there is complete coverage for any beam particles incident upon the detector.
 The bars are wrapped individually in reflective milar sheets to increase the light yield.
 The total active area of the $\mathit{S4}$ panel is $1.40 \times 0.78$~m$^2$.
-A diagram of $\mathit{S4}$ along with its dimensions is presented in Figure~\ref{fig:dstofDiagram}.
+A diagram of $\mathit{S4}$ along with its dimensions is presented in Figure~\ref{fig:S3sketch}, right.
 
 The time resolution of the bars and PMTs is measured to be 0.8~ns using a $^{90}$Sr source placed at measured distances along the bar.
 Figure~\ref{fig:s4Res} is the measured time difference for signals coming from the PMTs at either end of a bar caused by the $^{90}$Sr at a given position.
@@ -232,14 +232,14 @@ The corresponding spatial resolution of the bars and PMTs was measured to be 7~c
   \label{fig:s4Res}	
 \end{figure}
 
-\begin{figure}[ht]    
-  \centering
-  \includegraphics[width=0.5\linewidth]{files/Figures/dstofFront2.png}
-  \hfill
-  \includegraphics[width=0.35\linewidth]{files/Figures/dstofDiag2.png}
-  \caption{Front (left) and rotated (right) view of the $\mathit{S4}$. The rotated view shows more clearly the staggering of the scintillator bars and PMTs.}
-  \label{fig:dstofDiagram}
-\end{figure}
+%\begin{figure}[ht]    
+ % \centering
+ %% \includegraphics[width=0.5\linewidth]{files/Figures/dstofFront2.png}
+  %\hfill
+  %\includegraphics[width=0.35\linewidth]{files/Figures/dstofDiag2.png}
+  %\caption{Front (left) and rotated (right) view of the $\mathit{S4}$ panel. The rotated view shows more clearly the staggering of the scintillator bars and PMTs.}
+ % \label{fig:dstofDiagram}
+%\end{figure}
 
 The anode signals of all 20 of the PMTs are discriminated using LeCroy 620AL NIM discriminators, at a threshold of 20~mV.
 The discriminated signals are then fed into a time-to-digital converter (TDC). A signal in $\mathit{S4}$ is deemed to have occurred if a signal is seen in both PMTs, above the discriminator threshold, on the same bar within 20~ns of each other. 
