@@ -51,13 +51,14 @@ Figure~\ref{fig:s1s3PredTimes}, left and right, shows the predicted time of flig
 
 Figure~\ref{fig:s3tof} shows the time of flight spectrum recorded in the $\mathit{S3}$ timing point for varying numbers of moderator blocks.
 The quicker peak is formed by minimum ionizing particles, while the peak at higher values of $\mathit{t_{S3}} - \mathit{t_{S1}}$ corresponds to protons.
-The proton peaks show a double peak feature, with a smaller delayed peak closely following the main proton peak; this feature appeared after the beam was steered so that the full 2.5 degree off-axis angle could be achieved and is due to beam scattering in the steering magnets.
+The proton peaks show a double peak feature, with a smaller delayed peak closely following the main proton peak; this feature appeared after the beam was steered so that the full 2.5 degree off-axis angle could be achieved and is due to a portion of beam scattering in the steering magnets leading to the slower peak.
+The part of the beam which does not impinge on the steering magnets produces the quicker proton peak in the spectrum.
 Figure~\ref{fig:utofNoBend}, left and right, shows the proton peak for unsteered beam and the double peak structure is gone.
 In the black curve, which shows the 0 block data, a deuteron peak can be seen centered at 95~ns.
 The timing ranges for particle species selection are chosen using the analytic expectations shown in Figure~\ref{fig:s1s3PredTimes}.
 
-\begin{figure}[ht]
-  \begin{adjustbox}{max totalsize={.8\textwidth}{.5\textheight},center}
+\begin{figure}[h]
+  \begin{adjustbox}{max totalsize={.7\textwidth}{.5\textheight},center}
     \input{files/Figures/utofS1.tex}
   \end{adjustbox}
   \caption{$\mathit{S3}$ time of flight spectra for varying numbers of moderator blocks.}
@@ -145,9 +146,9 @@ Therefore, to reduce the number of background events in the proton sample, a min
 This cut varies, depending on the SiPM in question and is determined from distributions such as those shown in Figure~\ref{fig:TvsA}. 
 The cut values vary in the range 0.125~V to 0.3~V.
 
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=\linewidth]{files/Figures/tvsa.pdf}
+  \includegraphics[width=.9\linewidth]{files/Figures/tvsa.pdf}
   \caption{Examples of SiPM signal amplitude plotted against $\mathit{S1}$ to $\mathit{S3}$ time of flight for different numbers of moderator blocks. Clockwise from top left 0, 1, 3 and 2 moderator blocks are shown. A1 is the voltage recorded in the SiPM at the end of the bar. The red horizontal dashed line shows the amplitude cut used for this particular SiPM. Events in the area enclosed by the red dashed lines are selected as protons. Events enclosed by the green dashed lines are selected as MIPs.}
   \label{fig:TvsA}
 \end{figure}
@@ -162,7 +163,7 @@ The dead time of the downstream ToF DAQ is found to be negligible.
 A linear relationship between the number of $\mathit{S1} \cap \mathit{S2}$ signals measured in each DAQ is determined for each moderator block sample.
 Therefore, events measured in the upstream ToF DAQ are weighted, such that the number of $\mathit{S1} \cap \mathit{S2}$ signals measured in the upstream and downstream ToF DAQs are approximately equal.
 
-\begin{figure}[ht]
+\begin{figure}[h]
   \begin{adjustbox}{max totalsize={.9\textwidth}{.5\textheight},center}
     \input{files/Figures/tofS4_correct.tex}
   \end{adjustbox}
@@ -198,6 +199,7 @@ This correction is performed using the cosmic ray flux.
 It is assumed that the flux of cosmic rays passing through each part of $\mathit{S4}$ is equal.
 Each $\mathit{S4}$ bar is divided into 7~cm segments for analysis, and the number of cosmic rays passing through each segment is measured by assuming that all signals occurring outside of beam spills are produced by cosmic rays.
 The efficiency is then found from this distribution by normalising the bin with the highest number of cosmic ray signals to 1.
+This efficiency is highest around the middle of the bars (70~cm) because of the requirement that coincident signals are observed in both PMTs on a given bar in order for a hit to be recorded.
 An example of one of these distributions is shown in Figure~\ref{fig:s4PosEff}.
 Events are then weighted according to the bar in which they are observed and their measured position along this bar.
 The weight applied is the inverse of the value shown on the z-axis of Figure~\ref{fig:s4PosEff}.
