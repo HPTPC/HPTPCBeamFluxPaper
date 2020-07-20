@@ -117,9 +117,10 @@ These distances were calculated using the data gathered by the survey team.
 
 \subsection{Upstream beam counters (S1 and S2)}
 \label{subsec:s1s2Exp}
-\begin{figure}
+
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\linewidth]{files/Figures/S1S2FrontOn.png}
+  \includegraphics[width=0.65\linewidth]{files/Figures/S1S2FrontOn.png}
   \caption{The S1 and S2 beam counters. Together the coincidence of signals in the beam counters were recorded by the DAQ systems.}
   \label{fig:S1S2headon}
 \end{figure}
@@ -128,8 +129,8 @@ The $\mathit{S1}$ counter is a $40\times40\times5$~mm$^3$ plastic scintillator c
 The time resolution of the counter, as measured by the DAQ system of the upstream ToF, was about 30~ps. This is estimated with the distribution of the average PMT hit times; the quantity $t_{\textrm{ave}}=\frac{1}{4}((t_{\textrm{PMT0}}+t_{\textrm{PMT1}})-(t_{\textrm{PMT2}}+t_{\textrm{PMT3}}))$ has the same spread as the simple average but is conveniently centered at zero.
 An example of the $t_{\textrm{ave}}$ distribution for one run of $\mathit{S1}$ data is shown in Figure~\ref{fig:s1Res}. The full width at half maximum (FWHM) of the distribution is 62 ps.
 
-\begin{figure}
-  \begin{adjustbox}{width=0.7\linewidth, center}
+\begin{figure}[h]
+  \begin{adjustbox}{width=0.65\linewidth, center}
     \input{files/Figures/s1TimeRes.tex}
   \end{adjustbox}
   \caption{Example of the timing spread of $\mathit{S1}$ hits. The time is calculated as an average of the hit time as measured in each of the four PMTs.}
@@ -207,13 +208,15 @@ With 4 moderator blocks in the beamline, the measured horizontal FWHM of the bea
    \caption{ \label{fig:s3XY_pion}Reconstructed positions of hits observed in $\mathit{S3}$. Left: minimum ionizing particles with four moderator blocks placed in the beamline. Right: protons detected with four moderator blocks placed in the beamline. This figure uses local $\mathit{S3}$ coordinates in which $y,x=0~\text{cm}$ is the bottom right corner of the active area when viewed from $\mathit{S1}$.}
 \end{figure}
 
-%    The placement of each of the four time of flight constituents in respect to the TPC is shown in Figure~\ref{fig:S1S2S3S4}.
-%    \begin{figure}
-%      \centering
-%%    \includegraphics[width=0.6\linewidth]{files/Figures/S1S2S3S4.png}
-%   	\caption{Position of the time of flight constituents in the T10 beam hall. The TPC prototype and beam entrance are also shown}
-%   		\label{fig:S1S2S3S4}
-%   \end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.8\linewidth]{files/Figures/utofTrig.png}
+  \caption{Simplified trigger logic diagram for the upstream ToF detection of a beam particle, showing the required coincidences. Left and right refer to the SiPMs on the opposite ends of the same bar.}
+  \label{fig:utofTrig}
+\end{figure}
+
+Figure~\ref{fig:utofTrig} shows the required trigger logic for the detection of a beam particle in the upstream ToF instrumentation.
+The signal thresholds and timing cuts used for the coincidences are those detailed in this section.
 
 \subsection{Downstream Time of Flight instrumentation (S4)}
 \label{subsec:s4Exp}
@@ -253,6 +256,16 @@ The discriminated signals are then fed into a time-to-digital converter (TDC). A
 This timing window is determined through testing performed with a $^{90}$Sr source at known positions on the bar.
 
 The $\mathit{S1-S2}$ coincidence signal is digitized by the same TDC. This signal is used to calculate the particle time of flight from $\mathit{S2}$ to $\mathit{S4}$.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.8\linewidth]{files/Figures/dtofTrig.png}
+  \caption{Simplified trigger logic diagram for the downstream ToF DAQ showing the required coincidences for recording a beam particle. Left and right refer to the PMTs on the opposite ends of the same bar.}
+  \label{fig:dtofTrig}
+\end{figure}
+
+Figure~\ref{fig:dtofTrig} shows the required trigger conditions in order for a beam particle to be identified in the downstream ToF DAQ.
+The required signal size thresholds and timing windows for coincidences are detailed above and in Section~\ref{timeofflightanalysissubsec}.
 
 \subsection{The HPTPC Prototype}
 For the characterisation of the beam using the ToF systems described in this paper, the relevant characteristics of the HPTPC prototype are the location and thickness of the steel vessel walls.
