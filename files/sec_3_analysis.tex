@@ -123,7 +123,7 @@ A linear relationship between the number of $\mathit{S1} \cap \mathit{S2}$ signa
 Therefore, events measured in the upstream ToF DAQ are weighted, such that the number of $\mathit{S1} \cap \mathit{S2}$ signals measured in the upstream and downstream ToF DAQs are approximately equal.
 
 \begin{figure}[h]
-  \begin{adjustbox}{max totalsize={.9\textwidth}{.5\textheight},center}
+  \begin{adjustbox}{max totalsize={.83\textwidth}{.5\textheight},center}
     \input{files/Figures/tofS4_correct.tex}
   \end{adjustbox}
   \caption{$\mathit{S4}$ time-of-flight spectra for varying numbers of moderator blocks. For all configurations, a flat background has been fitted and subtracted from the data. Additionally, the plot has also been corrected for the differing efficiencies of the various bars and for the variation in efficiency as a function of position along the bar, as described in Section~\ref{timeofflightanalysissubsec}.}
@@ -147,7 +147,7 @@ These Monte Carlo studies also show that, at the energies used in this study, ap
 
 \begin{figure}[h]
   \centering
-  \begin{adjustbox}{max totalsize={.9\textwidth}{.5\textheight},center}
+  \begin{adjustbox}{max totalsize={.83\textwidth}{.5\textheight},center}
     \input{files/Figures/s4TofMass.tex}
   \end{adjustbox}
   \caption{Reconstructed mass spectrum for the data taken without moderator blocks. The spectrum was calculated using the time difference between $\mathit{S4}$ and $\mathit{S2}$. Vertical arrows show predicted position of particles.}
@@ -168,7 +168,7 @@ This weight is derived from tests performed on the $\mathit{S4}$ bars with a $^{
 Using this source, it was determined that the maximum measured rate of signals produced by the $^{90}$Sr source was equal to 0.8 of the true rate.
 
 \begin{figure}
-  \begin{adjustbox}{width=.68\textwidth, center}
+  \begin{adjustbox}{width=.65\textwidth, center}
     \input{files/Figures/relativeEff1Blocks.tex}
   \end{adjustbox}
   \caption{Relative detection efficiency of $\mathit{S4}$ as a function of bar number and position along each bar as measured with cosmic rays. The data from bar 10 was not used in the analysis due to the poor efficiency along the bar.}
@@ -185,12 +185,19 @@ The background rates for each sample are shown in Table~\ref{tab:backgrounds}.
 These backgrounds have been subtracted from the totals shown in Section~\ref{sec:s4Flux}.
 
 \begin{figure}[h]
-  \begin{adjustbox}{max totalsize={.8\textwidth}{.62\textheight},center}
+  \begin{adjustbox}{max totalsize={.75\textwidth}{.62\textheight},center}
     \input{files/Figures/bkgSubPaper.tex}
   \end{adjustbox}
   \caption{Example of the time of flight spectrum observed in $\mathit{S4}$ with combined signal and background functions fitted (shown in red).}
   \label{fig:fitEx}
 \end{figure}
+
+The backgrounds follow the same pattern as the total measured $\mathit{S4}$ particle rates (see Section~\ref{sec:s4Flux}).
+The background rate initially increases with the addition of the addition of more moderator blocks then decreases for the 3 and 4 moderator block configurations.
+
+The ratio of the rate of signal protons to the background rate falls with the addition of moderator blocks.
+This is due to increased scattering from the moderator blocks which causes more particles to strike $\mathit{S4}$ without passing through $\mathit{S2}$.
+This leads to an increase in false coincidences which contribute to the background rate.
 
 \begin{table}
   \centering
@@ -210,10 +217,5 @@ These backgrounds have been subtracted from the totals shown in Section~\ref{sec
   \label{tab:backgrounds}
 \end{table}
 
-The backgrounds follow the same pattern as the total measured $\mathit{S4}$ particle rates (see Section~\ref{sec:s4Flux}).
-The background rate initially increases with the addition of the addition of more moderator blocks then decreases for the 3 and 4 moderator block configurations.
 
-The ratio of the rate of signal protons to the background rate falls with the addition of moderator blocks.
-This is due to increased scattering from the moderator blocks which causes more particles to strike $\mathit{S4}$ without passing through $\mathit{S2}$.
-This leads to an increase in false coincidences which contribute to the background rate.
 
