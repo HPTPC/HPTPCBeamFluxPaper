@@ -51,6 +51,7 @@ Synchronization between ToF DAQ systems was performed offline using the referenc
 T10 received 1--3 spills from the PS during each supercycle, which has a typical duration of 33~s.
 The spill duration is 400~ms.
 The minimum separation in time between two spills is 1 second, so the start-of-spill signal frequency is less than or equal to 1~Hz.
+Because of the low frequency of start-of-spill signal it is possible to use it, along with the DAQ file timestamps, to ensure that all spills are matched in both DAQs.
 The trigger condition of the upstream ToF was based on the coincidence between $\mathit{S1}$ and $\mathit{S3}$ constituents.
 $\mathit{S2}$ signals were also recorded by the upstream ToF DAQ but were not used in the trigger.
 The DAQ of the downstream ToF was run in self-triggering mode with a gate open during the spill.
